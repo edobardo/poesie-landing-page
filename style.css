@@ -166,13 +166,24 @@ h1, h2, h3 {
 .main-nav {
   display: none;
   align-items: center;
-  gap: 32px;
+  gap: 20px;
   font-size: 0.95rem;
   color: var(--ink-soft);
 }
 
 .main-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
   transition: color var(--transition);
+}
+
+.main-nav svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .main-nav a:hover {
@@ -232,10 +243,19 @@ h1, h2, h3 {
 }
 
 .mobile-nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding: 12px 0;
   font-size: 1rem;
   color: var(--ink-soft);
   border-bottom: 1px solid var(--paper-line);
+}
+
+.mobile-nav a svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .mobile-nav .button {
@@ -871,9 +891,18 @@ h1, h2, h3 {
   margin: 0;
 }
 
+.footer-bottom svg {
+  width: 16px;  /* Dimensione leggermente più discreta per il footer */
+  height: 16px;
+  flex-shrink: 0;
+}
+
 .footer-bottom a {
+  display: inline-flex;
+  align-items: center;
   color: var(--ink-faint);
   font-size: 0.90rem;
+  gap: 6px;
   transition: color var(--transition);
 }
 
