@@ -860,8 +860,37 @@ h1, h2, h3 {
 .footer-bottom {
   border-top: 1px solid var(--paper-line);
   padding-top: 20px;
-  font-size: 0.82rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.90rem;
   color: var(--ink-faint);
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: var(--ink-faint);
+  font-size: 0.90rem;
+  transition: color var(--transition);
+}
+
+.footer-bottom a:hover {
+  color: var(--wine);
+}
+
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.instagram-link svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
 }
 
 /* =========================================================
