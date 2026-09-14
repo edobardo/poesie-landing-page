@@ -2,552 +2,578 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Poesie</title>
-<meta name="description" content="Poesie tiene le tue poesie nel tuo Google Drive, senza rumore, senza fretta.">
-<!-- <link rel="icon" type="image/png" src="images/logo.png"> -->
-<link rel="icon" type="image/png" href="images/icon/iconPenWhite.png">
-<!-- <link rel="icon" type="image/png" href="images/icon/iconPenBlack.png"> -->
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700;800&family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="page.title">Poesie — Il tuo spazio personale per la poesia</title>
+<meta name="description" content="Poesie è l'app Android per scrivere, custodire ed esportare le tue poesie in totale riservatezza. Editor pulito, blocco biometrico, cifratura locale e statistiche di scrittura.">
+<link rel="icon" type="image/png" href="assets/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="ambient"></div>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="#top">
-      <img class="brand-logo" src="images/logo.png" alt="Poesie">
-      <span>Poesie</span>
-    </a>
-    <nav class="main-nav" aria-label="Navigazione principale">
-  
-  <!-- Pagine (Icona Documento/File) -->
-  <a href="#features" class="nav-link">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-      <polyline points="14 2 14 8 20 8"></polyline>
-      <line x1="16" y1="13" x2="8" y2="13"></line>
-      <line x1="16" y1="17" x2="8" y2="17"></line>
-      <polyline points="10 9 9 9 8 9"></polyline>
-    </svg>
-    <span>Pagine</span>
-  </a>
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <div class="nav-row">
+      <a href="#top" class="brand">
+        <img src="assets/logo.png" alt="Poesie">
+        <span class="serif cream">Poesie</span>
+      </a>
 
-  <!-- Il diario (Icona Libro) -->
-  <a href="#walkthrough" class="nav-link">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-    </svg>
-    <span>Il diario</span>
-  </a>
+      <nav class="nav-links">
+        <a href="#funzionalita" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a2 2 0 0 1-2.83-2.83l-3.77 3.77ZM14.7 6.3a1 1 0 0 1 0-1.4L16.3 3.3a1 1 0 0 1 1.4 0m0 0a2 2 0 0 1 2.83 2.83M14.7 6.3 3 18a2 2 0 0 0 0 2.83l1.17 1.17a2 2 0 0 0 2.83 0L18.7 10.3"></path>
+          </svg>
+          <span data-i18n="nav.features">Funzionalità</span>
+        </a>
+        <a href="#sicurezza" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span data-i18n="nav.security">Sicurezza</span>
+        </a>
+        <a href="#esportazione" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <span data-i18n="nav.export">Esportazione</span>
+        </a>
+        <a href="#statistiche" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+          <span data-i18n="nav.stats">Statistiche</span>
+        </a>
+        <a href="#domande" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          <span data-i18n="nav.faq">Domande</span>
+        </a>
+      </nav>
 
-  <!-- Domande (Icona Punto Interrogativo / Cerchio) -->
-  <a href="#faq" class="nav-link">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <circle cx="12" cy="12" r="10"></circle>
-      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-      <line x1="12" y1="17" x2="12.01" y2="17"></line>
-    </svg>
-    <span>Domande</span>
-  </a>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="https://play.google.com/store/apps/details?id=com.edobardo.poesie&hl=it" target="_blank" class="btn btn-primary btn-sm nav-cta" data-i18n="btn.download">Scarica per Android</a>
+        
+        <!-- SELETTORE LINGUA -->
+        <div class="lang-select-wrap">
+          <select id="langSelect" class="lang-select" aria-label="Seleziona lingua">
+            <option value="it">🇮🇹 Italian</option>
+            <option value="en">🇺🇸 English</option>
+            <option value="de">🇩🇪 German</option>
+            <option value="es">🇪🇸 Spanish</option>
+            <option value="fr">🇫🇷 French</option>
+            <option value="ja">🇯🇵 Japanese</option>
+            <option value="ko">🇰🇷 Korean</option>
+            <option value="pt">🇵🇹 Portuguese</option>
+            <option value="ru">🇷🇺 Russian</option>
+            <option value="ar">🇸🇦 Arabic</option>
+            <option value="zh">🇨🇳 Chinese</option>
+          </select>
+        </div>
+      </div>
 
-  <!-- Instagram -->
-  <a class="instagram-link nav-link" href="https://www.instagram.com/poesie_app?igsh=MXBnN3R1MjRocXhheA==" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-    </svg>
-    <span>Instagram</span>
-  </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Apri il menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
 
-</nav>
-    <a class="button button-download header-cta" href="#download">Apri il diario</a>
-    <button class="nav-toggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobile-nav">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-inner">
+        <a href="#funzionalita" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a2 2 0 0 1-2.83-2.83l-3.77 3.77ZM14.7 6.3a1 1 0 0 1 0-1.4L16.3 3.3a1 1 0 0 1 1.4 0m0 0a2 2 0 0 1 2.83 2.83M14.7 6.3 3 18a2 2 0 0 0 0 2.83l1.17 1.17a2 2 0 0 0 2.83 0L18.7 10.3"></path>
+          </svg>
+          <span data-i18n="nav.features">Funzionalità</span>
+        </a>
+        <a href="#sicurezza" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span data-i18n="nav.security">Sicurezza</span>
+        </a>
+        <a href="#esportazione" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <span data-i18n="nav.export">Esportazione</span>
+        </a>
+        <a href="#statistiche" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+          <span data-i18n="nav.stats">Statistiche</span>
+        </a>
+        <a href="#domande" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          <span data-i18n="nav.faq">Domande</span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.edobardo.poesie&hl=it" target="_blank" class="btn btn-primary btn-sm">Scarica per Android</a>
+      </div>
+    </div>
   </div>
-  <nav id="mobile-nav" class="mobile-nav" aria-label="Navigazione mobile" hidden>
-  <a href="#features">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-      <polyline points="14 2 14 8 20 8"></polyline>
-      <line x1="16" y1="13" x2="8" y2="13"></line>
-      <line x1="16" y1="17" x2="8" y2="17"></line>
-      <polyline points="10 9 9 9 8 9"></polyline>
-    </svg>
-    <span>Pagine</span>
-  </a>
-  <a href="#walkthrough">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-    </svg>
-    <span>Il diario</span>
-  </a>
-  <a href="#faq">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <circle cx="12" cy="12" r="10"></circle>
-      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-      <line x1="12" y1="17" x2="12.01" y2="17"></line>
-    </svg>
-    <span>Domande</span>
-  </a>
-  <a class="instagram-link" href="https://www.instagram.com/poesie_app?igsh=MXBnN3R1MjRocXhheA==" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-    </svg>
-    <span>Instagram</span>
-  </a>
-  <a class="button button-download" href="#download">Apri il diario</a>
-</nav>
 </header>
 
-<main id="top">
+<!-- ============ HERO ============ -->
+<section id="top" class="hero">
+  <div class="wrap hero-grid">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <p class="eyebrow">Un diario, tenuto in silenzio</p>
-        <h1 class="hero-title">Uno spazio per le <span class="highlight">righe incompiute</span></h1>
-        <p class="hero-lead">Poesie custodisce le tue poesie come un cassetto custodisce le lettere, al sicuro nel tuo Google Drive, in attesa della prossima bozza.</p>
-        <div class="store-row">
-          <a class="store-link" href="https://play.google.com/store/apps/details?id=com.edobardo.poesie&hl=it"
+    <div>
+      <div class="eyebrow-row hero-in" style="animation-delay:.05s">
+        <img src="assets/logo.png" alt="">
+        <span data-i18n="hero.eyebrow">Ora disponibile su Google Play</span>
+      </div>
+
+      <h1 class="hero-title hero-in" data-i18n="hero.title" style="animation-delay:.15s">Every feeling,<br>written down.</h1>
+
+      <p class="hero-sub hero-in" data-i18n="hero.sub" style="animation-delay:.28s">Il tuo spazio personale e riservato per la poesia. Sincronizzazione trasparente, cifratura discreta e strumenti pensati per chi scrive.</p>
+
+      <div class="cta-row hero-in" style="animation-delay:.4s">
+        <a href="#scarica" data-i18n="hero.btn_download" class="btn btn-primary">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M4 2.5v19a1 1 0 0 0 1.53.85l15-9.5a1 1 0 0 0 0-1.7l-15-9.5A1 1 0 0 0 4 2.5z"/></svg>
+          Disponibile su Google Play
+        </a>
+        <a href="#funzionalita" data-i18n="hero.btn_discover" class="btn btn-ghost">Scopri l'app</a>
+      </div>
+
+      <p class="hero-note hero-in" data-i18n="hero.note" style="animation-delay:.5s">Le tue poesie restano tue. Sempre — anche offline.</p>
+    </div>
+
+    <div class="hero-visual hero-in" style="animation-delay:.3s">
+      <div class="phone-glow"></div>
+      <img src="assets/hero_phones.png" alt="Schermate dell'app Poesie: raccolta, statistiche e nuovo componimento" class="hero-phones float">
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SECTION 1 — SCRITTURA ============ -->
+<section id="funzionalita" class="section">
+  <div class="wrap feature-grid">
+
+    <div class="order-swap-1 reveal">
+      <div class="phone-duo align-left">
+        <div class="phone-window float-slow" style="--r:-3deg;">
+          <img src="assets/WritePoem_phone.png" alt="Editor di scrittura dell'app Poesie con modelli di poesia e timer">
+        </div>
+        <div class="phone-window small secondary right float" style="--r:4deg;animation-delay:.4s;">
+          <img src="assets/Homepage_phone.png" alt="Schermata principale dell'app Poesie">
+        </div>
+      </div>
+    </div>
+
+    <div class="order-swap-2 reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2 class="section-heading" data-i18n="feat1.heading">Scrivi quando l'ispirazione arriva.</h2>
+      <p class="section-sub" data-i18n="feat1.sub">Cattura ogni verso nell'istante in cui nasce</p>
+      <p class="section-text" data-i18n="feat1.text">Poesie propone un editor pulito, pensato per restare in secondo piano e lasciare spazio alle parole. Scegli tra modelli per haiku, sonetti o versi liberi, imposta un timer per la scrittura concentrata e, quando le parole non arrivano, lascia che sia l'app a offrirti uno spunto.</p>
+      <ul class="feat-list">
+        <li data-i18n="feat1.item1">Editor essenziale, senza distrazioni</li>
+        <li data-i18n="feat1.item2">Modelli per haiku, sonetti e versi liberi</li>
+        <li data-i18n="feat1.item3">Timer di scrittura e modalità Focus</li>
+        <li data-i18n="feat1.item4">Spunti creativi con "Inspire me"</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SECTION 2 — COLLEZIONI ============ -->
+<section id="collezioni" class="section">
+  <div class="wrap feature-grid">
+
+    <div class="reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2 class="section-heading" data-i18n="feat2.heading">Ogni raccolta, curata come un piccolo libro.</h2>
+      <p class="section-sub" data-i18n="feat2.sub">Organizza, distingui, ritrova ogni poesia</p>
+      <p class="section-text" data-i18n="feat2.text">Crea raccolte multiple per temi, stati d'animo o progetti. Aggiungi tag, segna le tue poesie preferite e scegli una copertina personalizzata per ogni raccolta, così da riconoscerla a colpo d'occhio nella tua libreria.</p>
+      <ul class="feat-list">
+        <li data-i18n="feat2.item1">Raccolte multiple e illimitate</li>
+        <li data-i18n="feat2.item2">Tag e filtri per ritrovare ogni verso</li>
+        <li data-i18n="feat2.item3">Preferiti in un tocco</li>
+        <li data-i18n="feat2.item4">Copertine personalizzate</li>
+      </ul>
+    </div>
+
+    <div class="reveal">
+      <div class="phone-duo align-right">
+        <div class="phone-window float-slow" style="--r:3deg;">
+          <img src="assets/Collection_phone.png" alt="Vista archivio delle raccolte di poesie">
+        </div>
+        <div class="phone-window small secondary left float" style="--r:-4deg;animation-delay:.5s;">
+          <img src="assets/CollectionSettings_phone.png" alt="Personalizzazione della copertina di una raccolta">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SECTION 3 — SICUREZZA ============ -->
+<section id="sicurezza" class="section band-deep">
+  <div class="wrap">
+    <div class="sec-intro reveal">
+      <div class="divider center"><span class="rule"></span><span class="diamond"></span><span class="rule"></span></div>
+      <h2 class="section-heading" data-i18n="sec.heading">Privato. Sempre protetto.</h2>
+      <p class="section-sub" data-i18n="sec.sub">Le tue parole restano solo tue</p>
+      <p class="section-text" data-i18n="sec.text">Ogni poesia è protetta da un livello di sicurezza pensato per chi scrive cose che non vuole condividere con nessuno. Blocco biometrico o PIN all'apertura, cifratura locale dei tuoi file e, se lo desideri, sincronizzazione cloud protetta sul tuo Google Drive personale.</p>
+    </div>
+
+    <div class="stat-grid reveal">
+      <div class="stat-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.4"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Z" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3 data-i18n="sec.card1_title">Blocco biometrico e PIN</h3>
+        <p data-i18n="sec.card1_desc">L'app si apre solo per te, con impronta, volto o codice personale.</p>
+      </div>
+      <div class="stat-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.4"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke-linecap="round"/></svg>
+        <h3 data-i18n="sec.card2_title">Cifratura locale dei file</h3>
+        <p data-i18n="sec.card2_desc">Le tue poesie vengono custodite sul dispositivo, cifrate.</p>
+      </div>
+      <div class="stat-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.4"><path d="M7 18a4 4 0 0 1-1-7.87A5.5 5.5 0 0 1 16.5 8a4 4 0 0 1 .5 8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3 data-i18n="sec.card3_title">Sincronizzazione su Drive</h3>
+        <p data-i18n="sec.card3_desc">Decidi tu se e cosa sincronizzare sul tuo Google Drive.</p>
+      </div>
+    </div>
+
+    <div class="sec-duo reveal">
+      <div class="phone-glow" style="left:20%;right:20%;"></div>
+      <div class="phone-window float" style="--r:-3deg;">
+        <img src="assets/Settings_phone.png" alt="Sincronizzazione con Google Drive nelle impostazioni">
+      </div>
+      <div class="phone-window lg float-slow" style="--r:2deg;">
+        <img src="assets/Lockpage_phone.png" alt="Schermata di blocco biometrico dell'app Poesie">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 4 — ESPORTAZIONE ============ -->
+<section id="esportazione" class="section">
+  <div class="wrap feature-grid">
+
+    <div class="order-swap-1 reveal">
+      <div class="phone-solo align-left">
+        <div class="phone-window float-slow" style="--r:-2deg;">
+          <img src="assets/ExportCollection_phone.png" alt="Menu di esportazione in PDF, ePub, Markdown e ZIP cifrato">
+        </div>
+      </div>
+    </div>
+
+    <div class="order-swap-2 reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2 class="section-heading" data-i18n="export.heading">Le tue parole, pronte per il mondo.</h2>
+      <p class="section-sub" data-i18n="export.sub">Esporta, stampa, condividi</p>
+      <p class="section-text" data-i18n="export.text">Trasforma le tue raccolte in una piccola antologia impaginata in PDF, oppure esportale in ePub, Markdown o pagina web. Per chi desidera la massima riservatezza, è disponibile anche un backup completo in ZIP cifrato.</p>
+      <ul class="feat-list">
+        <li data-i18n="export.item1">PDF impaginato in stile antologia</li>
+        <li data-i18n="export.item2">ePub, Markdown e pagina web</li>
+        <li data-i18n="export.item3">Backup completo in ZIP cifrato</li>
+        <li data-i18n="export.item4">Card grafiche pronte per i social</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SECTION 5 — STATISTICHE ============ -->
+<section id="statistiche" class="section">
+  <div class="wrap feature-grid">
+
+    <div class="reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2 class="section-heading" data-i18n="stats.heading">Guarda crescere il tuo percorso.</h2>
+      <p class="section-sub" data-i18n="stats.sub">Streak, statistiche annuali e il tuo Poetry Wrapped</p>
+      <p class="section-text" data-i18n="stats.text">Segui il tuo streak giornaliero, scopri quante poesie hai scritto ogni mese e ogni anno, e a fine anno ritrova il tuo Poetry Wrapped: un piccolo riepilogo poetico dei tuoi progressi.</p>
+      <ul class="feat-list">
+        <li data-i18n="stats.item1">Streak giornaliero e record personali</li>
+        <li data-i18n="stats.item2">Statistiche mensili e annuali</li>
+        <li data-i18n="stats.item3">Parole più usate nei tuoi versi</li>
+        <li data-i18n="stats.item4">Poetry Wrapped di fine anno</li>
+      </ul>
+    </div>
+
+    <div class="reveal">
+      <div class="phone-solo align-right">
+        <div class="phone-window float-slow" style="--r:2deg;">
+          <img src="assets/Statistics_phone.png" alt="Statistiche di scrittura e calendario annuale delle poesie">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SECTION 6 — DOMANDE ============ -->
+<section id="domande" class="section">
+  <div class="wrap">
+    <div class="sec-intro reveal">
+      <div class="divider center"><span class="rule"></span><span class="diamond"></span><span class="rule"></span></div>
+      <h2 class="section-heading" data-i18n="faq.title">Domande, poste in silenzio</h2>
+    </div>
+
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary><span data-i18n="faq.q1">Dove vengono custodite le mie poesie?</span></summary>
+        <p data-i18n="faq.a1">Nel tuo Google Drive. Poesie scrive lì direttamente, in nessun altro posto.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary><span data-i18n="faq.q2">Qualcun altro può leggere le mie bozze?</span></summary>
+        <p data-i18n="faq.a2">Solo se scegli di condividerle. Il diario si apre solo per te.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary><span data-i18n="faq.q3">Serve un account separato?</span></summary>
+        <p data-i18n="faq.a3">No. Poesie usa semplicemente l'account Google già collegato al tuo Drive.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary><span data-i18n="faq.q4">E se una poesia è scritta solo a metà?</span></summary>
+        <p data-i18n="faq.a4">Lasciala così com'è. Ti aspetterà sulla sua pagina finché non sarai pronto a tornare.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ CTA FINALE ============ -->
+<section id="scarica" class="section band-deep">
+  <div class="wrap">
+    <div class="final-cta reveal">
+      <img src="assets/logo.png" alt="">
+      <h2 class="section-heading" data-i18n="cta.heading">Inizia a scrivere oggi.</h2>
+      <p class="section-text" style="margin-left:auto;margin-right:auto;" data-i18n="cta.text">Poesie è gratuita e disponibile su Google Play. Il tuo spazio personale per la poesia ti sta aspettando.</p>
+      <a class="store-link" href="https://play.google.com/store/apps/details?id=com.edobardo.poesie&hl=it"
 		target="_blank" rel="noopener">
             <img class="store-badge" src="https://entro.work/assets/mockups/google-play.svg" alt="Disponibile su Google Play">
           </a>
-        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand">
+          <img src="assets/logo.png" alt="Poesie">
+          <span class="serif cream">Poesie</span>
+        </a>
+        <p data-i18n="footer.desc">Uno spazio silenzioso per la tua poesia. Scrivi, custodisci ed esporta i tuoi versi, in totale riservatezza.</p>
       </div>
-      <aside class="hero-aside">
-        <ul class="hero-index">
-          <li class="hero-index-row">
-            <span class="hero-index-num">01</span>
-            <span class="hero-index-label">Media 4.1</span>
-            <span class="hero-index-stars" aria-label="4.1 su 5 stelle">★★★★☆</span>
+
+      <div class="footer-col">
+        <h4 data-i18n="nav.app">App</h4>
+        <ul>
+          <li>
+            <a class="nav-link" href="#funzionalita">
+              <!-- Icona Chiave Inglese / Funzionalità -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a2 2 0 0 1-2.83-2.83l-3.77 3.77ZM14.7 6.3a1 1 0 0 1 0-1.4L16.3 3.3a1 1 0 0 1 1.4 0m0 0a2 2 0 0 1 2.83 2.83M14.7 6.3 3 18a2 2 0 0 0 0 2.83l1.17 1.17a2 2 0 0 0 2.83 0L18.7 10.3"></path>
+              </svg>
+              <span data-i18n="nav.features">Funzionalità</span>
+            </a>
           </li>
-          <li class="hero-index-row">
-            <span class="hero-index-num">02</span>
-            <span class="hero-index-label">Su Google Play</span>
+          <li>
+            <a class="nav-link" href="#sicurezza">
+              <!-- Icona Lucchetto / Sicurezza -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span data-i18n="nav.security">Sicurezza</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#esportazione">
+              <!-- Icona Export / Esportazione -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
+              <span data-i18n="nav.export">Esportazione</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#statistiche">
+              <!-- Icona Grafico / Statistiche -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+              <span data-i18n="nav.stats">Statistiche</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#domande">
+              <!-- Icona Domanda / Domande -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+              <span data-i18n="nav.faq">Domande</span>
+            </a>
           </li>
         </ul>
-      </aside>
-    </div>
-  </section>
-
-  <!-- HIGHLIGHTS -->
-  <section class="highlights">
-    <div class="container">
-      <p class="section-eyebrow">Ciò che resta vero, pagina dopo pagina</p>
-      <ul class="highlights-list">
-        <li class="highlight-item">
-          <span class="highlight-icon" aria-hidden="true">🔒</span>
-          <span>Custodito nel tuo Drive</span>
-        </li>
-        <li class="highlight-item">
-          <span class="highlight-icon" aria-hidden="true">🕊️</span>
-          <span>Nessun gergo, nessun disordine</span>
-        </li>
-        <li class="highlight-item">
-          <span class="highlight-icon" aria-hidden="true">📜</span>
-          <span>Spazio per ogni bozza</span>
-        </li>
-        <li class="highlight-item">
-          <span class="highlight-icon" aria-hidden="true">🤍</span>
-          <span>Pensato per scrivere in pace</span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- FEATURES -->
-  <section id="features" class="features">
-    <div class="container">
-      <h2 class="section-title">Come vengono custodite le pagine</h2>
-      <ul class="features-grid">
-        <li class="feature-card">
-          <div class="feature-icon" aria-hidden="true">☁️</div>
-          <h3>Scritto direttamente su Drive</h3>
-          <p>Ogni poesia che scrivi vive nel tuo Google Drive, non su un server sconosciuto.</p>
-        </li>
-        <li class="feature-card">
-          <div class="feature-icon" aria-hidden="true">🗂️</div>
-          <h3>Organizzato come un vero quaderno</h3>
-          <p>Raccogli i tuoi versi in collezioni, come faresti con le pagine per stagione o stato d'animo.</p>
-        </li>
-        <li class="feature-card">
-          <div class="feature-icon" aria-hidden="true">⏳</div>
-          <h3>Bozze lasciate incompiute, di proposito</h3>
-          <p>Ritorna su una riga a metà quando il resto arriverà.</p>
-        </li>
-        <li class="feature-card">
-          <div class="feature-icon" aria-hidden="true">🔐</div>
-          <h3>Niente viene condiviso senza di te</h3>
-          <p>Il diario resta tuo: apri, chiudi e portalo tra i dispositivi come preferisci.</p>
-        </li>
-        <li class="feature-card">
-          <div class="feature-icon" aria-hidden="true">🎙️</div>
-          <h3>Ascolta e detta i tuoi versi</h3>
-          <p>Usa la tua voce per scrivere e lascia che l'app ti legga ad alta voce le tue poesie.</p>
-        </li>
-        <li class="feature-card">
-          <div class="feature-icon" aria-hidden="true">🔄</div>
-          <h3>Il tempo non cancella</h3>
-          <p>Salvataggio automatico delle revisioni. Nessuna parola andrà perduta, anche dopo una riscrittura.</p>
-        </li>
-        <li class="feature-card">
-          <div class="feature-icon" aria-hidden="true">📖</div>
-          <h3>La tua Antologia in PDF</h3>
-          <p>Esporta l'intera raccolta in un libro impaginato in modo professionale, pronto per essere stampato.</p>
-        </li>
-        <li class="feature-card">
-          <div class="feature-icon" aria-hidden="true">📊</div>
-          <h3>Il tuo anno in poesia</h3>
-          <p>Esplora il tuo Poetry Wrapped per scoprire statistiche e trend della tua scrittura, pagina dopo pagina.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section class="gallery">
-    <div class="container">
-      <div class="gallery-header">
-        <h2 class="section-title">Alcuni scorci dell'app</h2>
-        <span class="gallery-count">8 foto</span>
       </div>
-      <div class="gallery-grid">
-        <button type="button" class="gallery-item" data-title="La prima pagina bianca" data-subtitle="Apri un foglio vuoto, pronto ad accogliere le tue parole">
-          <img src="images/screenshot-1.png" alt="Schermata dell'app 1" loading="lazy">
-        </button>
-        <button type="button" class="gallery-item" data-title="Scrivere una riga" data-subtitle="Le parole si depositano direttamente nel tuo Drive">
-          <img src="images/screenshot-2.png" alt="Schermata dell'app 2" loading="lazy">
-        </button>
-        <button type="button" class="gallery-item" data-title="Raccogliere la collezione" data-subtitle="Organizza i tuoi versi in cartelle, come pagine di un quaderno">
-          <img src="images/screenshot-3.png" alt="Schermata dell'app 3" loading="lazy">
-        </button>
-        <button type="button" class="gallery-item" data-title="Tornare su una bozza" data-subtitle="Riprendi il filo da dove l'avevi lasciato">
-          <img src="images/screenshot-4.png" alt="Schermata dell'app 4" loading="lazy">
-        </button>
-        <button type="button" class="gallery-item" data-title="Rileggere" data-subtitle="Sfoglia di nuovo le tue pagine, in silenzio">
-          <img src="images/screenshot-5.png" alt="Schermata dell'app 5" loading="lazy">
-        </button>
-        <button type="button" class="gallery-item" data-title="Custodito nel tuo Drive" data-subtitle="Ogni poesia resta al sicuro, solo tua">
-          <img src="images/screenshot-6.png" alt="Schermata dell'app 6" loading="lazy">
-        </button>
-        <button type="button" class="gallery-item" data-title="Niente viene condiviso senza di te" data-subtitle="Apri, chiudi e porta il diario tra i dispositivi">
-          <img src="images/screenshot-7.png" alt="Schermata dell'app 7" loading="lazy">
-        </button>
-        <button type="button" class="gallery-item" data-title="Spazio per ogni bozza" data-subtitle="Pensato per scrivere in pace, senza fretta">
-          <img src="images/screenshot-8.png" alt="Schermata dell'app 8" loading="lazy">
-        </button>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.info">Informazioni</h4>
+        <ul>
+          <li><a href="https://edobardo.github.io/poesie-app-privacy/" target="_blank" class="footer-link">
+              <!-- Icona Scudo / Privacy -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span data-i18n="footer.privacy">Privacy</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://edobardo.github.io/poesie-app-privacy/" target="_blank" class="footer-link">
+              <!-- Icona Documento / Termini d'uso -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              <span data-i18n="footer.terms">Termini d'uso</span>
+            </a>
+          </li>
+          <!-- <li><a class="nav-link" href="#">Contatti</a></li> -->
+          <li><!-- Instagram -->
+            <a class="instagram-link nav-link" href="https://www.instagram.com/poesie_app?igsh=MXBnN3R1MjRocXhheA==" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-  </section>
 
-  <!-- LIGHTBOX GALLERIA -->
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <div class="lightbox-topbar container">
-      <span class="lightbox-counter"><span id="lightbox-current">1</span> / <span id="lightbox-total">8</span></span>
-      <span class="lightbox-count-label" id="lightbox-count-label">8 foto</span>
+    <div class="divider center" style="max-width:100%;margin-top:64px;margin-bottom:36px;"><span class="rule"></span><span class="diamond"></span><span class="rule"></span></div>
+
+    <div class="footer-bottom">
+      <p data-i18n="footer.rights">© 2026 Poesie. Tutti i diritti riservati.</p>
+      <p class="quote muted-2">"Poetry is the story of what cannot be said"</p>
     </div>
-    <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Chiudi">&times;</button>
-    <button type="button" class="lightbox-arrow lightbox-arrow--prev" id="lightbox-prev" aria-label="Foto precedente">&#8249;</button>
-    <button type="button" class="lightbox-arrow lightbox-arrow--next" id="lightbox-next" aria-label="Foto successiva">&#8250;</button>
-    <div class="lightbox-card">
-      <h3 class="lightbox-title" id="lightbox-title"></h3>
-      <p class="lightbox-subtitle" id="lightbox-subtitle"></p>
-      <div class="lightbox-frame">
-        <img id="lightbox-image" src="" alt="">
-      </div>
-    </div>
-    <div class="lightbox-dots" id="lightbox-dots"></div>
   </div>
-
-  <!-- WALKTHROUGH -->
-  <section id="walkthrough" class="walkthrough">
-    <div class="container">
-      <h2 class="section-title">Una passeggiata tra le pagine</h2>
-
-      <div class="walkthrough-row">
-        <div class="walkthrough-art">
-          <img src="images/screenshot-1.png" alt="La prima pagina bianca" loading="lazy">
-        </div>
-        <div class="walkthrough-copy">
-          <span class="walkthrough-num">01</span>
-          <h3>La prima pagina bianca</h3>
-          <p>Apri un foglio vuoto, in attesa come la carta prima che l'inchiostro la tocchi.</p>
-        </div>
-      </div>
-
-      <div class="walkthrough-row walkthrough-row--reverse">
-        <div class="walkthrough-art">
-          <img src="images/screenshot-2.png" alt="Scrivere una riga" loading="lazy">
-        </div>
-        <div class="walkthrough-copy">
-          <span class="walkthrough-num">02</span>
-          <h3>Scrivere una riga</h3>
-          <p>Scrivi liberamente, sapendo che le parole si depositano direttamente nel tuo Drive.</p>
-        </div>
-      </div>
-
-      <div class="walkthrough-row">
-        <div class="walkthrough-art">
-          <img src="images/screenshot-3.png" alt="Raccogliere la collezione" loading="lazy">
-        </div>
-        <div class="walkthrough-copy">
-          <span class="walkthrough-num">03</span>
-          <h3>Raccogliere la collezione</h3>
-          <p>Organizza le tue poesie in cartelle, la quieta catalogazione dei piccoli versi di una vita.</p>
-        </div>
-      </div>
-
-      <div class="walkthrough-row walkthrough-row--reverse">
-        <div class="walkthrough-art">
-          <img src="images/screenshot-4.png" alt="Tornare su una bozza" loading="lazy">
-        </div>
-        <div class="walkthrough-copy">
-          <span class="walkthrough-num">04</span>
-          <h3>Tornare su una bozza</h3>
-          <p>Riapri ciò che è rimasto incompiuto e riprendi il filo da dove l'avevi lasciato.</p>
-        </div>
-      </div>
-
-      <div class="walkthrough-row">
-        <div class="walkthrough-art">
-          <img src="images/screenshot-5.png" alt="Rileggere" loading="lazy">
-        </div>
-        <div class="walkthrough-copy">
-          <span class="walkthrough-num">05</span>
-          <h3>Rileggere</h3>
-          <p>Sfoglia di nuovo le tue pagine, nello stesso silenzio in cui le hai scritte.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="faq">
-    <div class="container faq-container">
-      <h2 class="section-title">Domande, poste in silenzio</h2>
-
-      <details class="faq-item">
-        <summary>Dove vengono custodite le mie poesie?</summary>
-        <p>Nel tuo Google Drive. Poesie scrive lì direttamente, in nessun altro posto.</p>
-      </details>
-
-      <details class="faq-item">
-        <summary>Qualcun altro può leggere le mie bozze?</summary>
-        <p>Solo se scegli di condividerle. Il diario si apre solo per te.</p>
-      </details>
-
-      <details class="faq-item">
-        <summary>Serve un account separato?</summary>
-        <p>No. Poesie usa semplicemente l'account Google già collegato al tuo Drive.</p>
-      </details>
-
-      <details class="faq-item">
-        <summary>E se una poesia è scritta solo a metà?</summary>
-        <p>Lasciala così com'è. Ti aspetterà sulla sua pagina finché non sarai pronto a tornare.</p>
-      </details>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section id="download" class="cta">
-    <div class="container cta-content">
-      <img class="cta-icon" src="images/logo.png" alt="">
-      <h2>Inizia una pagina stasera</h2>
-      <p class="cta-sub">Custodia silenziosa, per parole che stanno ancora trovando la loro forma.</p>
-      <div class="store-row">
-        <a class="store-link" href="https://play.google.com/store/apps/details?id=com.edobardo.poesie&hl=it"
-		target="_blank" rel="noopener">
-          <img class="store-badge" src="https://entro.work/assets/mockups/google-play.svg" alt="Disponibile su Google Play">
-        </a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      Poesie
-      <p class="footer-tagline">Un diario di poesia custodito nel tuo Google Drive.</p>
-    </div>
-    <nav class="main-nav" aria-label="Navigazione principale">
-  
-  <!-- Pagine (Icona Documento/File) -->
-  <a href="#features" class="nav-link">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-      <polyline points="14 2 14 8 20 8"></polyline>
-      <line x1="16" y1="13" x2="8" y2="13"></line>
-      <line x1="16" y1="17" x2="8" y2="17"></line>
-      <polyline points="10 9 9 9 8 9"></polyline>
-    </svg>
-    <span>Pagine</span>
-  </a>
-
-  <!-- Il diario (Icona Libro) -->
-  <a href="#walkthrough" class="nav-link">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-    </svg>
-    <span>Il diario</span>
-  </a>
-
-  <!-- Domande (Icona Punto Interrogativo / Cerchio) -->
-  <a href="#faq" class="nav-link">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <circle cx="12" cy="12" r="10"></circle>
-      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-      <line x1="12" y1="17" x2="12.01" y2="17"></line>
-    </svg>
-    <span>Domande</span>
-  </a>
-
-  <!-- Instagram -->
-  <a class="instagram-link nav-link" href="https://www.instagram.com/poesie_app?igsh=MXBnN3R1MjRocXhheA==" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-    </svg>
-    <span>Instagram</span>
-  </a>
-
-</nav>
-  </div>
-  <div class="container footer-bottom">
-  <p>&copy; 2026 Poesie</p>
-  
-  <a href="https://edobardo.github.io/poesie-app-privacy/" target="_blank" rel="noopener" class="footer-link">
-    <!-- Icona Scudo / Privacy -->
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-    </svg>
-    <span>Privacy</span>
-  </a>
-</div>
 </footer>
 
 <script>
-(function () {
-  var toggleBtn = document.querySelector(".nav-toggle");
-  var mobileNav = document.getElementById("mobile-nav");
+  var header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function(){
+    header.classList.toggle('scrolled', window.scrollY > 12);
+  }, { passive:true });
 
-  function closeMobileNav() {
-    mobileNav.hidden = true;
-    toggleBtn.setAttribute("aria-expanded", "false");
-    toggleBtn.classList.remove("is-active");
-    document.body.style.overflow = "";
+  var menuBtn = document.getElementById('menuBtn');
+  var mobileMenu = document.getElementById('mobileMenu');
+
+  // Controllo di sicurezza per evitare errori se mobileMenu non esiste nell'HTML
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function(){ 
+      mobileMenu.classList.toggle('open'); 
+    });
+    
+    mobileMenu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ 
+        mobileMenu.classList.remove('open'); 
+      });
+    });
   }
 
-  function openMobileNav() {
-    mobileNav.hidden = false;
-    toggleBtn.setAttribute("aria-expanded", "true");
-    toggleBtn.classList.add("is-active");
-    document.body.style.overflow = "hidden";
-  }
+  var reveals = document.querySelectorAll('.reveal');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(function(el){ io.observe(el); });
+</script>
 
-  toggleBtn.addEventListener("click", function () {
-    var isOpen = toggleBtn.getAttribute("aria-expanded") === "true";
-    if (isOpen) {
-      closeMobileNav();
-    } else {
-      openMobileNav();
+<script>
+  var langCache = {};
+
+  async function setLanguage(lang) {
+    try {
+      if (!langCache[lang]) {
+        var response = await fetch('locales/' + lang + '.json');
+        if (!response.ok) throw new Error('File lingua non trovato: ' + lang);
+        langCache[lang] = await response.json();
+      }
+
+      var translations = langCache[lang];
+
+      document.documentElement.lang = lang;
+      if (lang === 'ar') {
+        document.documentElement.setAttribute('dir', 'rtl');
+      } else {
+        document.documentElement.removeAttribute('dir');
+      }
+
+      var elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        if (translations[key] !== undefined) {
+          el.innerHTML = translations[key];
+        }
+      });
+
+      localStorage.setItem('preferred_lang', lang);
+
+    } catch (error) {
+      console.error('Errore caricamento lingua:', error);
+      if (lang !== 'it') setLanguage('it');
     }
-  });
+  }
 
-  Array.prototype.slice.call(mobileNav.querySelectorAll("a")).forEach(function (link) {
-    link.addEventListener("click", closeMobileNav);
-  });
-
-  window.addEventListener("resize", function () {
-    if (window.innerWidth >= 900 && !mobileNav.hidden) {
-      closeMobileNav();
-    }
-  });
-})();
-
-(function () {
-  var items = Array.prototype.slice.call(document.querySelectorAll(".gallery-item"));
-  var lightbox = document.getElementById("lightbox");
-  var imgEl = document.getElementById("lightbox-image");
-  var titleEl = document.getElementById("lightbox-title");
-  var subtitleEl = document.getElementById("lightbox-subtitle");
-  var currentEl = document.getElementById("lightbox-current");
-  var totalEl = document.getElementById("lightbox-total");
-  var countLabelEl = document.getElementById("lightbox-count-label");
-  var dotsEl = document.getElementById("lightbox-dots");
-  var prevBtn = document.getElementById("lightbox-prev");
-  var nextBtn = document.getElementById("lightbox-next");
-  var closeBtn = document.getElementById("lightbox-close");
-  var index = 0;
-
-  totalEl.textContent = items.length;
-  countLabelEl.textContent = items.length + " foto";
-
-  items.forEach(function (item, i) {
-    dotsEl.appendChild(makeDot(i));
-    item.addEventListener("click", function () {
-      openLightbox(i);
+  var langSelect = document.getElementById('langSelect');
+  if (langSelect) {
+    langSelect.addEventListener('change', function(e) {
+      setLanguage(e.target.value);
     });
-  });
 
-  function makeDot(i) {
-    var dot = document.createElement("span");
-    dot.className = "lightbox-dot";
-    dot.addEventListener("click", function () {
-      show(i);
-    });
-    return dot;
+    var userBrowserLang = navigator.language.slice(0, 2);
+    var supportedLangs = Array.from(langSelect.options).map(function(o) { return o.value; });
+    var defaultLang = supportedLangs.includes(userBrowserLang) ? userBrowserLang : 'it';
+    var initialLang = localStorage.getItem('preferred_lang') || defaultLang;
+
+    langSelect.value = initialLang;
+    setLanguage(initialLang);
   }
-
-  function openLightbox(i) {
-    show(i);
-    lightbox.classList.add("is-open");
-    lightbox.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeLightbox() {
-    lightbox.classList.remove("is-open");
-    lightbox.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-  }
-
-  function show(i) {
-    index = (i + items.length) % items.length;
-    var item = items[index];
-    var img = item.querySelector("img");
-    imgEl.src = img.src;
-    imgEl.alt = img.alt;
-    titleEl.textContent = item.getAttribute("data-title") || "";
-    subtitleEl.textContent = item.getAttribute("data-subtitle") || "";
-    currentEl.textContent = index + 1;
-
-    var dots = dotsEl.querySelectorAll(".lightbox-dot");
-    dots.forEach(function (dot, di) {
-      dot.classList.toggle("is-active", di === index);
-    });
-  }
-
-  prevBtn.addEventListener("click", function () { show(index - 1); });
-  nextBtn.addEventListener("click", function () { show(index + 1); });
-  closeBtn.addEventListener("click", closeLightbox);
-
-  lightbox.addEventListener("click", function (e) {
-    if (e.target === lightbox) closeLightbox();
-  });
-
-  document.addEventListener("keydown", function (e) {
-    if (!lightbox.classList.contains("is-open")) return;
-    if (e.key === "Escape") closeLightbox();
-    if (e.key === "ArrowLeft") show(index - 1);
-    if (e.key === "ArrowRight") show(index + 1);
-  });
-})();
 </script>
 </body>
 </html>
