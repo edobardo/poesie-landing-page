@@ -70,17 +70,17 @@
         <!-- SELETTORE LINGUA -->
         <div class="lang-select-wrap">
           <select id="langSelect" class="lang-select" aria-label="Seleziona lingua">
-            <option value="it">🇮🇹 Italian</option>
-            <option value="en">🇺🇸 English</option>
-            <option value="de">🇩🇪 German</option>
-            <option value="es">🇪🇸 Spanish</option>
-            <option value="fr">🇫🇷 French</option>
-            <option value="ja">🇯🇵 Japanese</option>
-            <option value="ko">🇰🇷 Korean</option>
-            <option value="pt">🇵🇹 Portuguese</option>
-            <option value="ru">🇷🇺 Russian</option>
-            <option value="ar">🇸🇦 Arabic</option>
-            <option value="zh">🇨🇳 Chinese</option>
+            <option data-i18n="nav.lang.it" value="it">🇮🇹 Italian</option>
+            <option data-i18n="nav.lang.en" value="en">🇺🇸 English</option>
+            <option data-i18n="nav.lang.de" value="de">🇩🇪 German</option>
+            <option data-i18n="nav.lang.es" value="es">🇪🇸 Spanish</option>
+            <option data-i18n="nav.lang.fr" value="fr">🇫🇷 French</option>
+            <option data-i18n="nav.lang.ja" value="ja">🇯🇵 Japanese</option>
+            <option data-i18n="nav.lang.ko" value="ko">🇰🇷 Korean</option>
+            <option data-i18n="nav.lang.pt" value="pt">🇵🇹 Portuguese</option>
+            <option data-i18n="nav.lang.ru" value="ru">🇷🇺 Russian</option>
+            <option data-i18n="nav.lang.ar" value="ar">🇸🇦 Arabic</option>
+            <option data-i18n="nav.lang.zh" value="zh">🇨🇳 Chinese</option>
           </select>
         </div>
       </div>
@@ -447,7 +447,7 @@
       <div class="footer-col">
         <h4 data-i18n="footer.info">Informazioni</h4>
         <ul>
-          <li><a href="privacy.html" class="footer-link">
+          <li><a href="privacy_en.html" class="footer-link">
               <!-- Icona Scudo / Privacy -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
@@ -456,7 +456,7 @@
             </a>
           </li>
           <li>
-            <a href="privacy.html" class="footer-link">
+            <a href="privacy_en.html" class="footer-link">
               <!-- Icona Documento / Termini d'uso -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -524,9 +524,9 @@
   reveals.forEach(function(el){ io.observe(el); });
 </script>
 
+<!-- Mantiene la tua funzione setLanguage per la landing page -->
 <script>
   var langCache = {};
-
   async function setLanguage(lang) {
     try {
       if (!langCache[lang]) {
@@ -534,46 +534,23 @@
         if (!response.ok) throw new Error('File lingua non trovato: ' + lang);
         langCache[lang] = await response.json();
       }
-
       var translations = langCache[lang];
-
       document.documentElement.lang = lang;
       if (lang === 'ar') {
         document.documentElement.setAttribute('dir', 'rtl');
       } else {
         document.documentElement.removeAttribute('dir');
       }
-
-      var elements = document.querySelectorAll('[data-i18n]');
-      elements.forEach(function(el) {
+      document.querySelectorAll('[data-i18n]').forEach(function(el) {
         var key = el.getAttribute('data-i18n');
-        if (translations[key] !== undefined) {
-          el.innerHTML = translations[key];
-        }
+        if (translations[key] !== undefined) el.innerHTML = translations[key];
       });
-
-      localStorage.setItem('preferred_lang', lang);
-
     } catch (error) {
       console.error('Errore caricamento lingua:', error);
-      if (lang !== 'it') setLanguage('it');
     }
   }
-
-  var langSelect = document.getElementById('langSelect');
-  if (langSelect) {
-    langSelect.addEventListener('change', function(e) {
-      setLanguage(e.target.value);
-    });
-
-    var userBrowserLang = navigator.language.slice(0, 2);
-    var supportedLangs = Array.from(langSelect.options).map(function(o) { return o.value; });
-    var defaultLang = supportedLangs.includes(userBrowserLang) ? userBrowserLang : 'it';
-    var initialLang = localStorage.getItem('preferred_lang') || defaultLang;
-
-    langSelect.value = initialLang;
-    setLanguage(initialLang);
-  }
 </script>
+
+<script src="assets/js/lang-switch.js"></script>
 </body>
 </html>

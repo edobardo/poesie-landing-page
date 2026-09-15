@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>隐私政策 — Poesie</title>
+<meta name="description" content="Poesie 隐私政策 — 了解我们如何处理您的数据、应用所需的权限以及 Premium 版本的工作原理。">
+<link rel="icon" type="image/png" href="assets/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <div class="nav-row">
+      <a href="index.html#top" class="brand">
+        <img src="assets/logo.png" alt="Poesie">
+        <span class="serif cream">Poesie</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html#funzionalita" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a2 2 0 0 1-2.83-2.83l-3.77 3.77ZM14.7 6.3a1 1 0 0 1 0-1.4L16.3 3.3a1 1 0 0 1 1.4 0m0 0a2 2 0 0 1 2.83 2.83M14.7 6.3 3 18a2 2 0 0 0 0 2.83l1.17 1.17a2 2 0 0 0 2.83 0L18.7 10.3"></path>
+          </svg>
+          <span data-i18n="nav.features">功能</span>
+        </a>
+        <a href="index.html#sicurezza" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span data-i18n="nav.security">安全</span>
+        </a>
+        <a href="index.html#esportazione" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <span data-i18n="nav.export">导出</span>
+        </a>
+        <a href="index.html#statistiche" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+          <span data-i18n="nav.stats">统计</span>
+        </a>
+        <a href="index.html#domande" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          <span data-i18n="nav.faq">常见问题</span>
+        </a>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="https://play.google.com/store/apps/details?id=com.edobardo.poesie&hl=zh" target="_blank" class="btn btn-primary btn-sm nav-cta" data-i18n="btn.download">Android 版下载</a>
+
+        <!-- LANGUAGE SELECTOR -->
+        <div class="lang-select-wrap">
+          <select id="langSelect" class="lang-select" aria-label="选择语言">
+            <option value="it">🇮🇹 意大利语</option>
+            <option value="en">🇺🇸 英语</option>
+            <option value="de">🇩🇪 德语</option>
+            <option value="es">🇪🇸 西班牙语</option>
+            <option value="fr">🇫🇷 法语</option>
+            <option value="ja">🇯🇵 日语</option>
+            <option value="ko">🇰🇷 韩语</option>
+            <option value="pt">🇵🇹 葡萄牙语</option>
+            <option value="ru">🇷🇺 俄语</option>
+            <option value="ar">🇸🇦 阿拉伯语</option>
+            <option value="zh" selected>🇨🇳 中文</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="menu-btn" id="menuBtn" aria-label="打开菜单">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-inner">
+        <a href="index.html#funzionalita" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a2 2 0 0 1-2.83-2.83l-3.77 3.77ZM14.7 6.3a1 1 0 0 1 0-1.4L16.3 3.3a1 1 0 0 1 1.4 0m0 0a2 2 0 0 1 2.83 2.83M14.7 6.3 3 18a2 2 0 0 0 0 2.83l1.17 1.17a2 2 0 0 0 2.83 0L18.7 10.3"></path>
+          </svg>
+          <span data-i18n="nav.features">功能</span>
+        </a>
+        <a href="index.html#sicurezza" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span data-i18n="nav.security">安全</span>
+        </a>
+        <a href="index.html#esportazione" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <span data-i18n="nav.export">导出</span>
+        </a>
+        <a href="index.html#statistiche" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+          <span data-i18n="nav.stats">统计</span>
+        </a>
+        <a href="index.html#domande" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          <span data-i18n="nav.faq">常见问题</span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.edobardo.poesie&hl=zh" target="_blank" class="btn btn-primary btn-sm">Android 版下载</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PRIVACY HERO ============ -->
+<section id="top" class="privacy-hero">
+  <div class="wrap">
+    <!-- LANGUAGE NOTICE -->
+    <!-- <div class="privacy-notice hero-in" style="animation-delay:.42s">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+      <span data-i18n="page.translations">隐私政策的其他语言翻译即将推出。</span>
+    </div> -->
+
+    <div class="eyebrow-row hero-in" style="animation-delay:.05s">
+      <img src="assets/logo.png" alt="">
+      <span>隐私政策</span>
+    </div>
+
+    <h1 class="privacy-title hero-in" style="animation-delay:.15s">您的诗作<br>始终安全无虞。</h1>
+
+    <p class="section-sub hero-in" style="animation-delay:.25s">Poesie 如何处理您的数据</p>
+
+    <p class="section-text hero-in" style="animation-delay:.35s;max-width:56ch;">我们不会在服务器上收集或存储您的诗歌文本。您的作品集仅保存在您的个人设备和个人 Google 云端硬盘账号中。</p>
+
+    <div class="privacy-badge hero-in" style="animation-delay:.50s">
+      <span class="diamond"></span>
+      最后更新：2026 年 9 月
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRIVACY ARTICLE ============ -->
+<section class="privacy-article">
+  <div class="wrap">
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>简介</h2>
+      <p>Poesie 是一款 Android 移动应用，旨在让用户撰写、整理和保存个人诗歌集，并可通过 Google 云端硬盘进行同步。应用支持多个独立的诗集，每个诗集都有专属封面和云端硬盘上的独立文件。</p>
+      <p>本应用提供免费版和 <strong>Premium</strong> 版（可通过 Google Play 应用内一次性购买激活）。本政策旨在说明我们处理哪些数据、处理目的以及您作为用户所享有的权利。</p>
+      <div class="privacy-highlight"><p>开发者不会在其服务器上收集或存储您的诗歌文本。所有诗集均完全保存在您的设备和个人 Google 云端硬盘中。</p></div>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>数据控制器</h2>
+      <p>数据控制器为：</p>
+      <ul>
+        <li><strong>Edoardo Stoffa</strong> — 独立开发者</li>
+        <li>电子邮件：<a href="mailto:supporto.poesie.app@gmail.com">supporto.poesie.app@gmail.com</a></li>
+      </ul>
+      <p>如有任何与隐私相关的问题，您可以通过上述电子邮件地址与我们联系。</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>处理的数据</h2>
+      <p>本应用仅处理向您提供服务所必需的以下数据：</p>
+      <ul>
+        <li>Google 账号的电子邮件地址（连接至云端硬盘后显示在设置中）</li>
+        <li>每个诗集的 <strong>.docx</strong> 文件（由应用在您的个人 Google 云端硬盘中创建/更新；权限范围：<em>drive.file</em>）</li>
+        <li>OAuth 2.0 授权令牌（使用系统安全机制安全存储在本地）</li>
+        <li>应用偏好设置（例如选择的语言、主题、Premium 激活状态、诗集列表）</li>
+        <li>通过系统文件选择器选择的自定义封面（存储在应用的受保护目录中）</li>
+        <li>锁屏密码：应用仅在受保护存储中保存加密的<strong>哈希值（Hash）</strong>，绝不会保存明文密码</li>
+        <li>存储在受保护存储中的恢复代码，用于在忘记密码时重置访问权限</li>
+        <li><strong>Premium 购买令牌</strong>（Google Play 购买令牌）：存储在设备的受保护存储中，用于通过 Google Play 结算服务验证购买，不会共享给开发者</li>
+        <li>加密的本地备份文件（带密码保护的 ZIP 压缩包）：仅根据用户请求生成，保存在本地缓存中，绝不传输给第三方</li>
+      </ul>
+      <p>任何数据均不会存储在开发者所有的服务器上。</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>数据处理的目的与法律依据</h2>
+      <p>数据处理出于以下目的：</p>
+      <ul>
+        <li>Google 云端硬盘上诗集的<strong>同步与备份</strong></li>
+        <li><strong>安全功能</strong>（通过 PIN 码或生物识别解锁应用、恢复代码、本地文件加密和隐私保护屏幕）</li>
+        <li><strong>提供请求的功能</strong>（自定义封面、语言设置、主题、标签、收藏夹、连续创作天数组件、写作目标、本地备份、生成 PDF 诗集、统计数据和“Poetry Wrapped”本地处理）</li>
+        <li><strong>本地通知</strong>（提醒保持连续写作记录，设备重启后会自动重新排期）</li>
+        <li><strong>管理应用内购买</strong>（通过 Google Play 结算服务验证和恢复 Premium 购买）</li>
+      </ul>
+      <div class="privacy-highlight"><p>主要的法律依据是 GDPR 第 6 条第 1 款 (b) 项（履行合同或提供用户请求的服务）。本地安全功能完全旨在保护您设备上的数据。</p></div>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Google 云端硬盘</h2>
+      <p>应用使用 Google Drive API，并受严格的 <strong>drive.file</strong> 权限范围限制。这意味着应用仅能访问由自身创建的文件。</p>
+      <ul>
+        <li>应用无法读取您 Google 云端硬盘中的其他文件</li>
+        <li>应用无法修改或删除由其他程序创建的文件</li>
+        <li>Poesie.docx 文件完全归您所有并在您的控制之下</li>
+        <li>您随时可以通过 Google 账号设置撤销应用的访问权限</li>
+      </ul>
+      <div class="privacy-highlight"><p>您随时可以在 <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" aria-label="管理 Google 应用权限（在新标签页中打开）">myaccount.google.com/permissions</a> 页面管理或撤销应用权限。</p></div>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>本地存储与安全</h2>
+      <p>以下数据存储在应用的私有本地文件夹中，受到操作系统的保护，其他应用无法访问：</p>
+      <ul>
+        <li>OAuth 2.0 令牌（位于操作系统的安全存储中）</li>
+        <li>本地缓存中的诗集文件（<strong>经应用采用 AES 标准加密</strong>；解密后的副本会在应用进入后台或被安全屏幕覆盖时自动删除）</li>
+        <li>偏好设置（语言、主题、Premium 状态、诗集列表及相关选项）</li>
+        <li>自定义封面（仅限用户明确选择的文件）</li>
+        <li>受保护存储（SecureStorage）中的密码哈希和恢复代码</li>
+        <li>存储在受保护存储中的 Premium 购买令牌，用于通过 Google Play 进行本地验证</li>
+        <li>仅在明确要求时生成的本地备份文件（由用户设置密码加密的 ZIP 文件）</li>
+      </ul>
+      <p>这些数据会在卸载应用时自动删除。您也可以通过在设置菜单中选择“断开连接”来结束云端硬盘会话。</p>
+      <div class="privacy-highlight"><p>所有网络传输（应用 ←→ Google）均严格通过 HTTPS (TLS) 加密安全连接进行。</p></div>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>所需的权限</h2>
+      <p>应用仅请求保证其正常运行所需的最小限度权限：</p>
+      <div class="privacy-table-wrap">
+        <table class="privacy-table" aria-label="应用所需的权限列表">
+          <thead>
+            <tr><th scope="col">权限</th><th scope="col">用途 / 原因</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>INTERNET</td><td>连接到 Google API 进行身份验证和云端硬盘同步，以及与 Google Play 交互以验证 Premium 状态</td></tr>
+            <tr><td>ACCESS_NETWORK_STATE</td><td>检查网络状态（例如显示“离线/在线”状态）</td></tr>
+            <tr><td>系统文件选择器</td><td>选择封面：访问权限仅限于用户通过系统界面明确选择的文件</td></tr>
+            <tr><td>android.permission.USE_BIOMETRIC / android.permission.USE_FINGERPRINT</td><td>启用生物识别（指纹 / 面部识别）应用锁功能</td></tr>
+            <tr><td>android.permission.POST_NOTIFICATIONS</td><td>发送连续写作天数的提醒通知</td></tr>
+            <tr><td>android.permission.WAKE_LOCK</td><td>在安排每日通知任务期间保持处理器处于活动状态</td></tr>
+            <tr><td>android.permission.RECEIVE_BOOT_COMPLETED</td><td>设备重启后重新计划和恢复通知</td></tr>
+            <tr><td>android.permission.VIBRATE</td><td>接收通知时提供震动反馈</td></tr>
+            <tr><td>android.permission.SCHEDULE_EXACT_ALARM</td><td>确保即使在省电模式下也能在精准时间发送通知</td></tr>
+            <tr><td>android.permission.RECORD_AUDIO</td><td>使用麦克风进行语音输入（语音转文字）。开发者不会保存或传输语音数据，语音由系统的语音识别服务处理</td></tr>
+            <tr><td>com.android.vending.BILLING</td><td>通过 Google Play 结算服务管理永久 Premium 版的购买</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>所有权限均不会用于上述说明之外的其他目的。</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Premium 版本与应用内购买</h2>
+      <p>Poesie 提供通过 Google Play 结算服务进行应用内一次性购买（One-Time Purchase）的功能。</p>
+      <p>激活 Premium 版本可解锁额外功能（更多主题、高级编辑工具及扩展导出选项）。这些功能完全在设备本地运行，无需注册外部账号。</p>
+      <p>关于 Premium 购买，应用会处理以下数据：</p>
+      <ul>
+        <li><strong>购买令牌</strong>：由 Google Play 生成并保存在设备受保护存储（<em>SecureStorage</em>）中的标识符。仅用于通过 Google Play Billing API 验证购买的有效性，除 Google LLC 和开发者外，不会共享给第三方。</li>
+        <li><strong>Premium 状态</strong>：保存在本地设置中的布尔值（Boolean），用于在不同会话间维持激活状态，并在应用启动时定期通过 Google Play 校验。</li>
+      </ul>
+      <div class="privacy-highlight"><p>开发者不会直接处理或存储银行或支付数据。所有财务交易均由 Google Play 商店根据其政策进行处理。欲了解更多信息，请参阅 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label="Google 隐私权政策（在新标签页中打开）">Google 隐私权政策</a>。</p></div>
+      <p>在重新安装或更换新设备时，可通过应用内的<strong>“恢复购买”</strong>功能无额外费用地恢复已购项目。</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>与第三方共享数据</h2>
+      <p>开发者不会将用户的个人数据出售、转让或共享给第三方。</p>
+      <p>为了保障技术运行而集成的第三方服务：</p>
+      <ul>
+        <li><strong>Google LLC</strong> — OAuth 2.0 身份验证与 Google 云端硬盘数据存储。<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label="Google 隐私权政策（在新标签页中打开）">Google 隐私权政策</a></li>
+        <li><strong>Google LLC / Google Play</strong> — 通过 Google Play Billing 管理支付以及应用内评价请求。购买令牌仅传输给 Google 用于验证 Premium 许可。<a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer" aria-label="Google Play 服务条款（在新标签页中打开）">Google Play 服务条款</a></li>
+      </ul>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>数据保留期限</h2>
+      <ul>
+        <li>内容 (Poesie.docx) 将保存在您的 Google 云端硬盘中，直到您主动将其删除</li>
+        <li>OAuth 令牌保留在设备上，直到您退出账号或卸载应用</li>
+        <li>恢复代码保留在设备上，直到用于重置访问权限或卸载应用</li>
+        <li>Premium 购买令牌保留在设备上直到卸载应用；如果通过 Google Play 退款或取消购买，令牌将被自动清除</li>
+      </ul>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>用户权利 (GDPR)</h2>
+      <p>作为数据主体，根据 GDPR 第 15-22 条，您有权行使以下权利：</p>
+      <ul>
+        <li><strong>访问权</strong> — 确认您的数据是否正在被处理并获取其副本</li>
+        <li><strong>更正权</strong> — 请求更正不准确或不完整的数据</li>
+        <li><strong>删除权（“被遗忘权”）</strong> — 请求删除您的个人数据</li>
+        <li><strong>限制处理权</strong> — 在特定情况下请求限制数据处理</li>
+        <li><strong>数据可携权</strong> — 以结构化、通用且机器可读的格式接收您的数据</li>
+        <li><strong>反对权</strong> — 在适用情况下反对处理您的数据</li>
+        <li><strong>申诉权</strong> — 向主管数据保护监管机构提出申诉（在意大利为 <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer" aria-label="意大利数据保护局网站（在新标签页中打开）">Garante Privacy</a>，或您所在国家/地区的相关监管机构）</li>
+      </ul>
+      <p>如需行使上述任何权利，请通过“数据控制器”部分列出的电子邮件与我们联系。</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>未成年人隐私保护</h2>
+      <p>Poesie 不面向 14 岁以下的儿童。开发者不会故意收集未成年人的数据。根据 GDPR，处理未成年人数据需要取得父母或法定监护人的同意。</p>
+      <p>通过 Google Play 进行应用内购买需要拥有有效的 Google 账号。父母对购买许可的管理将遵循 Google Play 和 Google Family Link 的规则。</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Cookie 及类似技术</h2>
+      <p>Poesie 移动应用<strong>不使用 Cookie 或追踪技术</strong>。</p>
+      <p>本网站可能会使用托管服务所需的必要技术性 Cookie。绝不使用用于营销或画像分析的 Cookie。</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>隐私政策的变更</h2>
+      <p>开发者保留随时修改本隐私政策的权利。修改后的政策一经在本页面发布并更新修订日期即刻生效。</p>
+    </div>
+
+    <div class="privacy-contact reveal">
+      <h3>关于隐私还有其他疑问？</h3>
+      <p>如需行使您的权利或了解更多信息，请联系数据控制器。</p>
+      <a href="mailto:supporto.poesie.app@gmail.com" aria-label="发送电子邮件给 Poesie 支持团队">supporto.poesie.app@gmail.com</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html#top" class="brand">
+          <img src="assets/logo.png" alt="Poesie">
+          <span class="serif cream">Poesie</span>
+        </a>
+        <p>专属您的诗歌隐秘空间。在完全保护隐私的环境中撰写、保存与导出您的诗作。</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>应用</h4>
+        <ul>
+          <li>
+            <a class="nav-link" href="index.html#funzionalita">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a2 2 0 0 1-2.83-2.83l-3.77 3.77ZM14.7 6.3a1 1 0 0 1 0-1.4L16.3 3.3a1 1 0 0 1 1.4 0m0 0a2 2 0 0 1 2.83 2.83M14.7 6.3 3 18a2 2 0 0 0 0 2.83l1.17 1.17a2 2 0 0 0 2.83 0L18.7 10.3"></path>
+              </svg>
+              <span>功能</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="index.html#sicurezza">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>安全</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="index.html#esportazione">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
+              <span>导出</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="index.html#statistiche">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+              <span>统计</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>信息</h4>
+        <ul>
+          <li><a href="privacy_zh.html" class="footer-link" aria-current="page">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>隐私政策</span>
+            </a>
+          </li>
+          <li>
+            <a href="privacy_zh.html" class="footer-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              <span>使用条款</span>
+            </a>
+          </li>
+          <li>
+            <a class="instagram-link nav-link" href="https://www.instagram.com/poesie_app?igsh=MXBnN3R1MjRocXhheA==" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider center" style="max-width:100%;margin-top:64px;margin-bottom:36px;"><span class="rule"></span><span class="diamond"></span><span class="rule"></span></div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Poesie. 保留所有权利。</p>
+      <p class="quote muted-2">“诗歌，是记录语言无法表达的一切。”</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function(){
+    header.classList.toggle('scrolled', window.scrollY > 12);
+  }, { passive:true });
+
+  var menuBtn = document.getElementById('menuBtn');
+  var mobileMenu = document.getElementById('mobileMenu');
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function(){
+      mobileMenu.classList.toggle('open');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        mobileMenu.classList.remove('open');
+      });
+    });
+  }
+
+  var reveals = document.querySelectorAll('.reveal');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(function(el){ io.observe(el); });
+</script>
+
+<script>
+  var langCache = {};
+
+  async function setLanguage(lang) {
+    try {
+      if (!langCache[lang]) {
+        var response = await fetch('locales/' + lang + '.json');
+        if (!response.ok) throw new Error('未找到语言文件：' + lang);
+        langCache[lang] = await response.json();
+      }
+
+      var translations = langCache[lang];
+
+      document.documentElement.lang = lang;
+      if (lang === 'ar') {
+        document.documentElement.setAttribute('dir', 'rtl');
+      } else {
+        document.documentElement.removeAttribute('dir');
+      }
+
+      var elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        if (translations[key] !== undefined) {
+          el.innerHTML = translations[key];
+        }
+      });
+
+      localStorage.setItem('preferred_lang', lang);
+
+    } catch (error) {
+      console.error('加载语言失败：', error);
+      if (lang !== 'zh') setLanguage('zh');
+    }
+  }
+
+  var langSelect = document.getElementById('langSelect');
+  if (langSelect) {
+    langSelect.addEventListener('change', function(e) {
+      setLanguage(e.target.value);
+    });
+
+    var userBrowserLang = navigator.language.slice(0, 2);
+    var supportedLangs = Array.from(langSelect.options).map(function(o) { return o.value; });
+    var defaultLang = supportedLangs.includes(userBrowserLang) ? userBrowserLang : 'zh';
+    var initialLang = localStorage.getItem('preferred_lang') || defaultLang;
+
+    langSelect.value = initialLang;
+    setLanguage(initialLang);
+  }
+</script>
+<script src="assets/js/lang-switch.js"></script>
+</body>
+</html>

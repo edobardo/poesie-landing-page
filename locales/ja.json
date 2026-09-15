@@ -10,6 +10,18 @@
   "nav.faq": "よくある質問",
   "btn.download": "Android版をダウンロード",
 
+  "nav.lang.it": "イタリア語",
+  "nav.lang.en": "英語",
+  "nav.lang.de": "ドイツ語",
+  "nav.lang.es": "スペイン語",
+  "nav.lang.fr": "フランス語",
+  "nav.lang.ja": "日本語",
+  "nav.lang.ko": "韓国語",
+  "nav.lang.pt": "ポルトガル語",
+  "nav.lang.ru": "ロシア語",
+  "nav.lang.ar": "アラビア語",
+  "nav.lang.zh": "中国語",
+
   "hero.eyebrow": "Google Playで配信中",
   "hero.title": "Every feeling,<br>written down.",
   "hero.sub": "詩のための、あなただけのプライベートな空間。円滑な同期、密やかな暗号化、書き手の electron に寄り添うツール群。",

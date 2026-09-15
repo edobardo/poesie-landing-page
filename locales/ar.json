@@ -9,6 +9,18 @@
   "nav.stats": "الإحصائيات",
   "nav.faq": "الأسئلة الشائعة",
   "btn.download": "تنزيل لنظام أندرويد",
+    
+  "nav.lang.it": "الإيطالية",
+  "nav.lang.en": "الإنجليزية",
+  "nav.lang.de": "الألمانية",
+  "nav.lang.es": "الإسبانية",
+  "nav.lang.fr": "الفرنسية",
+  "nav.lang.ja": "اليابانية",
+  "nav.lang.ko": "الكورية",
+  "nav.lang.pt": "البرتغالية",
+  "nav.lang.ru": "الروسية",
+  "nav.lang.ar": "العربية",
+  "nav.lang.zh": "الصينية",
 
   "hero.eyebrow": "متوفر الآن على Google Play",
   "hero.title": "Every feeling,<br>written down.",

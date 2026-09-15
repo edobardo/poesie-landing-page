@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — Poesie</title>
+<meta name="description" content="Política de Privacidade do Poesie — Descubra como os seus dados são tratados, as permissões necessárias e como funciona a versão Premium.">
+<link rel="icon" type="image/png" href="assets/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <div class="nav-row">
+      <a href="index.html#top" class="brand">
+        <img src="assets/logo.png" alt="Poesie">
+        <span class="serif cream">Poesie</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html#funzionalita" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a2 2 0 0 1-2.83-2.83l-3.77 3.77ZM14.7 6.3a1 1 0 0 1 0-1.4L16.3 3.3a1 1 0 0 1 1.4 0m0 0a2 2 0 0 1 2.83 2.83M14.7 6.3 3 18a2 2 0 0 0 0 2.83l1.17 1.17a2 2 0 0 0 2.83 0L18.7 10.3"></path>
+          </svg>
+          <span data-i18n="nav.features">Funcionalidades</span>
+        </a>
+        <a href="index.html#sicurezza" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span data-i18n="nav.security">Segurança</span>
+        </a>
+        <a href="index.html#esportazione" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <span data-i18n="nav.export">Exportação</span>
+        </a>
+        <a href="index.html#statistiche" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+          <span data-i18n="nav.stats">Estatísticas</span>
+        </a>
+        <a href="index.html#domande" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          <span data-i18n="nav.faq">Perguntas Frequentes</span>
+        </a>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="https://play.google.com/store/apps/details?id=com.edobardo.poesie&hl=pt" target="_blank" class="btn btn-primary btn-sm nav-cta" data-i18n="btn.download">Descarregar para Android</a>
+
+        <!-- LANGUAGE SELECTOR -->
+        <div class="lang-select-wrap">
+          <select id="langSelect" class="lang-select" aria-label="Selecionar idioma">
+            <option value="it">🇮🇹 Italiano</option>
+            <option value="en">🇺🇸 Inglês</option>
+            <option value="de">🇩🇪 Alemão</option>
+            <option value="es">🇪🇸 Espanhol</option>
+            <option value="fr">🇫🇷 Francês</option>
+            <option value="ja">🇯🇵 Japonês</option>
+            <option value="ko">🇰🇷 Coreano</option>
+            <option value="pt" selected>🇵🇹 Português</option>
+            <option value="ru">🇷🇺 Russo</option>
+            <option value="ar">🇸🇦 Árabe</option>
+            <option value="zh">🇨🇳 Chinês</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-inner">
+        <a href="index.html#funzionalita" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a2 2 0 0 1-2.83-2.83l-3.77 3.77ZM14.7 6.3a1 1 0 0 1 0-1.4L16.3 3.3a1 1 0 0 1 1.4 0m0 0a2 2 0 0 1 2.83 2.83M14.7 6.3 3 18a2 2 0 0 0 0 2.83l1.17 1.17a2 2 0 0 0 2.83 0L18.7 10.3"></path>
+          </svg>
+          <span data-i18n="nav.features">Funcionalidades</span>
+        </a>
+        <a href="index.html#sicurezza" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span data-i18n="nav.security">Segurança</span>
+        </a>
+        <a href="index.html#esportazione" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <span data-i18n="nav.export">Exportação</span>
+        </a>
+        <a href="index.html#statistiche" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+          <span data-i18n="nav.stats">Estatísticas</span>
+        </a>
+        <a href="index.html#domande" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          <span data-i18n="nav.faq">Perguntas Frequentes</span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.edobardo.poesie&hl=pt" target="_blank" class="btn btn-primary btn-sm">Descarregar para Android</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PRIVACY HERO ============ -->
+<section id="top" class="privacy-hero">
+  <div class="wrap">
+    <!-- LANGUAGE NOTICE -->
+    <!-- <div class="privacy-notice hero-in" style="animation-delay:.42s">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+      <span data-i18n="page.translations">As traduções da Política de Privacidade para outros idiomas estarão disponíveis em breve.</span>
+    </div> -->
+
+    <div class="eyebrow-row hero-in" style="animation-delay:.05s">
+      <img src="assets/logo.png" alt="">
+      <span>Política de Privacidade</span>
+    </div>
+
+    <h1 class="privacy-title hero-in" style="animation-delay:.15s">As suas obras,<br>sempre em segurança.</h1>
+
+    <p class="section-sub hero-in" style="animation-delay:.25s">Como os seus dados são tratados no Poesie</p>
+
+    <p class="section-text hero-in" style="animation-delay:.35s;max-width:56ch;">Não recolhemos nem armazenamos o conteúdo dos seus poemas nos nossos servidores. A sua coleção permanece exclusiva e em segurança no seu dispositivo e no seu Google Drive pessoal.</p>
+
+    <div class="privacy-badge hero-in" style="animation-delay:.50s">
+      <span class="diamond"></span>
+      Última atualização: Setembro de 2026
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRIVACY ARTICLE ============ -->
+<section class="privacy-article">
+  <div class="wrap">
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Introdução</h2>
+      <p>O Poesie é uma aplicação móvel para Android concebida para permitir aos utilizadores criar, gerir e guardar a sua coleção pessoal de poemas, com sincronização através do Google Drive. A aplicação suporta múltiplas coleções independentes, cada uma com a sua imagem de capa e ficheiro dedicado no Drive.</p>
+      <p>A aplicação é oferecida numa versão gratuita e numa versão <strong>Premium</strong>, ativável através de uma compra única na aplicação via Google Play. Esta política explica quais os dados tratados, para que finalidades e quais os seus direitos como utilizador.</p>
+      <div class="privacy-highlight"><p>O programador não recolhe nem armazena o conteúdo dos seus poemas em servidores próprios. As coleções permanecem exclusivamente no seu dispositivo e no seu Google Drive.</p></div>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Responsável pelo Tratamento de Dados</h2>
+      <p>O Responsável pelo Tratamento dos dados pessoais é:</p>
+      <ul>
+        <li><strong>Edoardo Stoffa</strong> — Programador independente</li>
+        <li>E-mail: <a href="mailto:supporto.poesie.app@gmail.com">supporto.poesie.app@gmail.com</a></li>
+      </ul>
+      <p>Para qualquer questão relacionada com a sua privacidade, pode contactar-nos através do e-mail acima.</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Dados Tratados</h2>
+      <p>A aplicação trata exclusivamente os seguintes dados, necessários para o fornecimento dos serviços:</p>
+      <ul>
+        <li>Endereço de e-mail da Conta Google (exibido nas definições após a ligação ao Drive)</li>
+        <li>Ficheiros <strong>.docx</strong> de cada coleção (criados/atualizados pela aplicação no seu Google Drive pessoal; escopo: <em>drive.file</em>)</li>
+        <li>Tokens de autenticação OAuth 2.0 (armazenados localmente através dos mecanismos de segurança do sistema operativo)</li>
+        <li>Definições da aplicação (por ex., idioma selecionado, tema, estado de ativação Premium, lista de coleções)</li>
+        <li>Imagens de capa personalizadas selecionadas pelo utilizador através do seletor de ficheiros do sistema (guardadas no diretório privado da aplicação)</li>
+        <li>Palavra-passe de bloqueio: a aplicação armazena apenas uma <strong>hash</strong> cifrada na área protegida, nunca a palavra-passe em texto simples</li>
+        <li>Código de recuperação, armazenado na área protegida para permitir a redefinição em caso de esquecimento da palavra-passe</li>
+        <li><strong>Token de compra Premium</strong> (token de compra do Google Play): armazenado na área protegida do dispositivo para validação via Google Play Billing, sem ser transmitido ao programador</li>
+        <li>Ficheiros de cópia de segurança local cifrados (arquivos ZIP protegidos por palavra-passe): criados apenas a pedido do utilizador, guardados na cache local e nunca transmitidos a terceiros</li>
+      </ul>
+      <p>Nenhum dado é armazenado em servidores pertencentes ao programador.</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Finalidade e Base Jurídica do Tratamento</h2>
+      <p>Os dados são tratados para as seguintes finalidades:</p>
+      <ul>
+        <li><strong>Sincronização e cópia de segurança</strong> das coleções com o Google Drive</li>
+        <li><strong>Funcionalidades de segurança</strong> (bloqueio da aplicação por PIN ou biometria, código de recuperação, cifragem de ficheiros locais e ecrã de proteção de privacidade)</li>
+        <li><strong>Prestação de funcionalidades solicitadas</strong> (capas personalizadas, definições de idioma, temas, etiquetas, favoritos, widget de sequência de escrita, metas de escrita, cópias de segurança locais, criação de antologias em PDF, estatísticas e processamento local do "Poetry Wrapped")</li>
+        <li><strong>Notificações locais</strong> (lembretes para manter a sequência de escrita, reagendados após o reinício do dispositivo)</li>
+        <li><strong>Gestão de pagamentos na aplicação</strong> (validação e recuperação da compra Premium através do Google Play Billing)</li>
+      </ul>
+      <div class="privacy-highlight"><p>A base jurídica principal é o Artigo 6.º, n.º 1, alínea b) do RGPD (execução de um contrato ou prestação de um serviço solicitado pelo utilizador). As funcionalidades de segurança locais atuam para proteger o acesso aos seus dados no dispositivo.</p></div>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Google Drive</h2>
+      <p>A aplicação utiliza a API do Google Drive com o escopo restrito <strong>drive.file</strong>. Isto significa que o acesso está estritamente limitado aos ficheiros criados pela própria aplicação.</p>
+      <ul>
+        <li>A aplicação NÃO pode ler outros ficheiros presentes no seu Google Drive</li>
+        <li>A aplicação NÃO pode modificar ou eliminar ficheiros que não tenham sido criados por ela</li>
+        <li>Os ficheiros Poesie.docx permanecem sob a sua inteira propriedade e controlo</li>
+        <li>Pode revogar o acesso à aplicação a qualquer momento através das definições da sua conta Google</li>
+      </ul>
+      <div class="privacy-highlight"><p>Pode gerir ou revogar as permissões da aplicação a qualquer momento em <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" aria-label="Gerir permissões de aplicações Google (abre num novo separador)">myaccount.google.com/permissions</a>.</p></div>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Armazenamento Local e Segurança</h2>
+      <p>Os seguintes dados são armazenados localmente na pasta privada da aplicação, protegidos pelo sistema operativo e inacessíveis a outras aplicações:</p>
+      <ul>
+        <li>Tokens OAuth 2.0 (no armazenamento seguro do SO)</li>
+        <li>Ficheiros das coleções na cache local (<strong>cifrados pela aplicação em AES</strong>; as cópias descifradas são eliminadas automaticamente quando a aplicação passa para segundo plano ou é coberta pelo ecrã de segurança)</li>
+        <li>Definições (idioma, tema, estado Premium, lista de coleções e opções associadas)</li>
+        <li>Imagens de capa personalizadas (apenas os ficheiros explicitamente selecionados pelo utilizador)</li>
+        <li>Hash da palavra-passe e código de recuperação na área protegida (SecureStorage)</li>
+        <li>Token de compra Premium armazenado na área protegida para verificação local com o Google Play</li>
+        <li>Ficheiros de cópia de segurança local criados exclusivamente mediante solicitação expressa (ficheiros ZIP cifrados com palavra-passe definida pelo utilizador)</li>
+      </ul>
+      <p>Estes dados são eliminados automaticamente se desinstalar a aplicação. Pode também encerrar a sessão do Drive selecionando "Desligar" no menu de definições.</p>
+      <div class="privacy-highlight"><p>Todas as comunicações de rede (Aplicação → Google) são realizadas através de ligações seguras e cifradas HTTPS (TLS).</p></div>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Permissões Necessárias</h2>
+      <p>A aplicação solicita apenas as permissões estritamente necessárias para o seu correto funcionamento:</p>
+      <div class="privacy-table-wrap">
+        <table class="privacy-table" aria-label="Tabela de permissões necessárias pela aplicação">
+          <thead>
+            <tr><th scope="col">Permissão</th><th scope="col">Finalidade / Motivo</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>INTERNET</td><td>Ligação às APIs do Google para autenticação e sincronização com o Drive, e comunicação com o Google Play para validação do Premium</td></tr>
+            <tr><td>ACCESS_NETWORK_STATE</td><td>Verificação do estado da ligação (por ex., para exibir o estado "offline/online")</td></tr>
+            <tr><td>Seletor de Ficheiros do Sistema</td><td>Seleção de imagens de capa: o acesso é limitado exclusivamente aos ficheiros selecionados pelo utilizador através da interface do sistema</td></tr>
+            <tr><td>android.permission.USE_BIOMETRIC / android.permission.USE_FINGERPRINT</td><td>Ativação do bloqueio da aplicação via biometria (impressão digital/reconhecimento facial)</td></tr>
+            <tr><td>android.permission.POST_NOTIFICATIONS</td><td>Envio de notificações de lembrete da sequência de escrita</td></tr>
+            <tr><td>android.permission.WAKE_LOCK</td><td>Manter o processador ativo durante o agendamento diário das notificações</td></tr>
+            <tr><td>android.permission.RECEIVE_BOOT_COMPLETED</td><td>Restaurar os alarmes das notificações agendadas após o reinício do dispositivo</td></tr>
+            <tr><td>android.permission.VIBRATE</td><td>Fornecer feedback tátil/vibração ao receber notificações</td></tr>
+            <tr><td>android.permission.SCHEDULE_EXACT_ALARM</td><td>Garantir o disparo de notificações no horário exato, mesmo em modo de poupança de bateria</td></tr>
+            <tr><td>android.permission.RECORD_AUDIO</td><td>Uso do microfone para ditado por voz (conversão de voz em texto). Os dados de áudio não são armazenados nem transmitidos pelo programador, sendo processados pelo serviço de voz do sistema operativo</td></tr>
+            <tr><td>com.android.vending.BILLING</td><td>Gestão do pagamento da compra única da versão Premium através do Google Play Billing</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Nenhuma permissão é utilizada para fins diferentes dos declarados.</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Versão Premium e Pagamentos na Aplicação</h2>
+      <p>O Poesie oferece a opção de compra única na aplicação (One-Time Purchase) através do serviço Google Play Billing.</p>
+      <p>A ativação da versão Premium desbloqueia recursos adicionais (como temas extra, ferramentas avançadas de edição e opções de exportação expandidas). Estes recursos funcionam de forma totalmente local no dispositivo, sem a necessidade de criar uma conta externa.</p>
+      <p>Em relação à compra Premium, a aplicação trata os seguintes dados:</p>
+      <ul>
+        <li><strong>Token de compra</strong>: um identificador gerado pelo Google Play e armazenado na área protegida (<em>SecureStorage</em>) do dispositivo. É utilizado exclusivamente para verificar a validade da compra através da API Google Play Billing, não sendo partilhado com terceiros além da Google LLC e do programador.</li>
+        <li><strong>Estado Premium</strong>: um valor booleano guardado nas definições locais para manter a ativação entre sessões, com verificações periódicas junto do Google Play ao iniciar a aplicação.</li>
+      </ul>
+      <div class="privacy-highlight"><p>O programador não gere nem armazena diretamente dados bancários ou de pagamento. Todas as transações financeiras são processadas exclusivamente pela Google Play Store, de acordo com as suas próprias políticas. Para mais informações, consulte a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label="Política de Privacidade da Google (abre num novo separador)">Política de Privacidade da Google</a>.</p></div>
+      <p>Em caso de reinstalação ou transferência para um novo dispositivo, a compra pode ser restaurada sem custos adicionais através da opção <strong>"Restaurar compras"</strong> na aplicação.</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Partilha de Dados com Terceiros</h2>
+      <p>O programador não partilha, vende nem cede dados pessoais de utilizadores a terceiros.</p>
+      <p>Serviços de terceiros integrados para o funcionamento técnico:</p>
+      <ul>
+        <li><strong>Google LLC</strong> — Autenticação OAuth 2.0 e armazenamento no Google Drive. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label="Política de Privacidade da Google (abre num novo separador)">Política de Privacidade da Google</a></li>
+        <li><strong>Google LLC / Google Play</strong> — Gestão do processamento de pagamentos via Google Play Billing e pedidos de avaliação na aplicação. O token de compra é transmitido à Google exclusivamente para validação da licença Premium. <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer" aria-label="Termos de Serviço do Google Play (abre num novo separador)">Termos de Serviço do Google Play</a></li>
+      </ul>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Retenção de Dados</h2>
+      <ul>
+        <li>Os conteúdos (Poesie.docx) permanecem no seu Google Drive até que opte por eliminá-los</li>
+        <li>Os tokens OAuth são mantidos no dispositivo até que termine a sessão ou desinstale a aplicação</li>
+        <li>O código de recuperação permanece no dispositivo até ser utilizado para redefinir o acesso ou até à desinstalação</li>
+        <li>O token de compra Premium permanece no dispositivo até à desinstalação da aplicação, sendo automaticamente removido se a compra for anulada via Google Play</li>
+      </ul>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Direitos do Utilizador (RGPD)</h2>
+      <p>Como titular dos dados, tem o direito de exercer os seguintes direitos ao abrigo dos Artigos 15.º a 22.º do RGPD:</p>
+      <ul>
+        <li><strong>Direito de acesso</strong> — Confirmar se os seus dados estão a ser tratados e obter uma cópia dos mesmos</li>
+        <li><strong>Direito de retificação</strong> — Solicitar a correção de dados inexatos ou incompletos</li>
+        <li><strong>Direito ao apagamento ("direito a ser esquecido")</strong> — Solicitar a eliminação dos seus dados pessoais</li>
+        <li><strong>Direito à limitação do tratamento</strong> — Solicitar a restrição do tratamento em determinadas circunstâncias</li>
+        <li><strong>Direito à portabilidade dos dados</strong> — Receber os seus dados num formato estruturado e de uso corrente</li>
+        <li><strong>Direito de oposição</strong> — Opor-se ao tratamento dos seus dados, quando aplicável</li>
+        <li><strong>Direito de apresentar reclamação</strong> — Contactar a autoridade de controlo de proteção de dados competente (em Itália, a <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer" aria-label="Website da Autoridade Italiana de Proteção de Dados (abre num novo separador)">Garante Privacy</a>, ou a CNPD em Portugal)</li>
+      </ul>
+      <p>Para exercer qualquer um destes direitos, entre em contacto através do e-mail indicado na secção "Responsável pelo Tratamento".</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Privacidade das Crianças</h2>
+      <p>O Poesie não se destina a crianças com idade inferior a 14 anos. O programador não recolhe intencionalmente dados de menores. De acordo com o RGPD, o tratamento de dados de menores requer o consentimento dos pais ou tutores legais.</p>
+      <p>As compras na aplicação via Google Play requerem uma conta Google válida. A gestão do consentimento parental para compras segue as políticas do Google Play e do Google Family Link.</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Cookies e Tecnologias Semelhantes</h2>
+      <p>A aplicação móvel Poesie <strong>não utiliza cookies nem tecnologias de rastreio</strong>.</p>
+      <p>Este website pode utilizar cookies técnicos estritamente necessários fornecidos pelo serviço de alojamento. Não são utilizados cookies de perfilamento ou publicidade.</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Alterações à Política de Privacidade</h2>
+      <p>O programador reserva-se o direito de atualizar esta política de privacidade a qualquer momento. As alterações entrarão em vigor imediatamente após a sua publicação nesta página, com a data de atualização devidamente revista.</p>
+    </div>
+
+    <div class="privacy-contact reveal">
+      <h3>Tem dúvidas sobre a sua privacidade?</h3>
+      <p>Para exercer os seus direitos ou esclarecer qualquer questão, entre em contacto com o Responsável pelo Tratamento.</p>
+      <a href="mailto:supporto.poesie.app@gmail.com" aria-label="Enviar e-mail para o suporte do Poesie">supporto.poesie.app@gmail.com</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html#top" class="brand">
+          <img src="assets/logo.png" alt="Poesie">
+          <span class="serif cream">Poesie</span>
+        </a>
+        <p>Um espaço tranquilo para a sua poesia. Escreva, guarde e exporte os seus versos com privacidade absoluta.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Aplicação</h4>
+        <ul>
+          <li>
+            <a class="nav-link" href="index.html#funzionalita">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a2 2 0 0 1-2.83-2.83l-3.77 3.77ZM14.7 6.3a1 1 0 0 1 0-1.4L16.3 3.3a1 1 0 0 1 1.4 0m0 0a2 2 0 0 1 2.83 2.83M14.7 6.3 3 18a2 2 0 0 0 0 2.83l1.17 1.17a2 2 0 0 0 2.83 0L18.7 10.3"></path>
+              </svg>
+              <span>Funcionalidades</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="index.html#sicurezza">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>Segurança</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="index.html#esportazione">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
+              <span>Exportação</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="index.html#statistiche">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+              <span>Estatísticas</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Informação</h4>
+        <ul>
+          <li><a href="privacy_pt.html" class="footer-link" aria-current="page">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>Privacidade</span>
+            </a>
+          </li>
+          <li>
+            <a href="privacy_pt.html" class="footer-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              <span>Termos de Uso</span>
+            </a>
+          </li>
+          <li>
+            <a class="instagram-link nav-link" href="https://www.instagram.com/poesie_app?igsh=MXBnN3R1MjRocXhheA==" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider center" style="max-width:100%;margin-top:64px;margin-bottom:36px;"><span class="rule"></span><span class="diamond"></span><span class="rule"></span></div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Poesie. Todos os direitos reservados.</p>
+      <p class="quote muted-2">"A poesia é a história daquilo que não se pode dizer"</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function(){
+    header.classList.toggle('scrolled', window.scrollY > 12);
+  }, { passive:true });
+
+  var menuBtn = document.getElementById('menuBtn');
+  var mobileMenu = document.getElementById('mobileMenu');
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function(){
+      mobileMenu.classList.toggle('open');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        mobileMenu.classList.remove('open');
+      });
+    });
+  }
+
+  var reveals = document.querySelectorAll('.reveal');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(function(el){ io.observe(el); });
+</script>
+
+<script>
+  var langCache = {};
+
+  async function setLanguage(lang) {
+    try {
+      if (!langCache[lang]) {
+        var response = await fetch('locales/' + lang + '.json');
+        if (!response.ok) throw new Error('Ficheiro de idioma não encontrado: ' + lang);
+        langCache[lang] = await response.json();
+      }
+
+      var translations = langCache[lang];
+
+      document.documentElement.lang = lang;
+      if (lang === 'ar') {
+        document.documentElement.setAttribute('dir', 'rtl');
+      } else {
+        document.documentElement.removeAttribute('dir');
+      }
+
+      var elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        if (translations[key] !== undefined) {
+          el.innerHTML = translations[key];
+        }
+      });
+
+      localStorage.setItem('preferred_lang', lang);
+
+    } catch (error) {
+      console.error('Erro ao carregar idioma:', error);
+      if (lang !== 'pt') setLanguage('pt');
+    }
+  }
+
+  var langSelect = document.getElementById('langSelect');
+  if (langSelect) {
+    langSelect.addEventListener('change', function(e) {
+      setLanguage(e.target.value);
+    });
+
+    var userBrowserLang = navigator.language.slice(0, 2);
+    var supportedLangs = Array.from(langSelect.options).map(function(o) { return o.value; });
+    var defaultLang = supportedLangs.includes(userBrowserLang) ? userBrowserLang : 'pt';
+    var initialLang = localStorage.getItem('preferred_lang') || defaultLang;
+
+    langSelect.value = initialLang;
+    setLanguage(initialLang);
+  }
+</script>
+<script src="assets/js/lang-switch.js"></script>
+</body>
+</html>

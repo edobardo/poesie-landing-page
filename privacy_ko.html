@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>개인정보 처리방침 — Poesie</title>
+<meta name="description" content="Poesie의 개인정보 처리방침 — 데이터 처리 방식, 앱 필요 권한 및 Premium 버전 작동 방식에 대해 알아보세요.">
+<link rel="icon" type="image/png" href="assets/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <div class="nav-row">
+      <a href="index.html#top" class="brand">
+        <img src="assets/logo.png" alt="Poesie">
+        <span class="serif cream">Poesie</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html#funzionalita" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a2 2 0 0 1-2.83-2.83l-3.77 3.77ZM14.7 6.3a1 1 0 0 1 0-1.4L16.3 3.3a1 1 0 0 1 1.4 0m0 0a2 2 0 0 1 2.83 2.83M14.7 6.3 3 18a2 2 0 0 0 0 2.83l1.17 1.17a2 2 0 0 0 2.83 0L18.7 10.3"></path>
+          </svg>
+          <span data-i18n="nav.features">기능</span>
+        </a>
+        <a href="index.html#sicurezza" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span data-i18n="nav.security">보안</span>
+        </a>
+        <a href="index.html#esportazione" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <span data-i18n="nav.export">내보내기</span>
+        </a>
+        <a href="index.html#statistiche" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+          <span data-i18n="nav.stats">통계</span>
+        </a>
+        <a href="index.html#domande" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          <span data-i18n="nav.faq">자주 묻는 질문</span>
+        </a>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="https://play.google.com/store/apps/details?id=com.edobardo.poesie&hl=ko" target="_blank" class="btn btn-primary btn-sm nav-cta" data-i18n="btn.download">Android 앱 다운로드</a>
+
+        <!-- LANGUAGE SELECTOR -->
+        <div class="lang-select-wrap">
+          <select id="langSelect" class="lang-select" aria-label="언어 선택">
+            <option value="it">🇮🇹 이탈리아어</option>
+            <option value="en">🇺🇸 영어</option>
+            <option value="de">🇩🇪 독일어</option>
+            <option value="es">🇪🇸 스페인어</option>
+            <option value="fr">🇫🇷 프랑스어</option>
+            <option value="ja">🇯🇵 일본어</option>
+            <option value="ko" selected>🇰🇷 한국어</option>
+            <option value="pt">🇵🇹 포르투갈어</option>
+            <option value="ru">🇷🇺 러시아어</option>
+            <option value="ar">🇸🇦 아랍어</option>
+            <option value="zh">🇨🇳 중국어</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-inner">
+        <a href="index.html#funzionalita" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a2 2 0 0 1-2.83-2.83l-3.77 3.77ZM14.7 6.3a1 1 0 0 1 0-1.4L16.3 3.3a1 1 0 0 1 1.4 0m0 0a2 2 0 0 1 2.83 2.83M14.7 6.3 3 18a2 2 0 0 0 0 2.83l1.17 1.17a2 2 0 0 0 2.83 0L18.7 10.3"></path>
+          </svg>
+          <span data-i18n="nav.features">기능</span>
+        </a>
+        <a href="index.html#sicurezza" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span data-i18n="nav.security">보안</span>
+        </a>
+        <a href="index.html#esportazione" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <span data-i18n="nav.export">내보내기</span>
+        </a>
+        <a href="index.html#statistiche" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+          <span data-i18n="nav.stats">통계</span>
+        </a>
+        <a href="index.html#domande" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          <span data-i18n="nav.faq">자주 묻는 질문</span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.edobardo.poesie&hl=ko" target="_blank" class="btn btn-primary btn-sm">Android 앱 다운로드</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PRIVACY HERO ============ -->
+<section id="top" class="privacy-hero">
+  <div class="wrap">
+    <!-- LANGUAGE NOTICE -->
+    <!-- <div class="privacy-notice hero-in" style="animation-delay:.42s">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+      <span data-i18n="page.translations">다른 언어로 된 개인정보 처리방침 번역본이 곧 제공될 예정입니다.</span>
+    </div> -->
+
+    <div class="eyebrow-row hero-in" style="animation-delay:.05s">
+      <img src="assets/logo.png" alt="">
+      <span>개인정보 처리방침</span>
+    </div>
+
+    <h1 class="privacy-title hero-in" style="animation-delay:.15s">당신의 작품집을,<br>언제나 안전하게.</h1>
+
+    <p class="section-sub hero-in" style="animation-delay:.25s">Poesie의 데이터 처리 방식안내</p>
+
+    <p class="section-text hero-in" style="animation-delay:.35s;max-width:56ch;">개발자가 관리하는 서버에 시 내용을 수집하거나 저장하지 않습니다. 귀하의 작품집은 사용 중인 기기와 개인 Google 드라이브에만 안전하게 저장됩니다.</p>
+
+    <div class="privacy-badge hero-in" style="animation-delay:.50s">
+      <span class="diamond"></span>
+      최종 수정일: 2026년 9월
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRIVACY ARTICLE ============ -->
+<section class="privacy-article">
+  <div class="wrap">
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>소개</h2>
+      <p>Poesie는 사용자가 시 개인 컬렉션을 작성, 관리, 저장할 수 있도록 설계된 Android 모바일 애플리케이션으로, Google 드라이브 동기화 기능을 제공합니다. 이 앱은 여러 독립적인 컬렉션을 지원하며, 각 컬렉션은 커스텀 표지 이미지와 드라이브 내 전용 파일을 가질 수 있습니다.</p>
+      <p>본 앱은 무료 버전과 Google Play를 통한 앱 내 일회성 구매로 활성화할 수 있는 <strong>Premium</strong> 버전을 제공합니다. 본 방침은 처리되는 데이터, 처리 목적 및 사용자의 권리에 대해 설명합니다.</p>
+      <div class="privacy-highlight"><p>개발자가 자체 서버에 사용자의 시 내용을 수집하거나 저장하지 않습니다. 모든 컬렉션은 기기와 개인 Google 드라이브에 안전하게 보관됩니다.</p></div>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>개인정보 처리자</h2>
+      <p>개인정보 처리자는 다음과 같습니다:</p>
+      <ul>
+        <li><strong>Edoardo Stoffa</strong> — 개인 개발자</li>
+        <li>이메일: <a href="mailto:supporto.poesie.app@gmail.com">supporto.poesie.app@gmail.com</a></li>
+      </ul>
+      <p>개인정보보호와 관련된 문의 사항이 있으신 경우 위 이메일로 연락주시기 바랍니다.</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>처리되는 데이터</h2>
+      <p>본 앱은 서비스 제공을 위해 다음 데이터만을 처리합니다:</p>
+      <ul>
+        <li>Google 계정 이메일 주소(드라이브 연결 후 설정 화면에 표시됨)</li>
+        <li>각 컬렉션의 <strong>.docx</strong> 파일(앱이 개인 Google 드라이브 내에 생성/업데이트함. 범위: <em>drive.file</em>)</li>
+        <li>OAuth 2.0 인증 토큰(OS의 보안 메커니즘을 통해 기기 내에 로컬로 저장됨)</li>
+        <li>앱 설정(예: 선택한 언어, 테마, Premium 활성화 상태, 컬렉션 목록)</li>
+        <li>시스템 파일 선택기를 통해 사용자가 직접 선택한 커스텀 표지 이미지(앱 전용 디렉터리에 저장됨)</li>
+        <li>잠금용 비밀번호: 앱은 암호화된 <strong>해시값</strong>만 보안 영역에 저장하며, 일반 텍스트 비밀번호는 저장하지 않습니다</li>
+        <li>비밀번호 재설정을 위해 보안 영역에 저장되는 복구 코드</li>
+        <li><strong>Premium 구매 토큰</strong>(Google Play 구매 토큰): Google Play Billing을 통한 구매 검증을 위해 기기의 보안 영역에 저장되며, 개발자에게 전송되지 않습니다</li>
+        <li>암호화된 로컬 백업 파일(비밀번호로 보호된 ZIP 압축파일): 사용자의 요청 시에만 생성되어 로컬 캐시에 저장되며 제3자에게 전송되지 않습니다</li>
+      </ul>
+      <p>개발자가 소유한 서버에 데이터가 저장되는 일은 절대 없습니다.</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>처리 목적 및 법적 근거</h2>
+      <p>데이터는 다음 목적으로 처리됩니다:</p>
+      <ul>
+        <li>Google 드라이브를 통한 컬렉션 <strong>동기화 및 백업</strong></li>
+        <li><strong>보안 기능</strong>(PIN 또는 생체인식을 통한 앱 잠금, 복구 코드, 로컬 파일 암호화, 보안 오버레이 화면)</li>
+        <li><strong>사용자 요청 기능 제공</strong>(표지 이미지, 언어 설정, 테마, 태그, 즐겨찾기, 연속 작성 위젯, 집필 목표, 로컬 백업, PDF 시선집 생성, 통계 및 "Poetry Wrapped" 로컬 처리)</li>
+        <li><strong>로컬 알림</strong>(기기 재부팅 시 재스케줄링되는 연속 집필 리마인더)</li>
+        <li><strong>인앱 결제 관리</strong>(Google Play Billing을 통한 Premium 구매 검증 및 복원)</li>
+      </ul>
+      <div class="privacy-highlight"><p>주요 법적 근거는 GDPR 제6조 제1항 (b)호(계약의 이행 또는 사용자가 요청한 서비스 제공)입니다. 로컬 보안 기능(잠금/복구)은 기기 내 사용자 데이터를 보호하기 위해 작동합니다.</p></div>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Google 드라이브</h2>
+      <p>본 앱은 <strong>drive.file</strong> 접근 권한 범위의 Google Drive API를 사용하므로, 접근 권한은 본 앱이 직접 생성한 파일로 엄격히 제한됩니다.</p>
+      <ul>
+        <li>앱이 Google 드라이브 내의 다른 파일을 읽을 수 없습니다</li>
+        <li>앱이 직접 생성하지 않은 파일을 수정하거나 삭제할 수 없습니다</li>
+        <li>Poesie.docx 파일에 대한 소유권 및 제어권은 완전히 사용자에게 있습니다</li>
+        <li>Google 계정 설정에서 언제든지 앱의 접근 권한을 철회할 수 있습니다</li>
+      </ul>
+      <div class="privacy-highlight"><p><a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" aria-label="Google 앱 액세스 권한 관리(새 탭에서 열기)">myaccount.google.com/permissions</a>에서 언제든지 앱 권한을 취소할 수 있습니다.</p></div>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>로컬 저장소 및 보안</h2>
+      <p>다음 데이터는 앱 전용 폴더에 로컬로 저장되며 OS에 의해 보호되어 다른 앱이 접근할 수 없습니다:</p>
+      <ul>
+        <li>OAuth 2.0 토큰(OS 보안 저장소 내부)</li>
+        <li>로컬 캐시 내의 컬렉션 파일(<strong>앱에 의해 AES로 암호화됨</strong>. 앱이 백그라운드로 전환되거나 보안 화면으로 가려질 때 복호화된 사본은 자동 삭제됨)</li>
+        <li>설정(언어, 테마, Premium 상태, 컬렉션 목록 및 관련 옵션)</li>
+        <li>커스텀 표지 이미지(사용자가 명시적으로 선택한 파일에 한함)</li>
+        <li>보안 영역(SecureStorage) 내 비밀번호 해시 및 복구 코드</li>
+        <li>Google Play 로컬 검증 전용으로 보안 영역에 저장되는 Premium 구매 토큰</li>
+        <li>명시적 요청 시에만 생성되어 임시 캐시에 보관되는 로컬 백업 파일(사용자 지정 비밀번호로 암호화된 ZIP 파일)</li>
+      </ul>
+      <p>이 데이터들은 앱을 삭제할 때 자동으로 함께 삭제됩니다. 또한 설정 화면에서 '연결 해제'를 선택하여 드라이브 세션을 종료할 수 있습니다.</p>
+      <div class="privacy-highlight"><p>네트워크 통신(앱 → Google)은 모두 암호화된 HTTPS(TLS) 보안 연결을 통해 수행됩니다.</p></div>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>필요 권한 안내</h2>
+      <p>앱이 정상적으로 작동하기 위해 필요한 최소한의 권한만을 요청합니다:</p>
+      <div class="privacy-table-wrap">
+        <table class="privacy-table" aria-label="앱 필요 권한 목록">
+          <thead>
+            <tr><th scope="col">권한</th><th scope="col">목적 / 사유</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>인터넷 (Internet)</td><td>인증 및 Google 드라이브 동기화를 위한 Google API 연결, Premium 결제 검증을 위한 Google Play 통신</td></tr>
+            <tr><td>네트워크 상태 (Network State)</td><td>연결 상태 확인(예: '오프라인/온라인' 상태 표시용)</td></tr>
+            <tr><td>시스템 파일 선택기</td><td>표지 이미지 선택: 접근은 시스템 UI를 통해 사용자가 선택한 파일로 제한됨</td></tr>
+            <tr><td>android.permission.USE_BIOMETRIC / android.permission.USE_FINGERPRINT</td><td>생체인식을 통한 앱 잠금 기능 활성화</td></tr>
+            <tr><td>android.permission.POST_NOTIFICATIONS</td><td>연속 집필 리마인더 알림 발송</td></tr>
+            <tr><td>android.permission.WAKE_LOCK</td><td>일일 알림 일정 처리 중 프로세서를 활성 상태로 유지하기 위함</td></tr>
+            <tr><td>android.permission.RECEIVE_BOOT_COMPLETED</td><td>기기 재부팅 후 예약된 알림을 재복원하기 위함</td></tr>
+            <tr><td>android.permission.VIBRATE</td><td>알림 시 진동/햅틱 피드백 제공</td></tr>
+            <tr><td>android.permission.SCHEDULE_EXACT_ALARM</td><td>기기의 절전 모드 시에도 정확한 시간에 알림을 전송하기 위함</td></tr>
+            <tr><td>android.permission.RECORD_AUDIO</td><td>음성 입력(음성-텍스트 변환)을 위한 마이크 사용. 음성 데이터는 개발자가 저장하거나 전송하지 않으며 기기의 음성 서비스에 의해 처리됨</td></tr>
+            <tr><td>com.android.vending.BILLING</td><td>Premium 버전(일회성 구매) 활성화를 위한 Google Play Billing 결제 관리</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>명시된 목적 외에 권한이 사용되는 일은 절대 없습니다.</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Premium 버전 및 인앱 결제</h2>
+      <p>Poesie는 Google Play Billing을 통한 <strong>일회성 구매</strong>(One-Time Purchase) 인앱 결제 옵션을 제공합니다.</p>
+      <p>Premium 버전을 활성화하면 추가 기능(추가 테마, 고급 편집 도구, 확장 내보내기 옵션 등)이 해제됩니다. 이 기능들은 별도의 계정 생성 없이 기기 내에서 완전히 로컬로 처리됩니다.</p>
+      <p>Premium 구매와 관련하여 앱은 다음 데이터를 처리합니다:</p>
+      <ul>
+        <li><strong>구매 토큰</strong>: Google Play에서 생성되어 기기의 보안 영역(<em>SecureStorage</em>)에 저장되는 식별자입니다. Google Play Billing API를 통해 구매 유효성을 확인하는 용도로만 사용되며 개발자나 Google LLC 이외의 제3자에게 전송되지 않습니다.</li>
+        <li><strong>Premium 상태</strong>: 세션 간 활성화 상태를 유지하기 위해 앱 설정에 저장되는 부울(Boolean) 값입니다. 앱 실행 시 Google Play와의 정기적인 확인이 수행됩니다.</li>
+      </ul>
+      <div class="privacy-highlight"><p>개발자가 직접 결제 정보를 관리하지 않습니다. 모든 금융 거래는 자체 방침에 따라 Google Play 스토어에 의해 처리됩니다. 결제 데이터 처리에 관한 자세한 내용은 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label="Google 개인정보 처리방침(새 탭에서 열기)">Google 개인정보 처리방침</a>을 참조하시기 바랍니다.</p></div>
+      <p>재설치 후나 새 기기로 이전 시 이전 구매 내역은 앱 내 <strong>'구매 복원'</strong> 기능을 통해 추가 비용 없이 복원할 수 있습니다.</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>제3자 데이터 공유</h2>
+      <p>개발자는 사용자의 개인정보를 제3자에게 공유, 판매 또는 양도하지 않습니다.</p>
+      <p>기술적 운영에 사용되는 외부 서비스:</p>
+      <ul>
+        <li><strong>Google LLC</strong> — OAuth 2.0 인증 및 Google 드라이브 저장소. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label="Google 개인정보 처리방침(새 탭에서 열기)">Google 개인정보 처리방침</a></li>
+        <li><strong>Google LLC / Google Play</strong> — Google Play Billing을 통한 결제 관리 및 앱 내 리뷰 요청. 구매 토큰은 Premium 구매 검증 목적으로만 Google에 전송되며, 개발자는 결제 데이터에 접근할 수 없습니다. <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer" aria-label="Google Play 서비스 약관(새 탭에서 열기)">Google Play 서비스 약관</a></li>
+      </ul>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>데이터 보유 기간</h2>
+      <ul>
+        <li>콘텐츠(Poesie.docx)는 사용자가 직접 삭제할 때까지 Google 드라이브에 유지됩니다</li>
+        <li>OAuth 토큰은 로그아웃하거나 앱을 삭제할 때까지 기기에 보관됩니다</li>
+        <li>복구 코드는 비밀번호/잠금을 해제하거나 앱을 삭제할 때까지 기기에 보관됩니다</li>
+        <li>Premium 구매 토큰은 앱을 삭제할 때까지 기기에 보관됩니다. Google Play에서 구매가 취소/무효화되면 자동으로 삭제됩니다</li>
+      </ul>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>사용자의 권리 (GDPR)</h2>
+      <p>정보주체로서 GDPR 제15조~제22조에 따라 다음 권리를 행사할 수 있습니다:</p>
+      <ul>
+        <li><strong>열람권</strong> — 개인정보 처리 현황 확인 및 사본 요청</li>
+        <li><strong>정정권</strong> — 부정확한 개인정보의 정정 요청</li>
+        <li><strong>삭제권(잊혀질 권리)</strong> — 개인정보 삭제 요청</li>
+        <li><strong>처리제한권</strong> — 특정 상황에서의 처리 제한 요청</li>
+        <li><strong>데이터 이동권</strong> — 구조화되고 일반적으로 사용되는 형식으로 데이터 수령</li>
+        <li><strong>이의제기권</strong> — 해당되는 경우 데이터 처리에 대한 이의 제기</li>
+        <li><strong>감독기관에 불복신청</strong> — 개인정보보호 감독기관(<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer" aria-label="이탈리아 개인정보보호청 웹사이트(새 탭에서 열기)">www.garanteprivacy.it</a> 또는 해당 지역 관할 기관)에 제기</li>
+      </ul>
+      <p>권리를 행사하고자 하는 경우 '개인정보 처리자' 섹션에 명시된 이메일로 연락주시기 바랍니다.</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>아동의 개인정보보호</h2>
+      <p>Poesie는 만 14세 미만의 아동을 대상으로 하지 않습니다. 개발자는 만 14세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다. EU 일반 개인정보보호법(GDPR)에 따라 미성년자의 데이터 처리에는 부모 또는 법정대리인의 동의가 필요합니다.</p>
+      <p>Google Play를 통한 인앱 구매에는 유효한 Google 계정이 필요합니다. 구매에 대한 부모의 동의 관리는 Google Play 및 Google Family Link의 정책을 따릅니다.</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>쿠키(Cookie) 및 유사 기술</h2>
+      <p>Poesie 모바일 애플리케이션은 <strong>쿠키나 추적 기술을 사용하지 않습니다</strong>.</p>
+      <p>본 웹사이트는 호스팅 서비스에서 제공하는 필수 기술 쿠키를 사용할 수 있습니다. 프로파일링 쿠키는 사용하지 않습니다.</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>개인정보 처리방침의 변경</h2>
+      <p>개발자는 본 방침을 개정할 권리를 가집니다. 변경 사항이 발생하는 경우 수정된 날짜와 함께 본 페이지에 게시됩니다.</p>
+    </div>
+
+    <div class="privacy-contact reveal">
+      <h3>개인정보 관련 문의 사항이 있으신가요?</h3>
+      <p>권리 행사 및 개인정보보호에 관한 문의는 개인정보 처리자에게 연락해주시기 바랍니다.</p>
+      <a href="mailto:supporto.poesie.app@gmail.com" aria-label="Poesie 지원팀에 이메일 보내기">supporto.poesie.app@gmail.com</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html#top" class="brand">
+          <img src="assets/logo.png" alt="Poesie">
+          <span class="serif cream">Poesie</span>
+        </a>
+        <p>당신의 시를 위한 조용한 공간. 완전히 보호되는 프라이버시 속에서 글을 쓰고, 저장하고, 내보내세요.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>앱</h4>
+        <ul>
+          <li>
+            <a class="nav-link" href="index.html#funzionalita">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a2 2 0 0 1-2.83-2.83l-3.77 3.77ZM14.7 6.3a1 1 0 0 1 0-1.4L16.3 3.3a1 1 0 0 1 1.4 0m0 0a2 2 0 0 1 2.83 2.83M14.7 6.3 3 18a2 2 0 0 0 0 2.83l1.17 1.17a2 2 0 0 0 2.83 0L18.7 10.3"></path>
+              </svg>
+              <span>기능</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="index.html#sicurezza">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>보안</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="index.html#esportazione">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
+              <span>내보내기</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="index.html#statistiche">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+              <span>통계</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>정보</h4>
+        <ul>
+          <li><a href="privacy_ko.html" class="footer-link" aria-current="page">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>개인정보 처리방침</span>
+            </a>
+          </li>
+          <li>
+            <a href="privacy_ko.html" class="footer-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              <span>이용약관</span>
+            </a>
+          </li>
+          <li>
+            <a class="instagram-link nav-link" href="https://www.instagram.com/poesie_app?igsh=MXBnN3R1MjRocXhheA==" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider center" style="max-width:100%;margin-top:64px;margin-bottom:36px;"><span class="rule"></span><span class="diamond"></span><span class="rule"></span></div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Poesie. All rights reserved.</p>
+      <p class="quote muted-2">"시란 언어로 표현할 수 없는 이야기이다"</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function(){
+    header.classList.toggle('scrolled', window.scrollY > 12);
+  }, { passive:true });
+
+  var menuBtn = document.getElementById('menuBtn');
+  var mobileMenu = document.getElementById('mobileMenu');
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function(){
+      mobileMenu.classList.toggle('open');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        mobileMenu.classList.remove('open');
+      });
+    });
+  }
+
+  var reveals = document.querySelectorAll('.reveal');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(function(el){ io.observe(el); });
+</script>
+
+<script>
+  var langCache = {};
+
+  async function setLanguage(lang) {
+    try {
+      if (!langCache[lang]) {
+        var response = await fetch('locales/' + lang + '.json');
+        if (!response.ok) throw new Error('언어 파일을 찾을 수 없습니다: ' + lang);
+        langCache[lang] = await response.json();
+      }
+
+      var translations = langCache[lang];
+
+      document.documentElement.lang = lang;
+      if (lang === 'ar') {
+        document.documentElement.setAttribute('dir', 'rtl');
+      } else {
+        document.documentElement.removeAttribute('dir');
+      }
+
+      var elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        if (translations[key] !== undefined) {
+          el.innerHTML = translations[key];
+        }
+      });
+
+      localStorage.setItem('preferred_lang', lang);
+
+    } catch (error) {
+      console.error('언어 로드 오류:', error);
+      if (lang !== 'ko') setLanguage('ko');
+    }
+  }
+
+  var langSelect = document.getElementById('langSelect');
+  if (langSelect) {
+    langSelect.addEventListener('change', function(e) {
+      setLanguage(e.target.value);
+    });
+
+    var userBrowserLang = navigator.language.slice(0, 2);
+    var supportedLangs = Array.from(langSelect.options).map(function(o) { return o.value; });
+    var defaultLang = supportedLangs.includes(userBrowserLang) ? userBrowserLang : 'ko';
+    var initialLang = localStorage.getItem('preferred_lang') || defaultLang;
+
+    langSelect.value = initialLang;
+    setLanguage(initialLang);
+  }
+</script>
+<script src="assets/js/lang-switch.js"></script>
+</body>
+</html>

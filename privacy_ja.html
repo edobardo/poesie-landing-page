@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー — Poesie</title>
+<meta name="description" content="Poesieのプライバシーポリシー — データの取り扱い方法、アプリが必要とする権限、Premiumバージョンの仕組みについてご確認ください。">
+<link rel="icon" type="image/png" href="assets/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <div class="nav-row">
+      <a href="index.html#top" class="brand">
+        <img src="assets/logo.png" alt="Poesie">
+        <span class="serif cream">Poesie</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html#funzionalita" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a2 2 0 0 1-2.83-2.83l-3.77 3.77ZM14.7 6.3a1 1 0 0 1 0-1.4L16.3 3.3a1 1 0 0 1 1.4 0m0 0a2 2 0 0 1 2.83 2.83M14.7 6.3 3 18a2 2 0 0 0 0 2.83l1.17 1.17a2 2 0 0 0 2.83 0L18.7 10.3"></path>
+          </svg>
+          <span data-i18n="nav.features">機能</span>
+        </a>
+        <a href="index.html#sicurezza" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span data-i18n="nav.security">セキュリティ</span>
+        </a>
+        <a href="index.html#esportazione" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <span data-i18n="nav.export">エクスポート</span>
+        </a>
+        <a href="index.html#statistiche" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+          <span data-i18n="nav.stats">統計</span>
+        </a>
+        <a href="index.html#domande" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          <span data-i18n="nav.faq">よくある質問</span>
+        </a>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="https://play.google.com/store/apps/details?id=com.edobardo.poesie&hl=ja" target="_blank" class="btn btn-primary btn-sm nav-cta" data-i18n="btn.download">Android版をダウンロード</a>
+
+        <!-- LANGUAGE SELECTOR -->
+        <div class="lang-select-wrap">
+          <select id="langSelect" class="lang-select" aria-label="言語を選択">
+            <option value="it">🇮🇹 イタリア語</option>
+            <option value="en">🇺🇸 英語</option>
+            <option value="de">🇩🇪 ドイツ語</option>
+            <option value="es">🇪🇸 スペイン語</option>
+            <option value="fr">🇫🇷 フランス語</option>
+            <option value="ja" selected>🇯🇵 日本語</option>
+            <option value="ko">🇰🇷 韓国語</option>
+            <option value="pt">🇵🇹 ポルトガル語</option>
+            <option value="ru">🇷🇺 ロシア語</option>
+            <option value="ar">🇸🇦 アラビア語</option>
+            <option value="zh">🇨🇳 中国語</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="menu-btn" id="menuBtn" aria-label="メニューを開く">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-inner">
+        <a href="index.html#funzionalita" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a2 2 0 0 1-2.83-2.83l-3.77 3.77ZM14.7 6.3a1 1 0 0 1 0-1.4L16.3 3.3a1 1 0 0 1 1.4 0m0 0a2 2 0 0 1 2.83 2.83M14.7 6.3 3 18a2 2 0 0 0 0 2.83l1.17 1.17a2 2 0 0 0 2.83 0L18.7 10.3"></path>
+          </svg>
+          <span data-i18n="nav.features">機能</span>
+        </a>
+        <a href="index.html#sicurezza" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span data-i18n="nav.security">セキュリティ</span>
+        </a>
+        <a href="index.html#esportazione" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <span data-i18n="nav.export">エクスポート</span>
+        </a>
+        <a href="index.html#statistiche" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+          <span data-i18n="nav.stats">統計</span>
+        </a>
+        <a href="index.html#domande" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          <span data-i18n="nav.faq">よくある質問</span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.edobardo.poesie&hl=ja" target="_blank" class="btn btn-primary btn-sm">Android版をダウンロード</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PRIVACY HERO ============ -->
+<section id="top" class="privacy-hero">
+  <div class="wrap">
+    <!-- LANGUAGE NOTICE -->
+    <!-- <div class="privacy-notice hero-in" style="animation-delay:.42s">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+      <span data-i18n="page.translations">他言語のプライバシーポリシー翻訳はまもなく利用可能になります。</span>
+    </div> -->
+
+    <div class="eyebrow-row hero-in" style="animation-delay:.05s">
+      <img src="assets/logo.png" alt="">
+      <span>プライバシーポリシー</span>
+    </div>
+
+    <h1 class="privacy-title hero-in" style="animation-delay:.15s">あなたの作品集を、<br>常に安全に。</h1>
+
+    <p class="section-sub hero-in" style="animation-delay:.25s">Poesieにおけるデータの取り扱いについて</p>
+
+    <p class="section-text hero-in" style="animation-delay:.35s;max-width:56ch;">当方が管理するサーバー上に詩の内容を収集・保存することはありません。あなたのコレクションは、お使いのデバイスおよび個人のGoogle ドライブにのみ保存されます。</p>
+
+    <div class="privacy-badge hero-in" style="animation-delay:.50s">
+      <span class="diamond"></span>
+      最終更新日: 2026年9月
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRIVACY ARTICLE ============ -->
+<section class="privacy-article">
+  <div class="wrap">
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>はじめに</h2>
+      <p>Poesieは、ユーザーが詩の個人コレクションを作成、管理、保存できるように設計されたAndroid用モバイルアプリケーションであり、Google ドライブとの同期機能を備えています。本アプリは複数の独立したコレクションに対応しており、それぞれに独自のカバー画像とドライブ上のファイルを設定できます。</p>
+      <p>本アプリには無料版と、Google Play経由のアプリ内一括購入で取得できる<strong>Premium</strong>バージョンがあります。本ポリシーでは、処理されるデータ、その目的、およびユーザーとしての権利について説明します。</p>
+      <div class="privacy-highlight"><p>開発者が自前のサーバーにユーザーの詩の内容を収集または保存することはありません。コレクションはお使いのデバイスとGoogle ドライブに安全に保持されます。</p></div>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>データ管理者</h2>
+      <p>個人データの管理者は以下の通りです：</p>
+      <ul>
+        <li><strong>Edoardo Stoffa</strong> — 個人開発者</li>
+        <li>メールアドレス: <a href="mailto:supporto.poesie.app@gmail.com">supporto.poesie.app@gmail.com</a></li>
+      </ul>
+      <p>プライバシーに関するご質問がある場合は、上記のお問い合わせ先までご連絡ください。</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>処理されるデータ</h2>
+      <p>本アプリは、サービスの提供を目的として以下のデータのみを処理します：</p>
+      <ul>
+        <li>Google アカウントのメールアドレス（ドライブ接続後に設定画面に表示されます）</li>
+        <li>各コレクションの <strong>.docx</strong> ファイル（個人のGoogle ドライブ内にアプリが作成/更新します。スコープ：<em>drive.file</em>）</li>
+        <li>OAuth 2.0 認証トークン（OSの安全なメカニズムを通じてローカルに保存されます）</li>
+        <li>アプリ設定（例：選択言語、テーマ、Premiumアクティベーション状態、コレクション一覧）</li>
+        <li>システムのファイルピッカー経由でユーザーが選択したカスタムカバー画像（アプリの専用ディレクトリに保存されます）</li>
+        <li>ロック用パスワード：アプリは保護領域に <strong>ハッシュ値</strong> のみを保存し、プレーンテキストのパスワードは保存しません</li>
+        <li>パスワードを忘れた場合の再設定用に、保護領域に保存される復元コード</li>
+        <li><strong>Premium購入トークン</strong>（Google Playの購入トークン）：Google Play Billingによる購入検証のためデバイスの保護領域に保存され、開発者に送信されることはありません</li>
+        <li>暗号化されたローカルバックアップファイル（パスワード保護されたZIPアーカイブ）：ユーザーの要求により作成されローカルキャッシュに保存され、第三者に送信されません</li>
+      </ul>
+      <p>開発者が所有するサーバー上にデータが保存されることは一切ありません。</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>利用目的および法的根拠</h2>
+      <p>データは以下の目的で処理されます：</p>
+      <ul>
+        <li>Google ドライブとのコレクションの<strong>同期およびバックアップ</strong></li>
+        <li><strong>セキュリティ機能</strong>（PINまたは生体認証によるアプリロック、復元コード、ローカルファイルの暗号化、セキュリティオーバーレイ画面）</li>
+        <li><strong>ユーザーが要求した機能の提供</strong>（カバー画像、言語設定、テーマ、タグ、お気に入り、連続執筆ウィジェット、執筆目標、ローカルバックアップ、PDF形式のアンソロジー作成、統計情報および「Poetry Wrapped」のローカル処理）</li>
+        <li><strong>ローカル通知</strong>（デバイス再起動時に再スケジュールされる連続執筆のリマインダー）</li>
+        <li><strong>アプリ内決済の管理</strong>（Google Play Billingを通じたPremium購入の検証および復元）</li>
+      </ul>
+      <div class="privacy-highlight"><p>主な法的根拠はGDPR第6条(1)(b)（契約の履行またはユーザーからのサービス要求の提供）です。ローカルセキュリティ機能（ロック/復元）は、デバイス上のユーザーデータへのアクセスを保護するために機能します。</p></div>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Google ドライブ</h2>
+      <p>本アプリは <strong>drive.file</strong> スコープ付きのGoogle Drive APIを使用しているため、アクセス権限は本アプリ自身が作成したファイルのみに厳密に制限されています。</p>
+      <ul>
+        <li>アプリがGoogle ドライブ内の他のファイルを読み取ることはできません</li>
+        <li>アプリ自身が作成していないファイルを変更または削除することはできません</li>
+        <li>Poesie.docx ファイルは引き続きユーザーに所有権があり、管理下に置かれます</li>
+        <li>Google アカウントの設定からいつでもアクセス権限を取り消すことができます</li>
+      </ul>
+      <div class="privacy-highlight"><p><a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" aria-label="Google アプリのアクセス許可を管理する（新しいタブで開く）">myaccount.google.com/permissions</a> にアクセスすることで、アプリのアクセス権限をいつでも取り消すことができます。</p></div>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>ローカルストレージとセキュリティ</h2>
+      <p>以下のデータはアプリの専用フォルダにローカル保存され、OSによって保護されているため他のアプリからアクセスすることはできません：</p>
+      <ul>
+        <li>OAuth 2.0 トークン（OSのセキュアストレージ内）</li>
+        <li>ローカルキャッシュ内の各コレクションファイル（<strong>アプリによりAESで暗号化</strong>。アプリがバックグラウンドに移動した際、またはセキュリティ画面で覆われた際に、暗号化されていないコピーは自動消去されます）</li>
+        <li>設定（言語、テーマ、Premiumステータス、コレクション一覧および関連オプション）</li>
+        <li>カスタムカバー画像（ユーザーが明示的に選択したファイルのみ）</li>
+        <li>保護領域（SecureStorage）内のパスワードハッシュ＋復元コード</li>
+        <li>Google Playでのローカル検証専用に保護領域に保存されるPremium購入トークン</li>
+        <li>明示的な要求時にのみ作成され一時キャッシュに保持されるローカルバックアップファイル（ユーザー指定のパスワードで暗号化されたZIPファイル）</li>
+      </ul>
+      <p>これらのデータはアプリをアンインストールすると自動的に削除されます。また、設定画面で「切断」を選択してドライブセッションを終了することもできます。</p>
+      <div class="privacy-highlight"><p>ネットワーク通信（アプリ → Google）はすべて安全なHTTPS（TLS）接続を介して行われます。</p></div>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>必要な権限</h2>
+      <p>アプリが正常に動作するために、必要最小限の権限のみを要求します：</p>
+      <div class="privacy-table-wrap">
+        <table class="privacy-table" aria-label="アプリが必要とする権限の表">
+          <thead>
+            <tr><th scope="col">権限</th><th scope="col">目的 / 理由</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>インターネット (Internet)</td><td>認証およびGoogle ドライブ同期のためのGoogle APIへの接続、およびPremium購入の検証のためのGoogle Playとの通信</td></tr>
+            <tr><td>ネットワーク状態 (Network State)</td><td>接続状態の確認（例：「オフライン/オンライン」ステータス表示のため）</td></tr>
+            <tr><td>システムファイルピッカー</td><td>カバー画像の選択：アクセスはシステムUIを介してユーザーが選択したファイルのみに制限されます</td></tr>
+            <tr><td>android.permission.USE_BIOMETRIC / android.permission.USE_FINGERPRINT</td><td>生体認証によるアプリロック機能の有効化</td></tr>
+            <tr><td>android.permission.POST_NOTIFICATIONS</td><td>連続執筆のリマインダー通知の送信</td></tr>
+            <tr><td>android.permission.WAKE_LOCK</td><td>毎日の通知スケジュール処理中にプロセッサをアクティブに維持するため</td></tr>
+            <tr><td>android.permission.RECEIVE_BOOT_COMPLETED</td><td>デバイス再起動後にスケジュールされた通知を再復元するため</td></tr>
+            <tr><td>android.permission.VIBRATE</td><td>通知時の触覚フィードバック/振動の提供</td></tr>
+            <tr><td>android.permission.SCHEDULE_EXACT_ALARM</td><td>デバイスのスリープモード時でも正確な時間に通知を送るため</td></tr>
+            <tr><td>android.permission.RECORD_AUDIO</td><td>音声入力（音声テキスト変換）のためのマイク使用。音声データは開発者によって保存・送信されず、デバイスの音声サービスによって処理されます</td></tr>
+            <tr><td>com.android.vending.BILLING</td><td>Premiumバージョン（買い切り型）を有効化するためのGoogle Play Billingを通じた決済管理</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>記載された目的以外に権限が使用されることは一切ありません。</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>Premiumバージョンとアプリ内決済</h2>
+      <p>Poesieは、Google Play Billingを通じた<strong>1回限りの買い切り型</strong>（One-Time Purchase）アプリ内購入オプションを提供しています。</p>
+      <p>Premiumバージョンを有効化すると、追加機能（追加テーマ、高度な編集ツール、拡張エクスポート機能など）が解放されます。これらの機能は別のアカウントを作成することなく、デバイス上で完全にローカル処理されます。</p>
+      <p>Premium購入に関連して、アプリは以下のデータを処理します：</p>
+      <ul>
+        <li><strong>購入トークン</strong>：Google Playによって生成され、デバイスの保護領域（<em>SecureStorage</em>）に保存される識別子。Google Play Billing APIを通じて購入の有効性を確認するためだけに利用され、開発者やGoogle LLC以外の第三者に送信されることはありません。</li>
+        <li><strong>Premiumステータス</strong>：セッション間で有効化状態を保持するためにアプリ設定に保存されるブール値。アプリ起動時にGoogle Playとの定期確認が行われます。</li>
+      </ul>
+      <div class="privacy-highlight"><p>開発者が直接支払いを管理することはありません。すべての金銭的取引は、独自の方針に基づきGoogle Play ストアによって処理されます。決済データに関する詳細については、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label="Google プライバシーポリシー（新しいタブで開く）">Google プライバシーポリシー</a> をご参照ください。</p></div>
+      <p>再インストール後や新しいデバイスへの移行時など、以前に購入した権利はアプリ内の<strong>「購入の復元」</strong>機能を使用して追加料金なしで復元できます。</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>第三者とのデータ共有</h2>
+      <p>開発者がユーザーの個人データを第三者に共有、販売、または譲渡することはありません。</p>
+      <p>技術的運用に使用される外部サービス：</p>
+      <ul>
+        <li><strong>Google LLC</strong> — OAuth 2.0 認証およびGoogle ドライブストレージ。<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label="Google プライバシーポリシー（新しいタブで開く）">Google プライバシーポリシー</a></li>
+        <li><strong>Google LLC / Google Play</strong> — Google Play Billingを通じた決済管理およびアプリ内レビューリクエスト。購入トークンはPremium購入を検証する目的のみでGoogleに送信され、開発者が支払いデータにアクセスすることはできません。<a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer" aria-label="Google Play 利用規約（新しいタブで開く）">Google Play 利用規約</a></li>
+      </ul>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>データの保持期間</h2>
+      <ul>
+        <li>コンテンツ（Poesie.docx）は、ユーザーが削除を選択するまでGoogle ドライブ上に残ります</li>
+        <li>OAuth トークンは、ログアウトするかアプリをアンインストールするまでデバイス上に保持されます</li>
+        <li>復元コードは、パスワード/ロックを解除するかアプリをアンインストールするまでデバイス上に保持されます</li>
+        <li>Premium購入トークンは、アプリをアンインストールするまでデバイス上に保持されます。Google Playで購入が無効になった場合は自動的に削除されます</li>
+      </ul>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>ユーザーの権利（GDPR）</h2>
+      <p>データ主体として、GDPR第15条〜第22条に基づき、以下の権利を有します：</p>
+      <ul>
+        <li><strong>アクセス権</strong> — データの処理状況の確認およびコピーの取得</li>
+        <li><strong>訂正権</strong> — 不正確なデータの修正請求</li>
+        <li><strong>消去権（忘れられる権利）</strong> — データの削除請求</li>
+        <li><strong>処理の制限権</strong> — 特定の状況下での処理の制限請求</li>
+        <li><strong>データポータビリティ権</strong> — 構造化された一般的な形式でのデータ受領</li>
+        <li><strong>異議申し立て権</strong> — 該当する場合の処理に対する異議申し立て</li>
+        <li><strong>監督機関への不服申し立て</strong> — データ保護監督機関（<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer" aria-label="イタリアデータ保護当局のウェブサイト（新しいタブで開く）">www.garanteprivacy.it</a> または管轄の地域機関）への申立て</li>
+      </ul>
+      <p>権利を行使する場合は、「データ管理者」セクションに記載されているメールアドレスまでご連絡ください。</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>未成年者のプライバシー</h2>
+      <p>Poesieは14歳未満のお子様を対象としていません。開発者が14歳未満の未成年者から個人情報を意図的に収集することはありません。EU一般データ保護規則（GDPR）に基づき、未成年者のデータ処理には保護者または法的監護者の同意が必要です。</p>
+      <p>Google Playを通じたアプリ内購入には有効なGoogle アカウントが必要です。購入に関する保護者の同意管理は、Google PlayおよびGoogle ファミリー リンクの方針に従います。</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>クッキー（Cookie）および類似技術</h2>
+      <p>Poesie モバイルアプリケーションは、<strong>Cookieや追跡技術を使用していません</strong>。</p>
+      <p>本ウェブサイトでは、ホスティングサービスが提供する必須の技術的Cookieを使用する場合があります。プロファイリング用Cookieは使用していません。</p>
+    </div>
+
+    <div class="privacy-block reveal">
+      <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
+      <h2>プライバシーポリシーの変更</h2>
+      <p>開発者は本ポリシーを改定する権利を有します。変更が発生した場合は、更新日を改定した上で本ページに掲載されます。</p>
+    </div>
+
+    <div class="privacy-contact reveal">
+      <h3>プライバシーに関するご質問はありますか？</h3>
+      <p>権利の行使やデータ保護に関するお問い合わせは、データ管理者までご連絡ください。</p>
+      <a href="mailto:supporto.poesie.app@gmail.com" aria-label="Poesie サポートにメールを送信">supporto.poesie.app@gmail.com</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html#top" class="brand">
+          <img src="assets/logo.png" alt="Poesie">
+          <span class="serif cream">Poesie</span>
+        </a>
+        <p>あなたの詩のための静かな空間。完全に保護されたプライバシーのもとで、言葉を紡ぎ、保存し、書き出しましょう。</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>アプリ</h4>
+        <ul>
+          <li>
+            <a class="nav-link" href="index.html#funzionalita">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a2 2 0 0 1-2.83-2.83l-3.77 3.77ZM14.7 6.3a1 1 0 0 1 0-1.4L16.3 3.3a1 1 0 0 1 1.4 0m0 0a2 2 0 0 1 2.83 2.83M14.7 6.3 3 18a2 2 0 0 0 0 2.83l1.17 1.17a2 2 0 0 0 2.83 0L18.7 10.3"></path>
+              </svg>
+              <span>機能</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="index.html#sicurezza">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>セキュリティ</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="index.html#esportazione">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
+              <span>エクスポート</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="index.html#statistiche">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+              <span>統計</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>情報</h4>
+        <ul>
+          <li><a href="privacy_ja.html" class="footer-link" aria-current="page">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>プライバシー</span>
+            </a>
+          </li>
+          <li>
+            <a href="privacy_ja.html" class="footer-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              <span>利用規約</span>
+            </a>
+          </li>
+          <li>
+            <a class="instagram-link nav-link" href="https://www.instagram.com/poesie_app?igsh=MXBnN3R1MjRocXhheA==" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider center" style="max-width:100%;margin-top:64px;margin-bottom:36px;"><span class="rule"></span><span class="diamond"></span><span class="rule"></span></div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Poesie. All rights reserved.</p>
+      <p class="quote muted-2">「詩とは、言葉にできない事柄の物語である」</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function(){
+    header.classList.toggle('scrolled', window.scrollY > 12);
+  }, { passive:true });
+
+  var menuBtn = document.getElementById('menuBtn');
+  var mobileMenu = document.getElementById('mobileMenu');
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function(){
+      mobileMenu.classList.toggle('open');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        mobileMenu.classList.remove('open');
+      });
+    });
+  }
+
+  var reveals = document.querySelectorAll('.reveal');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(function(el){ io.observe(el); });
+</script>
+
+<script>
+  var langCache = {};
+
+  async function setLanguage(lang) {
+    try {
+      if (!langCache[lang]) {
+        var response = await fetch('locales/' + lang + '.json');
+        if (!response.ok) throw new Error('言語ファイルが見つかりません: ' + lang);
+        langCache[lang] = await response.json();
+      }
+
+      var translations = langCache[lang];
+
+      document.documentElement.lang = lang;
+      if (lang === 'ar') {
+        document.documentElement.setAttribute('dir', 'rtl');
+      } else {
+        document.documentElement.removeAttribute('dir');
+      }
+
+      var elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        if (translations[key] !== undefined) {
+          el.innerHTML = translations[key];
+        }
+      });
+
+      localStorage.setItem('preferred_lang', lang);
+
+    } catch (error) {
+      console.error('言語の読み込みエラー:', error);
+      if (lang !== 'ja') setLanguage('ja');
+    }
+  }
+
+  var langSelect = document.getElementById('langSelect');
+  if (langSelect) {
+    langSelect.addEventListener('change', function(e) {
+      setLanguage(e.target.value);
+    });
+
+    var userBrowserLang = navigator.language.slice(0, 2);
+    var supportedLangs = Array.from(langSelect.options).map(function(o) { return o.value; });
+    var defaultLang = supportedLangs.includes(userBrowserLang) ? userBrowserLang : 'ja';
+    var initialLang = localStorage.getItem('preferred_lang') || defaultLang;
+
+    langSelect.value = initialLang;
+    setLanguage(initialLang);
+  }
+</script>
+<script src="assets/js/lang-switch.js"></script>
+</body>
+</html>

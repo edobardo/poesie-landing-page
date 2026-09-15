@@ -10,6 +10,18 @@
   "nav.faq": "FAQ",
   "btn.download": "Télécharger pour Android",
 
+  "nav.lang.it": "Italien",
+  "nav.lang.en": "Anglais",
+  "nav.lang.de": "Allemand",
+  "nav.lang.es": "Espagnol",
+  "nav.lang.fr": "Français",
+  "nav.lang.ja": "Japonais",
+  "nav.lang.ko": "Coréen",
+  "nav.lang.pt": "Portugais",
+  "nav.lang.ru": "Russe",
+  "nav.lang.ar": "Arabe",
+  "nav.lang.zh": "Chinois",
+
   "hero.eyebrow": "Maintenant disponible sur Google Play",
   "hero.title": "Every feeling,<br>written down.",
   "hero.sub": "Votre espace personnel et privé pour la poésie. Synchronisation fluide, chiffrement discret et outils conçus pour les auteurs.",
