@@ -1,16 +1,16 @@
-// Mappa dei file privacy nella root
+// Mappa dei file privacy nella cartella dedicata
 const PRIVACY_PAGES = {
-  'it': 'privacy_it.html',
-  'en': 'privacy_en.html',
-  'de': 'privacy_de.html',
-  'es': 'privacy_es.html',
-  'fr': 'privacy_fr.html',
-  'ja': 'privacy_ja.html',
-  'ko': 'privacy_ko.html',
-  'pt': 'privacy_pt.html',
-  'ru': 'privacy_ru.html',
-  'ar': 'privacy_sa.html',
-  'zh': 'privacy_cn.html',
+  'it': 'privacy/it.html',
+  'en': 'privacy/en.html',
+  'de': 'privacy/de.html',
+  'es': 'privacy/es.html',
+  'fr': 'privacy/fr.html',
+  'ja': 'privacy/ja.html',
+  'ko': 'privacy/ko.html',
+  'pt': 'privacy/pt.html',
+  'ru': 'privacy/ru.html',
+  'ar': 'privacy/ar.html',
+  'zh': 'privacy/zh.html',
 };
 
 function getPreferredLanguage(supportedLangs) {

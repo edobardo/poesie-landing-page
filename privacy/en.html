@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="../">
 <title>Privacy Policy — Poesie</title>
 <meta name="description" content="Privacy policy of Poesie — learn how your data is processed, what permissions the app requires, and how the Premium version works.">
 <link rel="icon" type="image/png" href="assets/logo.png">
@@ -64,7 +65,7 @@
         </a>
       </nav>
 
-      <div style="display: flex; align-items: center; gap: 12px;">
+      <div class="nav-actions">
         <a href="https://play.google.com/store/apps/details?id=com.edobardo.poesie&hl=en" target="_blank" class="btn btn-primary btn-sm nav-cta" data-i18n="btn.download">Download for Android</a>
 
         <!-- LANGUAGE SELECTOR -->
@@ -139,7 +140,7 @@
 <section id="top" class="privacy-hero">
   <div class="wrap">
     <!-- LANGUAGE NOTICE -->
-    <!-- <div class="privacy-notice hero-in" style="animation-delay:.42s">
+    <!-- <div class="privacy-notice hero-in delay-42">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <circle cx="12" cy="12" r="10"></circle>
         <line x1="12" y1="16" x2="12" y2="12"></line>
@@ -148,18 +149,18 @@
       <span data-i18n="page.translations">Translations of the Privacy Policy into other languages will be available soon.</span>
     </div> -->
 
-    <div class="eyebrow-row hero-in" style="animation-delay:.05s">
+    <div class="eyebrow-row hero-in delay-05">
       <img src="assets/logo.png" alt="">
       <span>Privacy Policy</span>
     </div>
 
-    <h1 class="privacy-title hero-in" style="animation-delay:.15s">Your collection,<br>always safe.</h1>
+    <h1 class="privacy-title hero-in delay-15">Your collection,<br>always safe.</h1>
 
-    <p class="section-sub hero-in" style="animation-delay:.25s">How we process your data in Poesie</p>
+    <p class="section-sub hero-in delay-25">How we process your data in Poesie</p>
 
-    <p class="section-text hero-in" style="animation-delay:.35s;max-width:56ch;">We do not collect or store the content of your poems on our servers: your collection stays on your device and in your personal Google Drive.</p>
+    <p class="section-text hero-in delay-35 privacy-intro-text">We do not collect or store the content of your poems on our servers: your collection stays on your device and in your personal Google Drive.</p>
 
-    <div class="privacy-badge hero-in" style="animation-delay:.50s">
+    <div class="privacy-badge hero-in delay-5">
       <span class="diamond"></span>
       Last updated: September 2026
     </div>
@@ -417,7 +418,7 @@
       <div class="footer-col">
         <h4>Information</h4>
         <ul>
-          <li><a href="privacy_en.html" class="footer-link" aria-current="page">
+          <li><a href="privacy/en.html" class="footer-link" aria-current="page">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
@@ -425,7 +426,7 @@
             </a>
           </li>
           <li>
-            <a href="privacy_en.html" class="footer-link">
+            <a href="privacy/en.html" class="footer-link">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                 <polyline points="14 2 14 8 20 8"></polyline>
@@ -448,7 +449,7 @@
       </div>
     </div>
 
-    <div class="divider center" style="max-width:100%;margin-top:64px;margin-bottom:36px;"><span class="rule"></span><span class="diamond"></span><span class="rule"></span></div>
+    <div class="divider center footer-divider"><span class="rule"></span><span class="diamond"></span><span class="rule"></span></div>
 
     <div class="footer-bottom">
       <p>© 2026 Poesie. All rights reserved.</p>
@@ -457,90 +458,8 @@
   </div>
 </footer>
 
-<script>
-  var header = document.getElementById('siteHeader');
-  window.addEventListener('scroll', function(){
-    header.classList.toggle('scrolled', window.scrollY > 12);
-  }, { passive:true });
-
-  var menuBtn = document.getElementById('menuBtn');
-  var mobileMenu = document.getElementById('mobileMenu');
-
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', function(){
-      mobileMenu.classList.toggle('open');
-    });
-
-    mobileMenu.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){
-        mobileMenu.classList.remove('open');
-      });
-    });
-  }
-
-  var reveals = document.querySelectorAll('.reveal');
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  reveals.forEach(function(el){ io.observe(el); });
-</script>
-
-<script>
-  var langCache = {};
-
-  async function setLanguage(lang) {
-    try {
-      if (!langCache[lang]) {
-        var response = await fetch('locales/' + lang + '.json');
-        if (!response.ok) throw new Error('Language file not found: ' + lang);
-        langCache[lang] = await response.json();
-      }
-
-      var translations = langCache[lang];
-
-      document.documentElement.lang = lang;
-      if (lang === 'ar') {
-        document.documentElement.setAttribute('dir', 'rtl');
-      } else {
-        document.documentElement.removeAttribute('dir');
-      }
-
-      var elements = document.querySelectorAll('[data-i18n]');
-      elements.forEach(function(el) {
-        var key = el.getAttribute('data-i18n');
-        if (translations[key] !== undefined) {
-          el.innerHTML = translations[key];
-        }
-      });
-
-      localStorage.setItem('preferred_lang', lang);
-
-    } catch (error) {
-      console.error('Error loading language:', error);
-      if (lang !== 'en') setLanguage('en');
-    }
-  }
-
-  var langSelect = document.getElementById('langSelect');
-  if (langSelect) {
-    langSelect.addEventListener('change', function(e) {
-      setLanguage(e.target.value);
-    });
-
-    var userBrowserLang = navigator.language.slice(0, 2);
-    var supportedLangs = Array.from(langSelect.options).map(function(o) { return o.value; });
-    var defaultLang = supportedLangs.includes(userBrowserLang) ? userBrowserLang : 'en';
-    var initialLang = localStorage.getItem('preferred_lang') || defaultLang;
-
-    langSelect.value = initialLang;
-    setLanguage(initialLang);
-  }
-</script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/lang-switch.js"></script>
 </body>
 </html>
