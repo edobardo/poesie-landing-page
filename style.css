@@ -16,7 +16,7 @@
   }
 
   *,*::before,*::after{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}
   body{
     margin:0;
     background:var(--bg);
@@ -477,11 +477,24 @@
   .privacy-highlight p{margin-top:0;font-style:italic;color:var(--gold-light);font-size:0.95rem;}
 
   .privacy-table-wrap{overflow-x:auto;margin-top:16px;-webkit-overflow-scrolling:touch;}
-  .privacy-table{width:100%;border-collapse:collapse;font-size:0.9rem;min-width:520px;}
-  .privacy-table th{text-align:left;font-family:var(--serif);font-weight:600;color:var(--gold-light);padding:10px 16px 12px 0;border-bottom:1px solid var(--line);white-space:nowrap;}
-  .privacy-table td{padding:13px 16px 13px 0;color:var(--muted);border-bottom:1px solid var(--line-soft);vertical-align:top;line-height:1.65;}
+  .privacy-table{width:100%;border-collapse:collapse;font-size:0.9rem;table-layout:fixed;}
+  .privacy-table th{text-align:left;font-family:var(--serif);font-weight:600;color:var(--gold-light);padding:10px 16px 12px 0;border-bottom:1px solid var(--line);}
+  .privacy-table th:first-child,.privacy-table td:first-child{width:38%;}
+  .privacy-table td{padding:13px 16px 13px 0;color:var(--muted);border-bottom:1px solid var(--line-soft);vertical-align:top;line-height:1.65;overflow-wrap:break-word;word-break:break-word;}
   .privacy-table td:first-child{color:var(--gold-light);}
   .privacy-table tr:last-child td{border-bottom:none;}
+
+  @media(max-width:599px){
+    .privacy-table-wrap{overflow-x:visible;}
+    .privacy-table{min-width:0;}
+    .privacy-table thead{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+    .privacy-table,.privacy-table tbody,.privacy-table tr,.privacy-table td{display:block;width:100%;}
+    .privacy-table tr{padding:14px 0;border-bottom:1px solid var(--line-soft);}
+    .privacy-table tr:last-child{border-bottom:none;}
+    .privacy-table td{padding:3px 0;border-bottom:none;word-break:break-word;}
+    .privacy-table td:first-child{font-weight:600;padding-bottom:6px;width:100%;}
+    .privacy-table td:last-child::before{content:"Motivo: ";color:var(--gold-light);font-weight:600;}
+  }
 
   .privacy-contact{text-align:center;background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:44px 30px;margin-top:22px;}
   .privacy-contact h3{font-family:var(--serif);color:var(--cream);font-size:1.35rem;font-weight:600;}
