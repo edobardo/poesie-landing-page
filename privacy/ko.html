@@ -158,7 +158,7 @@
 
     <p class="section-sub hero-in delay-25">Poesie의 데이터 처리 방식안내</p>
 
-    <p class="section-text hero-in delay-35 privacy-intro-text">개발자가 관리하는 서버에 시 내용을 수집하거나 저장하지 않습니다. 귀하의 작품집은 사용 중인 기기와 개인 Google 드라이브에만 안전하게 저장됩니다.</p>
+    <p class="section-text hero-in delay-35 privacy-intro-text">저희는 사용자의 시 내용을 서버에 수집하거나 저장하지 않습니다. 당신의 시 컬렉션은 항상 사용자의 기기, Google 드라이브 또는 Microsoft OneDrive에서 사용자의 제어하에 유지됩니다.</p>
 
     <div class="privacy-badge hero-in delay-5">
       <span class="diamond"></span>
@@ -174,9 +174,9 @@
     <div class="privacy-block reveal">
       <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
       <h2>소개</h2>
-      <p>Poesie는 사용자가 시 개인 컬렉션을 작성, 관리, 저장할 수 있도록 설계된 Android 모바일 애플리케이션으로, Google 드라이브 동기화 기능을 제공합니다. 이 앱은 여러 독립적인 컬렉션을 지원하며, 각 컬렉션은 커스텀 표지 이미지와 드라이브 내 전용 파일을 가질 수 있습니다.</p>
+      <p>Poesie는 사용자가 자신만의 시 컬렉션을 작성, 관리 및 보관할 수 있는 Android 모바일 애플리케이션으로, 유연한 클라우드 동기화(Google 드라이브 또는 Microsoft OneDrive) 또는 로컬 전용 모드를 지원합니다. 각각 독립된 표지와 전용 파일을 가진 여러 컬렉션을 관리할 수 있습니다.</p>
       <p>본 앱은 무료 버전과 Google Play를 통한 앱 내 일회성 구매로 활성화할 수 있는 <strong>Premium</strong> 버전을 제공합니다. 본 방침은 처리되는 데이터, 처리 목적 및 사용자의 권리에 대해 설명합니다.</p>
-      <div class="privacy-highlight"><p>개발자가 자체 서버에 사용자의 시 내용을 수집하거나 저장하지 않습니다. 모든 컬렉션은 기기와 개인 Google 드라이브에 안전하게 보관됩니다.</p></div>
+      <div class="privacy-highlight"><p>개발자는 사용자의 시 내용을 자체 서버에 수집하거나 저장하지 않습니다. 컬렉션은 사용자의 기기 및 사용자가 선택한 저장 공간(Google 드라이브, Microsoft OneDrive 또는 로컬 전용)에만 보관됩니다.</p></div>
     </div>
 
     <div class="privacy-block reveal">
@@ -185,7 +185,7 @@
       <p>개인정보 처리자는 다음과 같습니다:</p>
       <ul>
         <li><strong>Edoardo Stoffa</strong> — 개인 개발자</li>
-        <li>이메일: <a href="mailto:supporto.poesie.app@gmail.com">supporto.poesie.app@gmail.com</a></li>
+        <li>이메일: <a href="mailto:support@poesieapp.it">support@poesieapp.it</a></li>
       </ul>
       <p>개인정보보호와 관련된 문의 사항이 있으신 경우 위 이메일로 연락주시기 바랍니다.</p>
     </div>
@@ -195,9 +195,9 @@
       <h2>처리되는 데이터</h2>
       <p>본 앱은 서비스 제공을 위해 다음 데이터만을 처리합니다:</p>
       <ul>
-        <li>Google 계정 이메일 주소(드라이브 연결 후 설정 화면에 표시됨)</li>
-        <li>각 컬렉션의 <strong>.docx</strong> 파일(앱이 개인 Google 드라이브 내에 생성/업데이트함. 범위: <em>drive.file</em>)</li>
-        <li>OAuth 2.0 인증 토큰(OS의 보안 메커니즘을 통해 기기 내에 로컬로 저장됨)</li>
+        <li>Google 또는 Microsoft 계정의 이메일 주소(해당 클라우드 서비스 연결 후 설정 화면에 표시됨)</li>
+        <li>각 컬렉션의 <strong>.docx</strong> 파일(개인 Google 드라이브［<em>drive.file</em> 범위］, Microsoft OneDrive［<em>Files.ReadWrite.AppFolder</em> 범위］에 생성/업데이트되거나 기기 내 암호화된 로컬 저장소에만 보관［로컬 전용 모드］)</li>
+        <li>Google 드라이브 및/또는 Microsoft OneDrive용 OAuth 2.0 / PKCE 인증 토큰(SecureStorage 등 OS 보안 저장소에 로컬 저장됨)</li>
         <li>앱 설정(예: 선택한 언어, 테마, Premium 활성화 상태, 컬렉션 목록)</li>
         <li>시스템 파일 선택기를 통해 사용자가 직접 선택한 커스텀 표지 이미지(앱 전용 디렉터리에 저장됨)</li>
         <li>잠금용 비밀번호: 앱은 암호화된 <strong>해시값</strong>만 보안 영역에 저장하며, 일반 텍스트 비밀번호는 저장하지 않습니다</li>
@@ -213,7 +213,7 @@
       <h2>처리 목적 및 법적 근거</h2>
       <p>데이터는 다음 목적으로 처리됩니다:</p>
       <ul>
-        <li>Google 드라이브를 통한 컬렉션 <strong>동기화 및 백업</strong></li>
+        <li>Google 드라이브 또는 Microsoft OneDrive를 통한 컬렉션 <strong>동기화 및 백업</strong>, 또는 기기 내 안전한 로컬 보관(로컬 전용 모드)</li>
         <li><strong>보안 기능</strong>(PIN 또는 생체인식을 통한 앱 잠금, 복구 코드, 로컬 파일 암호화, 보안 오버레이 화면)</li>
         <li><strong>사용자 요청 기능 제공</strong>(표지 이미지, 언어 설정, 테마, 태그, 즐겨찾기, 연속 작성 위젯, 집필 목표, 로컬 백업, PDF 시선집 생성, 통계 및 "Poetry Wrapped" 로컬 처리)</li>
         <li><strong>로컬 알림</strong>(기기 재부팅 시 재스케줄링되는 연속 집필 리마인더)</li>
@@ -222,17 +222,16 @@
       <div class="privacy-highlight"><p>주요 법적 근거는 GDPR 제6조 제1항 (b)호(계약의 이행 또는 사용자가 요청한 서비스 제공)입니다. 로컬 보안 기능(잠금/복구)은 기기 내 사용자 데이터를 보호하기 위해 작동합니다.</p></div>
     </div>
 
-    <div class="privacy-block reveal">
+        <div class="privacy-block reveal">
       <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
-      <h2>Google 드라이브</h2>
-      <p>본 앱은 <strong>drive.file</strong> 접근 권한 범위의 Google Drive API를 사용하므로, 접근 권한은 본 앱이 직접 생성한 파일로 엄격히 제한됩니다.</p>
+      <h2>클라우드 및 로컬 저장소 (Google 드라이브, OneDrive 및 로컬 전용)</h2>
+      <p>사용자는 컬렉션을 저장하고 동기화할 위치를 다음 3가지 중에서 자유롭게 선택할 수 있습니다:</p>
       <ul>
-        <li>앱이 Google 드라이브 내의 다른 파일을 읽을 수 없습니다</li>
-        <li>앱이 직접 생성하지 않은 파일을 수정하거나 삭제할 수 없습니다</li>
-        <li>Poesie.docx 파일에 대한 소유권 및 제어권은 완전히 사용자에게 있습니다</li>
-        <li>Google 계정 설정에서 언제든지 앱의 접근 권한을 철회할 수 있습니다</li>
+        <li><strong>Google 드라이브</strong>: 본 앱은 <strong>drive.file</strong> 권한 범위의 Google Drive API를 사용하므로, 접근 권한은 본 앱이 직접 생성한 파일로 엄격히 제한됩니다. 드라이브 내 다른 파일이나 폴더에 접근할 수 없습니다. 권한은 <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a>에서 언제든지 취소할 수 있습니다.</li>
+        <li><strong>Microsoft OneDrive</strong>: 본 앱은 <strong>Files.ReadWrite.AppFolder</strong> 권한 범위의 Microsoft Graph API를 사용합니다. 접근 권한은 전용 앱 폴더(<em>OneDrive &gt; 앱 &gt; Poesie App</em>)로 엄격히 제한되며, OneDrive 내의 다른 개인 문서에는 전혀 접근할 수 없습니다. <a href="https://account.live.com/consent/Manage" target="_blank" rel="noopener noreferrer">account.live.com/consent/Manage</a>에서 접근 권한을 관리할 수 있습니다.</li>
+        <li><strong>로컬 전용 모드</strong>: 클라우드 서비스를 사용하지 않으려는 경우 앱은 완전히 오프라인으로 작동합니다. 컬렉션 파일은 AES 암호화되어 기기 내 앱의 전용 보안 영역에만 저장됩니다. 어떤 데이터도 기기 외부로 전송되지 않습니다. 비밀번호로 보호된 로컬 백업을 생성하지 않은 상태에서 앱을 삭제하면 로컬 데이터가 삭제되므로 유의하시기 바랍니다.</li>
       </ul>
-      <div class="privacy-highlight"><p><a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" aria-label="Google 앱 액세스 권한 관리(새 탭에서 열기)">myaccount.google.com/permissions</a>에서 언제든지 앱 권한을 취소할 수 있습니다.</p></div>
+      <div class="privacy-highlight"><p>선택한 저장 방식에 관계없이 모든 컬렉션 파일은 전적으로 사용자의 소유이며 완전한 제어하에 유지됩니다.</p></div>
     </div>
 
     <div class="privacy-block reveal">
@@ -240,7 +239,7 @@
       <h2>로컬 저장소 및 보안</h2>
       <p>다음 데이터는 앱 전용 폴더에 로컬로 저장되며 OS에 의해 보호되어 다른 앱이 접근할 수 없습니다:</p>
       <ul>
-        <li>OAuth 2.0 토큰(OS 보안 저장소 내부)</li>
+        <li>Google / Microsoft의 OAuth 2.0 토큰(운영체제의 안전한 저장 영역인 SecureStorage에 보관)</li>
         <li>로컬 캐시 내의 컬렉션 파일(<strong>앱에 의해 AES로 암호화됨</strong>. 앱이 백그라운드로 전환되거나 보안 화면으로 가려질 때 복호화된 사본은 자동 삭제됨)</li>
         <li>설정(언어, 테마, Premium 상태, 컬렉션 목록 및 관련 옵션)</li>
         <li>커스텀 표지 이미지(사용자가 명시적으로 선택한 파일에 한함)</li>
@@ -248,7 +247,7 @@
         <li>Google Play 로컬 검증 전용으로 보안 영역에 저장되는 Premium 구매 토큰</li>
         <li>명시적 요청 시에만 생성되어 임시 캐시에 보관되는 로컬 백업 파일(사용자 지정 비밀번호로 암호화된 ZIP 파일)</li>
       </ul>
-      <p>이 데이터들은 앱을 삭제할 때 자동으로 함께 삭제됩니다. 또한 설정 화면에서 '연결 해제'를 선택하여 드라이브 세션을 종료할 수 있습니다.</p>
+      <p>이러한 데이터는 앱 삭제 시 자동으로 삭제됩니다. 또한 설정 화면의 "연결 해제"를 통해 언제든지 클라우드 연결(Google 드라이브 또는 OneDrive)을 해제할 수 있습니다.</p>
       <div class="privacy-highlight"><p>네트워크 통신(앱 → Google)은 모두 암호화된 HTTPS(TLS) 보안 연결을 통해 수행됩니다.</p></div>
     </div>
 
@@ -354,7 +353,7 @@
     <div class="privacy-contact reveal">
       <h3>개인정보 관련 문의 사항이 있으신가요?</h3>
       <p>권리 행사 및 개인정보보호에 관한 문의는 개인정보 처리자에게 연락해주시기 바랍니다.</p>
-      <a href="mailto:supporto.poesie.app@gmail.com" aria-label="Poesie 지원팀에 이메일 보내기">supporto.poesie.app@gmail.com</a>
+      <a href="mailto:support@poesieapp.it" aria-label="Poesie 지원팀에 이메일 보내기">support@poesieapp.it</a>
     </div>
 
   </div>

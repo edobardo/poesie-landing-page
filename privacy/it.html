@@ -158,7 +158,7 @@
 
     <p class="section-sub hero-in delay-25">Come trattiamo i tuoi dati in Poesie</p>
 
-    <p class="section-text hero-in delay-35 privacy-intro-text">Non raccogliamo né archiviamo su server nostri i contenuti delle tue poesie: la tua raccolta resta sul tuo dispositivo e nel tuo Google Drive personale.</p>
+    <p class="section-text hero-in delay-35 privacy-intro-text">Non raccogliamo né archiviamo su server nostri i contenuti delle tue poesie: la tua raccolta resta sempre sotto il tuo controllo sul tuo dispositivo, nel tuo Google Drive o su Microsoft OneDrive.</p>
 
     <div class="privacy-badge hero-in delay-5">
       <span class="diamond"></span>
@@ -174,9 +174,9 @@
     <div class="privacy-block reveal">
       <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
       <h2>Introduzione</h2>
-      <p>Poesie è un'applicazione mobile per Android che consente agli utenti di creare, gestire e conservare la propria raccolta personale di poesie, con sincronizzazione tramite Google Drive. L'app supporta più raccolte indipendenti, ciascuna con la propria copertina e il proprio file su Drive.</p>
+      <p>Poesie è un'applicazione mobile per Android che consente agli utenti di creare, gestire e conservare la propria raccolta personale di poesie, con sincronizzazione cloud flessibile (Google Drive o Microsoft OneDrive) oppure in modalità Solo Locale. L'app supporta più raccolte indipendenti, ciascuna con la propria copertina e i propri file dedicati.</p>
       <p>L'app offre una versione gratuita e una versione <strong>Premium</strong> acquistabile tramite acquisto in-app singolo (one-time purchase) attraverso Google Play. La presente informativa descrive quali dati vengono trattati, per quali finalità, e quali diritti hai come utente.</p>
-      <div class="privacy-highlight"><p>Lo sviluppatore non raccoglie né archivia su propri server i contenuti delle tue poesie. La raccolta rimane sul tuo dispositivo e nel tuo Google Drive.</p></div>
+      <div class="privacy-highlight"><p>Lo sviluppatore non raccoglie né archivia su propri server i contenuti delle tue poesie. La raccolta rimane sul tuo dispositivo e nello spazio di archiviazione da te scelto (Google Drive, Microsoft OneDrive o Solo Locale).</p></div>
     </div>
 
     <div class="privacy-block reveal">
@@ -185,7 +185,7 @@
       <p>Il titolare del trattamento dei dati personali è:</p>
       <ul>
         <li><strong>Edoardo Stoffa</strong> — Sviluppatore indipendente</li>
-        <li>Email: <a href="mailto:supporto.poesie.app@gmail.com">supporto.poesie.app@gmail.com</a></li>
+        <li>Email: <a href="mailto:support@poesieapp.it">support@poesieapp.it</a></li>
       </ul>
       <p>Per qualsiasi richiesta relativa alla privacy, puoi contattare il titolare all'indirizzo email indicato.</p>
     </div>
@@ -195,9 +195,9 @@
       <h2>Dati trattati</h2>
       <p>L'app tratta i seguenti dati esclusivamente per il funzionamento del servizio:</p>
       <ul>
-        <li>Indirizzo email dell'account Google (visualizzato nella schermata impostazioni dopo la connessione a Drive)</li>
-        <li>File <strong>.docx</strong> di ciascuna raccolta, creati/aggiornati dall'app nel tuo Google Drive personale (scope <em>drive.file</em>)</li>
-        <li>Token di autenticazione OAuth 2.0 (salvato localmente tramite meccanismi sicuri del sistema operativo)</li>
+        <li>Indirizzo email dell'account Google o Microsoft (visualizzato nella schermata impostazioni dopo la connessione al rispettivo servizio cloud)</li>
+        <li>File <strong>.docx</strong> di ciascuna raccolta, creati/aggiornati dall'app nel tuo Google Drive personale (scope <em>drive.file</em>), nel tuo Microsoft OneDrive (scope <em>Files.ReadWrite.AppFolder</em>), oppure conservati esclusivamente nello storage cifrato locale del dispositivo (modalità Solo Locale)</li>
+        <li>Token di autenticazione OAuth 2.0 / PKCE per Google Drive e/o Microsoft OneDrive (salvato localmente tramite meccanismi sicuri del sistema operativo come SecureStorage)</li>
         <li>Preferenze dell'app (es. lingua selezionata, tema visivo, stato attivazione Premium, lista raccolte)</li>
         <li>Immagine di copertina personalizzata selezionata dall'utente tramite picker di sistema (salvata nella directory privata dell'app)</li>
         <li>Password di blocco: l'app salva solo un <strong>hash</strong> (non la password in chiaro) in area protetta del dispositivo</li>
@@ -213,7 +213,7 @@
       <h2>Finalità e base giuridica</h2>
       <p>I dati sono trattati per:</p>
       <ul>
-        <li><strong>Sincronizzazione e salvataggio</strong> delle raccolte su Google Drive</li>
+        <li><strong>Sincronizzazione e salvataggio</strong> delle raccolte su Google Drive o Microsoft OneDrive, oppure archiviazione protetta sul dispositivo (modalità Solo Locale)</li>
         <li><strong>Funzioni di sicurezza</strong> (blocco app tramite PIN o biometria, recovery code, cifratura locale del file, overlay di sicurezza)</li>
         <li><strong>Funzionalità richieste dall'utente</strong> (copertina, preferenze lingua, tema visivo, tag, preferiti, widget streak, obiettivi di scrittura, backup locale, generazione PDF antologia, elaborazione locale di statistiche e "Poetry Wrapped")</li>
         <li><strong>Notifiche locali</strong> (promemoria streak di scrittura, ripristinate al riavvio del dispositivo)</li>
@@ -222,17 +222,16 @@
       <div class="privacy-highlight"><p>La base giuridica principale è l'art. 6, par. 1, lett. b) del GDPR (esecuzione del servizio richiesto dall'utente). Le funzioni di sicurezza locali (blocco app/recovery) sono finalizzate alla protezione dell'accesso ai dati dell'utente sul dispositivo.</p></div>
     </div>
 
-    <div class="privacy-block reveal">
+        <div class="privacy-block reveal">
       <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
-      <h2>Google Drive</h2>
-      <p>L'app utilizza le API di Google Drive con scope <strong>drive.file</strong>, che limita l'accesso esclusivamente ai file creati dall'app stessa.</p>
+      <h2>Cloud e Archiviazione Locale (Google Drive, OneDrive e Solo Locale)</h2>
+      <p>L'utente può scegliere liberamente dove archiviare e sincronizzare le proprie raccolte tra tre modalità:</p>
       <ul>
-        <li>L'app non può leggere altri file presenti nel tuo Google Drive</li>
-        <li>L'app non può modificare o eliminare file non creati da essa</li>
-        <li>Il file Poesie.docx rimane di tua proprietà e sotto il tuo controllo</li>
-        <li>Puoi revocare l'accesso in qualsiasi momento dalle impostazioni Google</li>
+        <li><strong>Google Drive</strong>: L'app utilizza le API di Google Drive con scope <strong>drive.file</strong>, che limita l'accesso esclusivamente ai file creati dall'app stessa. L'app non può visualizzare, leggere, modificare o eliminare altri file o cartelle del tuo Drive. Puoi revocare i permessi in qualunque momento su <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a>.</li>
+        <li><strong>Microsoft OneDrive</strong>: L'app utilizza le Microsoft Graph API con scope <strong>Files.ReadWrite.AppFolder</strong>. L'accesso è strettamente circoscritto alla cartella dedicata all'applicazione (<em>OneDrive &gt; Applicazioni &gt; Poesie App</em>). L'app non ha accesso ad alcun altro file, cartella o documento personale presente nel tuo account OneDrive. Puoi gestire o revocare l'accesso dalle impostazioni dell'account Microsoft su <a href="https://account.live.com/consent/Manage" target="_blank" rel="noopener noreferrer">account.live.com/consent/Manage</a>.</li>
+        <li><strong>Modalità Solo Locale</strong>: Se preferisci non utilizzare alcun servizio cloud, l'app opera interamente offline. I file delle raccolte vengono memorizzati unicamente nella memoria privata dell'app, protetti da cifratura AES. Nessun dato lascia il dispositivo. In questa modalità, l'utente è avvisato che la disinstallazione dell'app comporta la cancellazione dei dati locali a meno che non sia stato effettuato un backup locale protetto da password.</li>
       </ul>
-      <div class="privacy-highlight"><p>Puoi revocare i permessi dell'app visitando <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" aria-label="Gestisci permessi app Google (si apre in una nuova scheda)">myaccount.google.com/permissions</a>.</p></div>
+      <div class="privacy-highlight"><p>Tutti i file delle raccolte rimangono di tua esclusiva proprietà e sotto il tuo totale controllo, qualunque sia la modalità scelta.</p></div>
     </div>
 
     <div class="privacy-block reveal">
@@ -240,7 +239,7 @@
       <h2>Archiviazione locale e sicurezza</h2>
       <p>I seguenti dati vengono salvati localmente nella cartella privata dell'app, protetta dal sistema operativo e non accessibile ad altre applicazioni:</p>
       <ul>
-        <li>Token OAuth 2.0 (in archiviazione sicura del sistema operativo)</li>
+        <li>Token OAuth 2.0 Google / Microsoft (in archiviazione sicura del sistema operativo SecureStorage)</li>
         <li>File di ciascuna raccolta in cache locale, <strong>cifrati con AES</strong> lato app; la copia in chiaro viene rimossa automaticamente quando l'app va in background o viene oscurata dall'overlay di sicurezza</li>
         <li>Preferenze (es. lingua, tema visivo, stato Premium, lista raccolte e relative configurazioni)</li>
         <li>Copertine personalizzate (solo i file selezionati dall'utente tramite picker di sistema)</li>
@@ -248,7 +247,7 @@
         <li>Token di acquisto Premium (purchase token) in area protetta, usato esclusivamente per verifiche locali con Google Play</li>
         <li>File di backup locale (archivio ZIP cifrato con password fornita dall'utente), generato solo su richiesta esplicita e conservato in cache temporanea</li>
       </ul>
-      <p>Questi dati vengono eliminati automaticamente alla disinstallazione dell'app. È inoltre possibile rimuovere la sessione Drive tramite "Disconnetti" nelle impostazioni.</p>
+      <p>Questi dati vengono eliminati automaticamente alla disinstallazione dell'app. È inoltre possibile rimuovere la sessione cloud (Google Drive o OneDrive) in qualsiasi momento tramite "Disconnetti" nelle impostazioni.</p>
       <div class="privacy-highlight"><p>Le comunicazioni di rete (app → Google) avvengono esclusivamente tramite HTTPS (TLS).</p></div>
     </div>
 
@@ -262,7 +261,7 @@
             <tr><th scope="col">Permesso</th><th scope="col">Motivo</th></tr>
           </thead>
           <tbody>
-            <tr><td>Internet</td><td>Connessione alle API di Google per autenticazione e sincronizzazione su Google Drive; comunicazione con Google Play per verifica acquisti Premium</td></tr>
+            <tr><td>Internet</td><td>Connessione alle API di Google per sincronizzazione su Google Drive e verifica acquisti Premium Google Play; connessione a Microsoft Graph API per la sincronizzazione opzionale su OneDrive</td></tr>
             <tr><td>Stato rete</td><td>Verifica della connettività (es. per mostrare messaggi "offline/online")</td></tr>
             <tr><td>File picker di sistema</td><td>Selezione della copertina: l'accesso è limitato al file scelto dall'utente tramite interfaccia di sistema</td></tr>
             <tr><td>android.permission.USE_BIOMETRIC / android.permission.USE_FINGERPRINT</td><td>Abilitare il blocco dell'app tramite autenticazione biometrica</td></tr>
@@ -299,8 +298,9 @@
       <p>Lo sviluppatore non condivide, non vende e non cede a terze parti alcun dato personale dell'utente.</p>
       <p>Servizi di terze parti utilizzati per il funzionamento tecnico:</p>
       <ul>
-        <li><strong>Google LLC</strong> — OAuth 2.0 e archiviazione su Google Drive. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label="Privacy Policy Google (si apre in una nuova scheda)">Privacy Policy Google</a></li>
+        <li><strong>Google LLC</strong> — Autenticazione OAuth 2.0 e archiviazione su Google Drive (per gli utenti che abilitano Drive). <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label="Privacy Policy Google (si apre in una nuova scheda)">Privacy Policy Google</a></li>
         <li><strong>Google LLC / Google Play</strong> — Elaborazione degli acquisti in-app tramite Google Play Billing e richieste di recensione in-app. Il purchase token viene inviato a Google esclusivamente per validare l'acquisto Premium; lo sviluppatore non ha accesso ai dati di pagamento. <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer" aria-label="Termini di servizio Google Play (si apre in una nuova scheda)">Termini Google Play</a></li>
+        <li><strong>Microsoft Corporation</strong> — Autenticazione OAuth 2.0 PKCE e archiviazione tramite Microsoft Graph API (per gli utenti che scelgono la sincronizzazione con Microsoft OneDrive). L'accesso è limitato esclusivamente alla cartella dedicata dell'applicazione. <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer" aria-label="Informativa sulla privacy di Microsoft (si apre in una nuova scheda)">Privacy Policy Microsoft</a></li>
       </ul>
     </div>
 
@@ -308,8 +308,8 @@
       <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
       <h2>Conservazione dei dati</h2>
       <ul>
-        <li>I contenuti (Poesie.docx) restano nel tuo Google Drive finché non li elimini tu</li>
-        <li>I token OAuth restano sul dispositivo finché non ti disconnetti o disinstalli l'app</li>
+        <li>I contenuti delle raccolte restano nel tuo Google Drive, nel tuo OneDrive o nella memoria locale dell'app finché non li elimini tu</li>
+        <li>I token di autenticazione OAuth (Google o Microsoft) restano sul dispositivo finché non ti disconnetti o disinstalli l'app</li>
         <li>Il recovery code resta sul dispositivo finché non rimuovi la password/blocco o disinstalli l'app</li>
         <li>Il purchase token Premium resta sul dispositivo finché non disinstalli l'app; viene rimosso automaticamente se l'acquisto non risulta più attivo su Google Play</li>
       </ul>
@@ -354,7 +354,7 @@
     <div class="privacy-contact reveal">
       <h3>Hai domande sulla privacy?</h3>
       <p>Per esercitare i tuoi diritti o per qualsiasi domanda relativa alla privacy, contatta il titolare del trattamento.</p>
-      <a href="mailto:supporto.poesie.app@gmail.com" aria-label="Invia email al supporto Poesie">supporto.poesie.app@gmail.com</a>
+      <a href="mailto:support@poesieapp.it" aria-label="Invia email al supporto Poesie">support@poesieapp.it</a>
     </div>
 
   </div>

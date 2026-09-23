@@ -158,7 +158,7 @@
 
     <p class="section-sub hero-in delay-25">How we process your data in Poesie</p>
 
-    <p class="section-text hero-in delay-35 privacy-intro-text">We do not collect or store the content of your poems on our servers: your collection stays on your device and in your personal Google Drive.</p>
+    <p class="section-text hero-in delay-35 privacy-intro-text">We do not collect or store the contents of your poems on our servers: your collection always remains under your control on your device, in your Google Drive, or on Microsoft OneDrive.</p>
 
     <div class="privacy-badge hero-in delay-5">
       <span class="diamond"></span>
@@ -174,9 +174,9 @@
     <div class="privacy-block reveal">
       <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
       <h2>Introduction</h2>
-      <p>Poesie is an Android mobile application that allows users to create, manage, and preserve their personal collection of poems, with synchronization via Google Drive. The app supports multiple independent collections, each with its own cover image and file on Drive.</p>
+      <p>Poesie is an Android mobile application that allows users to create, manage, and preserve their personal collection of poems, with flexible cloud synchronization (Google Drive or Microsoft OneDrive) or in Local Only mode. The app supports multiple independent collections, each with its own cover and dedicated files.</p>
       <p>The app offers a free version and a <strong>Premium</strong> version available through a one-time in-app purchase via Google Play. This policy describes what data is processed, for what purposes, and what rights you have as a user.</p>
-      <div class="privacy-highlight"><p>The developer does not collect or store the content of your poems on their own servers. Your collection remains on your device and in your Google Drive.</p></div>
+      <div class="privacy-highlight"><p>The developer does not collect or store the content of your poems on their own servers. Your collection remains on your device and in the storage space of your choice (Google Drive, Microsoft OneDrive, or Local Only).</p></div>
     </div>
 
     <div class="privacy-block reveal">
@@ -185,7 +185,7 @@
       <p>The data controller for personal data is:</p>
       <ul>
         <li><strong>Edoardo Stoffa</strong> — Independent Developer</li>
-        <li>Email: <a href="mailto:supporto.poesie.app@gmail.com">supporto.poesie.app@gmail.com</a></li>
+        <li>Email: <a href="mailto:support@poesieapp.it">support@poesieapp.it</a></li>
       </ul>
       <p>For any privacy-related requests, you can contact the controller at the email address provided.</p>
     </div>
@@ -195,9 +195,9 @@
       <h2>Processed Data</h2>
       <p>The app processes the following data exclusively for the functioning of the service:</p>
       <ul>
-        <li>Email address of the Google account (displayed in the settings screen after connecting to Drive)</li>
-        <li><strong>.docx</strong> file of each collection, created/updated by the app in your personal Google Drive (<em>drive.file</em> scope)</li>
-        <li>OAuth 2.0 authentication token (saved locally using secure operating system mechanisms)</li>
+        <li>Email address of the Google or Microsoft account (displayed in the settings screen after connecting to the respective cloud service)</li>
+        <li><strong>.docx</strong> file of each collection, created/updated by the app in your personal Google Drive (<em>drive.file</em> scope), in your Microsoft OneDrive (<em>Files.ReadWrite.AppFolder</em> scope), or kept strictly in local encrypted storage on the device (Local Only mode)</li>
+        <li>OAuth 2.0 / PKCE authentication token for Google Drive and/or Microsoft OneDrive (saved locally using secure operating system mechanisms such as SecureStorage)</li>
         <li>App preferences (e.g., selected language, visual theme, Premium activation status, collection list)</li>
         <li>Custom cover image selected by the user via system picker (saved in the app's private directory)</li>
         <li>Lock password: the app only saves a <strong>hash</strong> (not the plain text password) in a protected area of the device</li>
@@ -213,7 +213,7 @@
       <h2>Purposes and Legal Basis</h2>
       <p>Data is processed for:</p>
       <ul>
-        <li><strong>Syncing and saving</strong> collections on Google Drive</li>
+        <li><strong>Syncing and saving</strong> collections on Google Drive or Microsoft OneDrive, or secure local storage on device (Local Only mode)</li>
         <li><strong>Security functions</strong> (app lock via PIN or biometrics, recovery code, local file encryption, security overlay)</li>
         <li><strong>User-requested features</strong> (cover image, language preferences, visual theme, tags, favorites, streak widget, writing goals, local backup, anthology PDF generation, local processing of statistics and "Poetry Wrapped")</li>
         <li><strong>Local notifications</strong> (writing streak reminders, restored upon device reboot)</li>
@@ -222,17 +222,16 @@
       <div class="privacy-highlight"><p>The main legal basis is Art. 6, par. 1, letter b) of the GDPR (performance of a service requested by the user). Local security features (app lock/recovery) are aimed at protecting access to user data on the device.</p></div>
     </div>
 
-    <div class="privacy-block reveal">
+        <div class="privacy-block reveal">
       <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
-      <h2>Google Drive</h2>
-      <p>The app uses Google Drive APIs with the <strong>drive.file</strong> scope, which restricts access strictly to files created by the app itself.</p>
+      <h2>Cloud and Local Storage (Google Drive, OneDrive, and Local Only)</h2>
+      <p>Users can freely choose where to store and synchronize their collections among three modes:</p>
       <ul>
-        <li>The app cannot read other files present in your Google Drive</li>
-        <li>The app cannot modify or delete files not created by it</li>
-        <li>The Poesie.docx file remains your property and under your control</li>
-        <li>You can revoke access at any time from your Google settings</li>
+        <li><strong>Google Drive</strong>: The app uses Google Drive APIs with the <strong>drive.file</strong> scope, restricting access strictly to files created by the app itself. The app cannot view, read, modify, or delete any other files or folders in your Drive. You can revoke permissions at any time at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a>.</li>
+        <li><strong>Microsoft OneDrive</strong>: The app uses Microsoft Graph APIs with the <strong>Files.ReadWrite.AppFolder</strong> scope. Access is strictly limited to the application's dedicated folder (<em>OneDrive &gt; Apps &gt; Poesie App</em>). The app has no access to any other personal files, folders, or documents in your OneDrive account. You can manage or revoke access in your Microsoft account settings at <a href="https://account.live.com/consent/Manage" target="_blank" rel="noopener noreferrer">account.live.com/consent/Manage</a>.</li>
+        <li><strong>Local Only Mode</strong>: If you prefer not to use any cloud service, the app operates entirely offline. Collection files are stored exclusively in the app's private memory, protected by AES encryption. No data leaves your device. In this mode, users are reminded that uninstalling the app deletes local data unless a password-protected local backup has been created.</li>
       </ul>
-      <div class="privacy-highlight"><p>You can revoke the app's permissions by visiting <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" aria-label="Manage Google app permissions (opens in a new tab)">myaccount.google.com/permissions</a>.</p></div>
+      <div class="privacy-highlight"><p>All collection files remain your exclusive property and under your complete control, whichever mode is chosen.</p></div>
     </div>
 
     <div class="privacy-block reveal">
@@ -240,7 +239,7 @@
       <h2>Local Storage and Security</h2>
       <p>The following data is saved locally in the app's private folder, protected by the operating system and inaccessible to other applications:</p>
       <ul>
-        <li>OAuth 2.0 tokens (in secure operating system storage)</li>
+        <li>OAuth 2.0 Google / Microsoft tokens (stored in secure operating system storage SecureStorage)</li>
         <li>Files of each collection in local cache, <strong>encrypted with AES</strong> on the app side; the unencrypted copy is automatically deleted when the app goes to the background or is hidden by the security overlay</li>
         <li>Preferences (e.g., language, visual theme, Premium status, list of collections, and related settings)</li>
         <li>Custom cover images (only files chosen by the user via system picker)</li>
@@ -248,7 +247,7 @@
         <li>Premium purchase token in a protected area, used exclusively for local checks with Google Play</li>
         <li>Local backup file (ZIP archive encrypted with a user-provided password), generated only upon explicit request and kept in temporary cache</li>
       </ul>
-      <p>This data is automatically deleted upon uninstalling the app. You can also remove the Drive session via "Disconnect" in the settings.</p>
+      <p>This data is automatically deleted upon uninstalling the app. You can also remove the cloud session (Google Drive or OneDrive) at any time via "Disconnect" in settings.</p>
       <div class="privacy-highlight"><p>Network communications (app → Google) take place exclusively via HTTPS (TLS).</p></div>
     </div>
 
@@ -262,7 +261,7 @@
             <tr><th scope="col">Permission</th><th scope="col">Reason</th></tr>
           </thead>
           <tbody>
-            <tr><td>Internet</td><td>Connecting to Google APIs for authentication and synchronization on Google Drive; communicating with Google Play to verify Premium purchases</td></tr>
+            <tr><td>Internet</td><td>Connecting to Google APIs for Google Drive sync and verifying Google Play Premium purchases; connecting to Microsoft Graph API for optional OneDrive synchronization</td></tr>
             <tr><td>Network state</td><td>Checking connectivity (e.g., to display "offline/online" messages)</td></tr>
             <tr><td>System file picker</td><td>Cover image selection: access is limited to the file chosen by the user via system interface</td></tr>
             <tr><td>android.permission.USE_BIOMETRIC / android.permission.USE_FINGERPRINT</td><td>Enabling app lock via biometric authentication</td></tr>
@@ -308,8 +307,8 @@
       <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
       <h2>Data Retention</h2>
       <ul>
-        <li>Contents (Poesie.docx) remain in your Google Drive until you delete them</li>
-        <li>OAuth tokens remain on the device until you log out or uninstall the app</li>
+        <li>Collection contents remain in your Google Drive, OneDrive, or local app storage until you delete them</li>
+        <li>OAuth authentication tokens (Google or Microsoft) remain on the device until you disconnect or uninstall the app</li>
         <li>The recovery code remains on the device until you remove the password/lock or uninstall the app</li>
         <li>The Premium purchase token remains on the device until you uninstall the app; it is automatically removed if the purchase is no longer active on Google Play</li>
       </ul>
@@ -354,7 +353,7 @@
     <div class="privacy-contact reveal">
       <h3>Have questions about privacy?</h3>
       <p>To exercise your rights or for any privacy-related questions, contact the data controller.</p>
-      <a href="mailto:supporto.poesie.app@gmail.com" aria-label="Send email to Poesie support">supporto.poesie.app@gmail.com</a>
+      <a href="mailto:support@poesieapp.it" aria-label="Send email to Poesie support">support@poesieapp.it</a>
     </div>
 
   </div>

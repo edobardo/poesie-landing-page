@@ -158,7 +158,7 @@
 
     <p class="section-sub hero-in delay-25">كيفية معالجة بياناتك في Poesie</p>
 
-    <p class="section-text hero-in delay-35 privacy-intro-text">نحن لا نجمع أو نخزن نصوص قصائدك على خوادمنا. تُحفظ مجموعتك حصرياً وبأمان على جهازك وفي حسابك الشخصي على Google Drive.</p>
+    <p class="section-text hero-in delay-35 privacy-intro-text">نحن لا نجمع ولا نخزن محتوى قصائدك على خوادمنا: تظل مجموعتك دائمًا تحت سيطرتك الكاملة على جهازك، أو في Google Drive، أو على Microsoft OneDrive.</p>
 
     <div class="privacy-badge hero-in delay-5">
       <span class="diamond"></span>
@@ -174,9 +174,9 @@
     <div class="privacy-block reveal">
       <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
       <h2>مقدمة</h2>
-      <p>تطبيق Poesie هو تطبيق للهواتف المحمولة يعمل بنظام Android، صُمم ليتيح للمستخدمين كتابة وتنظيم وحفظ مجموعتهم الشعرية الخاصة مع إمكانية المزامنة عبر Google Drive. يدعم التطبيق مجموعات مستقلة متعددة، حيث تحتوي كل مجموعة على غلاف خاص بها وملف منفصل على Google Drive.</p>
+      <p>تطبيق Poesie هو تطبيق للهواتف المحمولة بنظام Android يتيح للمستخدمين إنشاء مجموعاتهم الشعرية الشخصية وإدارتها والحفاظ عليها، مع مزامنة سحابية مرنة (Google Drive أو Microsoft OneDrive) أو في وضع الحفظ المحلي فقط. يدعم التطبيق مجموعات مستقلة متعددة، لكل منها غلاف وملفات مخصصة.</p>
       <p>يتوفر التطبيق بإنشائين: نسخة مجانية ونسخة <strong>Premium</strong>، والتي يمكن تفعيلها من خلال عملية شراء واحدة داخل التطبيق عبر Google Play. تشرح هذه السياسة البيانات التي يتم معالجتها، والغرض من ذلك، والحقوق التي تتمتع بها كمستخدم.</p>
-      <div class="privacy-highlight"><p>لا يقوم المطور بجمع أو تخزين نصوص قصائدك على خوادمه الخاصة. تبقى جميع المجموعات حصرياً على جهازك وفي حسابك الشخصي على Google Drive.</p></div>
+      <div class="privacy-highlight"><p>المطور لا يجمع ولا يخزن محتوى قصائدك على خوادمه الخاصة. تظل المجموعة على جهازك وفي مساحة التخزين التي تختارها (Google Drive أو Microsoft OneDrive أو الحفظ المحلي فقط).</p></div>
     </div>
 
     <div class="privacy-block reveal">
@@ -185,7 +185,7 @@
       <p>المسؤول عن معالجة البيانات الشخصية هو:</p>
       <ul>
         <li><strong>Edoardo Stoffa</strong> — مطور مستقل</li>
-        <li>البريد الإلكتروني: <a href="mailto:supporto.poesie.app@gmail.com">supporto.poesie.app@gmail.com</a></li>
+        <li>البريد الإلكتروني: <a href="mailto:support@poesieapp.it">support@poesieapp.it</a></li>
       </ul>
       <p>لأي أسئلة تتعلق بالخصوصية، يمكنك التواصل معنا عبر عنوان البريد الإلكتروني الموضح أعلاه.</p>
     </div>
@@ -195,9 +195,9 @@
       <h2>البيانات التي يتم معالجتها</h2>
       <p>يعالج التطبيق فقط البيانات التالية الضرورية لتقديم الخدمة:</p>
       <ul>
-        <li>عنوان البريد الإلكتروني لحساب Google (يظهر في الإعدادات بعد الاتصال بـ Drive)</li>
-        <li>ملفات <strong>.docx</strong> لكل مجموعة (يتم إنشاؤها/تحديثها بواسطة التطبيق على Google Drive الشخصي الخاص بك؛ نطاق الوصول: <em>drive.file</em>)</li>
-        <li>رموز تفويض OAuth 2.0 (تُحفظ محلياً باستخدام آليات الأمان في نظام التشغيل)</li>
+        <li>عنوان البريد الإلكتروني لحساب Google أو Microsoft (يظهر في شاشة الإعدادات بعد الاتصال بالخدمة السحابية المعنية)</li>
+        <li>ملف <strong>.docx</strong> لكل مجموعة، يتم إنشاؤه/تحديثه بواسطة التطبيق في Google Drive الشخصي (نطاق <em>drive.file</em>)، أو في Microsoft OneDrive (نطاق <em>Files.ReadWrite.AppFolder</em>)، أو يُحفظ حصريًا في مساحة التخزين المحلية المشفرة على الجهاز (وضع الحفظ المحلي فقط)</li>
+        <li>رمز مصادقة OAuth 2.0 / PKCE لـ Google Drive و/أو Microsoft OneDrive (يُحفظ محليًا عبر آليات نظام التشغيل الآمنة مثل SecureStorage)</li>
         <li>تفضيلات التطبيق (مثل اللغة المختارة، المظهر، حالة تفعيل Premium، وقائمة المجموعات)</li>
         <li>الأغلفة المخصصة للمجموعات المختارة عبر مستكشف الملفات للنظام (تُحفظ في المجلد الآمن للتطبيق)</li>
         <li>كلمة مرور القفل: يخزن التطبيق فقط <strong>التشفير الهشي (Hash)</strong> كرمز مشفر في المجلد الآمن، وليس كلمة المرور النصية الصريحة</li>
@@ -213,7 +213,7 @@
       <h2>الأغراض والقواعد القانونية للمعالجة</h2>
       <p>تتم معالجة البيانات للأغراض التالية:</p>
       <ul>
-        <li><strong>المزامنة والنسخ الاحتياطي</strong> للمجموعات على Google Drive</li>
+        <li><strong>المزامنة والحفظ</strong> للمجموعات على Google Drive أو Microsoft OneDrive، أو الحفظ المحلي الآمن على الجهاز (وضع الحفظ المحلي فقط)</li>
         <li><strong>ميزات الأمان</strong> (قفل التطبيق برمز PIN أو البصمة، رمز الاسترداد، تشفير الملفات المحلية، وشاشات حماية الخصوصية)</li>
         <li><strong>تقديم الميزات المطلوبة</strong> (الأغلفة المخصصة، إعدادات اللغة، المظهر، الأوسمة، المفضلة، أداة تتبع الأيام المتتالية، أهداف الكتابة، النسخ الاحتياطي المحلي، إنشاء دواوين PDF، الإحصائيات والمعالجة المحلية لـ "Poetry Wrapped")</li>
         <li><strong>الإشعارات المحلية</strong> (تذكيرات للحفاظ على سلسلة الكتابة اليومية، يتم إعادة تشغيلها بعد إعادة تشغيل الجهاز)</li>
@@ -222,17 +222,16 @@
       <div class="privacy-highlight"><p>الأساس القانوني الرئيسي هو المادة 6 (1) (b) من اللائحة العامة لحماية البيانات GDPR (تنفيذ الاتفاقية أو تقديم الخدمة المطلوبة من قبل المستخدم). تعمل ميزات الأمان المحلية حصرياً لحماية بياناتك على الجهاز.</p></div>
     </div>
 
-    <div class="privacy-block reveal">
+        <div class="privacy-block reveal">
       <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
-      <h2>Google Drive</h2>
-      <p>يستخدم التطبيق واجهة برمجة تطبيقات Google Drive API مع نطاق وصول مقيد وصارم <strong>drive.file</strong>. هذا يعني أن الوصول يقتصر فقط على الملفات التي أنشأها التطبيق نفسه.</p>
+      <h2>التخزين السحابي والمحلي (Google Drive و OneDrive والحفظ المحلي فقط)</h2>
+      <p>يمكن للمستخدم الاختيار بحرية بين ثلاث طرق لتخزين مجموعاته ومزامنتها:</p>
       <ul>
-        <li>لا يمكن للتطبيق قراءة الملفات الأخرى الموجودة على Google Drive الخاص بك</li>
-        <li>لا يمكن للتطبيق تعديل أو حذف الملفات التي أنشأتها تطبيقات أخرى</li>
-        <li>تبقى ملفات Poesie.docx ملكك بالكامل وتحت سيطرتك الكاملة</li>
-        <li>يمكنك إلغاء وصول التطبيق في أي وقت عبر إعدادات حساب Google الخاص بك</li>
+        <li><strong>Google Drive</strong>: يستخدم التطبيق واجهات برمجة تطبيقات Google Drive بنطاق وصول <strong>drive.file</strong>، مما يقصر الوصول تمامًا على الملفات التي أنشأها التطبيق نفسه دون أي وصول لملفاتك الأخرى. يمكنك إلغاء الأذونات في أي وقت عبر <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a>.</li>
+        <li><strong>Microsoft OneDrive</strong>: يستخدم التطبيق Microsoft Graph API بنطاق <strong>Files.ReadWrite.AppFolder</strong>، مما يقصر الوصول على المجلد المخصص للتطبيق فقط (<em>OneDrive &gt; التطبيقات &gt; Poesie App</em>). لا يملك التطبيق أي وصول لملفاتك أو مستنداتك الأخرى. يمكنك إدارة الوصول عبر <a href="https://account.live.com/consent/Manage" target="_blank" rel="noopener noreferrer">account.live.com/consent/Manage</a>.</li>
+        <li><strong>وضع الحفظ المحلي فقط</strong>: إذا كنت تفضل عدم استخدام السحابة، فإن التطبيق يعمل دون اتصال بالإنترنت بالكامل. تُحفظ الملفات في الذاكرة الآمنة الخاصة بالتطبيق فقط ومحمية بتشفير AES. لا تخرج أي بيانات من جهازك. يُرجى ملاحظة أن إلغاء تثبيت التطبيق يؤدي إلى حذف البيانات المحلية ما لم يتم إنشاء نسخة احتياطية محلية محمية بكلمة مرور.</li>
       </ul>
-      <div class="privacy-highlight"><p>يمكنك إدارة أذونات التطبيق أو إلغاؤها في أي وقت من خلال الصفحة <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" aria-label="إدارة أذونات تطبيق Google (تفتح في تبويب جديد)">myaccount.google.com/permissions</a>.</p></div>
+      <div class="privacy-highlight"><p>تظل جميع ملفات المجموعات ملكك الخاص الحصري وتحت سيطرتك الكاملة بصرف النظر عن خيار التخزين المعتمد.</p></div>
     </div>
 
     <div class="privacy-block reveal">
@@ -240,7 +239,7 @@
       <h2>التخزين المحلي والأمان</h2>
       <p>تُحفظ البيانات التالية محلياً في المجلد الخاص بالتطبيق، وتكون محمية بواسطة نظام التشغيل ولا يمكن للتطبيقات الأخرى الوصول إليها:</p>
       <ul>
-        <li>رموز OAuth 2.0 (في التخزين الآمن لنظام التشغيل)</li>
+        <li>رموز OAuth 2.0 لـ Google / Microsoft (محفوظة في التخزين الآمن لنظام التشغيل SecureStorage)</li>
         <li>ملفات المجموعات في ذاكرة التخزين المؤقت المحلية (<strong>مشفرة بواسطة التطبيق بمعيار AES</strong>؛ يتم حذف النسخ غير المشفرة تلقائياً عند انتقال التطبيق إلى الخلفية أو إغلاقه بواسطة شاشة الأمان)</li>
         <li>التفضيلات (اللغة، المظهر، حالة Premium، قائمة المجموعات، والخيارات المرتبطة)</li>
         <li>الأغلفة المخصصة (فقط الملفات التي تم اختيارها بوضوح من قبل المستخدم)</li>
@@ -248,7 +247,7 @@
         <li>رمز شراء Premium المخزن في التخزين الآمن للتحقق المحلي عبر Google Play</li>
         <li>ملفات النسخ الاحتياطي المحلية، التي يتم إنشاؤها بناءً على طلب صريح فقط (ملفات ZIP مشفرة بكلمة مرور يحددها المستخدم)</li>
       </ul>
-      <p>يتم حذف هذه البيانات تلقائياً عند إلغاء تثبيت التطبيق. يمكنك أيضاً إنهاء جلسة العمل مع Drive باختيار "قطع الاتصال" من قائمة الإعدادات.</p>
+      <p>يتم حذف هذه البيانات تلقائيًا عند إلغاء تثبيت التطبيق. يمكنك أيضًا إنهاء الجلسة السحابية (Google Drive أو OneDrive) في أي وقت عبر خيار "قطع الاتصال" في الإعدادات.</p>
       <div class="privacy-highlight"><p>تتم جميع الاتصالات عبر الشبكة (التطبيق ← Google) حصرياً عبر اتصالات آمنة ومشفّرة بروتوكول HTTPS (TLS).</p></div>
     </div>
 
@@ -299,8 +298,9 @@
       <p>لا يقوم المطور بنقل أو بيع أو مشاركة البيانات الشخصية للمستخدمين مع أطراف ثالثة.</p>
       <p>الخدمات الخارجية المدمجة لضمان التشغيل الفني:</p>
       <ul>
-        <li><strong>Google LLC</strong> — مصادقة OAuth 2.0 وتخزين البيانات على Google Drive. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label="سياسة خصوصية Google (تفتح في تبويب جديد)">سياسة خصوصية Google</a></li>
-        <li><strong>Google LLC / Google Play</strong> — إدارة المدفوعات عبر Google Play Billing وطلبات التقييم داخل التطبيق. يُنقل رمز الشراء إلى Google حصرياً للتحقق من ترخيص Premium. <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer" aria-label="شروط خدمة Google Play (تفتح في تبويب جديد)">شروط خدمة Google Play</a></li>
+        <li><strong>Google LLC</strong> — مصادقة OAuth 2.0 وتخزين البيانات على Google Drive (للمستخدمين الذين يفعلون Drive). <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" aria-label="سياسة خصوصية Google (تفتح في تبويب جديد)">سياسة خصوصية Google</a></li>
+        <li><strong>Google LLC / Google Play</strong> — معالجة عمليات الشراء داخل التطبيق عبر Google Play Billing وطلبات التقييم. يُستخدم رمز الشراء فقط للتحقق من Premium؛ ولا يصل المطور لبيانات الدفع. <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer" aria-label="شروط خدمة Google Play (تفتح في تبويب جديد)">شروط Google Play</a></li>
+        <li><strong>Microsoft Corporation</strong> — مصادقة OAuth 2.0 PKCE والتخزين عبر Microsoft Graph API (للمستخدمين الذين يختارون المزامنة مع Microsoft OneDrive). الوصول مقتصر تمامًا على مجلد التطبيق المخصص. <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer" aria-label="بيان خصوصية Microsoft (تفتح في تبويب جديد)">بيان خصوصية Microsoft</a></li>
       </ul>
     </div>
 
@@ -354,7 +354,7 @@
     <div class="privacy-contact reveal">
       <h3>هل لديك أسئلة أخرى حول الخصوصية؟</h3>
       <p>لممارسة حقوقك أو للحصول على معلومات إضافية، تواصل مع مسؤول معالجة البيانات.</p>
-      <a href="mailto:supporto.poesie.app@gmail.com" aria-label="إرسال بريد إلكتروني إلى دعم Poesie">supporto.poesie.app@gmail.com</a>
+      <a href="mailto:support@poesieapp.it" aria-label="إرسال بريد إلكتروني إلى دعم Poesie">support@poesieapp.it</a>
     </div>
 
   </div>

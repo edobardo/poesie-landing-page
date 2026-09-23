@@ -158,7 +158,7 @@
 
     <p class="section-sub hero-in delay-25">Poesieにおけるデータの取り扱いについて</p>
 
-    <p class="section-text hero-in delay-35 privacy-intro-text">当方が管理するサーバー上に詩の内容を収集・保存することはありません。あなたのコレクションは、お使いのデバイスおよび個人のGoogle ドライブにのみ保存されます。</p>
+    <p class="section-text hero-in delay-35 privacy-intro-text">私たちはユーザーの詩の内容をサーバーに収集または保存しません。あなたの詩のコレクションは常に、あなたの端末、Googleドライブ、またはMicrosoft OneDriveで安全に管理されます。</p>
 
     <div class="privacy-badge hero-in delay-5">
       <span class="diamond"></span>
@@ -174,9 +174,9 @@
     <div class="privacy-block reveal">
       <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
       <h2>はじめに</h2>
-      <p>Poesieは、ユーザーが詩の個人コレクションを作成、管理、保存できるように設計されたAndroid用モバイルアプリケーションであり、Google ドライブとの同期機能を備えています。本アプリは複数の独立したコレクションに対応しており、それぞれに独自のカバー画像とドライブ上のファイルを設定できます。</p>
+      <p>Poesieは、ユーザーが詩の個人コレクションを作成、管理、保存できるように設計されたAndroid用モバイルアプリケーションであり、柔軟なクラウド同期（Google ドライブまたはMicrosoft OneDrive）または完全ローカル保存に対応しています。本アプリは複数の独立したコレクションに対応しており、それぞれに独自のカバー画像と専用ファイルを設定できます。</p>
       <p>本アプリには無料版と、Google Play経由のアプリ内一括購入で取得できる<strong>Premium</strong>バージョンがあります。本ポリシーでは、処理されるデータ、その目的、およびユーザーとしての権利について説明します。</p>
-      <div class="privacy-highlight"><p>開発者が自前のサーバーにユーザーの詩の内容を収集または保存することはありません。コレクションはお使いのデバイスとGoogle ドライブに安全に保持されます。</p></div>
+      <div class="privacy-highlight"><p>開発者が自前のサーバーにユーザーの詩の内容を収集または保存することはありません。コレクションはお使いのデバイス、およびご自身が選択したストレージ（Google ドライブ、Microsoft OneDrive、またはローカル専用）に安全に保持されます。</p></div>
     </div>
 
     <div class="privacy-block reveal">
@@ -185,7 +185,7 @@
       <p>個人データの管理者は以下の通りです：</p>
       <ul>
         <li><strong>Edoardo Stoffa</strong> — 個人開発者</li>
-        <li>メールアドレス: <a href="mailto:supporto.poesie.app@gmail.com">supporto.poesie.app@gmail.com</a></li>
+        <li>メールアドレス: <a href="mailto:support@poesieapp.it">support@poesieapp.it</a></li>
       </ul>
       <p>プライバシーに関するご質問がある場合は、上記のお問い合わせ先までご連絡ください。</p>
     </div>
@@ -195,9 +195,9 @@
       <h2>処理されるデータ</h2>
       <p>本アプリは、サービスの提供を目的として以下のデータのみを処理します：</p>
       <ul>
-        <li>Google アカウントのメールアドレス（ドライブ接続後に設定画面に表示されます）</li>
-        <li>各コレクションの <strong>.docx</strong> ファイル（個人のGoogle ドライブ内にアプリが作成/更新します。スコープ：<em>drive.file</em>）</li>
-        <li>OAuth 2.0 認証トークン（OSの安全なメカニズムを通じてローカルに保存されます）</li>
+        <li>GoogleまたはMicrosoftアカウントのメールアドレス（各クラウドサービスへの接続後、設定画面に表示されます）</li>
+        <li>各コレクションの <strong>.docx</strong> ファイル（個人のGoogle ドライブ［<em>drive.file</em> スコープ］、Microsoft OneDrive［<em>Files.ReadWrite.AppFolder</em> スコープ］内に作成/更新されるか、端末内の暗号化ローカルストレージにのみ保存されます［ローカル専用モード］）</li>
+        <li>Google ドライブおよび/またはMicrosoft OneDrive用のOAuth 2.0 / PKCE認証トークン（SecureStorageなどの安全なOS保護領域にローカル保存されます）</li>
         <li>アプリ設定（例：選択言語、テーマ、Premiumアクティベーション状態、コレクション一覧）</li>
         <li>システムのファイルピッカー経由でユーザーが選択したカスタムカバー画像（アプリの専用ディレクトリに保存されます）</li>
         <li>ロック用パスワード：アプリは保護領域に <strong>ハッシュ値</strong> のみを保存し、プレーンテキストのパスワードは保存しません</li>
@@ -213,7 +213,7 @@
       <h2>利用目的および法的根拠</h2>
       <p>データは以下の目的で処理されます：</p>
       <ul>
-        <li>Google ドライブとのコレクションの<strong>同期およびバックアップ</strong></li>
+        <li>Google ドライブまたはMicrosoft OneDriveとのコレクションの<strong>同期およびバックアップ</strong>、または端末内での安全なローカル保存（ローカル専用モード）</li>
         <li><strong>セキュリティ機能</strong>（PINまたは生体認証によるアプリロック、復元コード、ローカルファイルの暗号化、セキュリティオーバーレイ画面）</li>
         <li><strong>ユーザーが要求した機能の提供</strong>（カバー画像、言語設定、テーマ、タグ、お気に入り、連続執筆ウィジェット、執筆目標、ローカルバックアップ、PDF形式のアンソロジー作成、統計情報および「Poetry Wrapped」のローカル処理）</li>
         <li><strong>ローカル通知</strong>（デバイス再起動時に再スケジュールされる連続執筆のリマインダー）</li>
@@ -222,17 +222,16 @@
       <div class="privacy-highlight"><p>主な法的根拠はGDPR第6条(1)(b)（契約の履行またはユーザーからのサービス要求の提供）です。ローカルセキュリティ機能（ロック/復元）は、デバイス上のユーザーデータへのアクセスを保護するために機能します。</p></div>
     </div>
 
-    <div class="privacy-block reveal">
+        <div class="privacy-block reveal">
       <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
-      <h2>Google ドライブ</h2>
-      <p>本アプリは <strong>drive.file</strong> スコープ付きのGoogle Drive APIを使用しているため、アクセス権限は本アプリ自身が作成したファイルのみに厳密に制限されています。</p>
+      <h2>クラウドおよびローカルストレージ（Google ドライブ、OneDrive、ローカル専用）</h2>
+      <p>ユーザーはコレクションの保存および同期方法を以下の3つから自由に選択できます：</p>
       <ul>
-        <li>アプリがGoogle ドライブ内の他のファイルを読み取ることはできません</li>
-        <li>アプリ自身が作成していないファイルを変更または削除することはできません</li>
-        <li>Poesie.docx ファイルは引き続きユーザーに所有権があり、管理下に置かれます</li>
-        <li>Google アカウントの設定からいつでもアクセス権限を取り消すことができます</li>
+        <li><strong>Google ドライブ</strong>: 本アプリは <strong>drive.file</strong> スコープ付きのGoogle Drive APIを使用し、本アプリ自身が作成したファイルのみにアクセスが制限されます。他のファイルやフォルダへのアクセスはできません。アクセス権限は <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a> からいつでも取り消せます。</li>
+        <li><strong>Microsoft OneDrive</strong>: 本アプリは <strong>Files.ReadWrite.AppFolder</strong> スコープ付きのMicrosoft Graph APIを使用します。アクセスは本アプリ専用のフォルダ（<em>OneDrive &gt; アプリ &gt; Poesie App</em>）に厳格に制限され、OneDrive内の他の個人ファイルにアクセスすることは一切できません。アクセス設定は <a href="https://account.live.com/consent/Manage" target="_blank" rel="noopener noreferrer">account.live.com/consent/Manage</a> で管理できます。</li>
+        <li><strong>ローカル専用モード</strong>: クラウドを利用したくない場合、アプリは完全オフラインで動作します。コレクションはAES暗号化により端末内のアプリ保護領域にのみ安全に保存されます。データが端末外部に送信されることはありません。パスワード付きローカルバックアップを作成していない場合、アプリをアンインストールするとローカルデータは消去されますのでご注意ください。</li>
       </ul>
-      <div class="privacy-highlight"><p><a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" aria-label="Google アプリのアクセス許可を管理する（新しいタブで開く）">myaccount.google.com/permissions</a> にアクセスすることで、アプリのアクセス権限をいつでも取り消すことができます。</p></div>
+      <div class="privacy-highlight"><p>どの保存方法を選択した場合でも、コレクションのすべてのファイルはユーザー固有の所有物であり、完全な管理下にあります。</p></div>
     </div>
 
     <div class="privacy-block reveal">
@@ -240,7 +239,7 @@
       <h2>ローカルストレージとセキュリティ</h2>
       <p>以下のデータはアプリの専用フォルダにローカル保存され、OSによって保護されているため他のアプリからアクセスすることはできません：</p>
       <ul>
-        <li>OAuth 2.0 トークン（OSのセキュアストレージ内）</li>
+        <li>Google / Microsoft のOAuth 2.0トークン（OSの保護領域SecureStorageに安全に保管）</li>
         <li>ローカルキャッシュ内の各コレクションファイル（<strong>アプリによりAESで暗号化</strong>。アプリがバックグラウンドに移動した際、またはセキュリティ画面で覆われた際に、暗号化されていないコピーは自動消去されます）</li>
         <li>設定（言語、テーマ、Premiumステータス、コレクション一覧および関連オプション）</li>
         <li>カスタムカバー画像（ユーザーが明示的に選択したファイルのみ）</li>
@@ -248,7 +247,7 @@
         <li>Google Playでのローカル検証専用に保護領域に保存されるPremium購入トークン</li>
         <li>明示的な要求時にのみ作成され一時キャッシュに保持されるローカルバックアップファイル（ユーザー指定のパスワードで暗号化されたZIPファイル）</li>
       </ul>
-      <p>これらのデータはアプリをアンインストールすると自動的に削除されます。また、設定画面で「切断」を選択してドライブセッションを終了することもできます。</p>
+      <p>これらのデータはアプリのアンインストール時に自動的に消去されます。また、設定画面の「接続解除」からいつでもクラウド連携（Google ドライブまたはOneDrive）を解除できます。</p>
       <div class="privacy-highlight"><p>ネットワーク通信（アプリ → Google）はすべて安全なHTTPS（TLS）接続を介して行われます。</p></div>
     </div>
 
@@ -354,7 +353,7 @@
     <div class="privacy-contact reveal">
       <h3>プライバシーに関するご質問はありますか？</h3>
       <p>権利の行使やデータ保護に関するお問い合わせは、データ管理者までご連絡ください。</p>
-      <a href="mailto:supporto.poesie.app@gmail.com" aria-label="Poesie サポートにメールを送信">supporto.poesie.app@gmail.com</a>
+      <a href="mailto:support@poesieapp.it" aria-label="Poesie サポートにメールを送信">support@poesieapp.it</a>
     </div>
 
   </div>

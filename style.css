@@ -54,21 +54,63 @@
     background:
       radial-gradient(ellipse 60% 40% at 80% 0%, rgba(195,174,120,0.07), transparent 60%),
       radial-gradient(ellipse 50% 35% at 8% 30%, rgba(195,174,120,0.045), transparent 60%);
+    animation: ambientShimmer 14s ease-in-out infinite alternate;
+  }
+  @keyframes ambientShimmer {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.72; }
+    100% { opacity: 1; }
   }
 
   /* ============ divider motif ============ */
   .divider{display:flex;align-items:center;gap:14px;max-width:340px;}
   .divider .rule{flex:1;height:1px;background:var(--line);}
-  .divider .diamond{width:6px;height:6px;background:var(--gold);transform:rotate(45deg);flex-shrink:0;opacity:0.85;}
+  .divider .diamond{
+    width:6px;height:6px;background:var(--gold);transform:rotate(45deg);flex-shrink:0;opacity:0.85;
+    box-shadow: 0 0 8px 2px rgba(195,174,120,0.28);
+    transition: box-shadow .4s ease;
+  }
+  .divider:hover .diamond { box-shadow: 0 0 14px 4px rgba(195,174,120,0.45); }
   .divider.center{margin:0 auto;}
 
   /* ============ buttons ============ */
   .btn{
+    position:relative;overflow:hidden;
     display:inline-flex;align-items:center;justify-content:center;gap:10px;
     padding:15px 30px;border-radius:11px;
     font-family:var(--sans);font-weight:600;font-size:0.95rem;
     letter-spacing:0.01em;white-space:nowrap;border:1px solid transparent;
-    transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, background .35s ease, border-color .35s ease;
+    transition:transform .45s cubic-bezier(.16,.85,.2,1), box-shadow .45s cubic-bezier(.16,.85,.2,1), background .4s ease, border-color .4s ease;
+  }
+
+  /* ---- Hand-drawn SVG border on .btn-ghost ---- */
+  .btn-ghost .pen-border{
+    position:absolute;inset:0;border-radius:inherit;
+    pointer-events:none;overflow:visible;
+  }
+  .btn-ghost .pen-border rect{
+    fill:none;stroke:var(--gold);
+    stroke-width:1.5;stroke-linecap:round;
+    rx:11px;ry:11px;
+    stroke-dasharray:600;
+    stroke-dashoffset:600;
+    transition:stroke-dashoffset .7s cubic-bezier(.25,.1,.1,1);
+  }
+  .btn-ghost:hover .pen-border rect{
+    stroke-dashoffset:0;
+  }
+  /* Ripple pseudo-element */
+  .btn::after{
+    content:'';
+    position:absolute;inset:0;border-radius:inherit;
+    background:radial-gradient(circle at center, rgba(255,255,255,0.22) 0%, transparent 65%);
+    opacity:0;transform:scale(0.6);
+    transition:opacity .55s ease, transform .55s ease;
+    pointer-events:none;
+  }
+  .btn:active::after{
+    opacity:1;transform:scale(2);
+    transition:opacity 0s, transform 0s;
   }
   .btn-primary{
     background:var(--cream);color:#1a1a14;
@@ -97,10 +139,35 @@
   .brand span{font-size:1.25rem;letter-spacing:0.01em;}
 
   .nav-links{display:none;align-items:center;gap:25px;flex-wrap:nowrap;}
-  .nav-link{position:relative;color:var(--muted);font-size:0.92rem;font-weight:500;transition:color .3s ease;}
-  .nav-link:hover{color:var(--text);}
-  .nav-link::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s ease;}
-  .nav-link:hover::after{transform:scaleX(1);}
+  .nav-link{
+    position:relative;color:var(--muted);font-size:0.92rem;font-weight:500;
+    transition:color .3s ease, letter-spacing .3s ease;
+  }
+  .nav-link:hover{color:var(--text);letter-spacing:0.03em;}
+
+  /* ---- Hand-drawn SVG underline on nav-link ---- */
+  .nav-link{overflow:visible;}
+  .nav-link .pen-line{
+    position:absolute;left:0;bottom:-6px;
+    width:100%;height:10px;
+    pointer-events:none;overflow:visible;
+  }
+  .nav-link .pen-line line{
+    stroke:var(--gold);stroke-width:1.4;
+    stroke-linecap:round;
+    stroke-dasharray:200;
+    stroke-dashoffset:200;
+    transition:stroke-dashoffset .55s cubic-bezier(.25,.1,.1,1);
+  }
+  .nav-link:hover .pen-line line,
+  .nav-links .nav-link.active .pen-line line{
+    stroke-dashoffset:0;
+  }
+  /* keep old ::after for non-JS fallback but hide when pen-line is injected */
+  .nav-link.has-pen-line::after{display:none;}
+  /* Active section indicator */
+  .nav-links .nav-link.active{color:var(--cream);}
+  .nav-links .nav-link.active::after{transform:scaleX(1);opacity:0.7;}
   .nav-cta{display:none;}
   .menu-btn{display:inline-flex;color:var(--cream);padding:8px;margin-right:-8px;}
 
@@ -127,6 +194,8 @@
   .eyebrow-row span{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted-2);}
 
   .hero-title{font-family:var(--serif);color:var(--cream);line-height:1.08;font-size:2.5rem;font-weight:600;}
+  /* Typewriter: start invisible — JS will reveal character by character */
+  #heroTitle{opacity:0;}
   @media(min-width:640px){.hero-title{font-size:3.4rem;}}
   @media(min-width:1024px){.hero-title{font-size:4.3rem;}}
 
@@ -166,6 +235,13 @@
     box-shadow:0 30px 60px -25px rgba(0,0,0,0.65), 0 0 0 1px rgba(195,174,120,0.1);
     -webkit-mask-image:linear-gradient(to bottom, black 80%, transparent 99%);
     mask-image:linear-gradient(to bottom, black 80%, transparent 99%);
+    transition: box-shadow .4s ease, transform .4s cubic-bezier(.2,.8,.2,1);
+  }
+  /* Lift effect on static (non-float-animated) phone windows */
+  .phone-solo .phone-window:hover,
+  .phone-duo > .phone-window:not(.secondary):hover {
+    transform: translateY(-6px) scale(1.012);
+    box-shadow: 0 40px 70px -24px rgba(0,0,0,0.7), 0 0 0 1px rgba(195,174,120,0.22), 0 0 30px -10px rgba(195,174,120,0.12);
   }
   .phone-window img{width:100%;height:100%;object-fit:cover;object-position:top center;}
   .phone-window.small{aspect-ratio:700/880;}
@@ -190,14 +266,25 @@
   .order-swap-2{order:1;}
   @media(min-width:1024px){.order-swap-1{order:1;}.order-swap-2{order:2;}}
 
-  .section-heading{font-family:var(--serif);color:var(--cream);font-size:2.1rem;line-height:1.16;font-weight:600;}
+  .section-heading{
+    font-family:var(--serif);color:var(--cream);font-size:2.1rem;line-height:1.16;font-weight:600;
+    text-shadow: 0 0 40px rgba(195,174,120,0.15);
+  }
   @media(min-width:640px){.section-heading{font-size:2.7rem;}}
   .section-sub{font-family:var(--serif);font-style:italic;color:var(--gold-light);font-size:1.1rem;margin-top:16px;}
   .section-text{color:var(--muted);margin-top:22px;max-width:46ch;line-height:1.75;}
 
   .feat-list{margin-top:30px;}
-  .feat-list li{position:relative;padding-left:26px;color:var(--muted);font-size:0.98rem;line-height:1.6;}
-  .feat-list li::before{content:'❖';position:absolute;left:0;top:0.05em;color:var(--gold);font-size:0.85em;}
+  .feat-list li{
+    position:relative;padding-left:26px;color:var(--muted);font-size:0.98rem;line-height:1.6;
+    transition: color .25s ease;
+  }
+  .feat-list li:hover{color:var(--text);}
+  .feat-list li::before{
+    content:'❖';position:absolute;left:0;top:0.05em;color:var(--gold);font-size:0.85em;
+    transition: transform .3s cubic-bezier(.2,.8,.2,1), opacity .3s ease;
+  }
+  .feat-list li:hover::before{transform:scale(1.2);opacity:1;}
   .feat-list li + li{margin-top:12px;}
 
   /* ============ security band ============ */
@@ -211,8 +298,18 @@
 
   .stat-grid{display:grid;grid-template-columns:1fr;gap:20px;max-width:1080px;margin:64px auto 0;}
   @media(min-width:640px){.stat-grid{grid-template-columns:repeat(3,1fr);}}
-  .stat-card{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:26px;}
-  .stat-card svg{margin-bottom:16px;}
+  .stat-card{
+    background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:26px;
+    transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, border-color .35s ease;
+    will-change: transform;
+  }
+  .stat-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px -16px rgba(0,0,0,0.55), 0 0 0 1px rgba(195,174,120,0.28);
+    border-color: rgba(195,174,120,0.35);
+  }
+  .stat-card svg{margin-bottom:16px;transition: transform .35s cubic-bezier(.2,.8,.2,1);}
+  .stat-card:hover svg{transform:scale(1.12);}
   .stat-card h3{font-family:var(--serif);color:var(--cream);font-size:1.15rem;font-weight:600;}
   .stat-card p{color:var(--muted);font-size:0.9rem;margin-top:8px;line-height:1.6;}
 
@@ -235,8 +332,12 @@
   .footer-col h4{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted-2);margin-bottom:20px;}
   .footer-col li{margin-top:12px;}
   .footer-col li:first-child{margin-top:0;}
-  .footer-col a{color:var(--muted);font-size:0.92rem;transition:color .3s ease;}
-  .footer-col a:hover{color:var(--cream);}
+  .footer-col a{
+    color:var(--muted);font-size:0.92rem;
+    display:inline-flex;align-items:center;
+    transition:color .3s ease, transform .3s cubic-bezier(.2,.8,.2,1);
+  }
+  .footer-col a:hover{color:var(--cream);transform:translateX(4px);}
   .footer-bottom{display:flex;flex-direction:column;gap:16px;align-items:center;justify-content:space-between;text-align:center;margin-top:0px;}
   @media(min-width:640px){.footer-bottom{flex-direction:row;text-align:left;}}
   .footer-bottom p{font-size:0.75rem;color:var(--muted-2);}
@@ -311,7 +412,8 @@
   border-radius: 16px;
   padding: 4px 26px;
   margin-top: 14px;
-  transition: border-color .3s ease, background .3s ease;
+  transition: border-color .35s ease, background .35s ease, box-shadow .35s ease;
+  overflow: hidden;
 }
 
 .faq-item:first-child {
@@ -320,6 +422,7 @@
 
 .faq-item:hover {
   border-color: rgba(195,174,120,0.4);
+  box-shadow: 0 8px 28px -12px rgba(0,0,0,0.35);
 }
 
 .faq-item summary {
@@ -334,6 +437,7 @@
   justify-content: space-between;
   gap: 20px;
   padding: 22px 0;
+  user-select: none;
 }
 
 .faq-item summary::-webkit-details-marker {
@@ -348,16 +452,31 @@
   line-height: 1;
   color: var(--gold);
   flex-shrink: 0;
-  transition: transform .35s ease;
+  transition: transform .4s cubic-bezier(.2,.8,.2,1), color .3s ease;
+  display: inline-block;
 }
 
 .faq-item[open] summary::after {
   transform: rotate(45deg);
+  color: var(--gold-light);
 }
 
 .faq-item[open] {
   border-color: rgba(195,174,120,0.3);
   background: rgba(195,174,120,0.045);
+}
+
+/* Smooth content reveal using grid trick */
+.faq-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .42s cubic-bezier(.2,.7,.2,1);
+}
+.faq-item[open] .faq-body {
+  grid-template-rows: 1fr;
+}
+.faq-body-inner {
+  overflow: hidden;
 }
 
 .faq-item p {
@@ -425,12 +544,84 @@
   flex-shrink: 0;
 }
 
-  /* ============ scroll reveal ============ */
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1);}
-  .reveal.is-visible{opacity:1;transform:translateY(0);}
+  /* ============ scroll reveal — journal page lift ============ */
+  .reveal{
+    opacity:0;
+    transform:translateY(36px);
+    filter:blur(1.5px);
+    transition:
+      opacity   1.1s cubic-bezier(.16,.84,.18,1),
+      transform 1.1s cubic-bezier(.16,.84,.18,1),
+      filter    1.1s cubic-bezier(.16,.84,.18,1);
+  }
+  .reveal.is-visible{
+    opacity:1;
+    transform:translateY(0);
+    filter:blur(0);
+  }
 
-  .hero-in{opacity:0;transform:translateY(18px);animation:heroIn 1s cubic-bezier(.2,.7,.2,1) forwards;}
-  @keyframes heroIn{to{opacity:1;transform:translateY(0);}}
+  /* Stagger delay utilities (applied by JS or manually) */
+  .reveal-delay-1{transition-delay:0.12s;}
+  .reveal-delay-2{transition-delay:0.26s;}
+  .reveal-delay-3{transition-delay:0.42s;}
+  .reveal-delay-4{transition-delay:0.60s;}
+
+  /* ============ hero entrance ============ */
+  /* hero-in is used for non-typewriter elements (eyebrow, CTA, note, visual) */
+  .hero-in{
+    opacity:0;
+    transform:translateY(22px);
+    animation:heroIn 1.1s cubic-bezier(.16,.84,.18,1) forwards;
+  }
+  @keyframes heroIn{
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  /* ---- Typewriter cursor ---- */
+  @keyframes inkBlink {
+    0%,48%  { opacity: 1; }
+    50%,98% { opacity: 0; }
+    100%    { opacity: 1; }
+  }
+  .typewriter-cursor{
+    display:inline-block;
+    width:3px;height:0.85em;
+    background:var(--gold);
+    border-radius:2px;
+    margin-left:4px;
+    vertical-align:middle;
+    animation:inkBlink 1.1s cubic-bezier(.4,0,.6,1) infinite;
+    will-change:opacity;
+  }
+  .typewriter-cursor.done{
+    animation:inkBlink 2.4s cubic-bezier(.4,0,.6,1) infinite;
+    opacity:0;
+  }
+
+  /* ---- Ink-dry fade for hero subtitle ---- */
+  @keyframes inkDry {
+    0%   { opacity:0; filter:blur(6px); transform:translateY(10px); }
+    40%  { filter:blur(2px); }
+    100% { opacity:1; filter:blur(0);   transform:translateY(0); }
+  }
+  .ink-dry{
+    opacity:0;
+    animation:inkDry 1.6s cubic-bezier(.16,.84,.18,1) forwards;
+  }
+
+  /* ============ cursor glow (desktop) ============ */
+  .cursor-glow{
+    position:fixed;pointer-events:none;z-index:9999;
+    width:320px;height:320px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(195,174,120,0.055) 0%, transparent 70%);
+    transform:translate(-50%,-50%);
+    transition:opacity .4s ease;
+    opacity:0;
+    will-change:transform;
+  }
+  @media(hover:hover){.cursor-glow{display:block;}}
+  @media(hover:none){.cursor-glow{display:none;}}
 
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;}
@@ -522,4 +713,170 @@
 .privacy-notice svg {
   flex-shrink: 0;
   color: var(--gold);
+}
+
+/* ============================================================
+ * LENIS — body smoothing class
+ * Lenis adds `lenis` class to html; disable native scroll-behavior
+ * so Lenis's interpolated position is the sole source of truth.
+ * ============================================================ */
+html.lenis, html.lenis body {
+  height: auto;
+}
+html.lenis { scroll-behavior: auto !important; }
+
+/* ============================================================
+ * GSAP SPLITTYPE — Cinematic word-reveal clip masks
+ *
+ * When GSAP + SplitType wraps words, each .st-line becomes an
+ * overflow:hidden "slot", and .st-word elements slide up from
+ * beneath the edge — the classic Awwwards text-reveal mask trick.
+ * ============================================================ */
+.gsap-split-ready .st-line {
+  display: block;
+  overflow: hidden;
+  /* Add a tiny vertical breathing room so descenders aren't clipped */
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+.gsap-split-ready .st-word {
+  display: inline-block;
+  /* GSAP animates translateY on these elements */
+  will-change: transform;
+}
+
+/* ============================================================
+ * PEN SCENE — fountain pen SVG storytelling section
+ * ============================================================ */
+#pen-scene {
+  padding: 72px 0 80px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 90% 60% at 50% 50%, rgba(195,174,120,0.042), transparent 70%),
+    var(--bg-deep);
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+/* Decorative side fades so the path feels like it extends to infinity */
+#pen-scene::before,
+#pen-scene::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 96px;
+  z-index: 2;
+  pointer-events: none;
+}
+#pen-scene::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-deep), transparent);
+}
+#pen-scene::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-deep), transparent);
+}
+
+.pen-scene-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+@media(min-width:1024px) { .pen-scene-inner { padding: 0 40px; } }
+
+/* Italic label above the path */
+.pen-scene-eyebrow {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+  margin: 0 0 36px;
+  /* GSAP fades this in; start invisible for JS control */
+  opacity: 0;
+}
+/* Fallback if JS/GSAP doesn't load */
+@media(prefers-reduced-motion: reduce) {
+  .pen-scene-eyebrow { opacity: 1; }
+}
+
+/* The pen stage: positions the SVG path and pen cursor in the same coordinate frame */
+.pen-stage {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+/* The SVG stage */
+.pen-svg {
+  display: block;
+  width: 100%;
+  max-width: 920px;
+  height: auto;
+  max-height: 110px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+/* The path itself — JS will set stroke-dasharray + stroke-dashoffset */
+.pen-path,
+#penGroup path,
+.pen-svg path {
+  /* stroke-dasharray and stroke-dashoffset managed entirely by GSAP.
+     Fallback for no-JS: show the full path */
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  fill: none;
+  stroke: #c3ae78;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Fountain pen cursor element (supports SVG or <img>) */
+.pen-cursor,
+#penCursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 80px;
+  height: auto;
+  pointer-events: none;
+  z-index: 10;
+  /* Crucial: tip of the nib is at the right edge (100%), vertical center (50%) */
+  transform-origin: 100% 50%;
+  transform: rotate(130deg);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+  will-change: transform;
+}
+
+@media(max-width: 600px) {
+  .pen-cursor,
+  #penCursor {
+    width: 64px;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  .pen-cursor,
+  #penCursor {
+    display: none;
+  }
+}
+
+/* Scroll hint at the bottom */
+.pen-scene-hint {
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  margin: 32px 0 0;
+  /* GSAP fades this in too; start invisible */
+  opacity: 0;
+}
+@media(prefers-reduced-motion: reduce) {
+  .pen-scene-hint { opacity: 1; }
 }

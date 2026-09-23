@@ -17,12 +17,20 @@ async function setLanguage(lang) {
       document.documentElement.removeAttribute('dir');
     }
 
-    document.querySelectorAll('[data-i18n]').forEach(function (element) {
-      var key = element.getAttribute('data-i18n');
-      if (translations[key] !== undefined) {
-        element.innerHTML = translations[key];
-      }
-    });
+    var applyTranslations = function () {
+      document.querySelectorAll('[data-i18n]').forEach(function (element) {
+        var key = element.getAttribute('data-i18n');
+        if (translations[key] !== undefined) {
+          element.innerHTML = translations[key];
+        }
+      });
+    };
+
+    if (typeof window.refreshAnimations === 'function') {
+      window.refreshAnimations(applyTranslations);
+    } else {
+      applyTranslations();
+    }
   } catch (error) {
     console.error('Error loading language:', error);
   }

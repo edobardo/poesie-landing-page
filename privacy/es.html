@@ -158,7 +158,7 @@
 
     <p class="section-sub hero-in delay-25">Cómo procesamos tus datos en Poesie</p>
 
-    <p class="section-text hero-in delay-35 privacy-intro-text">No recopilamos ni almacenamos el contenido de tus poemas en nuestros servidores: tu colección permanece en tu dispositivo y en tu cuenta personal de Google Drive.</p>
+    <p class="section-text hero-in delay-35 privacy-intro-text">No recopilamos ni almacenamos el contenido de tus poemas en nuestros servidores: tu colección siempre permanece bajo tu control en tu dispositivo, en tu Google Drive o en Microsoft OneDrive.</p>
 
     <div class="privacy-badge hero-in delay-5">
       <span class="diamond"></span>
@@ -174,9 +174,9 @@
     <div class="privacy-block reveal">
       <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
       <h2>Introducción</h2>
-      <p>Poesie es una aplicación móvil para Android diseñada para permitir a los usuarios crear, gestionar y preservar su colección personal de poemas, incluyendo la sincronización mediante Google Drive. La aplicación admite múltiples colecciones independientes, cada una con su propia imagen de portada y archivo en Drive.</p>
+      <p>Poesie es una aplicación móvil para Android que permite a los usuarios crear, gestionar y conservar su colección personal de poemas, con sincronización flexible en la nube (Google Drive o Microsoft OneDrive) o en modo Solo Local. La aplicación admite múltiples colecciones independientes, cada una con su propia portada y archivos dedicados.</p>
       <p>La aplicación ofrece una versión gratuita y una versión <strong>Premium</strong> que se puede adquirir mediante una compra única en la aplicación a través de Google Play. Esta política describe qué datos se procesan, con qué fines y cuáles son tus derechos como usuario.</p>
-      <div class="privacy-highlight"><p>El desarrollador no recopila ni almacena el contenido de tus poemas en servidores propios. Tu colección permanece en tu dispositivo y en tu cuenta de Google Drive.</p></div>
+      <div class="privacy-highlight"><p>El desarrollador no recopila ni almacena el contenido de tus poemas en sus propios servidores. La colección permanece en tu dispositivo y en el almacenamiento que elijas (Google Drive, Microsoft OneDrive o Solo Local).</p></div>
     </div>
 
     <div class="privacy-block reveal">
@@ -185,7 +185,7 @@
       <p>El responsable del tratamiento de los datos personales es:</p>
       <ul>
         <li><strong>Edoardo Stoffa</strong> — Desarrollador independiente</li>
-        <li>Correo electrónico: <a href="mailto:supporto.poesie.app@gmail.com">supporto.poesie.app@gmail.com</a></li>
+        <li>Correo electrónico: <a href="mailto:support@poesieapp.it">support@poesieapp.it</a></li>
       </ul>
       <p>Para cualquier consulta relacionada con la privacidad, puedes ponerte en contacto con el responsable a través de la dirección de correo electrónico indicada.</p>
     </div>
@@ -222,17 +222,16 @@
       <div class="privacy-highlight"><p>La base legal principal es el Art. 6(1)(b) del RGPD (ejecución de un contrato o prestación de un servicio solicitado por el usuario). Las funciones de seguridad locales (bloqueo/recuperación) sirven para proteger el acceso a los datos del usuario en el dispositivo.</p></div>
     </div>
 
-    <div class="privacy-block reveal">
+        <div class="privacy-block reveal">
       <div class="divider"><span class="diamond"></span><span class="rule"></span></div>
-      <h2>Google Drive</h2>
-      <p>La aplicación utiliza las API de Google Drive con el ámbito <strong>drive.file</strong>, lo que limita estrictamente el acceso únicamente a los archivos creados por la propia aplicación.</p>
+      <h2>Almacenamiento en la Nube y Local (Google Drive, OneDrive y Solo Local)</h2>
+      <p>El usuario puede elegir libremente dónde almacenar y sincronizar sus colecciones entre tres opciones:</p>
       <ul>
-        <li>La aplicación no puede leer otros archivos de tu Google Drive</li>
-        <li>La aplicación no puede modificar ni eliminar archivos no creados por ella</li>
-        <li>El archivo Poesie.docx sigue siendo de tu propiedad y permanece bajo tu control</li>
-        <li>Puedes revocar el acceso en cualquier momento desde los ajustes de tu cuenta de Google</li>
+        <li><strong>Google Drive</strong>: La app utiliza las API de Google Drive con alcance <strong>drive.file</strong>, limitando el acceso exclusivamente a los archivos creados por la propia app. No puede ver, leer, modificar ni eliminar otros archivos de tu Drive. Puedes revocar permisos en <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a>.</li>
+        <li><strong>Microsoft OneDrive</strong>: La app utiliza las API de Microsoft Graph con alcance <strong>Files.ReadWrite.AppFolder</strong>. El acceso está restringido estrictamente a la carpeta dedicada de la aplicación (<em>OneDrive &gt; Aplicaciones &gt; Poesie App</em>). La app no tiene acceso a ningún otro archivo o carpeta personal de tu OneDrive. Puedes gestionar los permisos en <a href="https://account.live.com/consent/Manage" target="_blank" rel="noopener noreferrer">account.live.com/consent/Manage</a>.</li>
+        <li><strong>Modo Solo Local</strong>: Si prefieres no usar servicios en la nube, la app funciona completamente sin conexión. Los archivos de las colecciones se guardan únicamente en la memoria privada de la app con cifrado AES. Ningún dato sale de tu dispositivo. Recuerda que desinstalar la app borra los datos locales a menos que hayas creado una copia de seguridad local protegida con contraseña.</li>
       </ul>
-      <div class="privacy-highlight"><p>Puedes revocar los permisos de la aplicación visitando <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" aria-label="Gestionar permisos de aplicaciones de Google (se abre en una nueva pestaña)">myaccount.google.com/permissions</a>.</p></div>
+      <div class="privacy-highlight"><p>Todos los archivos de las colecciones siguen siendo de tu propiedad exclusiva y bajo tu total control, sea cual sea la opción elegida.</p></div>
     </div>
 
     <div class="privacy-block reveal">
@@ -262,7 +261,7 @@
             <tr><th scope="col">Permiso</th><th scope="col">Finalidad / Motivo</th></tr>
           </thead>
           <tbody>
-            <tr><td>Internet</td><td>Conexión con las API de Google para autenticación y sincronización en Google Drive; comunicación con Google Play para verificar compras Premium</td></tr>
+            <tr><td>Internet</td><td>Conexión a las API de Google para sincronización con Google Drive y verificación de compras Premium de Google Play; conexión a la API de Microsoft Graph para la sincronización opcional con OneDrive</td></tr>
             <tr><td>Estado de la red</td><td>Comprobación de conectividad (por ejemplo, para mostrar mensajes de estado "Sin conexión/En línea")</td></tr>
             <tr><td>Selector de archivos del sistema</td><td>Selección de la imagen de portada: el acceso se limita únicamente al archivo seleccionado por el usuario mediante la interfaz del sistema</td></tr>
             <tr><td>android.permission.USE_BIOMETRIC / android.permission.USE_FINGERPRINT</td><td>Activación del bloqueo de la aplicación mediante autenticación biométrica</td></tr>
@@ -354,7 +353,7 @@
     <div class="privacy-contact reveal">
       <h3>¿Tienes preguntas sobre tu privacidad?</h3>
       <p>Para ejercer tus derechos o resolver cualquier duda sobre la privacidad, ponte en contacto con el responsable del tratamiento.</p>
-      <a href="mailto:supporto.poesie.app@gmail.com" aria-label="Enviar correo electrónico al soporte de Poesie">supporto.poesie.app@gmail.com</a>
+      <a href="mailto:support@poesieapp.it" aria-label="Enviar correo electrónico al soporte de Poesie">support@poesieapp.it</a>
     </div>
 
   </div>
