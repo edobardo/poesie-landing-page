@@ -3,7 +3,8 @@
  const select=document.getElementById('language-select');
  const current=document.documentElement.lang;
  let saved=null;try{saved=localStorage.getItem('preferred_lang')}catch{}
- if(location.pathname==='/'||location.pathname==='/index.html'){
+ const isBot=/bot|googlebot|crawler|spider|robot|crawling|lighthouse/i.test(navigator.userAgent);
+ if(!isBot&&(location.pathname==='/'||location.pathname==='/index.html')){
   const query=new URLSearchParams(location.search).get('lang');
   const preferred=languages.includes(query)?query:languages.includes(saved)?saved:(navigator.language||'it').slice(0,2);
   if(languages.includes(preferred)&&preferred!==current){location.replace('/'+preferred+'/'+location.hash);return}
