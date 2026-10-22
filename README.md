@@ -1,79 +1,60 @@
-# Poesie — sito completo per GitHub Pages
+﻿# Poesie — landing statica per GitHub Pages
 
-Versione esportata il 29 settembre 2026. Il sito è indipendente da ChatGPT e Sites: HTML, CSS, JavaScript e immagini statiche, senza backend, chiavi API o servizi a pagamento necessari al funzionamento. I font sono caricati da Google Fonts; restano disponibili caratteri di sistema di riserva.
+Aggiornamento del 22 ottobre 2026. Il sito usa i sei mockup e la nuova grafica 1024×500 dello store in `../NEWSCREEN/`, con copie ottimizzate per il web, font locali e contenuti in 11 lingue. Non richiede backend, Node, API o servizi a pagamento per funzionare.
 
-## Pubblicazione rapida
+## Anteprima locale
 
-1. Estrai lo ZIP. Apri la cartella `poesie-github-pages`.
-2. Copia **il suo contenuto** nella radice del repository GitHub destinato alla landing. Non caricare lo ZIP come unico file e non aggiungere un ulteriore livello di cartelle. Il repository deve contenere direttamente `docs/index.html`.
-3. Fai commit e push sul ramo `main`. Puoi usare GitHub Desktop o l’interfaccia web di GitHub. Per un nuovo repository con GitHub Free, scegli un repository pubblico.
-4. In **Settings → Pages → Build and deployment**, seleziona **Deploy from a branch**, ramo **main**, cartella **/docs**, poi **Save**.
-5. In **Custom domain**, inserisci `poesieapp.it` e salva. Il file `docs/CNAME` è già incluso.
-6. Controlla il DNS come descritto in `GUIDA-PUBBLICAZIONE.md`. Se il dominio è già collegato allo stesso account GitHub Pages, potrebbe essere già corretto.
-7. Quando il certificato è disponibile, abilita **Enforce HTTPS**. Attendi che il deployment Pages sia completato.
+Dalla cartella `poesie-landing-page`:
 
-La pubblicazione rende visibile il sito sul web. I termini mantengono l’avviso di bozza: verifica i contenuti legali prima del lancio definitivo, come indicato in `NOTE-REVISIONE.md`.
-
-## Cosa contiene
-
-| Percorso | Contenuto |
-|---|---|
-| `docs/` | Sito pronto da pubblicare, completo di immagini e script |
-| `docs/it/`, `docs/en/`, ecc. | Landing nelle 11 lingue |
-| `docs/privacy/` | Privacy originali nelle 11 lingue |
-| `docs/terms/` | Termini d’uso separati nelle 11 lingue |
-| `docs/CNAME` | Dominio `poesieapp.it` |
-| `docs/.nojekyll` | Pubblicazione dei file statici senza elaborazione Jekyll |
-| `content/` | Testi, traduzioni, template e privacy di origine modificabili |
-| `generate.py` | Rigenera tutte le pagine in `docs/` |
-| `validate.py` | Controlla lingue, link locali, immagini e pagine legali |
-| `requirements.txt` | Dipendenza Python per modificare e rigenerare le pagine |
-
-**Non devi installare Python o Node per pubblicare:** il sito è già generato.
-
-Il sito è configurato per la radice del dominio `https://poesieapp.it/`. I collegamenti iniziano con `/`: l’anteprima sotto `nome.github.io/nome-repository/` non è il percorso previsto. Usa il dominio configurato o un server locale avviato su `docs/`.
-
-## Modifiche future
-
-- Aspetto: `docs/style.css`.
-- Interazioni: `docs/app.js` e `docs/language.js`.
-- Testi nuovi e selettore: `content/ui.json`.
-- Testi recuperati dal vecchio sito: `content/original-locales/*.json`.
-- Termini: `content/terms.json`.
-- Privacy: `content/original-privacy/*.html`.
-- Struttura landing: `content/landing-template.html` e `generate.py`.
-
-Dopo aver cambiato testi o template, esegui dalla radice del progetto:
-
-```bash
-python -m pip install -r requirements.txt
-python generate.py
-python validate.py
-```
-
-Su Windows puoi usare `py` al posto di `python`. Per verificare anche la sintassi JavaScript, se Node è installato:
-
-```bash
-node --check docs/app.js
-node --check docs/language.js
-```
-
-Fai commit anche dei file rigenerati in `docs/`: GitHub pubblica questi file, non esegue il generatore Python.
-
-Per vedere il sito in locale:
-
-```bash
+```powershell
 python -m http.server 8000 --directory docs
 ```
 
-Apri `http://localhost:8000/it/`. Evita di aprire `index.html` con doppio clic, perché i percorsi assoluti richiedono un server web.
+Apri `http://localhost:8000/it/` oppure `http://localhost:8000/en/`. La radice `/` propone la lingua del browser o l’ultima selezionata; `/it/` mantiene sempre l’italiano. Non aprire gli HTML con doppio clic: il sito usa percorsi dalla radice del dominio.
 
-## Aggiornamento nome dell’app
+## File da modificare
 
-Il nome completo compare nel titolo della pagina, nei metadati di condivisione e vicino al pulsante Google Play. Il logo mantiene «Poesie». Le traduzioni di «Scrittura Creativa» sono proposte editoriali, non nomi verificati sulle schede Google Play. Per allinearle allo store modifica `content/app-names.json` e rigenera le pagine.
+| Percorso | Contenuto |
+|---|---|
+| `content/landing.json` | Tutti i testi della landing nelle 11 lingue, FAQ e descrizioni delle immagini |
+| `content/landing-template.html` | Struttura HTML della landing |
+| `docs/style.css` | Aspetto, responsive e stili delle pagine legali |
+| `docs/app.js` | Ingrandimento delle immagini; i link funzionano anche senza JavaScript |
+| `docs/language.js` | Scelta e preferenza della lingua |
+| `content/app-names.json` | Nome localizzato dell’app |
+| `content/language-names.json` | Nomi delle lingue nel selettore |
+| `content/original-locales/*.json` | Testi del footer e delle pagine legali; non sono più la fonte delle funzioni della landing |
+| `content/ui.json` | Etichette condivise di navigazione e pagine legali |
+| `content/original-privacy/*.html` | Testo sorgente della Privacy Policy |
+| `content/terms.json` | Testo sorgente dei termini |
+| `docs/assets/showcase/` | Poster WebP responsive, grafica store WebP e PNG per anteprime social |
+| `docs/assets/fonts/` | Font IM Fell English già usati dall’app, serviti localmente |
+| `generate.py` | Generatore delle 34 pagine HTML, canonical e metadati social |
+| `validate.py` | Verifica traduzioni, link, ancore, varianti immagini, metadati e testi legali |
+| `prepare_assets.py` | Preparazione deterministica degli asset da NEWSCREEN, senza modificare gli originali |
 
-## Anteprima con VS Code Live Server
+Per aggiornare testi o struttura:
 
-Apri direttamente la cartella `docs` con File → Apri cartella, poi avvia Live Server su `index.html`. L’indirizzo deve essere `http://127.0.0.1:5500/index.html`, senza `/docs/` nel percorso.
+```powershell
+python -m pip install -r requirements.txt
+python -B generate.py
+python -B validate.py
+```
 
-I nomi delle lingue nel selettore sono tradotti nella lingua della pagina. Le 11 tabelle si trovano in `content/language-names.json`.
+Per ricreare anche le immagini, prima di generare esegui `python -B prepare_assets.py`. Questo comando richiede `../NEWSCREEN/` e i due font in `../PDF_Poesie_App/Resources/Fonts/`. Le copie pronte sono già incluse in `docs/`: né la pubblicazione né la rigenerazione degli HTML richiedono queste cartelle esterne.
+
+Con Node disponibile, controlla la sintassi con `node --check docs/app.js` e `node --check docs/language.js`.
+
+I poster mantengono i testi inglesi originali; la pagina lo indica in tutte le lingue. Le note Premium sono esplicite anche in HTML. Il PNG usato nei metadati Open Graph è la nuova grafica originale 1024×500 dello store.
+
+## Pubblicazione
+
+Il sito è pronto per `https://poesieapp.it/`: sono mantenuti `docs/CNAME`, `.nojekyll` e i token di verifica Google. In GitHub Pages usa il ramo previsto dal repository e la cartella `/docs`. Includi nel commit i sorgenti, gli asset nuovi e tutti gli HTML rigenerati: GitHub Pages pubblica `docs/`, senza eseguire Python.
+
+Non occorrono modifiche DNS per questo aggiornamento. I contenuti legali mantengono il testo visibile delle pagine precedenti; le vecchie etichette di bozza dei sorgenti non vengono inserite nelle pagine pubblicabili.
+
+## Verifiche dell’aggiornamento
+
+`validate.py` controlla tutte le 34 pagine: 11 landing, 11 privacy, 11 termini e la copia italiana alla radice. Verifica anche i file in `srcset`, i link alle immagini ingrandite, le ancore, i canonical e gli alternate delle lingue. Confronta il testo legale con i sorgenti, su Windows e sugli altri sistemi.
+
+L’analisi iniziale è conservata in `ANALISI-AGGIORNAMENTO.md`. Il codice dell’app Android non viene modificato dal sito.

@@ -2,13 +2,14 @@ from pathlib import Path
 from lxml import html,etree
 import json,copy
 P=Path(__file__).parent; D=P/'docs'; C=P/'content'
-language_names=json.loads((C/'language-names.json').read_text())
-names=json.loads((C/'app-names.json').read_text())
-ui=json.loads((C/'ui.json').read_text()); terms=json.loads((C/'terms.json').read_text())
+language_names=json.loads((C/'language-names.json').read_text(encoding='utf-8'))
+names=json.loads((C/'app-names.json').read_text(encoding='utf-8'))
+ui=json.loads((C/'ui.json').read_text(encoding='utf-8')); terms=json.loads((C/'terms.json').read_text(encoding='utf-8'))
 keys=['native','brand','eyebrow','hero','intro','fine','artLabel','artText','bottom','nextVerse','manifesto','manifestoSub','experienceLabel','experienceTitle','experienceSub','privacyLabel','privacyTitle','galleryLabel','galleryTitle','gallerySub','scroll','faqLabel','closingLabel','closingTitle','language','close','prev','next','enlarge','home','writing','collections','covers','export','stats','lock','settings','contact','draft','updated','back']
 for lang,vals in ui.items():assert len(vals)==len(keys),(lang,len(vals),len(keys))
 U={l:dict(zip(keys,v)) for l,v in ui.items()}
-files=['Homepage','WritePoem','Collection','CollectionSettings','ExportCollection','Statistics','Lockpage','Settings']
+SITE='https://poesieapp.it'
+landing=json.loads((C/'landing.json').read_text(encoding='utf-8'))
 def node(s):return html.fragment_fromstring(s)
 def sethtml(el,s):
  for child in list(el):el.remove(child)
@@ -43,7 +44,10 @@ def language_select(lang,kind='landing'):
  return box
 
 def footer(lang,t):
- u=U[lang];el=etree.Element('footer');brand=node('<a class="brand"><img src="/assets/appicon.webp" alt="" width="36" height="36">Poesie</a>');brand.set('href',f'/{lang}/');el.append(brand)
+ u=U[lang];el=etree.Element('footer')
+ brand=node('<a class="brand"><img src="/assets/appicon.webp" alt="" width="36" height="36"><bdi class="footer-app-name"></bdi></a>')
+ brand.find('bdi').text='Poesie - '+names[lang]
+ brand.set('href',f'/{lang}/');el.append(brand)
  p=etree.SubElement(el,'p');p.text=t['footer.desc']
  links=etree.SubElement(el,'div',{'class':'footer-links'})
  for title,url in [(t['footer.privacy'],f'/privacy/{lang}.html'),(t['footer.terms'],f'/terms/{lang}.html'),('Instagram','https://www.instagram.com/poesie_app/'),(u['contact'],'mailto:support@poesieapp.it')]:
@@ -70,8 +74,12 @@ def common(root,lang,t,kind='landing'):
  head.append(etree.Comment(' DO NOT REMOVE THIS TAGS'))
  for alt in head.xpath('link[@rel="alternate"]'):head.remove(alt)
  for code in ui:
-  href=f'/{code}/' if kind=='landing' else f'/{kind}/{code}.html'
-  etree.SubElement(head,'link',rel='alternate',hreflang=code,href=href)
+  href=landing_path(code) if kind=='landing' else f'/{kind}/{code}.html'
+  etree.SubElement(head,'link',rel='alternate',hreflang=code,href=SITE+href)
+ canonical=SITE+(landing_path(lang) if kind=='landing' else f'/{kind}/{lang}.html')
+ etree.SubElement(head,'link',rel='canonical',href=canonical)
+ etree.SubElement(head,'link',rel='alternate',hreflang='x-default',href=SITE+('/' if kind=='landing' else f'/{kind}/it.html'))
+ etree.SubElement(head,'meta',property='og:url',content=canonical)
  for el in root.xpath('//*[@src or @href]'):
   for attr in ['src','href']:
    val=el.get(attr,'')
@@ -85,73 +93,122 @@ def common(root,lang,t,kind='landing'):
  b=root.find('body');b.set('data-language',lang)
  scr=etree.SubElement(b,'script',src='/language.js');scr.set('defer','defer')
 
+def landing_path(lang):
+    return '/' if lang == 'it' else f'/{lang}/'
+
+
+def render_copy(root, copy, lang):
+    for element in root.xpath('//*[@data-copy]'):
+        key = element.attrib.pop('data-copy')
+        if 'data-html' in element.attrib:
+            element.attrib.pop('data-html')
+            sethtml(element, copy[key])
+        else:
+            text(element, copy[key])
+    for element in root.xpath('//*[@data-alt]'):
+        element.set('alt', copy[element.attrib.pop('data-alt')])
+    for element in root.xpath('//*[@data-list]'):
+        for item in copy[element.attrib.pop('data-list')]:
+            etree.SubElement(element, 'li').text = item
+    for anchor in root.xpath('//*[@data-poster]'):
+        poster = anchor.attrib.pop('data-poster')
+        title = copy[anchor.attrib.pop('data-title')]
+        anchor.set('href', f'/assets/showcase/{poster}-960.webp')
+        anchor.set('class', 'poster-link')
+        anchor.set('aria-label', U[lang]['enlarge'] + ': ' + title)
+        anchor.set('data-lightbox', title)
+        image = etree.SubElement(anchor, 'img', src=f'/assets/showcase/{poster}-480.webp', alt=title,
+            width='480', height='860', decoding='async')
+        image.set('srcset', f'/assets/showcase/{poster}-480.webp 480w, /assets/showcase/{poster}-960.webp 960w')
+        image.set('sizes', '(max-width: 700px) 85vw, (max-width: 1100px) 40vw, 380px')
+        if poster == 'share':
+            image.set('fetchpriority', 'high')
+        else:
+            image.set('loading', 'lazy')
+    for element in root.xpath('//*[@data-faq]'):
+        element.attrib.pop('data-faq')
+        for question, answer in copy['faq']:
+            detail = etree.SubElement(element, 'details')
+            etree.SubElement(detail, 'summary').text = question
+            etree.SubElement(detail, 'p').text = answer
+
+
 for lang in ui:
- u=U[lang];t=json.loads((C/'original-locales'/f'{lang}.json').read_text(encoding='utf-8-sig'))
- root=html.document_fromstring((C/'landing-template.html').read_text())
- def at(xpath):return root.xpath(xpath)[0]
- def put(xpath,value):sethtml(at(xpath),value)
- full_name='Poesie – '+names[lang]
- put('//title',full_name);at('//meta[@name="description"]').set('content',full_name+'. '+u['intro'])
- etree.SubElement(root.find('head'),'meta',property='og:title',content=full_name)
- etree.SubElement(root.find('head'),'meta',property='og:description',content=full_name+'. '+u['intro'])
- put('//header//a[@class="brand"]/span',names[lang])
- store_label=etree.Element('p',{'class':'app-store-name'});store_label.text=full_name
- at('//div[@class="hero-actions"]').addprevious(store_label)
- for a,key in zip(root.xpath('//header/nav/a'),['nav.features','nav.app','nav.faq']):text(a,t[key])
- at('//header/nav').set('aria-label',t['nav.app']);put('//header/a[contains(@class,"button")]',t['btn.download'])
- put('//div[@class="hero-copy"]/p[@class="eyebrow"]',u['eyebrow']);put('//h1',u['hero']);put('//p[@class="intro"]',u['intro'])
- put('//div[@class="hero-actions"]/a[1]',t['hero.btn_download']);put('//div[@class="hero-actions"]/a[2]',t['hero.btn_discover']);put('//p[@class="fine"]',u['fine'])
- put('//div[@class="art-note"]/span',u['artLabel']);put('//div[@class="art-note"]/p',u['artText'])
- put('//div[@class="hero-bottom"]/span[1]',u['bottom']);put('//div[@class="hero-bottom"]/span[2]',u['nextVerse'])
- put('//div[contains(@class,"manifesto")]/p',u['manifesto']);put('//div[contains(@class,"manifesto")]/span',u['manifestoSub'])
- put('//div[contains(@class,"section-head")]/p[1]',u['experienceLabel']);put('//div[contains(@class,"section-head")]/h2',u['experienceTitle']);put('//div[contains(@class,"section-head")]/p[2]',u['experienceSub'])
- for f,prefix in zip(root.xpath('//button[contains(@class,"feature")]'),['feat1','feat2','export','stats']):text(f.find('.//h3'),t[prefix+'.heading']);text(f.find('.//p'),t[prefix+'.text'])
- at('//div[@class="feature-list"]').set('aria-label',t['nav.features'])
- put('//section[contains(@class,"privacy")]/div[1]/p[1]',u['privacyLabel']);put('//section[contains(@class,"privacy")]/div[1]/h2',t['sec.heading']);put('//section[contains(@class,"privacy")]/div[1]/p[2]',t['sec.text'])
- for el,key in zip(root.xpath('//div[@class="privacy-tags"]/span'),['sec.card1_title','sec.card2_title','sec.card3_title']):text(el,t[key])
- put('//div[@class="privacy-detail"]/h3',u['privacyTitle']);put('//div[@class="privacy-detail"]/p',t['sec.card2_desc'])
- put('//div[contains(@class,"gallery-heading")]/div/p',u['galleryLabel']);put('//div[contains(@class,"gallery-heading")]/div/h2',u['galleryTitle']);put('//div[contains(@class,"gallery-heading")]/p',u['gallerySub'])
- at('//div[@class="gallery"]').set('aria-label',u['gallerySub']);put('//div[@class="gallery-foot"]/span',u['scroll'])
- for id,key in [('prev','prev'),('next','next')]:text(at(f'//*[@id="{id}"]'),u[key]);at(f'//*[@id="{id}"]').set('aria-label',u[key])
- # Reuse established translations for the three supporting feature notes.
- for el,vals in zip(root.xpath('//section[contains(@class,"details")]/div'),[(t['nav.features'],t['feat1.item2'],t['feat1.text']),(t['nav.export'],t['export.item4'],t['export.text']),(t['nav.stats'],t['stats.item4'],t['stats.text'])]):
-  for child,value in zip([el.find('span'),el.find('h3'),el.find('p')],vals):text(child,value)
- put('//section[@id="domande"]/div[1]/p',u['faqLabel']);put('//section[@id="domande"]/div[1]/h2',t['faq.title'])
- for i,det in enumerate(root.xpath('//div[@class="questions"]/details'),1):text(det.find('summary'),t[f'faq.q{i}']);text(det.find('p'),t[f'faq.a{i}'])
- put('//section[contains(@class,"closing")]/div/p',u['closingLabel']);put('//section[contains(@class,"closing")]/div/h2',u['closingTitle']);put('//section[contains(@class,"closing")]/div/a',t['cta.btn'])
- at('//dialog/button').set('aria-label',u['close']);at('//dialog').set('aria-label',u['gallerySub'])
- for img in root.xpath('//img[not(@alt="")]'):img.set('alt',t['nav.app']+' — Poesie')
- at('//*[@id="feature-img"]').set('alt',t['feat1.heading'])
- gallery=[{'file':f,'title':u[k]} for f,k in zip(files,['home','writing','collections','covers','export','stats','lock','settings'])]
- conf=etree.Element('script');conf.text='window.POESIE='+json.dumps({'gallery':gallery,'enlarge':u['enlarge']},ensure_ascii=False).replace('<','\\u003c')+';'
- app=at('//script[@src="app.js"]');app.addprevious(conf)
- common(root,lang,t)
- target=D/lang/'index.html';target.parent.mkdir(exist_ok=True);target.write_bytes(html.tostring(root,encoding='utf-8',doctype='<!doctype html>'))
- if lang=='it':(D/'index.html').write_bytes(html.tostring(root,encoding='utf-8',doctype='<!doctype html>'))
- # Legal pages share the new design, with original privacy body text retained.
- for kind in ['privacy','terms']:
-  legal=html.document_fromstring('<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title></title><link rel="icon" href="/assets/appicon.webp"><link rel="stylesheet" href="/style.css"></head><body><main class="legal-page"></main><footer></footer></body></html>')
-  header=copy.deepcopy(root.find('.//header'));header.remove(header.find('.//div[@class="language-control"]'));legal.find('body').insert(0,header)
-  main=legal.find('.//main');a=etree.SubElement(main,'a',{'class':'legal-back','href':f'/{lang}/'});a.text=u['back']
-  title=t['footer.'+kind];legal.find('.//title').text=title+' — '+full_name
-  if kind=='privacy':
-   source=html.document_fromstring((C/'original-privacy'/f'{lang}.html').read_text(encoding='utf-8-sig'))
-   for cls in ['privacy-hero','privacy-article']:
-    els=source.xpath(f'//section[contains(concat(" ",normalize-space(@class)," ")," {cls} ")]');assert els,(lang,cls)
-    main.append(copy.deepcopy(els[0]))
-   # Remove old decorative SVGs, animated presentation, and old inline styles; preserve legal prose and links.
-   for x in main.xpath('.//svg | .//script | .//style'):x.getparent().remove(x)
-   for x in main.iter():
-    for att in ['style','data-i18n','data-split']:
-     x.attrib.pop(att,None)
-  else:
-   h=etree.SubElement(main,'h1');h.text=title
-   p=etree.SubElement(main,'p',{'class':'legal-date'});p.text=u['updated']
-   p=etree.SubElement(main,'p',{'class':'draft-notice'});p.text=u['draft']
-   for heading,body in terms[lang]:
-    sec=etree.SubElement(main,'section');h=etree.SubElement(sec,'h2');h.text=heading;p=etree.SubElement(sec,'p');p.text=body
-   p=etree.SubElement(main,'p');a=etree.SubElement(p,'a',href=f'/privacy/{lang}.html');a.text=t['footer.privacy']
-   p=etree.SubElement(main,'p');a=etree.SubElement(p,'a',href='mailto:support@poesieapp.it');a.text='support@poesieapp.it'
-  common(legal,lang,t,kind)
-  target=D/kind/f'{lang}.html';target.parent.mkdir(exist_ok=True);target.write_bytes(html.tostring(legal,encoding='utf-8',doctype='<!doctype html>'))
+    u = U[lang]
+    t = json.loads((C/'original-locales'/f'{lang}.json').read_text(encoding='utf-8-sig'))
+    copytext = landing[lang]
+    root = html.document_fromstring((C/'landing-template.html').read_text(encoding='utf-8-sig'))
+    render_copy(root, copytext, lang)
+    full_name = 'Poesie – ' + names[lang]
+    hero_text = html.fromstring('<span>'+copytext['hero'].replace('<br>', ' ')+'</span>').text_content()
+    root.find('.//title').text = full_name + ' | ' + hero_text
+    head = root.find('head')
+    description = copytext['intro']
+    head.xpath('meta[@name="description"]')[0].set('content', description)
+    for property, value in [('og:title', full_name), ('og:description', description),
+            ('og:type', 'website'), ('og:site_name', 'Poesie'),
+            ('og:image', SITE+'/assets/showcase/feature-1024.png'),
+            ('og:image:width', '1024'), ('og:image:height', '500'),
+            ('og:image:alt', copytext['featureAlt'])]:
+        etree.SubElement(head, 'meta', property=property, content=value)
+    for name, value in [('twitter:card', 'summary_large_image'), ('twitter:title', full_name),
+            ('twitter:description', description), ('twitter:image', SITE+'/assets/showcase/feature-1024.png'),
+            ('twitter:image:alt', copytext['featureAlt'])]:
+        etree.SubElement(head, 'meta', name=name, content=value)
+    root.xpath('//header//a[@class="brand"]/span')[0].text = names[lang]
+    root.xpath('//header/nav')[0].set('aria-label', t['nav.app'])
+    for element in root.xpath('//*[@data-app-name]'):
+        element.attrib.pop('data-app-name')
+        element.text = names[lang]
+    for anchor in root.xpath('//*[@data-store]'):
+        anchor.attrib.pop('data-store')
+        anchor.set('href', 'https://play.google.com/store/apps/details?id=com.edobardo.poesie&hl='+lang)
+        anchor.set('target', '_blank')
+        anchor.set('rel', 'noopener noreferrer')
+    root.xpath('//dialog/button')[0].set('aria-label', u['close'])
+    root.xpath('//dialog')[0].set('aria-label', u['enlarge'])
+    common(root, lang, t)
+    target = D/lang/'index.html'
+    target.parent.mkdir(exist_ok=True)
+    content = html.tostring(root, encoding='utf-8', doctype='<!doctype html>', pretty_print=True)
+    target.write_bytes(content)
+    if lang == 'it':
+        (D/'index.html').write_bytes(content)
+    for kind in ['privacy', 'terms']:
+        legal = html.document_fromstring('<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title></title><link rel="icon" href="/assets/appicon.webp"><link rel="stylesheet" href="/style.css"></head><body><main class="legal-page" id="main"></main><footer></footer></body></html>')
+        header = copy.deepcopy(root.find('.//header'))
+        header.remove(header.find('.//div[@class="language-control"]'))
+        legal.find('body').insert(0, header)
+        main = legal.find('.//main')
+        a = etree.SubElement(main, 'a', {'class': 'legal-back', 'href': f'/{lang}/'})
+        a.text = u['back']
+        title = t['footer.'+kind]
+        legal.find('.//title').text = title+' — '+full_name
+        if kind == 'privacy':
+            source = html.document_fromstring((C/'original-privacy'/f'{lang}.html').read_text(encoding='utf-8-sig'))
+            for cls in ['privacy-hero', 'privacy-article']:
+                elements = source.xpath(f'//section[contains(concat(" ",normalize-space(@class)," ")," {cls} ")]')
+                assert elements, (lang, cls)
+                main.append(copy.deepcopy(elements[0]))
+            for element in main.xpath('.//svg | .//script | .//style'):
+                element.getparent().remove(element)
+            for element in main.iter():
+                for attribute in ['style', 'data-i18n', 'data-split']:
+                    element.attrib.pop(attribute, None)
+        else:
+            etree.SubElement(main, 'h1').text = title
+            etree.SubElement(main, 'p', {'class': 'legal-date'}).text = u['updated']
+            # Published terms omit the old source draft label in every language.
+            for heading, body in terms[lang]:
+                section = etree.SubElement(main, 'section')
+                etree.SubElement(section, 'h2').text = heading
+                etree.SubElement(section, 'p').text = body
+            p = etree.SubElement(main, 'p')
+            etree.SubElement(p, 'a', href=f'/privacy/{lang}.html').text = t['footer.privacy']
+            p = etree.SubElement(main, 'p')
+            etree.SubElement(p, 'a', href='mailto:support@poesieapp.it').text = 'support@poesieapp.it'
+        common(legal, lang, t, kind)
+        target = D/kind/f'{lang}.html'
+        target.parent.mkdir(exist_ok=True)
+        target.write_bytes(html.tostring(legal, encoding='utf-8', doctype='<!doctype html>', pretty_print=True))
 print('Generated 11 landing pages, 11 privacy pages, 11 terms pages and Italian root.')

@@ -1,9 +1,29 @@
-document.documentElement.classList.add('js');
-const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));
-const data=window.POESIE.gallery.map(x=>[x.file,x.title,x.title]);
-const gallery=document.querySelector('.gallery'),dialog=document.querySelector('dialog');
-data.forEach(([file,title,sub])=>{const b=document.createElement('button');b.innerHTML=`<img loading="lazy" src="/assets/${file}.webp" alt="${sub}"><span class="caption">${title}</span>`;b.setAttribute('aria-label',`${window.POESIE.enlarge}: ${sub}`);b.onclick=()=>{dialog.querySelector('img').src=`/assets/${file}.webp`;dialog.querySelector('img').alt=sub;dialog.querySelector('p').textContent=title;dialog.showModal()};gallery.append(b)});
-dialog.querySelector('.close').onclick=()=>dialog.close();dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});
-document.querySelectorAll('.feature').forEach(b=>b.onclick=()=>{document.querySelectorAll('.feature').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-pressed','false');x.querySelector('.plus').textContent='+'});b.classList.add('active');b.setAttribute('aria-pressed','true');b.querySelector('.plus').textContent='−';const img=document.getElementById('feature-img');img.src=`/assets/${b.dataset.image}.webp`;img.alt=b.querySelector('h3').textContent});
-const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;document.getElementById('prev').onclick=()=>gallery.scrollBy({left:(document.documentElement.dir==='rtl'?1:-1)*gallery.clientWidth*.8,behavior:reduced?'instant':'smooth'});document.getElementById('next').onclick=()=>gallery.scrollBy({left:(document.documentElement.dir==='rtl'?-1:1)*gallery.clientWidth*.8,behavior:reduced?'instant':'smooth'});
-function progress(){const range=document.documentElement.scrollHeight-innerHeight;document.querySelector('.progress').style.width=(range>0?scrollY/range*100:0)+'%'}addEventListener('scroll',progress,{passive:true});addEventListener('resize',progress);progress();
+﻿(() => {
+  const dialog = document.querySelector('#lightbox');
+  if (!dialog || typeof dialog.showModal !== 'function') return;
+  let opener = null;
+  const close = () => {
+    dialog.close();
+  };
+  document.querySelectorAll('a[data-lightbox]').forEach(link => {
+    link.addEventListener('click', event => {
+      if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      opener = link;
+      const img = dialog.querySelector('img');
+      img.src = link.href;
+      img.alt = link.dataset.lightbox;
+      dialog.querySelector('p').textContent = link.dataset.lightbox;
+      dialog.showModal();
+    });
+  });
+  dialog.querySelector('.close').addEventListener('click', close);
+  dialog.addEventListener('click', event => {
+    if (event.target !== dialog) return;
+    const rect = dialog.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) close();
+  });
+  dialog.addEventListener('close', () => {
+    if (opener) opener.focus({preventScroll: true});
+  });
+})();
