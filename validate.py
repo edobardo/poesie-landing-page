@@ -1,9 +1,9 @@
-﻿"""Validate deployable pages, translations, image variants and legal text."""
+"""Validate deployable pages, translations, image variants and legal text."""
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
 import json
 import re
-from lxml import html
+from lxml import html, etree
 
 P = Path(__file__).resolve().parent
 D = P / 'docs'
@@ -117,4 +117,9 @@ for match in re.findall(r'url\([\'\"]?([^\)\'\"]+)', (D/'style.css').read_text(e
     local_target(D/'index.html', match)
 assert count == 34, count
 assert (D/'index.html').read_bytes() == (D/'it/index.html').read_bytes()
-print(f'PASS: {count} pages; 11 complete translations, responsive assets, anchors, canonicals, hreflang, static showcase, Premium sections and unchanged legal text.')
+assert (D/'robots.txt').exists()
+assert f'Sitemap: {SITE}/sitemap.xml' in (D/'robots.txt').read_text(encoding='utf-8')
+assert (D/'sitemap.xml').exists()
+sitemap_root = etree.fromstring((D/'sitemap.xml').read_bytes())
+assert len(sitemap_root.xpath('//sm:url', namespaces={'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'})) == 33
+print(f'PASS: {count} pages; 11 complete translations, responsive assets, anchors, canonicals, hreflang, static showcase, Premium sections, sitemap.xml, robots.txt and unchanged legal text.')

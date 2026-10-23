@@ -211,4 +211,25 @@ for lang in ui:
         target = D/kind/f'{lang}.html'
         target.parent.mkdir(exist_ok=True)
         target.write_bytes(html.tostring(legal, encoding='utf-8', doctype='<!doctype html>', pretty_print=True))
-print('Generated 11 landing pages, 11 privacy pages, 11 terms pages and Italian root.')
+
+def generate_sitemap_and_robots():
+    NS = {None: 'http://www.sitemaps.org/schemas/sitemap/0.9', 'xhtml': 'http://www.w3.org/1999/xhtml'}
+    urlset = etree.Element('urlset', nsmap=NS)
+    for lang in ui:
+        u = etree.SubElement(urlset, 'url')
+        etree.SubElement(u, 'loc').text = SITE + landing_path(lang)
+        for code in ui:
+            etree.SubElement(u, '{http://www.w3.org/1999/xhtml}link', rel='alternate', hreflang=code, href=SITE + landing_path(code))
+        etree.SubElement(u, '{http://www.w3.org/1999/xhtml}link', rel='alternate', hreflang='x-default', href=SITE + '/')
+    for kind in ['privacy', 'terms']:
+        for lang in ui:
+            u = etree.SubElement(urlset, 'url')
+            etree.SubElement(u, 'loc').text = f'{SITE}/{kind}/{lang}.html'
+            for code in ui:
+                etree.SubElement(u, '{http://www.w3.org/1999/xhtml}link', rel='alternate', hreflang=code, href=f'{SITE}/{kind}/{code}.html')
+            etree.SubElement(u, '{http://www.w3.org/1999/xhtml}link', rel='alternate', hreflang='x-default', href=f'{SITE}/{kind}/it.html')
+    (D/'sitemap.xml').write_bytes(etree.tostring(urlset, encoding='utf-8', xml_declaration=True, pretty_print=True))
+    (D/'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n', encoding='utf-8')
+
+generate_sitemap_and_robots()
+print('Generated 11 landing pages, 11 privacy pages, 11 terms pages, Italian root, sitemap.xml and robots.txt.')
