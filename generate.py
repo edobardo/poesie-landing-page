@@ -32,7 +32,7 @@ def language_select(lang,kind='landing'):
  chevron=etree.SubElement(summary,'span',{'class':'language-chevron','aria-hidden':'true'});chevron.text='⌄'
  menu=etree.SubElement(picker,'div',{'class':'language-options','aria-label':u['language']})
  for code in ui:
-  url=f'/{code}/' if kind=='landing' else f'/{kind}/{code}.html'
+  url=landing_path(code) if kind=='landing' else f'/{kind}/{code}.html'
   op=etree.SubElement(sel,'option',value=url)
   if code==lang:op.set('selected','selected')
   op.text=('US' if code=='en' else code.upper())+' · '+language_names[lang][code]
@@ -47,7 +47,7 @@ def footer(lang,t):
  u=U[lang];el=etree.Element('footer')
  brand=node('<a class="brand"><img src="/assets/appicon.webp" alt="" width="36" height="36"><bdi class="footer-app-name"></bdi></a>')
  brand.find('bdi').text='Poesie - '+names[lang]
- brand.set('href',f'/{lang}/');el.append(brand)
+ brand.set('href',landing_path(lang));el.append(brand)
  p=etree.SubElement(el,'p');p.text=t['footer.desc']
  links=etree.SubElement(el,'div',{'class':'footer-links'})
  for title,url in [(t['footer.privacy'],f'/privacy/{lang}.html'),(t['footer.terms'],f'/terms/{lang}.html'),('Instagram','https://www.instagram.com/poesie_app/'),(u['contact'],'mailto:support@poesieapp.it')]:
@@ -88,7 +88,7 @@ def common(root,lang,t,kind='landing'):
  for a in root.xpath('//a[contains(@href,"play.google.com")]'):a.set('href','https://play.google.com/store/apps/details?id=com.edobardo.poesie&hl='+lang)
  header=root.find('.//header');header.append(language_select(lang,kind))
  for a in header.xpath('.//a[starts-with(@href,"#")]'):
-  if kind!='landing':a.set('href',f'/{lang}/'+a.get('href'))
+  if kind!='landing':a.set('href',landing_path(lang)+a.get('href'))
  old=root.find('.//footer');old.getparent().replace(old,footer(lang,t))
  b=root.find('body');b.set('data-language',lang)
  scr=etree.SubElement(b,'script',src='/language.js');scr.set('defer','defer')
@@ -180,7 +180,7 @@ for lang in ui:
         header.remove(header.find('.//div[@class="language-control"]'))
         legal.find('body').insert(0, header)
         main = legal.find('.//main')
-        a = etree.SubElement(main, 'a', {'class': 'legal-back', 'href': f'/{lang}/'})
+        a = etree.SubElement(main, 'a', {'class': 'legal-back', 'href': landing_path(lang)})
         a.text = u['back']
         title = t['footer.'+kind]
         legal.find('.//title').text = title+' — '+full_name

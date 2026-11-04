@@ -10,7 +10,7 @@ Dalla cartella `poesie-landing-page`:
 python -m http.server 8000 --directory docs
 ```
 
-Apri `http://localhost:8000/it/` oppure `http://localhost:8000/en/`. La radice `/` propone la lingua del browser o l’ultima selezionata; `/it/` mantiene sempre l’italiano. Non aprire gli HTML con doppio clic: il sito usa percorsi dalla radice del dominio.
+Apri `http://localhost:8000/` oppure `http://localhost:8000/en/`. La radice `/` mantiene sempre l’italiano e ogni altra lingua ha il proprio URL: il selettore permette di cambiarla esplicitamente, senza reindirizzamenti basati su browser, preferenze salvate o riconoscimento dei bot. `/it/` resta una copia compatibile con i vecchi link, con canonical verso `/`; tutti i nuovi link interni italiani puntano a `/`. Non aprire gli HTML con doppio clic: il sito usa percorsi dalla radice del dominio.
 
 ## File da modificare
 
@@ -58,3 +58,18 @@ Non occorrono modifiche DNS per questo aggiornamento. I contenuti legali manteng
 `validate.py` controlla tutte le 34 pagine: 11 landing, 11 privacy, 11 termini e la copia italiana alla radice. Verifica anche i file in `srcset`, i link alle immagini ingrandite, le ancore, i canonical e gli alternate delle lingue. Confronta il testo legale con i sorgenti, su Windows e sugli altri sistemi.
 
 L’analisi iniziale è conservata in `ANALISI-AGGIORNAMENTO.md`. Il codice dell’app Android non viene modificato dal sito.
+
+## Segnalazione Search Console del 4 novembre 2026
+
+Gli screenshot in `problem/` segnalano `/en/` come «Pagina duplicata, Google ha scelto una pagina canonica diversa da quella specificata dall’utente». Il dettaglio del Controllo URL mostra che il 23 ottobre Google ha scansionato correttamente `/en/`, con scansione e indicizzazione consentite, ma ha scelto `https://poesieapp.it/` come canonical al posto di `https://poesieapp.it/en/`. Nei file locali `/en/` ha già un canonical verso sé stessa, contenuto inglese e alternate reciproci; sitemap e robots includono e consentono la pagina. Il contenuto acquisito da Google non è disponibile negli screenshot e le richieste di verifica del sito pubblico da questo ambiente hanno ricevuto HTTP 403: il confronto con la versione pubblicata resta da completare.
+
+Sono stati rimossi i reindirizzamenti automatici della home e uniformati i link italiani al canonical `/`. Sono correzioni di coerenza, non la prova della causa della segnalazione. Google raccomanda URL stabili per lingua e una scelta esplicita della lingua: https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites.
+
+Dopo la pubblicazione, in Search Console:
+
+1. Controlla `https://poesieapp.it/en/` e confronta la «Pagina canonica selezionata da Google» con quella dichiarata. Nei dati del 23 ottobre la scelta è la home `/`: confronta anche il contenuto acquisito da Google per entrambe le pagine, se disponibile.
+2. Esegui il test dell’URL pubblicato e verifica che restituisca la pagina inglese con canonical `https://poesieapp.it/en/`, senza blocchi alla scansione.
+3. Richiedi l’indicizzazione di `/en/` e della home aggiornata. Verifica che la sitemap inviata sia `https://poesieapp.it/sitemap.xml`.
+4. Avvia «Convalida correzione» dopo le verifiche. Il risultato dipende da una nuova scansione e dalla scelta di Google; il test dell’URL pubblicato non anticipa il canonical che Google selezionerà.
+
+Guida al significato della segnalazione: https://support.google.com/webmasters/answer/7440203?hl=it.

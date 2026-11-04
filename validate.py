@@ -42,18 +42,34 @@ def local_target(file, value):
     return target
 
 
+def page_path(lang, kind='landing'):
+    return (('/' if lang == 'it' else f'/{lang}/') if kind == 'landing'
+            else f'/{kind}/{lang}.html')
+
+
+def expected_alternates(kind):
+    return {**{lang: SITE + page_path(lang, kind) for lang in langs},
+            'x-default': SITE + page_path('it', kind)}
+
+
 count = 0
+canonical_urls = set()
 for file in D.rglob('*.html'):
     r = html.fromstring(file.read_bytes())
     lang = r.get('lang')
     assert lang in langs, file
     assert r.get('dir') == ('rtl' if lang == 'ar' else 'ltr'), file
+    kind = file.parent.name if file.parent.name in ('privacy', 'terms') else 'landing'
+    expected = page_path(lang, kind)
     assert not r.xpath('//*[@data-copy or @data-alt or @data-poster or @data-list or @data-faq or @data-store]'), ('Unresolved template', file)
     opts = r.xpath('//select[@id="language-select"]/option')
     assert len(opts) == 11, file
     selected = [x for x in opts if 'selected' in x.attrib]
     assert len(selected) == 1, file
-    assert f'/{lang}' in selected[0].get('value'), file
+    assert selected[0].get('value') == expected, file
+    assert [x.get('value') for x in opts] == [page_path(code, kind) for code in langs], file
+    for anchor in r.xpath('//a[@href]'):
+        assert urlsplit(anchor.get('href')).path not in ('/it/', '/it/index.html'), ('Noncanonical Italian link', file)
     for element in r.xpath('//*[@src or @href or @srcset]'):
         for attr in ['src', 'href']:
             value = element.get(attr, '')
@@ -66,12 +82,12 @@ for file in D.rglob('*.html'):
         local_target(file, opt.get('value'))
     canonicals = r.xpath('//link[@rel="canonical"]/@href')
     assert len(canonicals) == 1, ('Canonical missing or repeated', file)
-    kind = file.parent.name if file.parent.name in ('privacy', 'terms') else 'landing'
-    expected = f'/{kind}/{lang}.html' if kind != 'landing' else ('/' if lang == 'it' else f'/{lang}/')
     assert canonicals[0] == SITE + expected, (file, canonicals)
+    canonical_urls.add(canonicals[0])
     alternates = r.xpath('//link[@rel="alternate"]')
     assert {x.get('hreflang') for x in alternates} == set(langs) | {'x-default'}, file
     assert len(alternates) == 12, file
+    assert {x.get('hreflang'): x.get('href') for x in alternates} == expected_alternates(kind), ('Incorrect language alternates', file)
     for alt in alternates:
         assert alt.get('href').startswith(SITE + '/'), file
         local_target(file, alt.get('href'))
@@ -121,5 +137,16 @@ assert (D/'robots.txt').exists()
 assert f'Sitemap: {SITE}/sitemap.xml' in (D/'robots.txt').read_text(encoding='utf-8')
 assert (D/'sitemap.xml').exists()
 sitemap_root = etree.fromstring((D/'sitemap.xml').read_bytes())
-assert len(sitemap_root.xpath('//sm:url', namespaces={'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'})) == 33
+ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9', 'xhtml': 'http://www.w3.org/1999/xhtml'}
+sitemap_entries = sitemap_root.xpath('sm:url', namespaces=ns)
+locations = [entry.find('sm:loc', ns).text for entry in sitemap_entries]
+assert len(locations) == len(set(locations)) == 33
+assert set(locations) == canonical_urls, 'Sitemap must contain exactly the canonical URLs'
+for entry, location in zip(sitemap_entries, locations):
+    path = urlsplit(location).path
+    kind = path.split('/')[1] if path.startswith(('/privacy/', '/terms/')) else 'landing'
+    alternates = entry.xpath('xhtml:link', namespaces=ns)
+    assert len(alternates) == 12, location
+    assert all(x.get('rel') == 'alternate' for x in alternates), location
+    assert {x.get('hreflang'): x.get('href') for x in alternates} == expected_alternates(kind), ('Incorrect sitemap alternates', location)
 print(f'PASS: {count} pages; 11 complete translations, responsive assets, anchors, canonicals, hreflang, static showcase, Premium sections, sitemap.xml, robots.txt and unchanged legal text.')
