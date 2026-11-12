@@ -60,16 +60,13 @@
       <span>Privacy Policy</span>
     </div>
 
-    <h1 class="privacy-title hero-in delay-15">Your collection,<br>always safe.</h1>
+    <h1 class="privacy-title hero-in delay-15">Privacy Policy</h1>
 
     <p class="section-sub hero-in delay-25">How we process your data in Poesie</p>
 
     <p class="section-text hero-in delay-35 privacy-intro-text">We do not collect or store the contents of your poems on our servers: your collection always remains under your control on your device, in your Google Drive, or on Microsoft OneDrive.</p>
 
-    <div class="privacy-badge hero-in delay-5">
-      <span class="diamond"></span>
-      Last updated: September 2026
-    </div>
+    <div class="privacy-badge hero-in delay-5">Last updated: 12 November 2026</div>
   </div>
 </section>
 
@@ -109,8 +106,7 @@
       <p>The app processes the following data exclusively for the functioning of the service:</p>
       <ul>
         <li>Email address of the Google or Microsoft account (displayed in the settings screen after connecting to the respective cloud service)</li>
-        <li>
-<strong>.docx</strong> file of each collection, created/updated by the app in your personal Google Drive (<em>drive.file</em> scope), in your Microsoft OneDrive (<em>Files.ReadWrite.AppFolder</em> scope), or kept strictly in local encrypted storage on the device (Local Only mode)</li>
+        <li>The app handles collections, revisions, automatic drafts, trash, tags, favourites, covers, statistics and preferences. If you connect a cloud account, it handles your account profile and access tokens, as well as the local data needed for app lock and Premium verification.</li>
         <li>OAuth 2.0 / PKCE authentication token for Google Drive and/or Microsoft OneDrive (saved locally using secure operating system mechanisms such as SecureStorage)</li>
         <li>App preferences (e.g., selected language, visual theme, Premium activation status, collection list)</li>
         <li>Custom cover image selected by the user via system picker (saved in the app's private directory)</li>
@@ -118,10 +114,11 @@
         <li>Recovery code saved in a protected area of the device to allow password resets in case of loss</li>
         <li>
 <strong>Premium purchase token</strong> (Google Play purchase token) — saved in a protected area of the device to verify purchase validity with Google Play Billing; it is never shared with the developer</li>
-        <li>Encrypted local backup file (password-protected ZIP archive) — generated upon user request and saved in local cache; not sent to third parties</li>
+        <li>Export and restore password-protected ZIP backups</li>
       </ul>
       <p>No data is stored on servers owned by the developer.</p>
-    </div>
+    <p>Dictation and read-aloud use the service configured on the device, which may process audio or text on its servers under its own settings and notices. The app may locally process images, videos, custom audio, revisions and statistics. Exports and backups may be handed to the app or destination you select through the system; those copies follow the recipient’s rules. Aggregate Premium counters stay on the device and are not automatically sent to the developer.</p>
+</div>
 
     <div class="privacy-block reveal">
       <div class="divider">
@@ -141,7 +138,7 @@
         <li>
 <strong>In-app purchase management</strong> (verification and restoration of the Premium purchase via Google Play Billing)</li>
       </ul>
-      <div class="privacy-highlight"><p>The main legal basis is Art. 6, par. 1, letter b) of the GDPR (performance of a service requested by the user). Local security features (app lock/recovery) are aimed at protecting access to user data on the device.</p></div>
+      <div class="privacy-highlight">Processing needed for the service you request is based on GDPR Article 6(1)(b); legal obligations on Article 6(1)(c). Device and cloud permissions are requested separately for optional features and can be revoked in their settings. Acknowledging this notice is not blanket consent to further processing.</div>
     </div>
 
         <div class="privacy-block reveal">
@@ -155,8 +152,7 @@
 <strong>Google Drive</strong>: The app uses Google Drive APIs with the <strong>drive.file</strong> scope, restricting access strictly to files created by the app itself. The app cannot view, read, modify, or delete any other files or folders in your Drive. You can revoke permissions at any time at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a>.</li>
         <li>
 <strong>Microsoft OneDrive</strong>: The app uses Microsoft Graph APIs with the <strong>Files.ReadWrite.AppFolder</strong> scope. Access is strictly limited to the application's dedicated folder (<em>OneDrive &gt; Apps &gt; Poesie App</em>). The app has no access to any other personal files, folders, or documents in your OneDrive account. You can manage or revoke access in your Microsoft account settings at <a href="https://account.live.com/consent/Manage" target="_blank" rel="noopener noreferrer">account.live.com/consent/Manage</a>.</li>
-        <li>
-<strong>Local Only Mode</strong>: If you prefer not to use any cloud service, the app operates entirely offline. Collection files are stored exclusively in the app's private memory, protected by AES encryption. No data leaves your device. In this mode, users are reminded that uninstalling the app deletes local data unless a password-protected local backup has been created.</li>
+        <li>Local Only does not sync collections to a cloud provider. Writing and organisation work on the device. Purchases, voice services and sharing you choose may still use networks and external services. Before uninstalling, save confirmed poems through an export or external backup: drafts and trash are not included.</li>
       </ul>
       <div class="privacy-highlight"><p>All collection files remain your exclusive property and under your complete control, whichever mode is chosen.</p></div>
     </div>
@@ -169,7 +165,7 @@
       <p>The following data is saved locally in the app's private folder, protected by the operating system and inaccessible to other applications:</p>
       <ul>
         <li>OAuth 2.0 Google / Microsoft tokens (stored in secure operating system storage SecureStorage)</li>
-        <li>Files of each collection in local cache, <strong>encrypted with AES</strong> on the app side; the unencrypted copy is automatically deleted when the app goes to the background or is hidden by the security overlay</li>
+        <li>Main collections have AES-encrypted copies; reading, editing and export also create plaintext working files. Automatic snapshots in the private Backups folder are unencrypted DOCX files: the code retains up to 10 copies per collection-name prefix. App lock and screenshot protection do not automatically encrypt snapshots, cloud documents or exported files.</li>
         <li>Preferences (e.g., language, visual theme, Premium status, list of collections, and related settings)</li>
         <li>Custom cover images (only files chosen by the user via system picker)</li>
         <li>Password hash + recovery code in a protected area (SecureStorage)</li>
@@ -177,8 +173,9 @@
         <li>Local backup file (ZIP archive encrypted with a user-provided password), generated only upon explicit request and kept in temporary cache</li>
       </ul>
       <p>This data is automatically deleted upon uninstalling the app. You can also remove the cloud session (Google Drive or OneDrive) at any time via "Disconnect" in settings.</p>
-      <div class="privacy-highlight"><p>Network communications (app → Google) take place exclusively via HTTPS (TLS).</p></div>
-    </div>
+      <div class="privacy-highlight">Google Drive / Microsoft OneDrive: HTTPS (TLS).</div>
+    <p>Drafts and trash are encrypted and local: they are not synced or included in ZIP backups. Trashed poems can be recovered within 30 days; expired copies are removed during the next cleanup. Collections have encrypted copies, but plaintext working files, exports and private snapshots also exist. Google/Microsoft handle cloud services; Google Play handles purchases. Dictation and read-aloud use device services, which may process audio or text online. Share files only with services you trust.</p>
+</div>
 
     <div class="privacy-block reveal">
       <div class="divider">
@@ -268,7 +265,7 @@
 <span class="diamond"></span><span class="rule"></span>
 </div>
       <h2>Third-Party Sharing</h2>
-      <p>The developer does not share, sell, or transfer any user personal data to third parties.</p>
+      <p>Data is sent to providers needed for features you choose (Google Drive, Microsoft OneDrive, Google Play, voice services and sharing apps). We do not sell your data; the app contains no advertising or remote analytics services. OneDrive uses Files.ReadWrite.AppFolder for files, User.Read for your profile and offline_access for session renewal. Cloud copies are DOCX documents and do not use the local app encryption key: Poesie does not provide end-to-end encryption for them.</p>
       <p>Third-party services used for technical operations:</p>
       <ul>
         <li>
@@ -277,8 +274,10 @@
         <li>
 <strong>Google LLC / Google Play</strong> — In-app purchase processing via Google Play Billing and in-app review prompts. The purchase token is sent to Google solely to validate the Premium purchase; the developer has no access to payment details. <a href="https://play.google.com/store/apps/details?id=com.edobardo.poesie&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Play Terms of Service (opens in a new tab)">Google Play Terms</a>
 </li>
-      </ul>
-    </div>
+      <li><a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer">Microsoft OneDrive — Privacy</a></li>
+</ul>
+    <p>Dictation and read-aloud use the service configured on the device, which may process audio or text on its servers under its own settings and notices. The app may locally process images, videos, custom audio, revisions and statistics. Exports and backups may be handed to the app or destination you select through the system; those copies follow the recipient’s rules. Aggregate Premium counters stay on the device and are not automatically sent to the developer.</p>
+</div>
 
     <div class="privacy-block reveal">
       <div class="divider">
@@ -286,7 +285,7 @@
 </div>
       <h2>Data Retention</h2>
       <ul>
-        <li>Collection contents remain in your Google Drive, OneDrive, or local app storage until you delete them</li>
+        <li>Drafts stay on the device until confirmed or discarded. Trash keeps encrypted copies recoverable within 30 days; expired copies are removed on the next opening/cleanup. Unreadable files may be retained to avoid losing recoverable data. Drafts and trash are not included in sync or ZIP backups. Deleting a poem or emptying the trash does not automatically remove earlier snapshots, exports, or cloud-provider versions and trash. Uninstalling removes private local data, not external copies. Disconnecting the cloud does not delete cloud files.</li>
         <li>OAuth authentication tokens (Google or Microsoft) remain on the device until you disconnect or uninstall the app</li>
         <li>The recovery code remains on the device until you remove the password/lock or uninstall the app</li>
         <li>The Premium purchase token remains on the device until you uninstall the app; it is automatically removed if the purchase is no longer active on Google Play</li>
@@ -323,8 +322,8 @@
 <span class="diamond"></span><span class="rule"></span>
 </div>
       <h2>Minors</h2>
-      <p>Poesie is not intended for users under 14 years of age. The developer does not knowingly collect personal data from minors under 14. In accordance with the European General Data Protection Regulation (GDPR), processing minors' data requires consent from parents or legal guardians.</p>
-      <p>In-app purchases via Google Play require a valid Google account; parental consent management for purchases is subject to Google Play and Google Family Library policies.</p>
+      <p>Poesie is not intended for children under 14. Parental authorisation and purchase requirements depend on applicable law and Google Play account settings.</p>
+      <p><a href="https://support.google.com/googleplay/answer/7039872" target="_blank" rel="noopener noreferrer">Google Play</a></p>
     </div>
 
     <div class="privacy-block reveal">
@@ -333,8 +332,9 @@
 </div>
       <h2>Cookies and Similar Technologies</h2>
       <p>The Poesie mobile app <strong>does not use cookies</strong> or tracking technologies.</p>
-      <p>This web page may use essential technical cookies provided by the hosting service. No profiling cookies are used by Poesie.</p>
-    </div>
+      <p>The website is static, with locally served images and fonts, and has no profiling cookies or added analytics tools in its code. The intended host is GitHub Pages: GitHub logs visitor IP addresses for security under its privacy statement. Google Play and Instagram links open external services with their own notices. If you email support@poesieapp.it, your address and message are processed to handle your request for as long as needed and to meet legal obligations. Do not send passwords or recovery codes. Providers may process data outside the EEA under the notices and safeguards they describe.</p>
+    <p><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub — Privacy</a></p>
+</div>
 
     <div class="privacy-block reveal">
       <div class="divider">

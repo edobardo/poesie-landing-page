@@ -7,7 +7,7 @@
     "download": "Scarica per Android",
     "eyebrow": "IL TUO SPAZIO PER LA POESIA",
     "hero": "Dai forma<br>ai tuoi <em>versi.</em>",
-    "intro": "Un pensiero diventa poesia. Una poesia diventa immagine, video, una raccolta da sfogliare. Tutto comincia dalle tue parole.",
+    "intro": "Scrivi e organizza le tue poesie in uno spazio personale. Trasformale in immagini, video o un’antologia PDF, e scegli dove conservarle.",
     "discover": "Scopri cosa puoi creare",
     "freeNote": "Inizia gratis, anche senza account. Funzioni aggiuntive con Premium.",
     "signature": "Scrivi per te. Condividi quando vuoi.",
@@ -17,7 +17,7 @@
     "writeBody": "Cattura un pensiero nell’istante in cui arriva. Lascia spazio alla scrittura, poi torna sui tuoi versi con calma.",
     "writePoint1": "Modalità Focus e timer di scrittura",
     "writePoint2": "Spunti creativi per cominciare",
-    "writePoint3": "Tag e cronologia delle revisioni",
+    "writePoint3": "Bozze automatiche e cronologia delle revisioni",
     "templateNote": "I modelli guidati per haiku, sonetti e canzoni richiedono Premium.",
     "createTitle": "Le parole prendono una nuova forma.",
     "createBody": "Da custodire o da condividere. Scegli come raccontare ciò che hai scritto.",
@@ -34,9 +34,9 @@
     "premiumLink": "Scopri Poesie Premium →",
     "spaceLabel": "LE TUE PAROLE, CON CURA",
     "spaceTitle": "Uno spazio tutto tuo.",
-    "spaceBody": "Raccogli le poesie, aggiungi tag e preferiti, ritrova un verso. Conserva tutto sul dispositivo oppure scegli la sincronizzazione con il tuo account Google Drive o OneDrive.",
+    "spaceBody": "Organizza raccolte, tag, preferiti e cartelle intelligenti. Ritrova i tuoi versi con la ricerca e scegli tra il dispositivo, Google Drive e OneDrive.",
     "local": "Solo Locale",
-    "securityNote": "Puoi attivare il blocco con password o biometria e la protezione degli screenshot. I file locali sono gestiti con cifratura.",
+    "securityNote": "Attiva il blocco con password o biometria e la protezione degli screenshot. Queste protezioni non si estendono ai file già esportati o condivisi.",
     "premiumEyebrow": "PIÙ SPAZIO ALLA CREATIVITÀ",
     "premiumTitle": "Comincia liberamente. Vai oltre con Premium.",
     "premiumBody": "Un acquisto singolo tramite Google Play, senza abbonamento. Scegli quando aggiungere nuovi strumenti al tuo quaderno.",
@@ -53,8 +53,8 @@
       "Antologia PDF con copertina",
       "Stili aggiuntivi e rimozione del watermark",
       "Audio personalizzato nei video",
-      "Modelli poetici guidati e temi aggiuntivi",
-      "Esportazione di backup ZIP protetti"
+      "Modelli poetici guidati, temi aggiuntivi e controlli avanzati di lettura",
+      "Esportazione e ripristino di backup ZIP protetti da password"
     ],
     "priceNote": "Prezzo e dettagli delle funzioni sono disponibili nell’app, prima dell’acquisto.",
     "faqLabel": "PRIMA DEL PRIMO VERSO",
@@ -79,6 +79,10 @@
       [
         "Su quali dispositivi posso usarla?",
         "Poesie è disponibile per Android su Google Play. La scheda dello store indica la compatibilità con il tuo dispositivo."
+      ],
+      [
+        "Come conservo i testi prima di disinstallare?",
+        "Esporta le poesie o salva una copia di sicurezza dalle impostazioni prima di disinstallare. Il ripristino da ZIP richiede Premium. Bozze e cestino restano sul dispositivo e non sono inclusi: conferma prima i testi che vuoi conservare."
       ]
     ],
     "closingLabel": "IL PROSSIMO VERSO COMINCIA DA TE",
@@ -89,7 +93,9 @@
     "videoAlt": "Impostazioni video e fotogramma con effetto macchina da scrivere",
     "bookAlt": "Copertina e pagina di un’antologia PDF creata con Premium",
     "spaceAlt": "Raccolta di poesie e impostazioni di blocco dell’app e degli screenshot",
-    "featureAlt": "Poesie: editor e poesia impaginata nella nuova presentazione dello store"
+    "featureAlt": "Poesie: editor e poesia impaginata nella nuova presentazione dello store",
+    "recoveryNote": "Hai eliminato una poesia per errore? Puoi recuperarla dal cestino entro 30 giorni. Bozze e cestino restano su questo dispositivo e non sono inclusi nella sincronizzazione o nei backup ZIP.",
+    "progressNote": "Segui statistiche, obiettivi e continuità di scrittura. Riascolta le tue poesie con la lettura vocale; con Premium esplora anche Poetry Wrapped."
   },
   "en": {
     "skip": "Skip to content",
@@ -99,7 +105,7 @@
     "download": "Download for Android",
     "eyebrow": "A SPACE FOR YOUR POETRY",
     "hero": "Shape your<br><em>verses.</em>",
-    "intro": "A thought becomes a poem. A poem becomes an image, a video, a collection to leaf through. It all begins with your words.",
+    "intro": "Write and organise your poems in a personal space. Turn them into images, videos or a PDF anthology, and choose where to keep them.",
     "discover": "See what you can create",
     "freeNote": "Start free, even without an account. Additional features with Premium.",
     "signature": "Write for yourself. Share when you’re ready.",
@@ -109,7 +115,7 @@
     "writeBody": "Catch a thought the moment it arrives. Make room for writing, then return to your verses in your own time.",
     "writePoint1": "Focus mode and a writing timer",
     "writePoint2": "Creative prompts to get started",
-    "writePoint3": "Tags and revision history",
+    "writePoint3": "Automatic drafts and revision history",
     "templateNote": "Guided haiku, sonnet and canzone templates require Premium.",
     "createTitle": "Words take on a new form.",
     "createBody": "To keep or to share. Choose how to present what you’ve written.",
@@ -126,9 +132,9 @@
     "premiumLink": "Discover Poesie Premium →",
     "spaceLabel": "YOUR WORDS, CARED FOR",
     "spaceTitle": "A space all your own.",
-    "spaceBody": "Collect your poems, add tags and favourites, find a verse again. Keep everything on your device or sync with your own Google Drive or OneDrive account.",
+    "spaceBody": "Organise collections, tags, favourites and smart folders. Find your verses with search and choose storage on your device, Google Drive or OneDrive.",
     "local": "Local Only",
-    "securityNote": "You can enable password or biometric app lock and screenshot protection. Local files are managed with encryption.",
+    "securityNote": "Enable password or biometric app lock and screenshot protection. These protections do not extend to files already exported or shared.",
     "premiumEyebrow": "MORE ROOM FOR CREATIVITY",
     "premiumTitle": "Start freely. Go further with Premium.",
     "premiumBody": "A one-time purchase through Google Play, with no subscription. Choose when to add more tools to your notebook.",
@@ -145,8 +151,8 @@
       "PDF anthology with a cover",
       "Additional styles and watermark removal",
       "Custom audio in videos",
-      "Guided poetry templates and additional app themes",
-      "Password-protected ZIP backup export"
+      "Guided poetry templates, extra themes and advanced reading controls",
+      "Export and restore password-protected ZIP backups"
     ],
     "priceNote": "See the price and feature details in the app before purchasing.",
     "faqLabel": "BEFORE YOUR FIRST VERSE",
@@ -171,6 +177,10 @@
       [
         "Which devices can I use?",
         "Poesie is available for Android on Google Play. Check the store listing for compatibility with your device."
+      ],
+      [
+        "How do I keep my writing before uninstalling?",
+        "Export your poems or save a safety copy from Settings before uninstalling. Restoring a ZIP backup requires Premium. Drafts and trash remain on the device and are not included: confirm any writing you want to keep first."
       ]
     ],
     "closingLabel": "YOUR NEXT VERSE BEGINS WITH YOU",
@@ -181,7 +191,9 @@
     "videoAlt": "Video settings and a frame with the typewriter effect",
     "bookAlt": "Cover and page of a PDF anthology created with Premium",
     "spaceAlt": "Poetry collection and app lock and screenshot protection settings",
-    "featureAlt": "Poesie editor and a styled poem in the new store feature graphic"
+    "featureAlt": "Poesie editor and a styled poem in the new store feature graphic",
+    "recoveryNote": "Deleted a poem by mistake? Recover it from the trash within 30 days. Drafts and trash stay on this device and are not included in cloud sync or ZIP backups.",
+    "progressNote": "Track statistics, writing goals and your streak. Listen to your poems with read-aloud; Premium also includes Poetry Wrapped."
   },
   "de": {
     "skip": "Zum Inhalt",
@@ -189,7 +201,7 @@
     "navCreate": "Gestalten & teilen",
     "eyebrow": "RAUM FÜR DEINE POESIE",
     "hero": "Gib deinen<br>Versen <em>Gestalt.</em>",
-    "intro": "Ein Gedanke wird zum Gedicht. Ein Gedicht wird zum Bild, zum Video, zu einer Sammlung zum Durchblättern. Alles beginnt mit deinen Worten.",
+    "intro": "Schreibe und ordne deine Gedichte an einem persönlichen Ort. Gestalte Bilder, Videos oder eine PDF-Anthologie und wähle deinen Speicherort.",
     "discover": "Entdecke die Möglichkeiten",
     "freeNote": "Kostenlos starten, auch ohne Konto. Zusätzliche Funktionen mit Premium.",
     "signature": "Schreibe für dich. Teile, wenn du möchtest.",
@@ -199,7 +211,7 @@
     "writeBody": "Halte einen Gedanken fest, sobald er entsteht. Nimm dir Zeit zum Schreiben und kehre in Ruhe zu deinen Versen zurück.",
     "writePoint1": "Fokusmodus und Schreib-Timer",
     "writePoint2": "Kreative Impulse für den Anfang",
-    "writePoint3": "Tags und Versionsverlauf",
+    "writePoint3": "Automatische Entwürfe und Versionsverlauf",
     "templateNote": "Geführte Vorlagen für Haiku, Sonett und Kanzone erfordern Premium.",
     "createTitle": "Worte nehmen eine neue Form an.",
     "createBody": "Zum Bewahren oder Teilen. Entscheide, wie du deine Texte präsentieren möchtest.",
@@ -216,9 +228,9 @@
     "premiumLink": "Poesie Premium entdecken →",
     "spaceLabel": "DEINE WORTE, GUT AUFGEHOBEN",
     "spaceTitle": "Ein Raum nur für dich.",
-    "spaceBody": "Ordne Gedichte in Sammlungen, ergänze Tags und Favoriten. Speichere alles auf deinem Gerät oder synchronisiere mit deinem eigenen Google-Drive- oder OneDrive-Konto.",
+    "spaceBody": "Ordne Sammlungen, Tags, Favoriten und intelligente Ordner. Finde Verse mit der Suche und speichere auf dem Gerät, in Google Drive oder OneDrive.",
     "local": "Nur lokal",
-    "securityNote": "Aktiviere die App-Sperre per Passwort oder Biometrie und den Screenshot-Schutz. Lokale Dateien werden mit Verschlüsselung verwaltet.",
+    "securityNote": "Aktiviere die App-Sperre per Passwort oder Biometrie und den Screenshot-Schutz. Bereits exportierte oder geteilte Dateien werden dadurch nicht geschützt.",
     "premiumEyebrow": "MEHR RAUM FÜR KREATIVITÄT",
     "premiumTitle": "Frei beginnen. Mit Premium weitergehen.",
     "premiumBody": "Ein einmaliger Kauf über Google Play, ohne Abonnement. Entscheide, wann du dein Notizbuch um weitere Werkzeuge ergänzen möchtest.",
@@ -235,8 +247,8 @@
       "PDF-Anthologie mit Cover",
       "Zusätzliche Stile und Entfernen des Wasserzeichens",
       "Eigenes Audio in Videos",
-      "Geführte Gedichtvorlagen und zusätzliche App-Themen",
-      "Export passwortgeschützter ZIP-Backups"
+      "Geführte Gedichtvorlagen, zusätzliche Themen und erweiterte Vorleseeinstellungen",
+      "Passwortgeschützte ZIP-Backups exportieren und wiederherstellen"
     ],
     "priceNote": "Preis und Funktionsdetails findest du vor dem Kauf in der App.",
     "faqLabel": "VOR DEM ERSTEN VERS",
@@ -261,6 +273,10 @@
       [
         "Welche Geräte werden unterstützt?",
         "Poesie ist für Android bei Google Play verfügbar. Die Store-Seite zeigt die Kompatibilität mit deinem Gerät."
+      ],
+      [
+        "Wie sichere ich Texte vor der Deinstallation?",
+        "Exportiere Gedichte oder speichere vorher eine Sicherungskopie in den Einstellungen. Die Wiederherstellung aus ZIP erfordert Premium. Entwürfe und Papierkorb bleiben auf dem Gerät und sind nicht enthalten: bestätige zuerst die Texte, die du behalten möchtest."
       ]
     ],
     "closingLabel": "DEIN NÄCHSTER VERS BEGINNT MIT DIR",
@@ -273,7 +289,9 @@
     "stylesAlt": "Poesie: Deine Poesie, dein Stil.",
     "videoAlt": "Poesie: Deine Verse werden lebendig.",
     "bookAlt": "Poesie: Deine Gedichte werden zum Buch.",
-    "spaceAlt": "Poesie: Ein Raum nur für dich."
+    "spaceAlt": "Poesie: Ein Raum nur für dich.",
+    "recoveryNote": "Ein Gedicht versehentlich gelöscht? Stelle es innerhalb von 30 Tagen aus dem Papierkorb wieder her. Entwürfe und Papierkorb bleiben auf diesem Gerät und sind weder in der Cloud-Synchronisierung noch in ZIP-Backups enthalten.",
+    "progressNote": "Verfolge Statistiken, Schreibziele und deine Schreibserie. Lass dir Gedichte vorlesen; Premium enthält auch Poetry Wrapped."
   },
   "es": {
     "skip": "Ir al contenido",
@@ -281,7 +299,7 @@
     "navCreate": "Crea y comparte",
     "eyebrow": "UN ESPACIO PARA TU POESÍA",
     "hero": "Da forma<br>a tus <em>versos.</em>",
-    "intro": "Un pensamiento se convierte en poema. Un poema, en imagen, vídeo o una colección que hojear. Todo empieza con tus palabras.",
+    "intro": "Escribe y organiza tus poemas en un espacio personal. Conviértelos en imágenes, vídeos o una antología PDF y elige dónde guardarlos.",
     "discover": "Descubre lo que puedes crear",
     "freeNote": "Empieza gratis, incluso sin cuenta. Funciones adicionales con Premium.",
     "signature": "Escribe para ti. Comparte cuando quieras.",
@@ -291,7 +309,7 @@
     "writeBody": "Captura una idea en cuanto aparece. Haz espacio para escribir y vuelve a tus versos con calma.",
     "writePoint1": "Modo Focus y temporizador de escritura",
     "writePoint2": "Ideas creativas para empezar",
-    "writePoint3": "Etiquetas e historial de revisiones",
+    "writePoint3": "Borradores automáticos e historial de revisiones",
     "templateNote": "Las plantillas guiadas de haiku, soneto y canción requieren Premium.",
     "createTitle": "Las palabras toman una nueva forma.",
     "createBody": "Para guardar o compartir. Elige cómo presentar lo que has escrito.",
@@ -308,9 +326,9 @@
     "premiumLink": "Descubre Poesie Premium →",
     "spaceLabel": "TUS PALABRAS, BIEN CUIDADAS",
     "spaceTitle": "Un espacio solo tuyo.",
-    "spaceBody": "Organiza poemas, añade etiquetas y favoritos, recupera un verso. Guarda todo en tu dispositivo o sincroniza con tu propia cuenta de Google Drive o OneDrive.",
+    "spaceBody": "Organiza colecciones, etiquetas, favoritos y carpetas inteligentes. Encuentra tus versos con la búsqueda y guarda en el dispositivo, Google Drive o OneDrive.",
     "local": "Solo local",
-    "securityNote": "Puedes activar el bloqueo con contraseña o biometría y la protección de capturas. Los archivos locales se gestionan con cifrado.",
+    "securityNote": "Activa el bloqueo con contraseña o biometría y la protección de capturas. Estas medidas no protegen los archivos ya exportados o compartidos.",
     "premiumEyebrow": "MÁS ESPACIO PARA CREAR",
     "premiumTitle": "Empieza libremente. Ve más allá con Premium.",
     "premiumBody": "Una compra única en Google Play, sin suscripción. Tú decides cuándo añadir herramientas a tu cuaderno.",
@@ -327,8 +345,8 @@
       "Antología PDF con portada",
       "Estilos adicionales y eliminación de la marca de agua",
       "Audio personalizado en vídeos",
-      "Plantillas poéticas guiadas y temas adicionales",
-      "Exportación de copias ZIP con contraseña"
+      "Plantillas poéticas guiadas, temas adicionales y controles avanzados de lectura",
+      "Exportar y restaurar copias ZIP protegidas con contraseña"
     ],
     "priceNote": "Consulta el precio y los detalles de las funciones en la app antes de comprar.",
     "faqLabel": "ANTES DEL PRIMER VERSO",
@@ -353,6 +371,10 @@
       [
         "¿En qué dispositivos funciona?",
         "Poesie está disponible para Android en Google Play. La ficha de la tienda indica la compatibilidad con tu dispositivo."
+      ],
+      [
+        "¿Cómo conservo los textos antes de desinstalar?",
+        "Exporta tus poemas o guarda una copia de seguridad desde Ajustes antes de desinstalar. Restaurar una copia ZIP requiere Premium. Los borradores y la papelera quedan en el dispositivo y no se incluyen: confirma primero los textos que quieras conservar."
       ]
     ],
     "closingLabel": "TU PRÓXIMO VERSO EMPIEZA CONTIGO",
@@ -365,7 +387,9 @@
     "stylesAlt": "Poesie: Tu poesía, tu estilo.",
     "videoAlt": "Poesie: Tus versos cobran vida.",
     "bookAlt": "Poesie: Tus poemas se convierten en un libro.",
-    "spaceAlt": "Poesie: Un espacio solo tuyo."
+    "spaceAlt": "Poesie: Un espacio solo tuyo.",
+    "recoveryNote": "¿Has borrado un poema por error? Recupéralo de la papelera en un plazo de 30 días. Los borradores y la papelera quedan en este dispositivo y no se incluyen en la sincronización ni en las copias ZIP.",
+    "progressNote": "Consulta estadísticas, objetivos y tu racha de escritura. Escucha tus poemas con la lectura en voz alta; Premium también incluye Poetry Wrapped."
   },
   "fr": {
     "skip": "Aller au contenu",
@@ -373,7 +397,7 @@
     "navCreate": "Créer et partager",
     "eyebrow": "UN ESPACE POUR VOTRE POÉSIE",
     "hero": "Donnez forme<br>à vos <em>vers.</em>",
-    "intro": "Une pensée devient poème. Un poème devient image, vidéo, recueil à feuilleter. Tout commence par vos mots.",
+    "intro": "Écris et organise tes poèmes dans un espace personnel. Transforme-les en images, vidéos ou anthologie PDF et choisis où les conserver.",
     "discover": "Découvrez ce que vous pouvez créer",
     "freeNote": "Commencez gratuitement, même sans compte. Fonctions supplémentaires avec Premium.",
     "signature": "Écrivez pour vous. Partagez à votre rythme.",
@@ -383,7 +407,7 @@
     "writeBody": "Saisissez une pensée dès qu’elle apparaît. Faites place à l’écriture, puis revenez à vos vers tranquillement.",
     "writePoint1": "Mode Focus et minuteur d’écriture",
     "writePoint2": "Pistes créatives pour commencer",
-    "writePoint3": "Étiquettes et historique des révisions",
+    "writePoint3": "Brouillons automatiques et historique des révisions",
     "templateNote": "Les modèles guidés de haïku, sonnet et canzone nécessitent Premium.",
     "createTitle": "Les mots prennent une nouvelle forme.",
     "createBody": "À garder ou à partager. Choisissez comment présenter vos écrits.",
@@ -400,9 +424,9 @@
     "premiumLink": "Découvrir Poesie Premium →",
     "spaceLabel": "VOS MOTS, AVEC SOIN",
     "spaceTitle": "Un espace bien à vous.",
-    "spaceBody": "Organisez vos poèmes, ajoutez des étiquettes et des favoris, retrouvez un vers. Gardez tout sur votre appareil ou synchronisez avec votre compte Google Drive ou OneDrive.",
+    "spaceBody": "Organise recueils, tags, favoris et dossiers intelligents. Retrouve tes vers avec la recherche et choisis ton appareil, Google Drive ou OneDrive.",
     "local": "Local uniquement",
-    "securityNote": "Vous pouvez activer le verrouillage par mot de passe ou biométrie et la protection des captures d’écran. Les fichiers locaux sont gérés avec chiffrement.",
+    "securityNote": "Active le verrouillage par mot de passe ou biométrie et la protection des captures. Ces protections ne couvrent pas les fichiers déjà exportés ou partagés.",
     "premiumEyebrow": "PLUS DE PLACE À LA CRÉATIVITÉ",
     "premiumTitle": "Commencez librement. Allez plus loin avec Premium.",
     "premiumBody": "Un achat unique via Google Play, sans abonnement. Choisissez quand ajouter des outils à votre carnet.",
@@ -419,8 +443,8 @@
       "Anthologie PDF avec couverture",
       "Styles supplémentaires et suppression du filigrane",
       "Audio personnalisé dans les vidéos",
-      "Modèles poétiques guidés et thèmes supplémentaires",
-      "Export de sauvegardes ZIP avec mot de passe"
+      "Modèles poétiques guidés, thèmes supplémentaires et réglages avancés de lecture",
+      "Exportation et restauration de sauvegardes ZIP protégées par mot de passe"
     ],
     "priceNote": "Consultez le prix et le détail des fonctions dans l’app avant l’achat.",
     "faqLabel": "AVANT LE PREMIER VERS",
@@ -445,6 +469,10 @@
       [
         "Sur quels appareils fonctionne l’app ?",
         "Poesie est disponible pour Android sur Google Play. La fiche de la boutique indique la compatibilité avec votre appareil."
+      ],
+      [
+        "Comment conserver mes textes avant de désinstaller ?",
+        "Exporte tes poèmes ou enregistre une copie de sécurité depuis les paramètres avant de désinstaller. La restauration ZIP nécessite Premium. Brouillons et corbeille restent sur l’appareil et sont exclus : confirme d’abord les textes à conserver."
       ]
     ],
     "closingLabel": "VOTRE PROCHAIN VERS COMMENCE AVEC VOUS",
@@ -457,7 +485,9 @@
     "stylesAlt": "Poesie: Votre poésie, votre style.",
     "videoAlt": "Poesie: Vos vers prennent vie.",
     "bookAlt": "Poesie: Vos poèmes deviennent un livre.",
-    "spaceAlt": "Poesie: Un espace bien à vous."
+    "spaceAlt": "Poesie: Un espace bien à vous.",
+    "recoveryNote": "Un poème supprimé par erreur ? Récupère-le dans la corbeille sous 30 jours. Brouillons et corbeille restent sur cet appareil et sont exclus de la synchronisation et des sauvegardes ZIP.",
+    "progressNote": "Suis tes statistiques, objectifs et séries d’écriture. Écoute tes poèmes avec la lecture vocale ; Premium inclut aussi Poetry Wrapped."
   },
   "pt": {
     "skip": "Ir para o conteúdo",
@@ -465,7 +495,7 @@
     "navCreate": "Criar e partilhar",
     "eyebrow": "UM ESPAÇO PARA A TUA POESIA",
     "hero": "Dá forma<br>aos teus <em>versos.</em>",
-    "intro": "Um pensamento torna-se poema. Um poema torna-se imagem, vídeo ou uma coleção para folhear. Tudo começa com as tuas palavras.",
+    "intro": "Escreve e organiza os teus poemas num espaço pessoal. Transforma-os em imagens, vídeos ou numa antologia PDF e escolhe onde guardá-los.",
     "discover": "Descobre o que podes criar",
     "freeNote": "Começa gratuitamente, mesmo sem conta. Funcionalidades adicionais com Premium.",
     "signature": "Escreve para ti. Partilha quando quiseres.",
@@ -475,7 +505,7 @@
     "writeBody": "Regista um pensamento assim que surge. Abre espaço para escrever e regressa aos teus versos com calma.",
     "writePoint1": "Modo Focus e temporizador de escrita",
     "writePoint2": "Sugestões criativas para começar",
-    "writePoint3": "Etiquetas e histórico de revisões",
+    "writePoint3": "Rascunhos automáticos e histórico de revisões",
     "templateNote": "Os modelos guiados de haiku, soneto e canção requerem Premium.",
     "createTitle": "As palavras ganham uma nova forma.",
     "createBody": "Para guardar ou partilhar. Escolhe como apresentar o que escreveste.",
@@ -492,9 +522,9 @@
     "premiumLink": "Descobre Poesie Premium →",
     "spaceLabel": "AS TUAS PALAVRAS, COM CUIDADO",
     "spaceTitle": "Um espaço só teu.",
-    "spaceBody": "Organiza poemas, adiciona etiquetas e favoritos, reencontra um verso. Guarda tudo no dispositivo ou sincroniza com a tua conta Google Drive ou OneDrive.",
+    "spaceBody": "Organiza coleções, etiquetas, favoritos e pastas inteligentes. Encontra os teus versos com a pesquisa e guarda no dispositivo, Google Drive ou OneDrive.",
     "local": "Apenas local",
-    "securityNote": "Podes ativar o bloqueio com palavra-passe ou biometria e a proteção de capturas de ecrã. Os ficheiros locais são geridos com encriptação.",
+    "securityNote": "Ativa o bloqueio por palavra-passe ou biometria e a proteção de capturas. Estas medidas não protegem ficheiros já exportados ou partilhados.",
     "premiumEyebrow": "MAIS ESPAÇO PARA CRIAR",
     "premiumTitle": "Começa livremente. Vai mais longe com Premium.",
     "premiumBody": "Uma compra única no Google Play, sem subscrição. Escolhe quando acrescentar ferramentas ao teu caderno.",
@@ -511,8 +541,8 @@
       "Antologia PDF com capa",
       "Estilos adicionais e remoção da marca de água",
       "Áudio personalizado nos vídeos",
-      "Modelos poéticos guiados e temas adicionais",
-      "Exportação de cópias ZIP com palavra-passe"
+      "Modelos poéticos guiados, temas adicionais e controlos avançados de leitura",
+      "Exportação e restauro de cópias ZIP protegidas por palavra-passe"
     ],
     "priceNote": "Consulta o preço e os detalhes das funcionalidades na app antes da compra.",
     "faqLabel": "ANTES DO PRIMEIRO VERSO",
@@ -537,6 +567,10 @@
       [
         "Em que dispositivos funciona?",
         "Poesie está disponível para Android no Google Play. A página da loja indica a compatibilidade com o teu dispositivo."
+      ],
+      [
+        "Como guardo os textos antes de desinstalar?",
+        "Exporta os poemas ou guarda uma cópia de segurança nas definições antes de desinstalar. O restauro ZIP requer Premium. Rascunhos e lixo ficam no dispositivo e não estão incluídos: confirma primeiro os textos que queres guardar."
       ]
     ],
     "closingLabel": "O TEU PRÓXIMO VERSO COMEÇA CONTIGO",
@@ -549,7 +583,9 @@
     "stylesAlt": "Poesie: A tua poesia, o teu estilo.",
     "videoAlt": "Poesie: Os teus versos ganham vida.",
     "bookAlt": "Poesie: Os teus poemas tornam-se um livro.",
-    "spaceAlt": "Poesie: Um espaço só teu."
+    "spaceAlt": "Poesie: Um espaço só teu.",
+    "recoveryNote": "Apagaste um poema por engano? Recupera-o do lixo no prazo de 30 dias. Os rascunhos e o lixo ficam neste dispositivo e não são incluídos na sincronização nem nas cópias ZIP.",
+    "progressNote": "Acompanha estatísticas, objetivos e a tua sequência de escrita. Ouve os poemas com a leitura em voz alta; Premium também inclui Poetry Wrapped."
   },
   "ru": {
     "skip": "К содержимому",
@@ -557,7 +593,7 @@
     "navCreate": "Создавайте и делитесь",
     "eyebrow": "ПРОСТРАНСТВО ДЛЯ ВАШЕЙ ПОЭЗИИ",
     "hero": "Придайте форму<br>своим <em>стихам.</em>",
-    "intro": "Мысль становится стихотворением. Стихотворение — изображением, видео или сборником, который можно листать. Всё начинается с ваших слов.",
+    "intro": "Пиши и упорядочивай стихи в личном пространстве. Создавай изображения, видео или PDF-сборник и выбирай, где их хранить.",
     "discover": "Узнайте, что можно создать",
     "freeNote": "Начните бесплатно, даже без аккаунта. Дополнительные функции — с Premium.",
     "signature": "Пишите для себя. Делитесь, когда захотите.",
@@ -567,7 +603,7 @@
     "writeBody": "Запишите мысль, как только она появится. Найдите время для творчества и возвращайтесь к стихам без спешки.",
     "writePoint1": "Режим Focus и таймер письма",
     "writePoint2": "Творческие подсказки для начала",
-    "writePoint3": "Теги и история изменений",
+    "writePoint3": "Автоматические черновики и история изменений",
     "templateNote": "Шаблоны хайку, сонета и канцоны доступны с Premium.",
     "createTitle": "Слова обретают новую форму.",
     "createBody": "Сохранить для себя или поделиться. Выберите, как представить написанное.",
@@ -584,9 +620,9 @@
     "premiumLink": "Откройте Poesie Premium →",
     "spaceLabel": "БЕРЕЖНО К ВАШИМ СЛОВАМ",
     "spaceTitle": "Пространство только для вас.",
-    "spaceBody": "Собирайте стихи, добавляйте теги и избранное, находите нужные строки. Храните всё на устройстве или синхронизируйте со своим Google Drive либо OneDrive.",
+    "spaceBody": "Организуй сборники, теги, избранное и умные папки. Находи строки поиском и храни их на устройстве, в Google Drive или OneDrive.",
     "local": "Только локально",
-    "securityNote": "Можно включить блокировку паролем или биометрией и защиту от снимков экрана. Локальные файлы обрабатываются с шифрованием.",
+    "securityNote": "Включи блокировку паролем или биометрией и защиту от снимков экрана. Эта защита не распространяется на уже экспортированные или отправленные файлы.",
     "premiumEyebrow": "БОЛЬШЕ ПРОСТОРА ДЛЯ ТВОРЧЕСТВА",
     "premiumTitle": "Начните свободно. Создавайте больше с Premium.",
     "premiumBody": "Одна покупка через Google Play, без подписки. Решите сами, когда добавить новые инструменты в свой блокнот.",
@@ -603,8 +639,8 @@
       "PDF-антология с обложкой",
       "Дополнительные стили и удаление водяного знака",
       "Собственное аудио в видео",
-      "Поэтические шаблоны и дополнительные темы",
-      "Экспорт ZIP-копий с паролем"
+      "Поэтические шаблоны, дополнительные темы и расширенные настройки чтения",
+      "Экспорт и восстановление ZIP-копий с паролем"
     ],
     "priceNote": "Цена и подробности функций доступны в приложении до покупки.",
     "faqLabel": "ДО ПЕРВОЙ СТРОКИ",
@@ -629,6 +665,10 @@
       [
         "Какие устройства поддерживаются?",
         "Poesie доступно для Android в Google Play. Совместимость с вашим устройством указана на странице магазина."
+      ],
+      [
+        "Как сохранить тексты перед удалением приложения?",
+        "Экспортируйте стихи или сохраните резервную копию в настройках до удаления приложения. Восстановление из ZIP требует Premium. Черновики и корзина остаются на устройстве и не включаются: сначала подтвердите тексты, которые хотите сохранить."
       ]
     ],
     "closingLabel": "ВАША СЛЕДУЮЩАЯ СТРОКА НАЧИНАЕТСЯ С ВАС",
@@ -641,7 +681,9 @@
     "stylesAlt": "Poesie: Ваша поэзия, ваш стиль.",
     "videoAlt": "Poesie: Ваши стихи оживают.",
     "bookAlt": "Poesie: Ваши стихи становятся книгой.",
-    "spaceAlt": "Poesie: Пространство только для вас."
+    "spaceAlt": "Poesie: Пространство только для вас.",
+    "recoveryNote": "Случайно удалил стихотворение? Восстанови его из корзины в течение 30 дней. Черновики и корзина остаются на этом устройстве и не входят в синхронизацию и ZIP-копии.",
+    "progressNote": "Следи за статистикой, целями и серией дней письма. Слушай свои стихи; Premium также включает Poetry Wrapped."
   },
   "ar": {
     "skip": "انتقل إلى المحتوى",
@@ -649,7 +691,7 @@
     "navCreate": "ابتكر وشارك",
     "eyebrow": "مساحة لشعرك",
     "hero": "امنح كلماتك<br><em>شكلاً.</em>",
-    "intro": "تتحول الفكرة إلى قصيدة، والقصيدة إلى صورة أو فيديو أو مجموعة تتصفحها. كل شيء يبدأ بكلماتك.",
+    "intro": "اكتب قصائدك ونظّمها في مساحة شخصية. حوّلها إلى صور أو فيديو أو ديوان PDF واختر مكان حفظها.",
     "discover": "اكتشف ما يمكنك إنشاؤه",
     "freeNote": "ابدأ مجانًا، حتى دون حساب. ميزات إضافية مع Premium.",
     "signature": "اكتب لنفسك. شارك حين تريد.",
@@ -659,7 +701,7 @@
     "writeBody": "سجّل الفكرة لحظة ولادتها. افسح مجالًا للكتابة ثم عد إلى أبياتك على مهل.",
     "writePoint1": "وضع التركيز ومؤقت الكتابة",
     "writePoint2": "أفكار إبداعية للبدء",
-    "writePoint3": "وسوم وسجل التعديلات",
+    "writePoint3": "مسودات تلقائية وسجل المراجعات",
     "templateNote": "قوالب الهايكو والسونيت والكانزوني الموجّهة تتطلب Premium.",
     "createTitle": "تتخذ الكلمات شكلاً جديدًا.",
     "createBody": "للاحتفاظ بها أو لمشاركتها. اختر كيف تقدم ما كتبته.",
@@ -676,9 +718,9 @@
     "premiumLink": "اكتشف Poesie Premium ←",
     "spaceLabel": "كلماتك، بعناية",
     "spaceTitle": "مساحة تخصك وحدك.",
-    "spaceBody": "اجمع قصائدك وأضف الوسوم والمفضلة واعثر على أبياتك. احفظ كل شيء على جهازك أو زامن مع حسابك الشخصي في Google Drive أو OneDrive.",
+    "spaceBody": "نظّم المجموعات والوسوم والمفضلة والمجلدات الذكية. ابحث عن أبياتك واختر الحفظ على الجهاز أو Google Drive أو OneDrive.",
     "local": "محلي فقط",
-    "securityNote": "يمكنك تفعيل القفل بكلمة مرور أو البصمة وحماية لقطات الشاشة. تُدار الملفات المحلية باستخدام التشفير.",
+    "securityNote": "فعّل القفل بكلمة مرور أو بالبصمة وحماية لقطات الشاشة. لا تشمل هذه الحماية الملفات التي سبق تصديرها أو مشاركتها.",
     "premiumEyebrow": "مساحة أوسع للإبداع",
     "premiumTitle": "ابدأ بحرية. انطلق أبعد مع Premium.",
     "premiumBody": "شراء لمرة واحدة عبر Google Play، دون اشتراك. اختر متى تضيف أدوات جديدة إلى دفترك.",
@@ -695,8 +737,8 @@
       "مختارات PDF مع غلاف",
       "تصاميم إضافية وإزالة العلامة المائية",
       "صوت مخصص في الفيديوهات",
-      "قوالب شعرية موجّهة وسمات إضافية",
-      "تصدير نسخ ZIP محمية بكلمة مرور"
+      "قوالب شعرية موجّهة وسمات إضافية وإعدادات قراءة متقدمة",
+      "تصدير نسخ ZIP محمية بكلمة مرور واستعادتها"
     ],
     "priceNote": "اطّلع على السعر وتفاصيل الميزات في التطبيق قبل الشراء.",
     "faqLabel": "قبل أول بيت",
@@ -721,6 +763,10 @@
       [
         "ما الأجهزة المدعومة؟",
         "يتوفر Poesie لنظام Android على Google Play. تعرض صفحة المتجر توافق جهازك."
+      ],
+      [
+        "كيف أحفظ نصوصي قبل إلغاء التثبيت؟",
+        "صدّر القصائد أو احفظ نسخة أمان من الإعدادات قبل إلغاء التثبيت. تتطلب استعادة ZIP Premium (شراء لمرة واحدة). تبقى المسودات والسلة على الجهاز ولا تُضمّنان؛ أكّد أولاً النصوص التي تريد الاحتفاظ بها."
       ]
     ],
     "closingLabel": "بيتك التالي يبدأ منك",
@@ -733,7 +779,9 @@
     "stylesAlt": "Poesie: شعرك، أسلوبك.",
     "videoAlt": "Poesie: تنبض أبياتك بالحياة.",
     "bookAlt": "Poesie: تصبح قصائدك كتابًا.",
-    "spaceAlt": "Poesie: مساحة تخصك وحدك."
+    "spaceAlt": "Poesie: مساحة تخصك وحدك.",
+    "recoveryNote": "حذفت قصيدة بالخطأ؟ يمكنك استعادتها من سلة المهملات خلال 30 يوماً. تبقى المسودات والسلة على هذا الجهاز ولا تُضمّنان في المزامنة أو نسخ ZIP الاحتياطية.",
+    "progressNote": "تابع الإحصاءات وأهداف الكتابة وسلسلتك اليومية. استمع إلى قصائدك بالقراءة الصوتية؛ يشمل Premium أيضاً Poetry Wrapped."
   },
   "ja": {
     "skip": "本文へ移動",
@@ -741,7 +789,7 @@
     "navCreate": "形にして共有",
     "eyebrow": "あなたの詩のための場所",
     "hero": "あなたの詩を<br><em>かたちに。</em>",
-    "intro": "想いが詩になる。詩が画像や動画、ページをめくれる詩集になる。すべては、あなたの言葉から。",
+    "intro": "自分だけの場所で詩を書き、整理しましょう。画像、動画、PDF詩集を作成し、保存先を選べます。",
     "discover": "できることを見る",
     "freeNote": "アカウントなしでも無料で開始。追加機能はPremiumで。",
     "signature": "自分のために書く。好きなときに共有する。",
@@ -751,7 +799,7 @@
     "writeBody": "思いついた瞬間を、そのまま書き留める。書くことに向き合い、好きなときに詩を見直しましょう。",
     "writePoint1": "集中モードと執筆タイマー",
     "writePoint2": "書き始めるための創作ヒント",
-    "writePoint3": "タグと変更履歴",
+    "writePoint3": "下書きの自動保存と変更履歴",
     "templateNote": "俳句・ソネット・カンツォーネのガイド付きテンプレートはPremium機能です。",
     "createTitle": "言葉が、新しいかたちになる。",
     "createBody": "手元に残しても、誰かに届けても。書いた言葉の見せ方を選べます。",
@@ -768,9 +816,9 @@
     "premiumLink": "Poesie Premiumを見る →",
     "spaceLabel": "あなたの言葉を、大切に",
     "spaceTitle": "あなただけの場所。",
-    "spaceBody": "詩集を作り、タグやお気に入りで言葉を探す。端末だけに保存するか、自分のGoogle DriveやOneDriveと同期できます。",
+    "spaceBody": "詩集、タグ、お気に入り、スマートフォルダーで整理。検索で詩を見つけ、端末、Google Drive、OneDriveから保存先を選べます。",
     "local": "ローカルのみ",
-    "securityNote": "パスワード・生体認証ロックとスクリーンショット保護を有効にできます。ローカルファイルは暗号化を用いて管理されます。",
+    "securityNote": "パスワードや生体認証によるロックとスクリーンショット保護を有効にできます。書き出し・共有済みのファイルはこの保護の対象外です。",
     "premiumEyebrow": "創作に、もっと余白を",
     "premiumTitle": "自由に始めて、Premiumでもっと先へ。",
     "premiumBody": "Google Playでの一度きりの購入。定期購入はありません。必要なときに、ノートの道具を増やせます。",
@@ -787,8 +835,8 @@
       "表紙付きPDF詩集",
       "追加スタイルと透かし削除",
       "動画への独自音声の追加",
-      "ガイド付き詩作テンプレートと追加テーマ",
-      "パスワード付きZIPバックアップの書き出し"
+      "詩のガイド付きテンプレート、追加テーマ、高度な読み上げ設定",
+      "パスワード付きZIPバックアップの書き出しと復元"
     ],
     "priceNote": "価格と機能の詳細は、購入前にアプリ内で確認できます。",
     "faqLabel": "最初の一行の前に",
@@ -813,6 +861,10 @@
       [
         "どの端末で使えますか？",
         "PoesieはGoogle Playで配信中のAndroidアプリです。お使いの端末への対応はストアで確認できます。"
+      ],
+      [
+        "アンインストール前に作品を残すには？",
+        "事前に詩を書き出すか、設定から安全用のコピーを外部に保存してください。ZIPからの復元にはPremiumが必要です。下書きとごみ箱は端末内に残り、バックアップ対象外です。残したい本文は先に確定してください。"
       ]
     ],
     "closingLabel": "次の一行は、あなたから",
@@ -825,7 +877,9 @@
     "stylesAlt": "Poesie: あなたの詩を、あなたらしく。",
     "videoAlt": "Poesie: あなたの詩が動き出す。",
     "bookAlt": "Poesie: あなたの詩が、一冊の本に。",
-    "spaceAlt": "Poesie: あなただけの場所。"
+    "spaceAlt": "Poesie: あなただけの場所。",
+    "recoveryNote": "誤って削除した詩は30日以内ならごみ箱から復元できます。下書きとごみ箱はこの端末にのみ保存され、同期やZIPバックアップには含まれません。",
+    "progressNote": "統計、執筆目標、連続執筆日数を確認できます。詩の読み上げに加え、PremiumではPoetry Wrappedも楽しめます。"
   },
   "ko": {
     "skip": "본문으로 이동",
@@ -833,7 +887,7 @@
     "navCreate": "만들고 공유하기",
     "eyebrow": "당신의 시를 위한 공간",
     "hero": "당신의 시에<br><em>형태를.</em>",
-    "intro": "생각이 시가 되고, 시는 이미지와 영상, 넘겨 볼 수 있는 시집이 됩니다. 모든 것은 당신의 말에서 시작됩니다.",
+    "intro": "나만의 공간에서 시를 쓰고 정리하세요. 이미지, 동영상, PDF 시집으로 만들고 저장할 곳을 선택할 수 있습니다.",
     "discover": "무엇을 만들 수 있는지 보기",
     "freeNote": "계정 없이도 무료로 시작하세요. 추가 기능은 Premium에서.",
     "signature": "나를 위해 쓰고, 원할 때 나누세요.",
@@ -843,7 +897,7 @@
     "writeBody": "떠오르는 생각을 바로 담아 보세요. 글쓰기에 집중하고, 여유롭게 시를 다듬으세요.",
     "writePoint1": "집중 모드와 글쓰기 타이머",
     "writePoint2": "시작을 돕는 창작 아이디어",
-    "writePoint3": "태그와 수정 기록",
+    "writePoint3": "초안 자동 저장과 수정 기록",
     "templateNote": "하이쿠·소네트·칸초네 안내 템플릿은 Premium 기능입니다.",
     "createTitle": "말이 새로운 형태를 얻습니다.",
     "createBody": "간직해도, 나누어도 좋아요. 쓴 글을 보여 주는 방식을 골라 보세요.",
@@ -860,9 +914,9 @@
     "premiumLink": "Poesie Premium 알아보기 →",
     "spaceLabel": "소중하게 간직하는 말",
     "spaceTitle": "오롯이 나만의 공간.",
-    "spaceBody": "시를 모으고 태그와 즐겨찾기로 다시 찾아보세요. 기기에만 보관하거나 개인 Google Drive 또는 OneDrive 계정과 동기화할 수 있습니다.",
+    "spaceBody": "시집, 태그, 즐겨찾기, 스마트 폴더로 정리하세요. 검색으로 시구를 찾고 기기, Google Drive, OneDrive 중 저장 위치를 선택하세요.",
     "local": "로컬 전용",
-    "securityNote": "비밀번호·생체 인증 잠금과 스크린샷 보호를 켤 수 있습니다. 로컬 파일은 암호화를 사용하여 관리됩니다.",
+    "securityNote": "비밀번호 또는 생체 인증 잠금과 스크린샷 보호를 켤 수 있습니다. 이미 내보내거나 공유한 파일에는 적용되지 않습니다.",
     "premiumEyebrow": "창작을 위한 더 넓은 공간",
     "premiumTitle": "자유롭게 시작하고 Premium으로 더 나아가세요.",
     "premiumBody": "구독 없이 Google Play에서 한 번만 구매하세요. 원할 때 노트에 도구를 더하세요.",
@@ -879,8 +933,8 @@
       "표지가 있는 PDF 시집",
       "추가 스타일과 워터마크 제거",
       "영상에 사용자 지정 오디오 추가",
-      "안내형 시 템플릿과 추가 테마",
-      "비밀번호로 보호된 ZIP 백업 내보내기"
+      "시 창작 템플릿, 추가 테마 및 고급 읽기 설정",
+      "비밀번호로 보호된 ZIP 백업 내보내기 및 복원"
     ],
     "priceNote": "구매 전에 앱에서 가격과 기능의 상세 내용을 확인하세요.",
     "faqLabel": "첫 시구를 쓰기 전에",
@@ -905,6 +959,10 @@
       [
         "어떤 기기에서 사용할 수 있나요?",
         "Poesie는 Google Play의 Android 앱입니다. 기기 호환 여부는 스토어에서 확인하세요."
+      ],
+      [
+        "앱 삭제 전에 글을 보관하려면?",
+        "삭제 전에 시를 내보내거나 설정에서 안전 사본을 외부에 저장하세요. ZIP 복원은 Premium이 필요합니다. 초안과 휴지통은 기기에만 남고 백업에 포함되지 않으므로 보관할 글을 먼저 확정하세요."
       ]
     ],
     "closingLabel": "다음 시구는 당신에게서 시작됩니다",
@@ -917,7 +975,9 @@
     "stylesAlt": "Poesie: 당신의 시, 당신의 스타일.",
     "videoAlt": "Poesie: 시구가 살아 움직입니다.",
     "bookAlt": "Poesie: 당신의 시가 책이 됩니다.",
-    "spaceAlt": "Poesie: 오롯이 나만의 공간."
+    "spaceAlt": "Poesie: 오롯이 나만의 공간.",
+    "recoveryNote": "실수로 지운 시는 30일 이내에 휴지통에서 복원할 수 있습니다. 초안과 휴지통은 이 기기에만 저장되며 동기화나 ZIP 백업에 포함되지 않습니다.",
+    "progressNote": "통계, 글쓰기 목표와 연속 작성일을 확인하세요. 시를 소리 내어 들을 수 있고 Premium에는 Poetry Wrapped도 포함됩니다."
   },
   "zh": {
     "skip": "跳到正文",
@@ -925,7 +985,7 @@
     "navCreate": "创作与分享",
     "eyebrow": "你的诗歌空间",
     "hero": "让你的诗句<br><em>有形。</em>",
-    "intro": "一个念头成为一首诗，一首诗化作图片、视频，或一本可以翻阅的诗集。一切，从你的文字开始。",
+    "intro": "在个人空间中写诗并整理作品。将诗歌制作成图片、视频或PDF诗集，自主选择保存位置。",
     "discover": "探索你能创造什么",
     "freeNote": "无需账号，也能免费开始。更多功能可通过Premium解锁。",
     "signature": "为自己书写，随心分享。",
@@ -935,7 +995,7 @@
     "writeBody": "在灵感到来的瞬间记下它。给书写留出空间，再从容地回到诗句中。",
     "writePoint1": "专注模式与写作计时器",
     "writePoint2": "帮助起笔的创作提示",
-    "writePoint3": "标签与修改历史",
+    "writePoint3": "自动保存草稿与修改记录",
     "templateNote": "俳句、十四行诗和坎佐内的引导模板需要Premium。",
     "createTitle": "文字，有了新的模样。",
     "createBody": "珍藏或分享，选择呈现作品的方式。",
@@ -952,9 +1012,9 @@
     "premiumLink": "了解Poesie Premium →",
     "spaceLabel": "用心珍藏你的文字",
     "spaceTitle": "只属于你的空间。",
-    "spaceBody": "收集诗歌，添加标签和收藏，找回想念的诗句。可仅保存在设备上，或同步到你自己的Google Drive或OneDrive账号。",
+    "spaceBody": "使用诗集、标签、收藏和智能文件夹整理作品。通过搜索找回诗句，并选择保存在设备、Google Drive或OneDrive。",
     "local": "仅本地",
-    "securityNote": "可启用密码或生物识别锁定及截屏保护。本地文件采用加密管理。",
+    "securityNote": "可启用密码或生物识别锁定及截屏保护。这些保护不适用于已经导出或分享的文件。",
     "premiumEyebrow": "给创意更多空间",
     "premiumTitle": "自由开始，用Premium走得更远。",
     "premiumBody": "通过Google Play一次购买，无需订阅。按自己的节奏，为笔记本添加更多工具。",
@@ -971,8 +1031,8 @@
       "带封面的PDF诗集",
       "更多风格和移除水印",
       "视频自定义音频",
-      "引导式诗歌模板和更多主题",
-      "导出密码保护的ZIP备份"
+      "引导式诗歌模板、更多主题和高级朗读设置",
+      "导出和恢复受密码保护的ZIP备份"
     ],
     "priceNote": "购买前可在应用内查看价格和功能详情。",
     "faqLabel": "写下第一行之前",
@@ -997,6 +1057,10 @@
       [
         "支持哪些设备？",
         "Poesie是Google Play上的Android应用。请在商店页面查看设备兼容性。"
+      ],
+      [
+        "卸载前如何保留作品？",
+        "卸载前请导出诗歌，或在设置中保存外部安全副本。恢复ZIP需要Premium。草稿和回收站仅保存在设备上，不包含在备份中；请先确认保存要保留的正文。"
       ]
     ],
     "closingLabel": "下一行诗，从你开始",
@@ -1009,6 +1073,8 @@
     "stylesAlt": "Poesie: 你的诗歌，你的风格。",
     "videoAlt": "Poesie: 让诗句生动起来。",
     "bookAlt": "Poesie: 你的诗歌，成为一本书。",
-    "spaceAlt": "Poesie: 只属于你的空间。"
+    "spaceAlt": "Poesie: 只属于你的空间。",
+    "recoveryNote": "误删了诗歌？可在30天内从回收站恢复。草稿和回收站仅保存在本设备上，不包含在同步或ZIP备份中。",
+    "progressNote": "查看统计、写作目标和连续写作天数，也可朗读诗歌。Premium还包含Poetry Wrapped。"
   }
 }

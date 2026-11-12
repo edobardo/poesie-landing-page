@@ -1,6 +1,7 @@
 """Validate deployable pages, translations, image variants and legal text."""
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
+from urllib.robotparser import RobotFileParser
 import json
 import re
 from lxml import html, etree
@@ -8,6 +9,8 @@ from lxml import html, etree
 P = Path(__file__).resolve().parent
 D = P / 'docs'
 SITE = 'https://poesieapp.it'
+robots = RobotFileParser()
+robots.parse((D/'robots.txt').read_text(encoding='utf-8').splitlines())
 langs = list(json.loads((P/'content/ui.json').read_text(encoding='utf-8')))
 copy = json.loads((P/'content/landing.json').read_text(encoding='utf-8'))
 assert set(copy) == set(langs), 'Missing landing translations'
@@ -15,7 +18,7 @@ for lang in langs:
     assert set(copy[lang]) == set(copy['it']), ('Incomplete translation', lang)
     serialized = json.dumps(copy[lang], ensure_ascii=False)
     assert '??' not in serialized and '\ufffd' not in serialized, ('Damaged text encoding', lang)
-    assert len(copy[lang]['faq']) == 5, lang
+    assert len(copy[lang]['faq']) == 6, lang
     assert len(copy[lang]['freeFeatures']) == 4 and len(copy[lang]['paidFeatures']) == 5, lang
     scripts = {'ru': r'[\u0400-\u04ff]', 'ar': r'[\u0600-\u06ff]',
                'ja': r'[\u3040-\u30ff]', 'ko': r'[\uac00-\ud7af]', 'zh': r'[\u4e00-\u9fff]'}
@@ -61,6 +64,11 @@ for file in D.rglob('*.html'):
     assert r.get('dir') == ('rtl' if lang == 'ar' else 'ltr'), file
     kind = file.parent.name if file.parent.name in ('privacy', 'terms') else 'landing'
     expected = page_path(lang, kind)
+    assert robots.can_fetch('Googlebot', SITE + expected), ('Googlebot blocked by robots.txt', file)
+    for meta in r.xpath('//meta[@name]'):
+        if meta.get('name', '').lower() in ('robots', 'googlebot'):
+            directives = set(re.split(r'[\s,]+', meta.get('content', '').lower()))
+            assert not directives.intersection({'noindex', 'none'}), ('Indexing blocked by meta tag', file)
     assert not r.xpath('//*[@data-copy or @data-alt or @data-poster or @data-list or @data-faq or @data-store]'), ('Unresolved template', file)
     opts = r.xpath('//select[@id="language-select"]/option')
     assert len(opts) == 11, file
@@ -98,7 +106,8 @@ for file in D.rglob('*.html'):
         old = html.fromstring((P/'content/original-privacy'/file.name).read_bytes())
         newtext = ' '.join(r.xpath('//section[contains(@class,"privacy-article")]//text()')).split()
         oldtext = ' '.join(old.xpath('//section[contains(@class,"privacy-article")]//text()')).split()
-        assert oldtext == newtext, ('Privacy text changed', lang)
+        assert oldtext == newtext, ('Privacy differs from current source', lang)
+        assert r.xpath('//div[contains(@class,"privacy-badge")]/text()') == old.xpath('//div[contains(@class,"privacy-badge")]/text()'), ('Privacy date differs from source', lang)
     elif kind == 'terms':
         assert not r.xpath('//p[@class="draft-notice"]'), file
         original = json.loads((P/'content/terms.json').read_text(encoding='utf-8'))[lang]
@@ -115,7 +124,7 @@ for file in D.rglob('*.html'):
             assert image is not None and image.get('alt'), file
             assert image.get('width') and image.get('height') and image.get('srcset'), file
         assert len(r.xpath('//img[@fetchpriority="high"]')) == 1, file
-        assert len(r.xpath('//div[@class="questions"]/details')) == 5, file
+        assert len(r.xpath('//div[@class="questions"]/details')) == 6, file
         assert r.xpath('//meta[@property="og:image"]/@content') == [SITE+'/assets/showcase/feature-1024.png'], file
         assert r.xpath('//meta[@name="twitter:card"]/@content') == ['summary_large_image'], file
         assert r.xpath('//meta[@name="google-site-verification"]'), file
@@ -149,4 +158,4 @@ for entry, location in zip(sitemap_entries, locations):
     assert len(alternates) == 12, location
     assert all(x.get('rel') == 'alternate' for x in alternates), location
     assert {x.get('hreflang'): x.get('href') for x in alternates} == expected_alternates(kind), ('Incorrect sitemap alternates', location)
-print(f'PASS: {count} pages; 11 complete translations, responsive assets, anchors, canonicals, hreflang, static showcase, Premium sections, sitemap.xml, robots.txt and unchanged legal text.')
+print(f'PASS: {count} pages; 11 complete translations, responsive assets, anchors, canonicals, hreflang, static showcase, Premium sections, sitemap.xml, robots.txt and legal content matching current sources.')

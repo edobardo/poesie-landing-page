@@ -1,5 +1,7 @@
 # Poesie — analisi della landing e proposta di aggiornamento
 
+Questa è l’analisi storica del 22 ottobre. La verifica del codice corrente e del sito pubblico del 12 novembre 2026 è in [ANALISI-2026-11-12.md](ANALISI-2026-11-12.md).
+
 **Aggiornamento realizzato.** La proposta descritta sotto è stata applicata al sito locale. Sono stati integrati i sei poster e la nuova immagine `NEWSCREEN/poesie_feature_graphic_en_1024x500.png`: quest’ultima compare nella chiusura della pagina e, nella versione PNG originale, nei metadati di condivisione. La landing ha ora fondo carta, accenti verde bosco, sezioni per immagini e video e un confronto gratuito/Premium nelle 11 lingue. Gli originali delle immagini e il codice Android sono rimasti intatti. Le copie WebP dei sei poster a 480 px occupano insieme circa 146 KiB; tutte le varianti WebP, inclusa la grafica orizzontale, circa 566 KiB. I problemi del generatore e del validatore descritti nell’analisi iniziale sono stati corretti. Le istruzioni aggiornate sono in `README.md`.
 
 Analisi del 22 ottobre 2026. Materiali: sito locale in `poesie-landing-page/`, sei immagini in `NEWSCREEN/`, codice dell’app Android in `PDF_Poesie_App/`. La versione dichiarata nel progetto è 2.2.2, build 52. Le conclusioni sulle funzioni derivano dal codice locale: non attestano quale build sia attualmente distribuita su Google Play.

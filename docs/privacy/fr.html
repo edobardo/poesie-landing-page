@@ -60,16 +60,13 @@
       <span>Politique de Confidentialité</span>
     </div>
 
-    <h1 class="privacy-title hero-in delay-15">Votre collection,<br>toujours en sécurité.</h1>
+    <h1 class="privacy-title hero-in delay-15">Confidentialité</h1>
 
     <p class="section-sub hero-in delay-25">Comment nous traitons vos données dans Poesie</p>
 
     <p class="section-text hero-in delay-35 privacy-intro-text">Nous ne collectons ni ne stockons le contenu de vos poèmes sur nos serveurs : votre recueil reste toujours sous votre contrôle sur votre appareil, dans votre Google Drive ou sur Microsoft OneDrive.</p>
 
-    <div class="privacy-badge hero-in delay-5">
-      <span class="diamond"></span>
-      Dernière mise à jour : septembre 2026
-    </div>
+    <div class="privacy-badge hero-in delay-5">Dernière mise à jour : 12 novembre 2026</div>
   </div>
 </section>
 
@@ -109,7 +106,7 @@
       <p>L'application traite les données suivantes exclusivement pour fournir le service :</p>
       <ul>
         <li>Adresse e-mail du compte Google (affichée dans les paramètres après la connexion à Drive)</li>
-        <li>Fichier <strong>.docx</strong> de chaque collection, créé/mis à jour par l'application sur votre Google Drive personnel (périmètre <em>drive.file</em>)</li>
+        <li>L’app traite recueils, révisions, brouillons automatiques, corbeille, tags, favoris, couvertures, statistiques et préférences. Si tu connectes un compte cloud, elle gère son profil et ses jetons d’accès ainsi que les données locales de verrouillage et de vérification Premium.</li>
         <li>Jeton d'authentification OAuth 2.0 (stocké localement via les mécanismes sécurisés du système d'exploitation)</li>
         <li>Paramètres de l'application (ex. : langue sélectionnée, thème visuel, statut d'activation Premium, liste des collections)</li>
         <li>Image de couverture personnalisée, choisie par l'utilisateur via le sélecteur de fichiers du système (stockée dans le répertoire privé de l'application)</li>
@@ -117,10 +114,11 @@
         <li>Code de récupération stocké dans une zone protégée de l'appareil pour permettre la réinitialisation du mot de passe en cas d'oubli</li>
         <li>
 <strong>Jeton d'achat Premium</strong> (jeton d'achat Google Play) — conservé dans une zone protégée de l'appareil pour vérifier la validité de l'achat via Google Play Billing ; il n'est jamais partagé avec le développeur</li>
-        <li>Fichier de sauvegarde locale chiffré (archive ZIP protégée par mot de passe) — créé à la demande de l'utilisateur et conservé dans le cache local ; il n'est envoyé à aucun tiers</li>
+        <li>Exportation et restauration de sauvegardes ZIP protégées par mot de passe</li>
       </ul>
       <p>Aucune donnée n'est stockée sur des serveurs appartenant au développeur.</p>
-    </div>
+    <p>Dictée et lecture utilisent le service configuré sur l’appareil, qui peut traiter audio ou texte sur ses serveurs selon ses paramètres et notices. Images, vidéos, audio personnel, révisions et statistiques sont traités localement. Exports et sauvegardes peuvent être transmis à l’app ou destination choisie, selon les règles du destinataire. Les compteurs Premium agrégés restent locaux et ne sont pas envoyés automatiquement au développeur.</p>
+</div>
 
     <div class="privacy-block reveal">
       <div class="divider">
@@ -140,7 +138,7 @@
         <li>
 <strong>La gestion de l'achat intégré</strong> (vérification et restauration de l'achat Premium via Google Play Billing)</li>
       </ul>
-      <div class="privacy-highlight"><p>La base légale principale est l'Art. 6(1)(b) du RGPD (exécution d'un contrat ou fourniture d'un service demandé par l'utilisateur). Les fonctions de sécurité locales (verrouillage/récupération) servent à protéger l'accès aux données de l'utilisateur sur l'appareil.</p></div>
+      <div class="privacy-highlight">Le traitement nécessaire au service demandé repose sur l’article 6(1)(b) du RGPD ; les obligations légales sur le 6(1)(c). Les autorisations de l’appareil et du cloud pour les fonctions facultatives sont demandées séparément et révocables dans leurs paramètres. La lecture de cette notice n’est pas un consentement général à d’autres traitements.</div>
     </div>
 
         <div class="privacy-block reveal">
@@ -154,8 +152,7 @@
 <strong>Google Drive</strong> : L'application utilise les API Google Drive avec la portée <strong>drive.file</strong>, limitant l'accès aux seuls fichiers créés par l'application. Elle ne peut ni consulter ni modifier d'autres fichiers de votre Drive. Vous pouvez révoquer les autorisations sur <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a>.</li>
         <li>
 <strong>Microsoft OneDrive</strong> : L'application utilise les API Microsoft Graph avec la portée <strong>Files.ReadWrite.AppFolder</strong>. L'accès est strictement limité au dossier dédié de l'application (<em>OneDrive &gt; Applications &gt; Poesie App</em>). Elle n'a accès à aucun autre document ou dossier personnel de votre OneDrive. Vous pouvez gérer cet accès sur <a href="https://account.live.com/consent/Manage" target="_blank" rel="noopener noreferrer">account.live.com/consent/Manage</a>.</li>
-        <li>
-<strong>Mode Local uniquement</strong> : Si vous préférez ne pas utiliser de service cloud, l'application fonctionne entièrement hors ligne. Les recueils sont conservés uniquement dans la mémoire privée de l'application, chiffrés avec AES. Aucune donnée ne quitte votre appareil. La désinstallation supprime les données locales, sauf si vous avez créé une sauvegarde locale protégée par mot de passe.</li>
+        <li>Le mode local ne synchronise pas les recueils dans le cloud. Écriture et organisation fonctionnent sur l’appareil. Les achats, services vocaux et partages choisis peuvent néanmoins utiliser le réseau. Avant de désinstaller, exporte ou sauvegarde les poèmes confirmés à l’extérieur : brouillons et corbeille sont exclus.</li>
       </ul>
       <div class="privacy-highlight"><p>Tous les fichiers de vos recueils demeurent votre propriété exclusive et sous votre contrôle total, quel que soit le mode choisi.</p></div>
     </div>
@@ -168,7 +165,7 @@
       <p>Les données suivantes sont conservées localement dans le dossier privé de l'application, protégées par le système d'exploitation et inaccessibles aux autres applications :</p>
       <ul>
         <li>Jetons OAuth 2.0 Google / Microsoft (dans le stockage sécurisé du système d'exploitation SecureStorage)</li>
-        <li>Fichiers de chaque collection dans le cache local, <strong>chiffrés par l'application via AES</strong> ; la copie non chiffrée est automatiquement supprimée lorsque l'application passe en arrière-plan ou est recouverte par l'écran de sécurité</li>
+        <li>Les recueils principaux ont des copies chiffrées AES ; la lecture, la modification et l’export produisent aussi des fichiers en clair. Les instantanés automatiques du dossier privé Backups sont des DOCX non chiffrés, jusqu’à 10 par préfixe du nom du recueil. Verrouillage et protection des captures ne chiffrent pas automatiquement instantanés, documents cloud ou exports.</li>
         <li>Paramètres (langue, thème visuel, statut Premium, liste des collections et options associées)</li>
         <li>Images de couverture personnalisées (uniquement les fichiers explicitement choisis par l'utilisateur)</li>
         <li>Hachage du mot de passe + code de récupération dans une zone protégée (SecureStorage)</li>
@@ -176,8 +173,9 @@
         <li>Fichier de sauvegarde locale (archive ZIP chiffrée avec le mot de passe défini par l'utilisateur), créé uniquement sur demande expresse et conservé dans le cache temporaire</li>
       </ul>
       <p>Ces données sont supprimées lors de la désinstallation de l'application. Vous pouvez également déconnecter votre session cloud (Google Drive ou OneDrive) à tout moment via l'option « Déconnecter » dans les paramètres.</p>
-      <div class="privacy-highlight"><p>Les communications réseau (App → Google) s'effectuent exclusivement via des connexions sécurisées HTTPS (TLS).</p></div>
-    </div>
+      <div class="privacy-highlight">Google Drive / Microsoft OneDrive: HTTPS (TLS).</div>
+    <p>Brouillons et corbeille sont chiffrés et locaux : ils ne sont ni synchronisés ni inclus dans les sauvegardes ZIP. Les poèmes supprimés sont récupérables pendant 30 jours ; les copies expirées sont retirées au prochain nettoyage. Les recueils ont des copies chiffrées, mais des fichiers de travail, exports et instantanés privés existent en clair. Google/Microsoft gèrent le cloud, Google Play les achats. La dictée et la lecture utilisent les services de l’appareil, qui peuvent traiter l’audio ou le texte en ligne. Ne partage qu’avec des services de confiance.</p>
+</div>
 
     <div class="privacy-block reveal">
       <div class="divider">
@@ -267,7 +265,7 @@
 <span class="diamond"></span><span class="rule"></span>
 </div>
       <h2>Partage des Données avec des Tiers</h2>
-      <p>Le développeur ne partage, ne vend ni ne transfère aucune donnée personnelle des utilisateurs à des tiers.</p>
+      <p>Les données sont transmises aux prestataires nécessaires aux fonctions choisies : Google Drive, Microsoft OneDrive, Google Play, services vocaux et apps de partage. Nous ne vendons pas les données ; l’app ne comporte ni publicité ni analyse distante. OneDrive utilise Files.ReadWrite.AppFolder pour les fichiers, User.Read pour le profil et offline_access pour renouveler la session. Les copies cloud sont des DOCX sans la clé locale de l’app : Poesie ne leur fournit pas de chiffrement de bout en bout.</p>
       <p>Services tiers utilisés pour le fonctionnement technique :</p>
       <ul>
         <li>
@@ -276,8 +274,10 @@
         <li>
 <strong>Google LLC / Google Play</strong> — Gestion des achats intégrés via Google Play Billing et demandes d'évaluation dans l'application. Le jeton d'achat est transmis à Google exclusivement pour valider l'achat Premium ; le développeur n'a accès à aucune donnée bancaire. <a href="https://play.google.com/store/apps/details?id=com.edobardo.poesie&amp;hl=fr" target="_blank" rel="noopener noreferrer" aria-label="Conditions d'utilisation de Google Play (ouvre un nouvel onglet)">Conditions d'utilisation de Google Play</a>
 </li>
-      </ul>
-    </div>
+      <li><a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer">Microsoft OneDrive — Privacy</a></li>
+</ul>
+    <p>Dictée et lecture utilisent le service configuré sur l’appareil, qui peut traiter audio ou texte sur ses serveurs selon ses paramètres et notices. Images, vidéos, audio personnel, révisions et statistiques sont traités localement. Exports et sauvegardes peuvent être transmis à l’app ou destination choisie, selon les règles du destinataire. Les compteurs Premium agrégés restent locaux et ne sont pas envoyés automatiquement au développeur.</p>
+</div>
 
     <div class="privacy-block reveal">
       <div class="divider">
@@ -285,7 +285,7 @@
 </div>
       <h2>Durée de Conservation des Données</h2>
       <ul>
-        <li>Le contenu (Poesie.docx) demeure sur votre Google Drive jusqu'à ce que vous décidiez de le supprimer</li>
+        <li>Les brouillons restent sur l’appareil jusqu’à confirmation ou suppression. La corbeille contient des copies chiffrées récupérables pendant 30 jours ; les copies expirées sont retirées à la prochaine ouverture ou au prochain nettoyage. Les fichiers illisibles peuvent être conservés pour éviter une perte récupérable. Brouillons et corbeille sont exclus de la synchronisation et des ZIP. Supprimer un poème ou vider la corbeille n’efface pas automatiquement instantanés, exports, versions ou corbeilles cloud antérieurs. Désinstaller supprime les données privées locales, pas les copies externes. Déconnecter le cloud n’efface pas ses fichiers.</li>
         <li>Les jetons OAuth restent sur l'appareil jusqu'à ce que vous vous déconnectiez ou désinstalliez l'application</li>
         <li>Le code de récupération reste sur l'appareil jusqu'à ce que vous supprimiez le mot de passe/verrouillage ou désinstalliez l'application</li>
         <li>Le jeton d'achat Premium reste sur l'appareil jusqu'à la désinstallation de l'application ; il est automatiquement supprimé si l'achat n'est plus actif sur Google Play</li>
@@ -322,8 +322,8 @@
 <span class="diamond"></span><span class="rule"></span>
 </div>
       <h2>Mineurs</h2>
-      <p>Poesie ne s'adresse pas aux personnes de moins de 14 ans. Le développeur ne collecte pas sciemment de données personnelles relatives à des mineurs de moins de 14 ans. Conformément au Règlement Général sur la Protection des Données (RGPD) de l'UE, le traitement des données relatives aux mineurs nécessite le consentement des parents ou des tuteurs légaux.</p>
-      <p>Les achats intégrés dans l'application via Google Play nécessitent un compte Google valide ; la gestion du consentement parental pour les achats est soumise aux règles de Google Play et au groupe familial Google.</p>
+      <p>Poesie n’est pas destinée aux moins de 14 ans. Les autorisations parentales et les conditions d’achat dépendent du droit applicable et des paramètres du compte Google Play.</p>
+      <p><a href="https://support.google.com/googleplay/answer/7039872" target="_blank" rel="noopener noreferrer">Google Play</a></p>
     </div>
 
     <div class="privacy-block reveal">
@@ -332,8 +332,9 @@
 </div>
       <h2>Cookies et Technologies Similaires</h2>
       <p>L'application mobile Poesie <strong>n'utilise pas de cookies</strong> ni de technologies de suivi.</p>
-      <p>Ce site web peut utiliser des cookies techniques essentiels fournis par le service d'hébergement. Aucun cookie de profilage n'est utilisé par Poesie.</p>
-    </div>
+      <p>Le site est statique, avec images et polices locales, sans cookies de profilage ni outils d’analyse ajoutés au code. L’hébergement prévu est GitHub Pages : GitHub journalise les IP pour la sécurité selon sa notice. Les liens Google Play et Instagram ouvrent des services externes. Pour un message à support@poesieapp.it, adresse et contenu sont traités le temps nécessaire à la réponse et aux obligations légales. N’envoie aucun mot de passe ou code de récupération. Les prestataires peuvent traiter des données hors EEE selon leurs notices et garanties.</p>
+    <p><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub — Privacy</a></p>
+</div>
 
     <div class="privacy-block reveal">
       <div class="divider">

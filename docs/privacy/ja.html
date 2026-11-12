@@ -60,16 +60,13 @@
       <span>プライバシーポリシー</span>
     </div>
 
-    <h1 class="privacy-title hero-in delay-15">あなたの作品集を、<br>常に安全に。</h1>
+    <h1 class="privacy-title hero-in delay-15">プライバシーポリシー</h1>
 
     <p class="section-sub hero-in delay-25">Poesieにおけるデータの取り扱いについて</p>
 
     <p class="section-text hero-in delay-35 privacy-intro-text">私たちはユーザーの詩の内容をサーバーに収集または保存しません。あなたの詩のコレクションは常に、あなたの端末、Googleドライブ、またはMicrosoft OneDriveで安全に管理されます。</p>
 
-    <div class="privacy-badge hero-in delay-5">
-      <span class="diamond"></span>
-      最終更新日: 2026年9月
-    </div>
+    <div class="privacy-badge hero-in delay-5">更新日：2026年11月12日</div>
   </div>
 </section>
 
@@ -109,7 +106,7 @@
       <p>本アプリは、サービスの提供を目的として以下のデータのみを処理します：</p>
       <ul>
         <li>GoogleまたはMicrosoftアカウントのメールアドレス（各クラウドサービスへの接続後、設定画面に表示されます）</li>
-        <li>各コレクションの <strong>.docx</strong> ファイル（個人のGoogle ドライブ［<em>drive.file</em> スコープ］、Microsoft OneDrive［<em>Files.ReadWrite.AppFolder</em> スコープ］内に作成/更新されるか、端末内の暗号化ローカルストレージにのみ保存されます［ローカル専用モード］）</li>
+        <li>アプリは詩集、変更履歴、自動保存の下書き、ごみ箱、タグ、お気に入り、表紙、統計、設定を扱います。クラウドを接続するとアカウント情報とアクセストークンを扱い、ロックやPremium確認用のデータも端末に保存します。</li>
         <li>Google ドライブおよび/またはMicrosoft OneDrive用のOAuth 2.0 / PKCE認証トークン（SecureStorageなどの安全なOS保護領域にローカル保存されます）</li>
         <li>アプリ設定（例：選択言語、テーマ、Premiumアクティベーション状態、コレクション一覧）</li>
         <li>システムのファイルピッカー経由でユーザーが選択したカスタムカバー画像（アプリの専用ディレクトリに保存されます）</li>
@@ -117,10 +114,11 @@
         <li>パスワードを忘れた場合の再設定用に、保護領域に保存される復元コード</li>
         <li>
 <strong>Premium購入トークン</strong>（Google Playの購入トークン）：Google Play Billingによる購入検証のためデバイスの保護領域に保存され、開発者に送信されることはありません</li>
-        <li>暗号化されたローカルバックアップファイル（パスワード保護されたZIPアーカイブ）：ユーザーの要求により作成されローカルキャッシュに保存され、第三者に送信されません</li>
+        <li>パスワード付きZIPバックアップの書き出しと復元</li>
       </ul>
       <p>開発者が所有するサーバー上にデータが保存されることは一切ありません。</p>
-    </div>
+    <p>音声入力・読み上げは端末で設定されたサービスを使い、その設定と通知に基づき音声やテキストが外部サーバーで処理される場合があります。画像、動画、任意の音声、変更履歴、統計はローカル処理されます。書き出しやバックアップは選んだアプリや送信先に渡され、相手先の規則が適用されます。Premiumの集計カウンターは端末内に保存され開発者へ自動送信されません。</p>
+</div>
 
     <div class="privacy-block reveal">
       <div class="divider">
@@ -139,7 +137,7 @@
         <li>
 <strong>アプリ内決済の管理</strong>（Google Play Billingを通じたPremium購入の検証および復元）</li>
       </ul>
-      <div class="privacy-highlight"><p>主な法的根拠はGDPR第6条(1)(b)（契約の履行またはユーザーからのサービス要求の提供）です。ローカルセキュリティ機能（ロック/復元）は、デバイス上のユーザーデータへのアクセスを保護するために機能します。</p></div>
+      <div class="privacy-highlight">要求されたサービスに必要な処理はGDPR第6条1項(b)、法的義務は(c)に基づきます。任意機能の端末・クラウド権限は個別に求められ、設定で取り消せます。通知を読んだことは、他の処理への包括的な同意を意味しません。</div>
     </div>
 
         <div class="privacy-block reveal">
@@ -153,8 +151,7 @@
 <strong>Google ドライブ</strong>: 本アプリは <strong>drive.file</strong> スコープ付きのGoogle Drive APIを使用し、本アプリ自身が作成したファイルのみにアクセスが制限されます。他のファイルやフォルダへのアクセスはできません。アクセス権限は <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a> からいつでも取り消せます。</li>
         <li>
 <strong>Microsoft OneDrive</strong>: 本アプリは <strong>Files.ReadWrite.AppFolder</strong> スコープ付きのMicrosoft Graph APIを使用します。アクセスは本アプリ専用のフォルダ（<em>OneDrive &gt; アプリ &gt; Poesie App</em>）に厳格に制限され、OneDrive内の他の個人ファイルにアクセスすることは一切できません。アクセス設定は <a href="https://account.live.com/consent/Manage" target="_blank" rel="noopener noreferrer">account.live.com/consent/Manage</a> で管理できます。</li>
-        <li>
-<strong>ローカル専用モード</strong>: クラウドを利用したくない場合、アプリは完全オフラインで動作します。コレクションはAES暗号化により端末内のアプリ保護領域にのみ安全に保存されます。データが端末外部に送信されることはありません。パスワード付きローカルバックアップを作成していない場合、アプリをアンインストールするとローカルデータは消去されますのでご注意ください。</li>
+        <li>ローカル専用モードは詩集をクラウドに同期しません。執筆と整理は端末内で行えますが、購入、音声サービス、任意の共有にはネットワークや外部サービスが使われる場合があります。削除前に保存済みの詩を外部へ書き出すかバックアップしてください。下書きとごみ箱は含まれません。</li>
       </ul>
       <div class="privacy-highlight"><p>どの保存方法を選択した場合でも、コレクションのすべてのファイルはユーザー固有の所有物であり、完全な管理下にあります。</p></div>
     </div>
@@ -167,7 +164,7 @@
       <p>以下のデータはアプリの専用フォルダにローカル保存され、OSによって保護されているため他のアプリからアクセスすることはできません：</p>
       <ul>
         <li>Google / Microsoft のOAuth 2.0トークン（OSの保護領域SecureStorageに安全に保管）</li>
-        <li>ローカルキャッシュ内の各コレクションファイル（<strong>アプリによりAESで暗号化</strong>。アプリがバックグラウンドに移動した際、またはセキュリティ画面で覆われた際に、暗号化されていないコピーは自動消去されます）</li>
+        <li>主要な詩集にはAES暗号化コピーがありますが、閲覧、編集、書き出し時には平文ファイルも作られます。非公開のBackupsフォルダーの自動履歴コピーは暗号化されていないDOCXで、詩集名の接頭辞ごとに最大10件です。ロックや画面保護はこれらのコピー、クラウド文書、書き出しを自動暗号化しません。</li>
         <li>設定（言語、テーマ、Premiumステータス、コレクション一覧および関連オプション）</li>
         <li>カスタムカバー画像（ユーザーが明示的に選択したファイルのみ）</li>
         <li>保護領域（SecureStorage）内のパスワードハッシュ＋復元コード</li>
@@ -175,8 +172,9 @@
         <li>明示的な要求時にのみ作成され一時キャッシュに保持されるローカルバックアップファイル（ユーザー指定のパスワードで暗号化されたZIPファイル）</li>
       </ul>
       <p>これらのデータはアプリのアンインストール時に自動的に消去されます。また、設定画面の「接続解除」からいつでもクラウド連携（Google ドライブまたはOneDrive）を解除できます。</p>
-      <div class="privacy-highlight"><p>ネットワーク通信（アプリ → Google）はすべて安全なHTTPS（TLS）接続を介して行われます。</p></div>
-    </div>
+      <div class="privacy-highlight">Google Drive / Microsoft OneDrive: HTTPS (TLS).</div>
+    <p>下書きとごみ箱は暗号化され端末内に保存されます。同期やZIPバックアップには含まれません。削除した詩は30日間復元でき、期限切れのコピーは次回のクリーンアップ時に削除されます。詩集には暗号化されたコピーがありますが、作業ファイル、書き出し、端末内の履歴コピーには平文のものもあります。クラウドはGoogle/Microsoft、購入はGoogle Playが処理します。音声入力・読み上げは端末のサービスを使い、音声やテキストがオンライン処理される場合があります。信頼できるサービスにのみ共有してください。</p>
+</div>
 
     <div class="privacy-block reveal">
       <div class="divider">
@@ -266,7 +264,7 @@
 <span class="diamond"></span><span class="rule"></span>
 </div>
       <h2>第三者とのデータ共有</h2>
-      <p>開発者がユーザーの個人データを第三者に共有、販売、または譲渡することはありません。</p>
+      <p>選択した機能に必要なGoogle Drive、Microsoft OneDrive、Google Play、音声サービス、共有アプリにデータが送信されます。データを販売せず、アプリには広告や遠隔分析サービスはありません。OneDriveはファイル用Files.ReadWrite.AppFolder、プロフィール用User.Read、セッション更新用offline_accessを使います。クラウドコピーはローカル鍵を使わないDOCXであり、Poesieによるエンドツーエンド暗号化ではありません。</p>
       <p>技術的運用に使用される外部サービス：</p>
       <ul>
         <li>
@@ -275,8 +273,10 @@
         <li>
 <strong>Google LLC / Google Play</strong> — Google Play Billingを通じた決済管理およびアプリ内レビューリクエスト。購入トークンはPremium購入を検証する目的のみでGoogleに送信され、開発者が支払いデータにアクセスすることはできません。<a href="https://play.google.com/store/apps/details?id=com.edobardo.poesie&amp;hl=ja" target="_blank" rel="noopener noreferrer" aria-label="Google Play 利用規約（新しいタブで開く）">Google Play 利用規約</a>
 </li>
-      </ul>
-    </div>
+      <li><a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer">Microsoft OneDrive — Privacy</a></li>
+</ul>
+    <p>音声入力・読み上げは端末で設定されたサービスを使い、その設定と通知に基づき音声やテキストが外部サーバーで処理される場合があります。画像、動画、任意の音声、変更履歴、統計はローカル処理されます。書き出しやバックアップは選んだアプリや送信先に渡され、相手先の規則が適用されます。Premiumの集計カウンターは端末内に保存され開発者へ自動送信されません。</p>
+</div>
 
     <div class="privacy-block reveal">
       <div class="divider">
@@ -284,7 +284,7 @@
 </div>
       <h2>データの保持期間</h2>
       <ul>
-        <li>コンテンツ（Poesie.docx）は、ユーザーが削除を選択するまでGoogle ドライブ上に残ります</li>
+        <li>下書きは確定または破棄するまで端末に保存されます。ごみ箱の暗号化コピーは30日間復元でき、期限切れのコピーは次回の表示・クリーンアップ時に削除されます。復元可能なデータを失わないよう読めないファイルを保持する場合があります。下書きとごみ箱は同期やZIPに含まれません。詩の削除やごみ箱の消去は、以前の履歴コピー、書き出し、クラウドのバージョンやごみ箱を自動消去しません。アンインストールは端末の非公開データを削除しますが外部コピーは残ります。クラウドの切断はクラウドファイルを削除しません。</li>
         <li>OAuth トークンは、ログアウトするかアプリをアンインストールするまでデバイス上に保持されます</li>
         <li>復元コードは、パスワード/ロックを解除するかアプリをアンインストールするまでデバイス上に保持されます</li>
         <li>Premium購入トークンは、アプリをアンインストールするまでデバイス上に保持されます。Google Playで購入が無効になった場合は自動的に削除されます</li>
@@ -321,8 +321,8 @@
 <span class="diamond"></span><span class="rule"></span>
 </div>
       <h2>未成年者のプライバシー</h2>
-      <p>Poesieは14歳未満のお子様を対象としていません。開発者が14歳未満の未成年者から個人情報を意図的に収集することはありません。EU一般データ保護規則（GDPR）に基づき、未成年者のデータ処理には保護者または法的監護者の同意が必要です。</p>
-      <p>Google Playを通じたアプリ内購入には有効なGoogle アカウントが必要です。購入に関する保護者の同意管理は、Google PlayおよびGoogle ファミリー リンクの方針に従います。</p>
+      <p>Poesieは14歳未満の子供を対象としていません。保護者の許可や購入の要件は、適用される法律とGoogle Playアカウントの設定によって異なります。</p>
+      <p><a href="https://support.google.com/googleplay/answer/7039872" target="_blank" rel="noopener noreferrer">Google Play</a></p>
     </div>
 
     <div class="privacy-block reveal">
@@ -331,8 +331,9 @@
 </div>
       <h2>クッキー（Cookie）および類似技術</h2>
       <p>Poesie モバイルアプリケーションは、<strong>Cookieや追跡技術を使用していません</strong>。</p>
-      <p>本ウェブサイトでは、ホスティングサービスが提供する必須の技術的Cookieを使用する場合があります。プロファイリング用Cookieは使用していません。</p>
-    </div>
+      <p>サイトは静的で、画像とフォントを自ら配信し、コードにプロファイリングCookieや追加の分析ツールはありません。予定するホストはGitHub Pagesで、GitHubは自身の通知に従い安全のためIPを記録します。Google PlayやInstagramのリンクは外部サービスを開きます。support@poesieapp.itへの連絡では、回答と法的義務に必要な期間メールアドレスと本文を処理します。パスワードや復旧コードは送らないでください。事業者は自身の通知と保護措置に従いEEA域外で処理する場合があります。</p>
+    <p><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub — Privacy</a></p>
+</div>
 
     <div class="privacy-block reveal">
       <div class="divider">

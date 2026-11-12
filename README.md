@@ -1,6 +1,6 @@
 ﻿# Poesie — landing statica per GitHub Pages
 
-Aggiornamento del 22 ottobre 2026. Il sito usa i sei mockup e la nuova grafica 1024×500 dello store in `../NEWSCREEN/`, con copie ottimizzate per il web, font locali e contenuti in 11 lingue. Non richiede backend, Node, API o servizi a pagamento per funzionare.
+Aggiornamento del 12 novembre 2026. Il sito usa sei mockup e la grafica 1024×500 dello store, con copie ottimizzate per il web, font locali e contenuti in 11 lingue. Il nuovo poster dello spazio personale è in `new-screen/06_a_space_all_yours.jpg`. Non richiede backend, Node, API o servizi a pagamento per funzionare.
 
 ## Anteprima locale
 
@@ -20,18 +20,18 @@ Apri `http://localhost:8000/` oppure `http://localhost:8000/en/`. La radice `/` 
 | `content/landing-template.html` | Struttura HTML della landing |
 | `docs/style.css` | Aspetto, responsive e stili delle pagine legali |
 | `docs/app.js` | Ingrandimento delle immagini; i link funzionano anche senza JavaScript |
-| `docs/language.js` | Scelta e preferenza della lingua |
+| `docs/language.js` | Scelta esplicita della lingua tramite i suoi URL |
 | `content/app-names.json` | Nome localizzato dell’app |
 | `content/language-names.json` | Nomi delle lingue nel selettore |
 | `content/original-locales/*.json` | Testi del footer e delle pagine legali; non sono più la fonte delle funzioni della landing |
 | `content/ui.json` | Etichette condivise di navigazione e pagine legali |
-| `content/original-privacy/*.html` | Testo sorgente della Privacy Policy |
+| `content/original-privacy/*.html` | Testo sorgente corrente della Privacy Policy, aggiornato al comportamento dell’app |
 | `content/terms.json` | Testo sorgente dei termini |
 | `docs/assets/showcase/` | Poster WebP responsive, grafica store WebP e PNG per anteprime social |
 | `docs/assets/fonts/` | Font IM Fell English già usati dall’app, serviti localmente |
 | `generate.py` | Generatore delle 34 pagine HTML, canonical e metadati social |
 | `validate.py` | Verifica traduzioni, link, ancore, varianti immagini, metadati e testi legali |
-| `prepare_assets.py` | Preparazione deterministica degli asset da NEWSCREEN, senza modificare gli originali |
+| `prepare_assets.py` | Prepara gli asset da `new-screen/` o `../NEWSCREEN/`, conservando le copie pronte se un originale non è disponibile |
 
 Per aggiornare testi o struttura:
 
@@ -41,7 +41,7 @@ python -B generate.py
 python -B validate.py
 ```
 
-Per ricreare anche le immagini, prima di generare esegui `python -B prepare_assets.py`. Questo comando richiede `../NEWSCREEN/` e i due font in `../PDF_Poesie_App/Resources/Fonts/`. Le copie pronte sono già incluse in `docs/`: né la pubblicazione né la rigenerazione degli HTML richiedono queste cartelle esterne.
+Per aggiornare anche le immagini, prima di generare esegui `python -B prepare_assets.py`. Gli originali presenti in `new-screen/` hanno priorità sui file omonimi in `../NEWSCREEN/`. Se un originale manca, il comando conserva entrambe le varianti già pronte; segnala errore se mancano anche quelle. Lo stesso vale per la grafica store. I font provengono da `../PDF_Poesie_App/Resources/Fonts/`. Le copie pronte sono incluse in `docs/`: pubblicazione e rigenerazione degli HTML non richiedono gli originali.
 
 Con Node disponibile, controlla la sintassi con `node --check docs/app.js` e `node --check docs/language.js`.
 
@@ -51,15 +51,17 @@ I poster mantengono i testi inglesi originali; la pagina lo indica in tutte le l
 
 Il sito è pronto per `https://poesieapp.it/`: sono mantenuti `docs/CNAME`, `.nojekyll` e i token di verifica Google. In GitHub Pages usa il ramo previsto dal repository e la cartella `/docs`. Includi nel commit i sorgenti, gli asset nuovi e tutti gli HTML rigenerati: GitHub Pages pubblica `docs/`, senza eseguire Python.
 
-Non occorrono modifiche DNS per questo aggiornamento. I contenuti legali mantengono il testo visibile delle pagine precedenti; le vecchie etichette di bozza dei sorgenti non vengono inserite nelle pagine pubblicabili.
+Non occorrono modifiche DNS per questo aggiornamento. Privacy e Termini sono aggiornati al 12 novembre 2026 nelle 11 lingue, includendo bozze, cestino, limiti dei backup, servizi vocali, copie locali e trattamento tecnico del sito. Le vecchie etichette di bozza non vengono inserite nelle pagine pubblicabili.
 
 ## Verifiche dell’aggiornamento
 
 `validate.py` controlla tutte le 34 pagine: 11 landing, 11 privacy, 11 termini e la copia italiana alla radice. Verifica anche i file in `srcset`, i link alle immagini ingrandite, le ancore, i canonical e gli alternate delle lingue. Confronta il testo legale con i sorgenti, su Windows e sugli altri sistemi.
 
-L’analisi iniziale è conservata in `ANALISI-AGGIORNAMENTO.md`. Il codice dell’app Android non viene modificato dal sito.
+L’analisi iniziale è conservata in `ANALISI-AGGIORNAMENTO.md`; la verifica attuale, le correzioni e i problemi ancora aperti sono in `ANALISI-2026-11-12.md`. Il generatore del sito non modifica il codice Android. In questo aggiornamento sono stati corretti separatamente il riepilogo privacy nell’app e i collegamenti localizzati a Privacy e Termini.
 
 ## Segnalazione Search Console del 4 novembre 2026
+
+La verifica più recente è in [SEARCH-CONSOLE-2026-11-12.md](SEARCH-CONSOLE-2026-11-12.md): gli screenshot in `search-contorl-problem/` riguardano `/it/` come alternativa corretta della home e due pagine legali rilevate ma non ancora scansionate. Le richieste HTTPS attuali sono riuscite e non mostrano blocchi di robots, noindex o canonical per queste due URL. Il testo seguente conserva il contesto storico del diverso problema segnalato il 4 novembre.
 
 Gli screenshot in `problem/` segnalano `/en/` come «Pagina duplicata, Google ha scelto una pagina canonica diversa da quella specificata dall’utente». Il dettaglio del Controllo URL mostra che il 23 ottobre Google ha scansionato correttamente `/en/`, con scansione e indicizzazione consentite, ma ha scelto `https://poesieapp.it/` come canonical al posto di `https://poesieapp.it/en/`. Nei file locali `/en/` ha già un canonical verso sé stessa, contenuto inglese e alternate reciproci; sitemap e robots includono e consentono la pagina. Il contenuto acquisito da Google non è disponibile negli screenshot e le richieste di verifica del sito pubblico da questo ambiente hanno ricevuto HTTP 403: il confronto con la versione pubblicata resta da completare.
 

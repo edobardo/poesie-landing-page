@@ -5,6 +5,7 @@ from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT.parent / "NEWSCREEN"
+UPDATES = ROOT / "new-screen"
 ASSETS = ROOT / "docs" / "assets" / "showcase"
 POSTERS = {
     "share": "01_give_shape_to_your_verses.jpg",
@@ -18,17 +19,28 @@ POSTERS = {
 def main():
     ASSETS.mkdir(parents=True, exist_ok=True)
     for name, filename in POSTERS.items():
-        with Image.open(SOURCE / filename) as source:
+        source_path = UPDATES / filename
+        if not source_path.exists():
+            source_path = SOURCE / filename
+        if not source_path.exists():
+            if all((ASSETS / f"{name}-{width}.webp").exists() for width in (480, 960)):
+                print(f"Retained prepared poster: {name}")
+                continue
+            raise FileNotFoundError(f"Missing poster source and prepared variants: {filename}")
+        with Image.open(source_path) as source:
             original = ImageOps.exif_transpose(source).convert("RGB")
             for width in (480, 960):
                 size = (width, round(original.height * width / original.width))
                 original.resize(size, Image.Resampling.LANCZOS).save(
                     ASSETS / f"{name}-{width}.webp", quality=86, method=6)
     feature = SOURCE / "poesie_feature_graphic_en_1024x500.png"
-    with Image.open(feature) as original:
-        assert original.size == (1024, 500), "Unexpected store feature graphic size"
-        original.convert("RGB").save(ASSETS / "feature-1024.webp", quality=90, method=6)
-    shutil.copy2(feature, ASSETS / "feature-1024.png")
+    if feature.exists():
+        with Image.open(feature) as original:
+            assert original.size == (1024, 500), "Unexpected store feature graphic size"
+            original.convert("RGB").save(ASSETS / "feature-1024.webp", quality=90, method=6)
+        shutil.copy2(feature, ASSETS / "feature-1024.png")
+    elif not all((ASSETS / f"feature-1024.{ext}").exists() for ext in ("webp", "png")):
+        raise FileNotFoundError("Missing store feature graphic and prepared copies")
     fonts = ROOT / "docs" / "assets" / "fonts"
     fonts.mkdir(exist_ok=True)
     for filename in ("IMFellEnglish-Regular.ttf", "IMFellEnglish-Italic.ttf"):
