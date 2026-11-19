@@ -229,7 +229,12 @@ def generate_sitemap_and_robots():
                 etree.SubElement(u, '{http://www.w3.org/1999/xhtml}link', rel='alternate', hreflang=code, href=f'{SITE}/{kind}/{code}.html')
             etree.SubElement(u, '{http://www.w3.org/1999/xhtml}link', rel='alternate', hreflang='x-default', href=f'{SITE}/{kind}/it.html')
     (D/'sitemap.xml').write_bytes(etree.tostring(urlset, encoding='utf-8', xml_declaration=True, pretty_print=True))
-    (D/'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n', encoding='utf-8')
+    robots = (
+        'User-agent: *\n'
+        'Disallow: /cdn-cgi/l/email-protection\n\n'
+        f'Sitemap: {SITE}/sitemap.xml\n'
+    )
+    (D/'robots.txt').write_text(robots, encoding='utf-8')
 
 generate_sitemap_and_robots()
 print('Generated 11 landing pages, 11 privacy pages, 11 terms pages, Italian root, sitemap.xml and robots.txt.')
