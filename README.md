@@ -1,6 +1,6 @@
 ﻿# Poesie — landing statica per GitHub Pages
 
-Aggiornamento del 12 novembre 2026. Il sito usa sei mockup e la grafica 1024×500 dello store, con copie ottimizzate per il web, font locali e contenuti in 11 lingue. Il nuovo poster dello spazio personale è in `new-screen/06_a_space_all_yours.jpg`. Non richiede backend, Node, API o servizi a pagamento per funzionare.
+Il sito usa sei mockup e la grafica 1024×500 dello store, con copie ottimizzate per il web, font locali e contenuti in 11 lingue. `new-images/` contiene i poster aggiornati della scrittura e dello spazio personale. Non richiede backend, Node, API o servizi a pagamento per funzionare.
 
 ## Anteprima locale
 
@@ -31,7 +31,7 @@ Apri `http://localhost:8000/` oppure `http://localhost:8000/en/`. La radice `/` 
 | `docs/assets/fonts/` | Font IM Fell English già usati dall’app, serviti localmente |
 | `generate.py` | Generatore delle 34 pagine HTML, canonical e metadati social |
 | `validate.py` | Verifica traduzioni, link, ancore, varianti immagini, metadati e testi legali |
-| `prepare_assets.py` | Prepara gli asset da `new-screen/` o `../NEWSCREEN/`, conservando le copie pronte se un originale non è disponibile |
+| `prepare_assets.py` | Prepara gli asset da `new-images/`, `new-screen/` o `../NEWSCREEN/`, conservando le copie pronte se un originale non è disponibile |
 
 Per aggiornare testi o struttura:
 
@@ -41,7 +41,7 @@ python -B generate.py
 python -B validate.py
 ```
 
-Per aggiornare anche le immagini, prima di generare esegui `python -B prepare_assets.py`. Gli originali presenti in `new-screen/` hanno priorità sui file omonimi in `../NEWSCREEN/`. Se un originale manca, il comando conserva entrambe le varianti già pronte; segnala errore se mancano anche quelle. Lo stesso vale per la grafica store. I font provengono da `../PDF_Poesie_App/Resources/Fonts/`. Le copie pronte sono incluse in `docs/`: pubblicazione e rigenerazione degli HTML non richiedono gli originali.
+Per aggiornare anche le immagini, prima di generare esegui `python -B prepare_assets.py`. Il comando cerca i poster in `new-images/`, poi in `new-screen/` e infine in `../NEWSCREEN/`. Se un originale manca, conserva entrambe le varianti già pronte. Se mancano anche quelle, segnala un errore. Lo stesso vale per la grafica store. I font provengono da `../PDF_Poesie_App/Resources/Fonts/` e, se gli originali non sono disponibili, il comando conserva quelli già presenti. Le copie pronte sono incluse in `docs/`: pubblicazione e rigenerazione degli HTML non richiedono gli originali.
 
 Con Node disponibile, controlla la sintassi con `node --check docs/app.js` e `node --check docs/language.js`.
 
