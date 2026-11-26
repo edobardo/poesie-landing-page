@@ -46,7 +46,7 @@ def language_select(lang,kind='landing'):
 def footer(lang,t):
  u=U[lang];el=etree.Element('footer')
  brand=node('<a class="brand"><img src="/assets/appicon.webp" alt="" width="36" height="36"><bdi class="footer-app-name"></bdi></a>')
- brand.find('bdi').text='Poesie - '+names[lang]
+ brand.find('bdi').text=('Poesie: ' if lang=='en' else 'Poesie - ')+names[lang]
  brand.set('href',landing_path(lang));el.append(brand)
  p=etree.SubElement(el,'p');p.text=t['footer.desc']
  links=etree.SubElement(el,'div',{'class':'footer-links'})
@@ -139,7 +139,7 @@ for lang in ui:
     copytext = landing[lang]
     root = html.document_fromstring((C/'landing-template.html').read_text(encoding='utf-8-sig'))
     render_copy(root, copytext, lang)
-    full_name = 'Poesie – ' + names[lang]
+    full_name = ('Poesie: ' if lang == 'en' else 'Poesie – ') + names[lang]
     hero_text = html.fromstring('<span>'+copytext['hero'].replace('<br>', ' ')+'</span>').text_content()
     root.find('.//title').text = full_name + ' | ' + hero_text
     head = root.find('head')

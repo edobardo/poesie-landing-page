@@ -29,12 +29,12 @@
     "videoNote": "Video con stili gratuiti e watermark inclusi. Audio personalizzato con Premium.",
     "bookLabel": "LA TUA RACCOLTA",
     "bookTitle": "Le tue poesie diventano un libro.",
-    "bookBody": "Dai una casa ai versi che hai raccolto. Con Premium crei un’antologia PDF con copertina e impaginazione dedicata, da conservare e condividere.",
+    "bookBody": "Con Premium puoi creare un’antologia PDF con copertina e indice oppure preparare un manoscritto. Scegli e ordina le poesie, organizzale in sezioni e controlla l’anteprima dell’impaginazione prima di esportare.",
     "formats": "Disponibili anche export standard: PDF, ePub, Markdown, HTML e TXT.",
     "premiumLink": "Scopri Poesie Premium →",
     "spaceLabel": "LE TUE PAROLE, CON CURA",
     "spaceTitle": "Uno spazio tutto tuo.",
-    "spaceBody": "Organizza raccolte, tag, preferiti e cartelle intelligenti. Ritrova i tuoi versi con la ricerca e scegli tra il dispositivo, Google Drive e OneDrive.",
+    "spaceBody": "Organizza raccolte, tag e preferiti e cerca nei tuoi testi. Segna le poesie come In lavorazione, Da rivedere o Pronta e ritrovale nelle cartelle intelligenti in base allo stato editoriale.",
     "local": "Solo Locale",
     "securityNote": "Attiva il blocco con password o biometria e la protezione degli screenshot. Queste protezioni non si estendono ai file già esportati o condivisi.",
     "premiumEyebrow": "PIÙ SPAZIO ALLA CREATIVITÀ",
@@ -45,16 +45,17 @@
     "freeFeatures": [
       "Scrittura in verso libero, raccolte, tag e preferiti",
       "Modalità Solo Locale, Google Drive o OneDrive",
+      "Backup completo dei dati di scrittura protetto da password",
       "Immagini e video con stili gratuiti e watermark",
       "Export standard in PDF, ePub, Markdown, HTML e TXT"
     ],
     "paidTitle": "Una forma in più per le tue idee.",
     "paidFeatures": [
-      "Antologia PDF con copertina",
+      "Antologie e manoscritti PDF",
       "Stili aggiuntivi e rimozione del watermark",
       "Audio personalizzato nei video",
       "Modelli poetici guidati, temi aggiuntivi e controlli avanzati di lettura",
-      "Esportazione e ripristino di backup ZIP protetti da password"
+      "Esportazione e ripristino di backup ZIP delle raccolte, protetti da password"
     ],
     "priceNote": "Prezzo e dettagli delle funzioni sono disponibili nell’app, prima dell’acquisto.",
     "faqLabel": "PRIMA DEL PRIMO VERSO",
@@ -82,7 +83,7 @@
       ],
       [
         "Come conservo i testi prima di disinstallare?",
-        "Esporta le poesie o salva una copia di sicurezza dalle impostazioni prima di disinstallare. Il ripristino da ZIP richiede Premium. Bozze e cestino restano sul dispositivo e non sono inclusi: conferma prima i testi che vuoi conservare."
+        "Prima di disinstallare, esporta il backup completo dalle Impostazioni e salva il file fuori dall’app. Per ripristinarlo, usa la modalità Solo locale. Il ripristino sostituisce i dati di scrittura locali coperti dal backup."
       ]
     ],
     "closingLabel": "IL PROSSIMO VERSO COMINCIA DA TE",
@@ -94,7 +95,7 @@
     "bookAlt": "Copertina e pagina di un’antologia PDF creata con Premium",
     "spaceAlt": "Raccolta di poesie e impostazioni di blocco dell’app e degli screenshot",
     "featureAlt": "Poesie: editor e poesia impaginata nella nuova presentazione dello store",
-    "recoveryNote": "Hai eliminato una poesia per errore? Puoi recuperarla dal cestino entro 30 giorni. Bozze e cestino restano su questo dispositivo e non sono inclusi nella sincronizzazione o nei backup ZIP.",
+    "recoveryNote": "Recupera dal Cestino le poesie eliminate entro 30 giorni. Il backup completo protetto da password include anche bozze, revisioni, contenuti del Cestino e progetti di manoscritto.",
     "progressNote": "Segui statistiche, obiettivi e continuità di scrittura. Riascolta le tue poesie con la lettura vocale; con Premium esplora anche Poetry Wrapped."
   },
   "en": {
@@ -127,12 +128,12 @@
     "videoNote": "Videos with free styles and watermark included. Custom audio with Premium.",
     "bookLabel": "YOUR COLLECTION",
     "bookTitle": "Your poems become a book.",
-    "bookBody": "Give your collected verses a home. With Premium, create a PDF anthology with a cover and a dedicated layout, to keep and share.",
+    "bookBody": "With Premium, create a PDF anthology with a cover and table of contents, or prepare a manuscript. Select and reorder poems, group them into sections, and preview the layout before exporting.",
     "formats": "Standard exports also available: PDF, ePub, Markdown, HTML and TXT.",
     "premiumLink": "Discover Poesie Premium →",
     "spaceLabel": "YOUR WORDS, CARED FOR",
     "spaceTitle": "A space all your own.",
-    "spaceBody": "Organise collections, tags, favourites and smart folders. Find your verses with search and choose storage on your device, Google Drive or OneDrive.",
+    "spaceBody": "Organise collections, tags and favourites, and search your poems. Mark poems In progress, Needs review or Ready and use smart folders to find them by editorial status.",
     "local": "Local Only",
     "securityNote": "Enable password or biometric app lock and screenshot protection. These protections do not extend to files already exported or shared.",
     "premiumEyebrow": "MORE ROOM FOR CREATIVITY",
@@ -143,16 +144,17 @@
     "freeFeatures": [
       "Free verse, collections, tags and favourites",
       "Local Only, Google Drive or OneDrive storage",
+      "Password-protected complete backup of your writing",
       "Images and videos with free styles and watermark",
       "Standard PDF, ePub, Markdown, HTML and TXT exports"
     ],
     "paidTitle": "More ways to shape your ideas.",
     "paidFeatures": [
-      "PDF anthology with a cover",
+      "PDF anthologies and manuscripts",
       "Additional styles and watermark removal",
       "Custom audio in videos",
       "Guided poetry templates, extra themes and advanced reading controls",
-      "Export and restore password-protected ZIP backups"
+      "Export and restore password-protected ZIP backups of collections"
     ],
     "priceNote": "See the price and feature details in the app before purchasing.",
     "faqLabel": "BEFORE YOUR FIRST VERSE",
@@ -180,7 +182,7 @@
       ],
       [
         "How do I keep my writing before uninstalling?",
-        "Export your poems or save a safety copy from Settings before uninstalling. Restoring a ZIP backup requires Premium. Drafts and trash remain on the device and are not included: confirm any writing you want to keep first."
+        "Before uninstalling, export a complete backup from Settings and save the file outside the app. Restore it in Local Only mode. Restoring replaces the local writing data covered by the backup."
       ]
     ],
     "closingLabel": "YOUR NEXT VERSE BEGINS WITH YOU",
@@ -192,7 +194,7 @@
     "bookAlt": "Cover and page of a PDF anthology created with Premium",
     "spaceAlt": "Poetry collection and app lock and screenshot protection settings",
     "featureAlt": "Poesie editor and a styled poem in the new store feature graphic",
-    "recoveryNote": "Deleted a poem by mistake? Recover it from the trash within 30 days. Drafts and trash stay on this device and are not included in cloud sync or ZIP backups.",
+    "recoveryNote": "Recover deleted poems from Trash within 30 days. The password-protected complete backup also includes drafts, revisions, Trash and manuscript projects.",
     "progressNote": "Track statistics, writing goals and your streak. Listen to your poems with read-aloud; Premium also includes Poetry Wrapped."
   },
   "de": {
@@ -223,12 +225,12 @@
     "videoNote": "Videos mit kostenlosen Stilen und Wasserzeichen inklusive. Eigenes Audio mit Premium.",
     "bookLabel": "DEINE SAMMLUNG",
     "bookTitle": "Deine Gedichte werden zum Buch.",
-    "bookBody": "Gib deinen gesammelten Versen ein Zuhause. Mit Premium erstellst du eine PDF-Anthologie mit Cover und eigener Gestaltung zum Bewahren und Teilen.",
+    "bookBody": "Mit Premium kannst du eine PDF-Anthologie mit Cover und Inhaltsverzeichnis erstellen oder ein Manuskript vorbereiten. Wähle Gedichte aus, ändere ihre Reihenfolge, gliedere sie in Abschnitte und prüfe das Layout in der Vorschau.",
     "formats": "Auch als Standardexport: PDF, ePub, Markdown, HTML und TXT.",
     "premiumLink": "Poesie Premium entdecken →",
     "spaceLabel": "DEINE WORTE, GUT AUFGEHOBEN",
     "spaceTitle": "Ein Raum nur für dich.",
-    "spaceBody": "Ordne Sammlungen, Tags, Favoriten und intelligente Ordner. Finde Verse mit der Suche und speichere auf dem Gerät, in Google Drive oder OneDrive.",
+    "spaceBody": "Organisiere Sammlungen, Tags und Favoriten und durchsuche deine Gedichte. Gib deinen Texten einen Bearbeitungsstatus und nutze intelligente Ordner, um sie nach Status wiederzufinden.",
     "local": "Nur lokal",
     "securityNote": "Aktiviere die App-Sperre per Passwort oder Biometrie und den Screenshot-Schutz. Bereits exportierte oder geteilte Dateien werden dadurch nicht geschützt.",
     "premiumEyebrow": "MEHR RAUM FÜR KREATIVITÄT",
@@ -239,16 +241,17 @@
     "freeFeatures": [
       "Freie Verse, Sammlungen, Tags und Favoriten",
       "Lokaler Speicher, Google Drive oder OneDrive",
+      "Passwortgeschützte Komplettsicherung deiner Schreibdaten",
       "Bilder und Videos mit kostenlosen Stilen und Wasserzeichen",
       "Standardexport als PDF, ePub, Markdown, HTML und TXT"
     ],
     "paidTitle": "Mehr Formen für deine Ideen.",
     "paidFeatures": [
-      "PDF-Anthologie mit Cover",
+      "PDF-Anthologien und Manuskripte",
       "Zusätzliche Stile und Entfernen des Wasserzeichens",
       "Eigenes Audio in Videos",
       "Geführte Gedichtvorlagen, zusätzliche Themen und erweiterte Vorleseeinstellungen",
-      "Passwortgeschützte ZIP-Backups exportieren und wiederherstellen"
+      "Passwortgeschützte ZIP-Sicherungen von Sammlungen exportieren und wiederherstellen"
     ],
     "priceNote": "Preis und Funktionsdetails findest du vor dem Kauf in der App.",
     "faqLabel": "VOR DEM ERSTEN VERS",
@@ -276,7 +279,7 @@
       ],
       [
         "Wie sichere ich Texte vor der Deinstallation?",
-        "Exportiere Gedichte oder speichere vorher eine Sicherungskopie in den Einstellungen. Die Wiederherstellung aus ZIP erfordert Premium. Entwürfe und Papierkorb bleiben auf dem Gerät und sind nicht enthalten: bestätige zuerst die Texte, die du behalten möchtest."
+        "Exportiere vor der Deinstallation eine Komplettsicherung aus den Einstellungen und speichere die Datei außerhalb der App. Stelle sie im Modus Nur lokal wieder her. Dabei werden die von der Sicherung erfassten lokalen Schreibdaten ersetzt."
       ]
     ],
     "closingLabel": "DEIN NÄCHSTER VERS BEGINNT MIT DIR",
@@ -290,7 +293,7 @@
     "videoAlt": "Poesie: Deine Verse werden lebendig.",
     "bookAlt": "Poesie: Deine Gedichte werden zum Buch.",
     "spaceAlt": "Poesie: Ein Raum nur für dich.",
-    "recoveryNote": "Ein Gedicht versehentlich gelöscht? Stelle es innerhalb von 30 Tagen aus dem Papierkorb wieder her. Entwürfe und Papierkorb bleiben auf diesem Gerät und sind weder in der Cloud-Synchronisierung noch in ZIP-Backups enthalten.",
+    "recoveryNote": "Gelöschte Gedichte kannst du innerhalb von 30 Tagen aus dem Papierkorb wiederherstellen. In die passwortgeschützte Komplettsicherung fließen auch Entwürfe, frühere Fassungen, der Papierkorb und Manuskriptprojekte ein.",
     "progressNote": "Verfolge Statistiken, Schreibziele und deine Schreibserie. Lass dir Gedichte vorlesen; Premium enthält auch Poetry Wrapped."
   },
   "es": {
@@ -321,12 +324,12 @@
     "videoNote": "Vídeos con estilos gratuitos y marca de agua incluidos. Audio personalizado con Premium.",
     "bookLabel": "TU COLECCIÓN",
     "bookTitle": "Tus poemas se convierten en un libro.",
-    "bookBody": "Dale un hogar a tus versos. Con Premium, crea una antología PDF con portada y una maquetación dedicada, para guardar y compartir.",
+    "bookBody": "Con Premium puedes crear una antología PDF con portada e índice o preparar un manuscrito. Selecciona y reordena los poemas, agrúpalos en secciones y revisa la maquetación en la vista previa antes de exportar.",
     "formats": "También hay exportación estándar: PDF, ePub, Markdown, HTML y TXT.",
     "premiumLink": "Descubre Poesie Premium →",
     "spaceLabel": "TUS PALABRAS, BIEN CUIDADAS",
     "spaceTitle": "Un espacio solo tuyo.",
-    "spaceBody": "Organiza colecciones, etiquetas, favoritos y carpetas inteligentes. Encuentra tus versos con la búsqueda y guarda en el dispositivo, Google Drive o OneDrive.",
+    "spaceBody": "Organiza tus colecciones, etiquetas y favoritos y busca dentro de tus poemas. Asigna a cada poema un estado editorial y usa carpetas inteligentes para encontrar los que compartan ese estado.",
     "local": "Solo local",
     "securityNote": "Activa el bloqueo con contraseña o biometría y la protección de capturas. Estas medidas no protegen los archivos ya exportados o compartidos.",
     "premiumEyebrow": "MÁS ESPACIO PARA CREAR",
@@ -337,16 +340,17 @@
     "freeFeatures": [
       "Verso libre, colecciones, etiquetas y favoritos",
       "Almacenamiento local, Google Drive o OneDrive",
+      "Copia completa de tus escritos protegida con contraseña",
       "Imágenes y vídeos con estilos gratuitos y marca de agua",
       "Exportación estándar en PDF, ePub, Markdown, HTML y TXT"
     ],
     "paidTitle": "Más formas para tus ideas.",
     "paidFeatures": [
-      "Antología PDF con portada",
+      "Antologías y manuscritos en PDF",
       "Estilos adicionales y eliminación de la marca de agua",
       "Audio personalizado en vídeos",
       "Plantillas poéticas guiadas, temas adicionales y controles avanzados de lectura",
-      "Exportar y restaurar copias ZIP protegidas con contraseña"
+      "Exportación y restauración de copias ZIP de colecciones protegidas con contraseña"
     ],
     "priceNote": "Consulta el precio y los detalles de las funciones en la app antes de comprar.",
     "faqLabel": "ANTES DEL PRIMER VERSO",
@@ -374,7 +378,7 @@
       ],
       [
         "¿Cómo conservo los textos antes de desinstalar?",
-        "Exporta tus poemas o guarda una copia de seguridad desde Ajustes antes de desinstalar. Restaurar una copia ZIP requiere Premium. Los borradores y la papelera quedan en el dispositivo y no se incluyen: confirma primero los textos que quieras conservar."
+        "Antes de desinstalar, exporta una copia completa desde Ajustes y guarda el archivo fuera de la app. Restáuralo en el modo Solo local. La restauración sustituye los datos de escritura locales que abarca la copia."
       ]
     ],
     "closingLabel": "TU PRÓXIMO VERSO EMPIEZA CONTIGO",
@@ -388,7 +392,7 @@
     "videoAlt": "Poesie: Tus versos cobran vida.",
     "bookAlt": "Poesie: Tus poemas se convierten en un libro.",
     "spaceAlt": "Poesie: Un espacio solo tuyo.",
-    "recoveryNote": "¿Has borrado un poema por error? Recupéralo de la papelera en un plazo de 30 días. Los borradores y la papelera quedan en este dispositivo y no se incluyen en la sincronización ni en las copias ZIP.",
+    "recoveryNote": "Recupera los poemas eliminados de la papelera en un plazo de 30 días. La copia completa protegida con contraseña también incluye borradores, revisiones, la papelera y proyectos de manuscrito.",
     "progressNote": "Consulta estadísticas, objetivos y tu racha de escritura. Escucha tus poemas con la lectura en voz alta; Premium también incluye Poetry Wrapped."
   },
   "fr": {
@@ -419,12 +423,12 @@
     "videoNote": "Vidéos avec styles gratuits et filigrane incluses. Audio personnalisé avec Premium.",
     "bookLabel": "VOTRE RECUEIL",
     "bookTitle": "Vos poèmes deviennent un livre.",
-    "bookBody": "Offrez une place à vos vers. Avec Premium, créez une anthologie PDF avec couverture et mise en page dédiée, à conserver et à partager.",
+    "bookBody": "Avec Premium, crée une anthologie PDF avec couverture et sommaire ou prépare un manuscrit. Choisis et réorganise tes poèmes, répartis-les en sections et vérifie la mise en page dans l’aperçu avant l’export.",
     "formats": "Exports standards également disponibles : PDF, ePub, Markdown, HTML et TXT.",
     "premiumLink": "Découvrir Poesie Premium →",
     "spaceLabel": "VOS MOTS, AVEC SOIN",
     "spaceTitle": "Un espace bien à vous.",
-    "spaceBody": "Organise recueils, tags, favoris et dossiers intelligents. Retrouve tes vers avec la recherche et choisis ton appareil, Google Drive ou OneDrive.",
+    "spaceBody": "Organise tes recueils, tes tags et tes favoris, et effectue des recherches dans tes poèmes. Attribue un statut éditorial à chaque texte et retrouve les poèmes par statut dans des dossiers intelligents.",
     "local": "Local uniquement",
     "securityNote": "Active le verrouillage par mot de passe ou biométrie et la protection des captures. Ces protections ne couvrent pas les fichiers déjà exportés ou partagés.",
     "premiumEyebrow": "PLUS DE PLACE À LA CRÉATIVITÉ",
@@ -435,16 +439,17 @@
     "freeFeatures": [
       "Vers libres, recueils, étiquettes et favoris",
       "Stockage local, Google Drive ou OneDrive",
+      "Sauvegarde complète de tes écrits protégée par mot de passe",
       "Images et vidéos avec styles gratuits et filigrane",
       "Exports standards PDF, ePub, Markdown, HTML et TXT"
     ],
     "paidTitle": "D’autres formes pour vos idées.",
     "paidFeatures": [
-      "Anthologie PDF avec couverture",
+      "Anthologies et manuscrits PDF",
       "Styles supplémentaires et suppression du filigrane",
       "Audio personnalisé dans les vidéos",
       "Modèles poétiques guidés, thèmes supplémentaires et réglages avancés de lecture",
-      "Exportation et restauration de sauvegardes ZIP protégées par mot de passe"
+      "Export et restauration de sauvegardes ZIP de recueils protégées par mot de passe"
     ],
     "priceNote": "Consultez le prix et le détail des fonctions dans l’app avant l’achat.",
     "faqLabel": "AVANT LE PREMIER VERS",
@@ -472,7 +477,7 @@
       ],
       [
         "Comment conserver mes textes avant de désinstaller ?",
-        "Exporte tes poèmes ou enregistre une copie de sécurité depuis les paramètres avant de désinstaller. La restauration ZIP nécessite Premium. Brouillons et corbeille restent sur l’appareil et sont exclus : confirme d’abord les textes à conserver."
+        "Avant de désinstaller, exporte une sauvegarde complète depuis les paramètres et enregistre le fichier hors de l’app. Restaure-le en mode Local uniquement. La restauration remplace les données d’écriture locales couvertes par la sauvegarde."
       ]
     ],
     "closingLabel": "VOTRE PROCHAIN VERS COMMENCE AVEC VOUS",
@@ -486,7 +491,7 @@
     "videoAlt": "Poesie: Vos vers prennent vie.",
     "bookAlt": "Poesie: Vos poèmes deviennent un livre.",
     "spaceAlt": "Poesie: Un espace bien à vous.",
-    "recoveryNote": "Un poème supprimé par erreur ? Récupère-le dans la corbeille sous 30 jours. Brouillons et corbeille restent sur cet appareil et sont exclus de la synchronisation et des sauvegardes ZIP.",
+    "recoveryNote": "Récupère tes poèmes supprimés dans la corbeille sous 30 jours. La sauvegarde complète protégée par mot de passe inclut aussi les brouillons, les révisions, la corbeille et les projets de manuscrit.",
     "progressNote": "Suis tes statistiques, objectifs et séries d’écriture. Écoute tes poèmes avec la lecture vocale ; Premium inclut aussi Poetry Wrapped."
   },
   "pt": {
@@ -517,12 +522,12 @@
     "videoNote": "Vídeos com estilos gratuitos e marca de água incluídos. Áudio personalizado com Premium.",
     "bookLabel": "A TUA COLEÇÃO",
     "bookTitle": "Os teus poemas tornam-se um livro.",
-    "bookBody": "Dá uma casa aos versos que reuniste. Com Premium, cria uma antologia PDF com capa e paginação própria, para guardar e partilhar.",
+    "bookBody": "Com o Premium, podes criar uma antologia em PDF com capa e índice ou preparar um manuscrito. Escolhe e reordena os poemas, organiza-os em secções e verifica a paginação na pré-visualização antes de exportar.",
     "formats": "Também estão disponíveis exportações padrão: PDF, ePub, Markdown, HTML e TXT.",
     "premiumLink": "Descobre Poesie Premium →",
     "spaceLabel": "AS TUAS PALAVRAS, COM CUIDADO",
     "spaceTitle": "Um espaço só teu.",
-    "spaceBody": "Organiza coleções, etiquetas, favoritos e pastas inteligentes. Encontra os teus versos com a pesquisa e guarda no dispositivo, Google Drive ou OneDrive.",
+    "spaceBody": "Organiza as tuas coleções, etiquetas e favoritos e pesquisa nos teus poemas. Atribui um estado editorial a cada poema e usa pastas inteligentes para os encontrar pelo estado.",
     "local": "Apenas local",
     "securityNote": "Ativa o bloqueio por palavra-passe ou biometria e a proteção de capturas. Estas medidas não protegem ficheiros já exportados ou partilhados.",
     "premiumEyebrow": "MAIS ESPAÇO PARA CRIAR",
@@ -533,16 +538,17 @@
     "freeFeatures": [
       "Verso livre, coleções, etiquetas e favoritos",
       "Armazenamento local, Google Drive ou OneDrive",
+      "Cópia de segurança completa da escrita protegida por palavra-passe",
       "Imagens e vídeos com estilos gratuitos e marca de água",
       "Exportações padrão em PDF, ePub, Markdown, HTML e TXT"
     ],
     "paidTitle": "Mais formas para as tuas ideias.",
     "paidFeatures": [
-      "Antologia PDF com capa",
+      "Antologias e manuscritos em PDF",
       "Estilos adicionais e remoção da marca de água",
       "Áudio personalizado nos vídeos",
       "Modelos poéticos guiados, temas adicionais e controlos avançados de leitura",
-      "Exportação e restauro de cópias ZIP protegidas por palavra-passe"
+      "Exportação e restauro de cópias ZIP de coleções protegidas por palavra-passe"
     ],
     "priceNote": "Consulta o preço e os detalhes das funcionalidades na app antes da compra.",
     "faqLabel": "ANTES DO PRIMEIRO VERSO",
@@ -570,7 +576,7 @@
       ],
       [
         "Como guardo os textos antes de desinstalar?",
-        "Exporta os poemas ou guarda uma cópia de segurança nas definições antes de desinstalar. O restauro ZIP requer Premium. Rascunhos e lixo ficam no dispositivo e não estão incluídos: confirma primeiro os textos que queres guardar."
+        "Antes de desinstalar, exporta uma cópia completa nas Definições e guarda o ficheiro fora da app. Restaura-o no modo Apenas local. O restauro substitui os dados de escrita locais abrangidos pela cópia."
       ]
     ],
     "closingLabel": "O TEU PRÓXIMO VERSO COMEÇA CONTIGO",
@@ -584,7 +590,7 @@
     "videoAlt": "Poesie: Os teus versos ganham vida.",
     "bookAlt": "Poesie: Os teus poemas tornam-se um livro.",
     "spaceAlt": "Poesie: Um espaço só teu.",
-    "recoveryNote": "Apagaste um poema por engano? Recupera-o do lixo no prazo de 30 dias. Os rascunhos e o lixo ficam neste dispositivo e não são incluídos na sincronização nem nas cópias ZIP.",
+    "recoveryNote": "Recupera do lixo os poemas apagados no prazo de 30 dias. A cópia completa protegida por palavra-passe também inclui rascunhos, revisões, o lixo e projetos de manuscrito.",
     "progressNote": "Acompanha estatísticas, objetivos e a tua sequência de escrita. Ouve os poemas com a leitura em voz alta; Premium também inclui Poetry Wrapped."
   },
   "ru": {
@@ -615,12 +621,12 @@
     "videoNote": "Видео с бесплатными стилями и водяным знаком включены. Собственное аудио — с Premium.",
     "bookLabel": "ВАШ СБОРНИК",
     "bookTitle": "Ваши стихи становятся книгой.",
-    "bookBody": "Найдите дом для своих стихов. С Premium создайте PDF-антологию с обложкой и особым оформлением, чтобы сохранить или поделиться.",
+    "bookBody": "С Premium можно создать PDF-антологию с обложкой и оглавлением или подготовить рукопись. Выбери стихи, расставь их в нужном порядке, объедини в разделы и проверь оформление перед экспортом.",
     "formats": "Доступен и обычный экспорт: PDF, ePub, Markdown, HTML и TXT.",
     "premiumLink": "Откройте Poesie Premium →",
     "spaceLabel": "БЕРЕЖНО К ВАШИМ СЛОВАМ",
     "spaceTitle": "Пространство только для вас.",
-    "spaceBody": "Организуй сборники, теги, избранное и умные папки. Находи строки поиском и храни их на устройстве, в Google Drive или OneDrive.",
+    "spaceBody": "Упорядочивай сборники, теги и избранное и ищи по текстам стихов. Отмечай этап работы над каждым стихотворением и находи стихи с нужным статусом в умных папках.",
     "local": "Только локально",
     "securityNote": "Включи блокировку паролем или биометрией и защиту от снимков экрана. Эта защита не распространяется на уже экспортированные или отправленные файлы.",
     "premiumEyebrow": "БОЛЬШЕ ПРОСТОРА ДЛЯ ТВОРЧЕСТВА",
@@ -631,16 +637,17 @@
     "freeFeatures": [
       "Свободный стих, сборники, теги и избранное",
       "Локальное хранение, Google Drive или OneDrive",
+      "Полная резервная копия текстов и рабочих материалов с защитой паролем",
       "Изображения и видео с бесплатными стилями и водяным знаком",
       "Обычный экспорт в PDF, ePub, Markdown, HTML и TXT"
     ],
     "paidTitle": "Больше форм для ваших идей.",
     "paidFeatures": [
-      "PDF-антология с обложкой",
+      "Антологии и рукописи в PDF",
       "Дополнительные стили и удаление водяного знака",
       "Собственное аудио в видео",
       "Поэтические шаблоны, дополнительные темы и расширенные настройки чтения",
-      "Экспорт и восстановление ZIP-копий с паролем"
+      "Экспорт и восстановление защищённых паролем ZIP-копий сборников"
     ],
     "priceNote": "Цена и подробности функций доступны в приложении до покупки.",
     "faqLabel": "ДО ПЕРВОЙ СТРОКИ",
@@ -668,7 +675,7 @@
       ],
       [
         "Как сохранить тексты перед удалением приложения?",
-        "Экспортируйте стихи или сохраните резервную копию в настройках до удаления приложения. Восстановление из ZIP требует Premium. Черновики и корзина остаются на устройстве и не включаются: сначала подтвердите тексты, которые хотите сохранить."
+        "Перед удалением приложения экспортируй полную резервную копию из настроек и сохрани файл вне приложения. Восстанавливай его в режиме «Только локально». При восстановлении заменяются локальные данные, охваченные резервной копией."
       ]
     ],
     "closingLabel": "ВАША СЛЕДУЮЩАЯ СТРОКА НАЧИНАЕТСЯ С ВАС",
@@ -682,7 +689,7 @@
     "videoAlt": "Poesie: Ваши стихи оживают.",
     "bookAlt": "Poesie: Ваши стихи становятся книгой.",
     "spaceAlt": "Poesie: Пространство только для вас.",
-    "recoveryNote": "Случайно удалил стихотворение? Восстанови его из корзины в течение 30 дней. Черновики и корзина остаются на этом устройстве и не входят в синхронизацию и ZIP-копии.",
+    "recoveryNote": "Удалённые стихи можно восстановить из корзины в течение 30 дней. В полную резервную копию с защитой паролем также входят черновики, предыдущие версии, корзина и проекты рукописей.",
     "progressNote": "Следи за статистикой, целями и серией дней письма. Слушай свои стихи; Premium также включает Poetry Wrapped."
   },
   "ar": {
@@ -713,12 +720,12 @@
     "videoNote": "فيديوهات بالتصاميم المجانية والعلامة المائية متاحة. صوت مخصص مع Premium.",
     "bookLabel": "مجموعتك",
     "bookTitle": "تصبح قصائدك كتابًا.",
-    "bookBody": "امنح أبياتك المجمعة موطنًا. مع Premium، أنشئ مختارات PDF بغلاف وتنسيق مخصص للاحتفاظ بها ومشاركتها.",
+    "bookBody": "مع Premium، يمكنك إنشاء مختارات شعرية بصيغة PDF مع غلاف وفهرس أو إعداد مخطوطة. اختر القصائد ورتّبها واجمعها في أقسام، ثم عاين التنسيق قبل التصدير.",
     "formats": "يتوفر أيضًا التصدير العادي: PDF وePub وMarkdown وHTML وTXT.",
     "premiumLink": "اكتشف Poesie Premium ←",
     "spaceLabel": "كلماتك، بعناية",
     "spaceTitle": "مساحة تخصك وحدك.",
-    "spaceBody": "نظّم المجموعات والوسوم والمفضلة والمجلدات الذكية. ابحث عن أبياتك واختر الحفظ على الجهاز أو Google Drive أو OneDrive.",
+    "spaceBody": "نظّم مجموعاتك ووسومك ومفضلاتك وابحث في نصوص القصائد. حدّد مرحلة العمل على كل قصيدة واستخدم المجلدات الذكية للعثور على القصائد بحسب حالتها التحريرية.",
     "local": "محلي فقط",
     "securityNote": "فعّل القفل بكلمة مرور أو بالبصمة وحماية لقطات الشاشة. لا تشمل هذه الحماية الملفات التي سبق تصديرها أو مشاركتها.",
     "premiumEyebrow": "مساحة أوسع للإبداع",
@@ -729,16 +736,17 @@
     "freeFeatures": [
       "الشعر الحر والمجموعات والوسوم والمفضلة",
       "تخزين محلي أو Google Drive أو OneDrive",
+      "نسخة احتياطية كاملة لبيانات الكتابة محمية بكلمة مرور",
       "صور وفيديوهات بتصاميم مجانية وعلامة مائية",
       "تصدير عادي إلى PDF وePub وMarkdown وHTML وTXT"
     ],
     "paidTitle": "أشكال أخرى لأفكارك.",
     "paidFeatures": [
-      "مختارات PDF مع غلاف",
+      "مختارات شعرية ومخطوطات بصيغة PDF",
       "تصاميم إضافية وإزالة العلامة المائية",
       "صوت مخصص في الفيديوهات",
       "قوالب شعرية موجّهة وسمات إضافية وإعدادات قراءة متقدمة",
-      "تصدير نسخ ZIP محمية بكلمة مرور واستعادتها"
+      "تصدير نسخ ZIP احتياطية للمجموعات واستعادتها بكلمة مرور"
     ],
     "priceNote": "اطّلع على السعر وتفاصيل الميزات في التطبيق قبل الشراء.",
     "faqLabel": "قبل أول بيت",
@@ -766,7 +774,7 @@
       ],
       [
         "كيف أحفظ نصوصي قبل إلغاء التثبيت؟",
-        "صدّر القصائد أو احفظ نسخة أمان من الإعدادات قبل إلغاء التثبيت. تتطلب استعادة ZIP Premium (شراء لمرة واحدة). تبقى المسودات والسلة على الجهاز ولا تُضمّنان؛ أكّد أولاً النصوص التي تريد الاحتفاظ بها."
+        "قبل إلغاء التثبيت، صدّر نسخة احتياطية كاملة من الإعدادات واحفظ الملف خارج التطبيق. استعده في وضع «محلي فقط». تستبدل الاستعادة بيانات الكتابة المحلية التي تشملها النسخة."
       ]
     ],
     "closingLabel": "بيتك التالي يبدأ منك",
@@ -780,7 +788,7 @@
     "videoAlt": "Poesie: تنبض أبياتك بالحياة.",
     "bookAlt": "Poesie: تصبح قصائدك كتابًا.",
     "spaceAlt": "Poesie: مساحة تخصك وحدك.",
-    "recoveryNote": "حذفت قصيدة بالخطأ؟ يمكنك استعادتها من سلة المهملات خلال 30 يوماً. تبقى المسودات والسلة على هذا الجهاز ولا تُضمّنان في المزامنة أو نسخ ZIP الاحتياطية.",
+    "recoveryNote": "استعد القصائد المحذوفة من سلة المهملات خلال 30 يومًا. تشمل النسخة الاحتياطية الكاملة المحمية بكلمة مرور أيضًا المسودات والمراجعات ومحتويات السلة ومشروعات المخطوطات.",
     "progressNote": "تابع الإحصاءات وأهداف الكتابة وسلسلتك اليومية. استمع إلى قصائدك بالقراءة الصوتية؛ يشمل Premium أيضاً Poetry Wrapped."
   },
   "ja": {
@@ -811,12 +819,12 @@
     "videoNote": "無料スタイルと透かし付きの動画を利用可能。独自音声はPremium機能です。",
     "bookLabel": "あなたの詩集",
     "bookTitle": "あなたの詩が、一冊の本に。",
-    "bookBody": "書きためた詩に、居場所を。Premiumなら表紙と専用レイアウトを備えたPDF詩集を作成し、保存や共有ができます。",
+    "bookBody": "Premiumでは、表紙と目次付きのPDF詩選集を作ったり、原稿を編集したりできます。詩を選んで並べ替え、章に分け、書き出す前にレイアウトを確認できます。",
     "formats": "通常の書き出しにも対応：PDF、ePub、Markdown、HTML、TXT。",
     "premiumLink": "Poesie Premiumを見る →",
     "spaceLabel": "あなたの言葉を、大切に",
     "spaceTitle": "あなただけの場所。",
-    "spaceBody": "詩集、タグ、お気に入り、スマートフォルダーで整理。検索で詩を見つけ、端末、Google Drive、OneDriveから保存先を選べます。",
+    "spaceBody": "詩集、タグ、お気に入りで整理し、詩の本文から検索できます。各作品に編集状況を設定し、スマートフォルダーで同じ状況の詩をまとめられます。",
     "local": "ローカルのみ",
     "securityNote": "パスワードや生体認証によるロックとスクリーンショット保護を有効にできます。書き出し・共有済みのファイルはこの保護の対象外です。",
     "premiumEyebrow": "創作に、もっと余白を",
@@ -827,16 +835,17 @@
     "freeFeatures": [
       "自由詩、詩集、タグ、お気に入り",
       "ローカル保存、Google Drive、OneDrive",
+      "パスワードで保護された執筆データの完全バックアップ",
       "無料スタイルと透かし付きの画像・動画",
       "PDF、ePub、Markdown、HTML、TXTの通常書き出し"
     ],
     "paidTitle": "想いをかたちにする、もっと多くの方法。",
     "paidFeatures": [
-      "表紙付きPDF詩集",
+      "PDF詩選集と原稿",
       "追加スタイルと透かし削除",
       "動画への独自音声の追加",
       "詩のガイド付きテンプレート、追加テーマ、高度な読み上げ設定",
-      "パスワード付きZIPバックアップの書き出しと復元"
+      "パスワードで保護された詩集のZIPバックアップの書き出しと復元"
     ],
     "priceNote": "価格と機能の詳細は、購入前にアプリ内で確認できます。",
     "faqLabel": "最初の一行の前に",
@@ -864,7 +873,7 @@
       ],
       [
         "アンインストール前に作品を残すには？",
-        "事前に詩を書き出すか、設定から安全用のコピーを外部に保存してください。ZIPからの復元にはPremiumが必要です。下書きとごみ箱は端末内に残り、バックアップ対象外です。残したい本文は先に確定してください。"
+        "アンインストール前に、設定から完全バックアップを書き出し、アプリの外にファイルを保存してください。「ローカルのみ」モードで復元できます。復元すると対象となる端末内の執筆データが置き換わります。"
       ]
     ],
     "closingLabel": "次の一行は、あなたから",
@@ -878,7 +887,7 @@
     "videoAlt": "Poesie: あなたの詩が動き出す。",
     "bookAlt": "Poesie: あなたの詩が、一冊の本に。",
     "spaceAlt": "Poesie: あなただけの場所。",
-    "recoveryNote": "誤って削除した詩は30日以内ならごみ箱から復元できます。下書きとごみ箱はこの端末にのみ保存され、同期やZIPバックアップには含まれません。",
+    "recoveryNote": "削除した詩は30日以内ならごみ箱から復元できます。パスワードで保護された完全バックアップには、下書き、改訂履歴、ごみ箱、原稿プロジェクトも含まれます。",
     "progressNote": "統計、執筆目標、連続執筆日数を確認できます。詩の読み上げに加え、PremiumではPoetry Wrappedも楽しめます。"
   },
   "ko": {
@@ -909,12 +918,12 @@
     "videoNote": "무료 스타일과 워터마크가 있는 영상 포함. 사용자 지정 오디오는 Premium 기능입니다.",
     "bookLabel": "나만의 시집",
     "bookTitle": "당신의 시가 책이 됩니다.",
-    "bookBody": "모아 둔 시에 집을 만들어 주세요. Premium으로 표지와 전용 레이아웃이 있는 PDF 시집을 만들어 보관하고 공유하세요.",
+    "bookBody": "Premium에서는 표지와 목차가 있는 PDF 시선집을 만들거나 원고를 준비할 수 있습니다. 시를 선택하고 순서를 바꾸거나 섹션별로 묶은 뒤, 내보내기 전에 레이아웃을 미리 확인하세요.",
     "formats": "일반 내보내기 지원: PDF, ePub, Markdown, HTML, TXT.",
     "premiumLink": "Poesie Premium 알아보기 →",
     "spaceLabel": "소중하게 간직하는 말",
     "spaceTitle": "오롯이 나만의 공간.",
-    "spaceBody": "시집, 태그, 즐겨찾기, 스마트 폴더로 정리하세요. 검색으로 시구를 찾고 기기, Google Drive, OneDrive 중 저장 위치를 선택하세요.",
+    "spaceBody": "시 모음집을 만들고 태그와 즐겨찾기로 정리하며 본문에서 시를 찾아보세요. 각 시의 편집 상태를 지정하고 스마트 폴더에서 같은 상태의 작품을 모아볼 수 있습니다.",
     "local": "로컬 전용",
     "securityNote": "비밀번호 또는 생체 인증 잠금과 스크린샷 보호를 켤 수 있습니다. 이미 내보내거나 공유한 파일에는 적용되지 않습니다.",
     "premiumEyebrow": "창작을 위한 더 넓은 공간",
@@ -925,16 +934,17 @@
     "freeFeatures": [
       "자유시, 시집, 태그와 즐겨찾기",
       "로컬 저장, Google Drive 또는 OneDrive",
+      "비밀번호로 보호되는 글쓰기 데이터 전체 백업",
       "무료 스타일과 워터마크가 있는 이미지·영상",
       "PDF, ePub, Markdown, HTML, TXT 일반 내보내기"
     ],
     "paidTitle": "아이디어를 표현하는 더 많은 방법.",
     "paidFeatures": [
-      "표지가 있는 PDF 시집",
+      "PDF 시선집과 원고",
       "추가 스타일과 워터마크 제거",
       "영상에 사용자 지정 오디오 추가",
       "시 창작 템플릿, 추가 테마 및 고급 읽기 설정",
-      "비밀번호로 보호된 ZIP 백업 내보내기 및 복원"
+      "비밀번호로 보호된 시 모음집 ZIP 백업 내보내기 및 복원"
     ],
     "priceNote": "구매 전에 앱에서 가격과 기능의 상세 내용을 확인하세요.",
     "faqLabel": "첫 시구를 쓰기 전에",
@@ -962,7 +972,7 @@
       ],
       [
         "앱 삭제 전에 글을 보관하려면?",
-        "삭제 전에 시를 내보내거나 설정에서 안전 사본을 외부에 저장하세요. ZIP 복원은 Premium이 필요합니다. 초안과 휴지통은 기기에만 남고 백업에 포함되지 않으므로 보관할 글을 먼저 확정하세요."
+        "앱을 삭제하기 전에 설정에서 전체 백업을 내보내고 앱 외부에 파일을 저장하세요. ‘로컬 전용’ 모드에서 복원할 수 있습니다. 복원하면 백업에 해당하는 기기의 글쓰기 데이터가 교체됩니다."
       ]
     ],
     "closingLabel": "다음 시구는 당신에게서 시작됩니다",
@@ -976,7 +986,7 @@
     "videoAlt": "Poesie: 시구가 살아 움직입니다.",
     "bookAlt": "Poesie: 당신의 시가 책이 됩니다.",
     "spaceAlt": "Poesie: 오롯이 나만의 공간.",
-    "recoveryNote": "실수로 지운 시는 30일 이내에 휴지통에서 복원할 수 있습니다. 초안과 휴지통은 이 기기에만 저장되며 동기화나 ZIP 백업에 포함되지 않습니다.",
+    "recoveryNote": "삭제한 시는 30일 이내에 휴지통에서 복원할 수 있습니다. 비밀번호로 보호되는 전체 백업에는 초안, 수정 기록, 휴지통, 원고 프로젝트도 포함됩니다.",
     "progressNote": "통계, 글쓰기 목표와 연속 작성일을 확인하세요. 시를 소리 내어 들을 수 있고 Premium에는 Poetry Wrapped도 포함됩니다."
   },
   "zh": {
@@ -1007,12 +1017,12 @@
     "videoNote": "可使用免费风格制作带水印的视频。自定义音频需要Premium。",
     "bookLabel": "你的诗集",
     "bookTitle": "你的诗歌，成为一本书。",
-    "bookBody": "为积累的诗句安一个家。通过Premium制作带封面和专属排版的PDF诗集，用于珍藏和分享。",
+    "bookBody": "使用 Premium 可制作带封面和目录的 PDF 诗歌选集，也可编排手稿。选择诗作、调整顺序并按章节归类，在导出前预览排版。",
     "formats": "还支持常规导出：PDF、ePub、Markdown、HTML和TXT。",
     "premiumLink": "了解Poesie Premium →",
     "spaceLabel": "用心珍藏你的文字",
     "spaceTitle": "只属于你的空间。",
-    "spaceBody": "使用诗集、标签、收藏和智能文件夹整理作品。通过搜索找回诗句，并选择保存在设备、Google Drive或OneDrive。",
+    "spaceBody": "用诗集、标签和收藏整理作品，也可搜索诗歌正文。为诗作标注编辑状态，再用智能文件夹汇集同一状态的作品。",
     "local": "仅本地",
     "securityNote": "可启用密码或生物识别锁定及截屏保护。这些保护不适用于已经导出或分享的文件。",
     "premiumEyebrow": "给创意更多空间",
@@ -1023,16 +1033,17 @@
     "freeFeatures": [
       "自由诗、诗集、标签和收藏",
       "本地存储、Google Drive或OneDrive",
+      "密码保护的完整写作数据备份",
       "免费风格及带水印的图片和视频",
       "常规导出PDF、ePub、Markdown、HTML和TXT"
     ],
     "paidTitle": "让想法拥有更多模样。",
     "paidFeatures": [
-      "带封面的PDF诗集",
+      "PDF 诗歌选集和手稿",
       "更多风格和移除水印",
       "视频自定义音频",
       "引导式诗歌模板、更多主题和高级朗读设置",
-      "导出和恢复受密码保护的ZIP备份"
+      "导出和恢复受密码保护的诗集 ZIP 备份"
     ],
     "priceNote": "购买前可在应用内查看价格和功能详情。",
     "faqLabel": "写下第一行之前",
@@ -1060,7 +1071,7 @@
       ],
       [
         "卸载前如何保留作品？",
-        "卸载前请导出诗歌，或在设置中保存外部安全副本。恢复ZIP需要Premium。草稿和回收站仅保存在设备上，不包含在备份中；请先确认保存要保留的正文。"
+        "卸载前，从设置中导出完整备份并将文件保存到应用之外。在“仅本地”模式下恢复。恢复时会替换备份所涵盖的本地写作数据。"
       ]
     ],
     "closingLabel": "下一行诗，从你开始",
@@ -1074,7 +1085,7 @@
     "videoAlt": "Poesie: 让诗句生动起来。",
     "bookAlt": "Poesie: 你的诗歌，成为一本书。",
     "spaceAlt": "Poesie: 只属于你的空间。",
-    "recoveryNote": "误删了诗歌？可在30天内从回收站恢复。草稿和回收站仅保存在本设备上，不包含在同步或ZIP备份中。",
+    "recoveryNote": "已删除的诗作可在 30 天内从回收站恢复。密码保护的完整备份还包含草稿、修订记录、回收站内容和手稿项目。",
     "progressNote": "查看统计、写作目标和连续写作天数，也可朗读诗歌。Premium还包含Poetry Wrapped。"
   }
 }
