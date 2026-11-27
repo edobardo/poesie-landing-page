@@ -50,7 +50,7 @@ def footer(lang,t):
  brand.set('href',landing_path(lang));el.append(brand)
  p=etree.SubElement(el,'p');p.text=t['footer.desc']
  links=etree.SubElement(el,'div',{'class':'footer-links'})
- for title,url in [(t['footer.privacy'],f'/privacy/{lang}.html'),(t['footer.terms'],f'/terms/{lang}.html'),('Instagram','https://www.instagram.com/poesie_app/'),(u['contact'],'mailto:support@poesieapp.it')]:
+ for title,url in [(t['footer.privacy'],f'/privacy/{lang}.html'),(t['footer.terms'],f'/terms/{lang}.html'),('Instagram','https://www.instagram.com/poesie_app/'),('TikTok','https://www.tiktok.com/@poesie_app'),(u['contact'],'mailto:support@poesieapp.it')]:
   a=etree.SubElement(links,'a',href=url)
   svg=etree.SubElement(a,'svg',{'viewBox':'0 0 24 24','fill':'none','stroke':'currentColor','stroke-width':'1.6','stroke-linecap':'round','stroke-linejoin':'round','aria-hidden':'true','focusable':'false'})
   if '/privacy/' in url:
@@ -59,6 +59,8 @@ def footer(lang,t):
    etree.SubElement(svg,'path',d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z');etree.SubElement(svg,'path',d='M14 2v6h6M8 13h8M8 17h6')
   elif 'instagram' in url:
    etree.SubElement(svg,'rect',x='3',y='3',width='18',height='18',rx='5');etree.SubElement(svg,'circle',cx='12',cy='12',r='4');etree.SubElement(svg,'circle',cx='17.5',cy='6.5',r='.7',fill='currentColor',stroke='none')
+  elif 'tiktok' in url:
+   etree.SubElement(svg,'path',d='M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5')
   else:
    etree.SubElement(svg,'rect',x='3',y='5',width='18',height='14',rx='2');etree.SubElement(svg,'path',d='m3 6 9 7 9-7')
   label=etree.SubElement(a,'span');label.text=title
